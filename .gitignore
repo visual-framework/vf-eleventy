@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+Thumbs.db
+db.json
+*.log
+public
+functions
+src/site/_includes/css
+.env
+yarn-error.log
+dist
