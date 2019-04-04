@@ -1,14 +1,11 @@
 const { DateTime } = require("luxon");
-const fractal      = require('./fractal.js');
-// const logger       = fractal.cli.console;
 const _            = require('lodash');
 const Path         = require('path');
-const utils        = require('@frctl/fractal').utils;
 
-function fractalReadyCallback() {
-  console.log('fractalReadyCallback done');
-}
 module.exports = function(config) {
+
+  // get the fractal enviroment
+  var fractal = global.fractal;
 
   // A useful way to reference to the contect we are runing eleventy in
   let env = process.env.ELEVENTY_ENV;
@@ -81,7 +78,6 @@ module.exports = function(config) {
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
 
-  console.log(fractal.components);
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;

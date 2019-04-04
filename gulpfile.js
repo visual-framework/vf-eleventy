@@ -10,18 +10,6 @@ gulp.task('watch', function() {
   gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
 });
 
-// Let's build this sucker.
-gulp.task('build', gulp.parallel(
-  'css',
-  'js'
-));
-
-// Build and watch things during dev
-gulp.task('dev', gulp.series(
-  'build',
-  'watch'
-));
-
 // Copy all vf HBS templates to ./src/site/_includes/components
 // we'll also need to rewrite some contents
 // - frctl you do `{{> '@vf-lede' vf-lede-text=vf-intro_lede}}`
@@ -36,3 +24,36 @@ gulp.task('vf-components', () => {
       }))
       .pipe(gulp.dest('./src/site/_includes/components'));
 });
+
+gulp.task('elventy-set-to-serve', function(done) {
+  // Since we're not using the 11ty command line directly, we need to set the
+  // `--serve` param manually
+  process.argv.push('--serve');
+  done();
+});
+
+// Run eleventy, but only after we wait for fractal to bootstrap
+// @todo: consider if this could/should be two parallel gulp tasks
+gulp.task('eleventy', function(done) {
+  global.fractal      = require('./fractal.js').initialize(fractalReadyCallback); // make fractal components are available gloablly
+
+  function fractalReadyCallback(fractal) {
+    global.fractal = fractal; // save fractal globally
+    const eleventy = require('@11ty/eleventy/cmd.js');
+    done();
+  }
+});
+
+// Let's build this sucker.
+gulp.task('build', gulp.parallel(
+  'css',
+  'js',
+  'eleventy'
+));
+
+// Build and watch things during dev
+gulp.task('dev', gulp.series(
+  'elventy-set-to-serve',
+  'build',
+  'watch'
+));
