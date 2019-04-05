@@ -35,7 +35,8 @@ gulp.task('elventy-set-to-serve', function(done) {
 // Run eleventy, but only after we wait for fractal to bootstrap
 // @todo: consider if this could/should be two parallel gulp tasks
 gulp.task('eleventy', function(done) {
-  global.fractal      = require('./fractal.js').initialize(fractalReadyCallback); // make fractal components are available gloablly
+  global.vfComponentPath = __dirname + '/src/components'; // where our VF components live
+  global.fractal      = require('./fractal.js').initialize('server',fractalReadyCallback); // make fractal components are available gloablly
 
   function fractalReadyCallback(fractal) {
     global.fractal = fractal; // save fractal globally
