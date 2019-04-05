@@ -84,7 +84,7 @@ module.exports = function(config) {
   return {
     dir: {
       input: "src/site",
-      output: "public",
+      output: "build",
       data: `_data/${env}`
     },
     templateFormats : [
