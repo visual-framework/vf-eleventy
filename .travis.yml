@@ -11,7 +11,7 @@ stages:
   - deploy
 
 before_script:
-  - npm install
+  # - npm install
   - npm install -g gulp-cli
   - gulp build
 
