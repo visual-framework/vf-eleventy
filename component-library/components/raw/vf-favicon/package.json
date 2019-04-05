@@ -1,0 +1,35 @@
+{
+  "version": "0.0.28",
+  "name": "@visual-framework/vf-favicon",
+  "description": "vf-favicon component",
+  "homepage": "https://visual-framework.github.io/vf-core/",
+  "author": "VF",
+  "license": "Apache 2.0",
+  "style": "vf-favicon.css",
+  "sass": "index.scss",
+  "files": [
+    "assets",
+    "index.scss",
+    "vf-favicon.scss",
+    "vf-favicon.css",
+    "vf-favicon.njk",
+    "vf-favicon.config.yml"
+  ],
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repo": "https://github.com/visual-framework/vf-core/tree/master/components/elements/vf-favicon",
+  "bugs": {
+    "url": "https://github.com/visual-framework/vf-core/issues/new"
+  },
+  "dependencies": {
+    "@visual-framework/vf-sass-config": "^0.0.25",
+    "node-normalize-scss": "^8.0.0"
+  },
+  "keywords": [
+    "fractal",
+    "component"
+  ],
+  "gitHead": "7d11e6ad9d9bfc895f35bef681a48c7553713213"
+}

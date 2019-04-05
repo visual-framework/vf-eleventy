@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style></style>
+    <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css" />
+    <title>Visual Framework 11ty boilerplate</title>
+  </head>
+  <body class="" >
+    <header class="vf-global-header">
+
+  <div class="vf-global-header__inner">
+
+    <a href="/" class="vf-logo--responsive"></a>
+
+
+    <p class="vf-global-header__site-name">Visual Framework for Life Science websites</p>
+
+    <nav class="vf-navigation vf-navigation--global">
+  <ul class="vf-navigation__list | vf-list--inline">
+    <li class="vf-navigation__item">
+      <a href="JavaScript:Void(0);" class="vf-navigation__link">Explore</a>
+    </li>
+    <li class="vf-navigation__item">
+      <a href="JavaScript:Void(0);" class="vf-navigation__link">Search</a>
+    </li>
+    <li class="vf-navigation__item">
+      <a href="JavaScript:Void(0);" class="vf-navigation__link">Sign In</a>
+    </li>
+  </ul>
+</nav>
+
+
+  </div>
+
+</header>
+
+
+    <div class="vf-body">
+
+      <div class="vf-grid">
+        <div>
+          <section class="vf-intro | embl-grid embl-grid--has-centered-content">
+<div>
+  <!-- empty -->
+</div>
+<div>
+  <h1 class="vf-intro__heading vf-intro__heading--has-tag">👋 It works! <a href="" class="vf-badge vf-badge--primary vf-badge--phases">alpha</a></h1>
+  <p class="vf-lede">You've successfully installed the Eleventy boilerplate for Visual Framework 2.0.</p>
+  <p class="vf-intro__text">This allows you to use the <a class="vf-link" href="https://www.11ty.io">11ty</a> static site generator with direct access to Visual Framework 2.0 components.
+<p>(coming soon: dynamic building of just the VF 2.0 CSS and JS in use.)</p></p>
+</div>
+</section>
+<h2>What you get</h2>
+<ul>
+<li>the Eleventy static site generator</li>
+<li>access to the Visual Framework component system</li>
+</ul>
+<p>To add a component you can use npm or install it manually.</p>
+<h3>npm installation</h3>
+<ul>
+<li><code>npm i @visual-framework/vf-logo</code></li>
+</ul>
+<h3>Manual installation for customisation</h3>
+<ol>
+<li>Download a pattern</li>
+<li>Copy it to <code>./src/components/vf-component-name</code></li>
+</ol>
+<p>In either case you'll need to re-run <code>npm run-script dev</code> to access the pattern.</p>
+<h3>Add your own local component</h3>
+<p>You can add a custom VF-compatible component to <code>./src/components</code> and use it in
+your site.</p>
+<p>You'll find a <code>vf-sample</code> component there, we've used it below:</p>
+<div class="vf-box">
+<p>Code: {% render &quot;@vf-sample&quot;, {text: &quot;with some text&quot;} %}</p>
+<p>Returns: I'm a sample with some text</p>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <!-- This page was generated on Invalid DateTime -->
+<script src="https://dev.assets.emblstatic.net/vf/develop/scripts/scripts.js"></script>
+
+  </body>
+</html>
