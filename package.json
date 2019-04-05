@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy": "^0.8.0",
     "@visual-framework/vf-banner": "0.0.14",
     "@visual-framework/vf-divider": "0.0.28",
     "@visual-framework/vf-favicon": "0.0.28",

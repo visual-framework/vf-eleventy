@@ -67,7 +67,7 @@ module.exports = {
     fractalServer.start().then(() => {
       logger.success(`Your Visual Framework component library is available at ${fractalServer.url}`);
       // logger.success(`Network URL: ${server.urls.sync.external}`);
-      console.log('done over here');
+      // console.log('done over here');
       callback(fractal);
     });
   }
