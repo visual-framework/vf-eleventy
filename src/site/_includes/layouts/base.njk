@@ -6,57 +6,11 @@
     <style>{% include "css/app.css" %}</style>
     <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css" />
     <title>{{ title }}</title>
-    <!--
-      EMBL Content Meta Properties
-      https://dev.beta.embl.org/guidelines/visual-framework/dev-docs/components/detail/embl-content-meta-properties.html
-      -->
-    <!-- Content descriptors -->
-    {%- if (embl_content_meta_properties) %}
-      {%- if (embl_content_meta_properties.who) %}
-      <meta name="embl:who" content="{{ embl_content_meta_properties.who }}"> <!-- the people, groups and teams involved -->
-      <meta name="embl:what" content="{{ embl_content_meta_properties.what }}"> <!-- the activities covered -->
-      <meta name="embl:where" content="{{ embl_content_meta_properties.where }}"> <!-- at which EMBL sites the content applies -->
-      <meta name="embl:active" content="{{ embl_content_meta_properties.active }}"> <!-- which of the who/what/where is active -->
-      {% endif %}
-
-      <!-- Content role -->
-      {%- if (embl_content_meta_properties.utility) %}
-      <meta name="embl:utility" content="{{ embl_content_meta_properties.utility }}"> <!-- if content is task and work based or if is meant to inspire -->
-      <meta name="embl:reach" content="{{ embl_content_meta_properties.reach }}"> <!-- if content is externally (public) or internally focused (those that work at EMBL) -->
-      {% endif %}
-
-      <!-- Page infromation -->
-      {%- if (embl_content_meta_properties.maintainer) %}
-      <meta name="embl:maintainer" content="{{ embl_content_meta_properties.maintainer }}"> <!-- the contact person or group responsible for the page -->
-      <meta name="embl:last-review" content="{{ embl_content_meta_properties.lastreview }}"> <!-- the last time the page was reviewed or updated -->
-      <meta name="embl:review-cycle" content="{{ embl_content_meta_properties.reviewcycle }}"> <!-- how long in days before the page should be checked -->
-      <meta name="embl:expiry" content="{{ embl_content_meta_properties.expiry }}"> <!-- if there is a fixed point in time when the page is no longer relevant -->
-      {% endif %}
-    {% endif %}
-
   </head>
   <body class="{{ bodyClass }}" >
-    <header class="vf-header">
-      <!-- EMBL.org global header -->
-      <link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=574&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader>
-      {# <link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=574&pattern=node-body" data-target="self" data-embl-js-content-hub-loader> #}
-      <!-- Data protection banner -->
-      <link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=581&pattern=node-body&source=contenthub" data-target="self" data-embl-js-content-hub-loader>
-    </header>
+    {% render '@vf-global-header' %}
+
     <div class="vf-body">
-
-      <!-- Beta phase banner -->
-      <div class="vf-u-margin__bottom-xl vf-grid">
-        <link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=580&pattern=node-body&source=contenthub&amp;source=contenthub" data-target="self" data-embl-js-content-hub-loader="">
-      </div>
-
-      <!-- embl-breadcrumbs-lookup -->
-      <div class="vf-grid">
-        <nav class="vf-breadcrumbs embl-breadcrumbs-lookup" aria-label="Breadcrumb" data-embl-js-breadcrumbs-lookup>
-            <div class="vf-text embl-breadcrumbs-lookup--loading-text"></div>
-        </nav>
-      </div>
-
 
       <div class="vf-grid">
         <div>
