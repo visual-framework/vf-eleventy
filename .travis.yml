@@ -25,6 +25,6 @@ deploy:
   cache:
     paths:
       - node_modules
-  # on:
-  #   branch:
-  #     - develop
+  on:
+    branch:
+      - master
