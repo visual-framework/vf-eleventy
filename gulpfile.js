@@ -1,6 +1,8 @@
 const gulp  = require('gulp');
 const rename = require('gulp-rename');
 
+var fractalBuildMode = 'build';
+
 // Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
 
@@ -29,14 +31,16 @@ gulp.task('elventy-set-to-serve', function(done) {
   // Since we're not using the 11ty command line directly, we need to set the
   // `--serve` param manually
   process.argv.push('--serve');
+  fractalBuildMode = 'server';
   done();
 });
 
 // Run eleventy, but only after we wait for fractal to bootstrap
 // @todo: consider if this could/should be two parallel gulp tasks
 gulp.task('eleventy', function(done) {
+  global.vfBuilderPath = __dirname + '/build/component-library';
   global.vfComponentPath = __dirname + '/src/components'; // where our VF components live
-  global.fractal      = require('./fractal.js').initialize('server',fractalReadyCallback); // make fractal components are available gloablly
+  global.fractal      = require('./fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
 
   function fractalReadyCallback(fractal) {
     global.fractal = fractal; // save fractal globally
@@ -44,6 +48,7 @@ gulp.task('eleventy', function(done) {
     done();
   }
 });
+
 
 // Let's build this sucker.
 gulp.task('build', gulp.parallel(
