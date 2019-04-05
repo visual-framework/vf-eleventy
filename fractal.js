@@ -69,10 +69,10 @@ module.exports = {
     fractal.web.set('builder.dest', vfBuilderPath);
 
     /* configure web */
-    fractal.web.set('static.path', __dirname + '/public');
+    fractal.web.set('static.path', vfBuilderPath);
     fractal.web.set('server.sync', true);
     fractal.web.set('server.syncOptions', {
-      open: true,
+      open: false,
       browser: 'default',
       sync: true
     });

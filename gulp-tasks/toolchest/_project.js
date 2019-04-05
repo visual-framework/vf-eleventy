@@ -20,7 +20,7 @@ module.exports = {
 
   // Some default locations
   buildSrc: "src",
-  buildDest: "public",
+  buildDest: "build",
 
   // Save some data to a local file for use in the build
   storeData: function(fileName, data){

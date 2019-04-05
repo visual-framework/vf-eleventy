@@ -10,7 +10,7 @@ You'll need to [install npm](https://docs.npmjs.com/downloading-and-installing-n
 1. Install all the npm moudles
    - `npm install`
    - `npm install eleventy -g`
-2. Generate `/public`
+2. Generate the site in `/build`
    - `gulp dev` renders and serves
    - `gulp build` build static assets
 
