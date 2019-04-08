@@ -6,6 +6,9 @@ var fractalBuildMode = 'build';
 // Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
 
+// Eleventy config
+process.argv.push('--config=eleventy.js');
+
 // Watch folders for changess
 gulp.task('watch', function() {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
