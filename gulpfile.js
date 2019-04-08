@@ -2,7 +2,6 @@ const gulp  = require('gulp');
 const rename = require('gulp-rename');
 
 var fractalBuildMode = 'build';
-
 // Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
 
@@ -43,7 +42,9 @@ gulp.task('elventy-set-to-serve', function(done) {
 gulp.task('eleventy', function(done) {
   global.vfBuilderPath = __dirname + '/build/vf-components';
   global.vfComponentPath = __dirname + '/src/components'; // where our VF components live
-  global.fractal      = require('./fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
+  global.vfDocsPath = __dirname + '/src/docs';
+  global.vfOpenBrowswer = false; // if you want to open a browser tab for the component library
+  global.fractal      = require('@visual-framework/vf-core/fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
 
   function fractalReadyCallback(fractal) {
     global.fractal = fractal; // save fractal globally
