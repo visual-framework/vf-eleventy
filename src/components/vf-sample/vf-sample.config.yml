@@ -1,5 +1,5 @@
-title: Visual Framework Sample Pattern
-label: Headings
+title: Visual Framework Sample Component
+label: Sample Local Component
 preview: '@preview--elements'
 status: beta
 variants:
@@ -7,14 +7,3 @@ variants:
     hidden: true
 context:
   component-type: element
-  vf_heading_modifiers:
-    - type: display
-      title: This heading size is display and inverted
-    - type: extra-large
-      title: This heading size is extra large
-    - type: large
-      title: This heading size is large
-    - type: regular
-      title: This heading size is regular
-    - type: small
-      title: This heading size is small
