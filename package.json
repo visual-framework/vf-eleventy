@@ -1,13 +1,13 @@
 {
-  "name": "static-html-pages",
+  "name": "vf-eleventy",
   "version": "0.1.0",
-  "description": "For EMBL.org pages that are built as static HTML (the page part is static, the content might be dynamic).",
+  "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "private": true,
   "main": "gulpfile.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
-    "build": "gulp build & ELEVENTY_ENV=dev eleventy",
+    "dev": "gulp dev",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -44,5 +44,7 @@
   "resolutions": {
     "terser": "3.14.*"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.0.6"
+  }
 }

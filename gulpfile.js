@@ -40,11 +40,11 @@ gulp.task('elventy-set-to-serve', function(done) {
 // Run eleventy, but only after we wait for fractal to bootstrap
 // @todo: consider if this could/should be two parallel gulp tasks
 gulp.task('eleventy', function(done) {
-  global.vfBuilderPath = __dirname + '/build/vf-components';
+  global.vfBuilderPath   = __dirname + '/build/vf-components';
   global.vfComponentPath = __dirname + '/src/components'; // where our VF components live
-  global.vfDocsPath = __dirname + '/src/docs';
-  global.vfOpenBrowser = false; // if you want to open a browser tab for the component library
-  global.fractal      = require('@visual-framework/vf-core/fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
+  global.vfDocsPath      = __dirname + '/src/docs';
+  global.vfOpenBrowser   = false; // if you want to open a browser tab for the component library
+  global.fractal         = require('@visual-framework/vf-core/fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
 
   function fractalReadyCallback(fractal) {
     global.fractal = fractal; // save fractal globally

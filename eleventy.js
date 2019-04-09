@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+const { DateTime } = require('luxon');
 const _            = require('lodash');
 const Path         = require('path');
 
@@ -78,6 +78,10 @@ module.exports = function(config) {
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
 
+  // rss feed plugin
+  // https://github.com/11ty/eleventy-plugin-rss
+  const pluginRss = require("@11ty/eleventy-plugin-rss");
+  config.addPlugin(pluginRss);
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;
@@ -85,7 +89,7 @@ module.exports = function(config) {
     dir: {
       input: "src/site",
       output: "build",
-      data: `_data/${env}`
+      data: "_data"
     },
     templateFormats : [
       "njk", "md", // note that .md files will also be parsed with njk processor
