@@ -13,7 +13,7 @@ layout: layouts/base.njk
   <h1 class="vf-intro__heading vf-intro__heading--has-tag">👋 It works! <a href="" class="vf-badge vf-badge--primary vf-badge--phases">alpha</a></h1>
   <p class="vf-lede">You've successfully installed the Eleventy boilerplate for Visual Framework 2.0.</p>
 
-  <p class="vf-intro__text">This allows you to use the <a class="vf-link" href="https://www.11ty.io">11ty</a> static site generator with direct access to Visual Framework 2.0 components.
+  <p class="vf-intro__text">{{ siteConfig.short_description | safe }}
 
   (coming soon: dynamic building of just the VF 2.0 CSS and JS in use.)</p>
 </div>
