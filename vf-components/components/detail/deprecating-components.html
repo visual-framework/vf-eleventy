@@ -185,7 +185,7 @@ Here's what we need to make sure we do:
 1. Update `README.md` with:
 - why the component has been deprecated
 - what component(s) developers should instead use
-- Use this template: `&lt;h2&gt;This component has been &lt;span style="color: rgb(228, 0, 70);"&gt;deprecated&lt;/span&gt;. Please use the &lt;a class="vf-link" href="#" new&lt;/a&gt; component.&lt;/h2&gt; in the README.md file.` 1. Publish on NPM: - follow the guidelines to update the packages using Lerna(TODO). This would be a major release for the deprecated component, decide on other pattern version numbers as described in the documentation for publishing(TODO). 1. Remove the component from `vf-core` 1. Deprecate on npm: - `npm deprecate @visual-framework/component "no longer supported use the @visual-framework/component instead" ` ## Need to deprecate just one variant of a component? 1. Add a note to the `--variant.njk` - Use this template: `&lt;h2&gt;This variant has been &lt;span style="color: rgb(228, 0, 70);"&gt;deprecated&lt;/span&gt;. Please use the &lt;a class="vf-link" href="#" new&lt;/a&gt; component.&lt;/h2&gt; in the README.md file.` 1. Wrap the relevant Sass in `html:not(.vf-disable-deprecated) {` 1. Hide the variant tab in `.config.yml`: ``` variants: - name: deprecated-variant hidden: true ```</pre>
+- Use this template: `&lt;h2&gt;This component has been &lt;span style="color: rgb(228, 0, 70);"&gt;deprecated&lt;/span&gt;. Please use the &lt;a class="vf-link" href="#" new&lt;/a&gt; component.&lt;/h2&gt; in the README.md file.` 1. Publish on NPM: - follow the guidelines to update the packages using Lerna(TODO). This would be a major release for the deprecated component, decide on other pattern version numbers as described in the documentation for publishing(TODO). 1. Remove the component from `vf-core` 1. Deprecate on npm: - `npm deprecate @visual-framework/component "no longer supported use the @visual-framework/component instead" ` ## Need to deprecate just one variant of a component? 1. Add a note to the `--variant.njk` - Use this template: `&lt;h2&gt;This variant has been &lt;span style="color: rgb(228, 0, 70);"&gt;deprecated&lt;/span&gt;. Please use the &lt;a class="vf-link" href="#" new&lt;/a&gt; component.&lt;/h2&gt; in the README.md file.` 1. Wrap the relevant Sass in `html:not(.vf-disable-deprecated) {` 1. Hide the variant tab in `.config.yml`: ``` variants: - name: deprecated-variant hidden: true ``` See also: [example `vf-deprecated` component](vf-deprecated.html)</pre>
         
     </code>
 </div>
@@ -235,7 +235,9 @@ Here's what we need <span class="hljs-keyword">to</span> make sure we do:
 variants:
   - <span class="hljs-built_in">name</span>: deprecated-variant
     hidden: <span class="hljs-literal">true</span>
-```</pre>
+```
+
+See also: [example `vf-deprecated` component]({{ '/components/detail/vf-deprecated' | path }})</pre>
     </code>
 </div>
 
