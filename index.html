@@ -55,17 +55,18 @@
 <li>the Eleventy static site generator</li>
 <li>access to the Visual Framework component system</li>
 </ul>
-<p>To add a component you can use npm or install it manually.</p>
-<h3>npm installation</h3>
+<p>To add a component you can use npm/Yarn or install it manually.</p>
+<h3>Component installation</h3>
 <ul>
-<li><code>npm i @visual-framework/vf-logo</code></li>
+<li>installation: <code>yarn add @visual-framework/vf-logo</code></li>
+<li>updating: <code>yarn upgrade-interactive --latest</code></li>
 </ul>
 <h3>Manual installation for customisation</h3>
 <ol>
 <li>Download a pattern</li>
 <li>Copy it to <code>./src/components/vf-component-name</code></li>
 </ol>
-<p>In either case you'll need to re-run <code>npm run-script dev</code> to access the pattern.</p>
+<p>In either case you'll need to re-run <code>gulp dev</code> to access the pattern.</p>
 <h3>Add your own local component</h3>
 <p>You can add a custom VF-compatible component to <code>./src/components</code> and use it in
 your site.</p>
