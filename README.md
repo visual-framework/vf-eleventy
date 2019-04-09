@@ -7,15 +7,17 @@ with direct access to Visual Framework 2.0 components.
 
 You'll need to [install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and then:
 
-1. Install all the npm moudles
+1. If you don't have `yarn`, install it
+   - https://yarnpkg.com/lang/en/docs/install/
+2. Install all the things
    - `yarn install`
-2. Generate the site in `/build`
+3. Generate the site in `/build`
    - `gulp dev` renders and serves
    - `gulp build` build static assets
 
 ## Adding Visual Framework components
 
-To add a component you can use npm or install it manually.
+To add a component you can use npm/Yarn or install it manually.
 
 ### By package
 
