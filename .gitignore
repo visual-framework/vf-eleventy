@@ -6,6 +6,7 @@ db.json
 public
 functions
 src/site/_includes/css
+src/site/_includes/js
 .env
 yarn-error.log
 dist
