@@ -3,4 +3,9 @@
     "url": "/",
     "title": "Visual Framework 11ty boilerplate",
     "index": " 👋 works! alpha &#39;ve successfully installed Eleventy boilerplate Visual Framework 20 This allows use 11ty static site generator with direct access 20 components(coming soon: dynamic building just VF CSS JS use)What get generatoraccess component system add can npm/Yarn install manuallyComponent installationinstallation: yarn @visualframework/vflogoupdating: upgradeinteractive latestManual installation customisationDownload patternCopy /src/components/vfcomponentname either case &#39;ll need rerun gulp dev patternAdd your own local component custom VFcompatible /src/components your site&#39;ll find vfsample there &#39;ve used below:Code: {% render @vfsample {text: some text} %}Returns: &#39;m sample text"
+  },
+  {
+    "url": "/posts/sample-post/",
+    "title": "I&#39;m an update",
+    "index": "&#39;m some content"
   },]

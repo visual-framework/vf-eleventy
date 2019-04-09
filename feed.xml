@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Elevent for Visual Framework components</title>
+  <subtitle>This allows you to use the 11ty static site generator with direct access to Visual Framework 2.0 components.</subtitle>
+  <link href="https://example.com/feed.xml" rel="self"/>
+  <link href="https://visual-framework.github.io/vf-eleventy/"/>
+  <updated>2019-04-09T12:24:50+00:00</updated>
+  <id>https://example.com/</id>
+  <author>
+    <name>Visual Framework system</name>
+    <email>ken.hawkins@embl.de</email>
+  </author>
+  
+  <entry>
+    <title>I&#39;m an update</title>
+    <link href="https://example.com/posts/sample-post/"/>
+    <updated>2019-04-09T12:24:50+00:00</updated>
+    <id>https://example.com/posts/sample-post/</id>
+    <content type="html">&lt;p&gt;I&#39;m some content.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

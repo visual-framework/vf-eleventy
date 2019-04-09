@@ -3,4 +3,7 @@
   <url>
     <loc>/</loc>
   </url>
+  <url>
+    <loc>/posts/sample-post/</loc>
+  </url>
 </urlset>
