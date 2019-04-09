@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Elevent for Visual Framework components</title>
-  <subtitle>This allows you to use the 11ty static site generator with direct access to Visual Framework 2.0 components.</subtitle>
-  <link href="https://example.com/feed.xml" rel="self"/>
+  <title>Eleventy for Visual Framework 2.0 components</title>
+  <subtitle>This allows using the &lt;a class=&quot;vf-link&quot; href=&quot;https://www.11ty.io&quot;&gt;11ty&lt;/a&gt; static site generator with direct access to &lt;a class=&quot;vf-link&quot; href=&quot;https://github.com/visual-framework/vf-core&quot;&gt;Visual Framework 2.0&lt;/a&gt; components.</subtitle>
+  <link href="https://visual-framework.github.io/vf-eleventy/feed.xml" rel="self"/>
   <link href="https://visual-framework.github.io/vf-eleventy/"/>
   <updated>2019-04-09T12:24:50+00:00</updated>
-  <id>https://example.com/</id>
+  <id>https://visual-framework.github.io/vf-eleventy</id>
   <author>
     <name>Visual Framework system</name>
     <email>ken.hawkins@embl.de</email>
@@ -13,9 +13,9 @@
   
   <entry>
     <title>I&#39;m an update</title>
-    <link href="https://example.com/posts/sample-post/"/>
+    <link href="https://visual-framework.github.io/vf-eleventy/posts/sample-post/"/>
     <updated>2019-04-09T12:24:50+00:00</updated>
-    <id>https://example.com/posts/sample-post/</id>
+    <id>https://visual-framework.github.io/vf-eleventy/posts/sample-post/</id>
     <content type="html">&lt;p&gt;I&#39;m some content.&lt;/p&gt;
 </content>
   </entry>
