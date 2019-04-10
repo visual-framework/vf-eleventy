@@ -3,6 +3,16 @@
 This allows you to use the [11ty](https://www.11ty.io) static site generator
 with direct access to Visual Framework 2.0 components.
 
+## Cloning this repo
+
+You can clone the files to your project by:
+
+- `npm pack @visual-framework/vf-boilerplate-eleventy`
+- `tar -xzf visual-framework-vf-boilerplate-eleventy-0.0.1.tgz`
+- `cd package`
+- `mv * ..`
+- `cd ..`
+
 ## Local development
 
 You'll need to [install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and then:
