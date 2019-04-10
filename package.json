@@ -1,8 +1,7 @@
 {
-  "name": "vf-eleventy",
+  "name": "@visual-framework/vf-boilerplate-eleventy",
   "version": "0.0.1",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
-  "private": true,
   "main": "gulpfile.js",
   "scripts": {
     "start": "npm run dev",
