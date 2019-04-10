@@ -1,6 +1,6 @@
 {
   "name": "vf-eleventy",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "private": true,
   "main": "gulpfile.js",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlabci.ebi.ac.uk/emblorg/static-html-pages.git"
+    "url": "https://github.com/visual-framework/vf-eleventy.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ken Hawkins <ken.hawkins@embl.de> (https://www.embl.de/aboutus/communication_outreach/)",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.2",
     "@visual-framework/vf-banner": "0.0.14",
