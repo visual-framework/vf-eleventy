@@ -1,5 +1,6 @@
 ---
-title: Visual Framework 11ty boilerplate
+renderData:
+  title: "{{ siteConfig.siteInformation.title }}"
 subtitle: No homepage, yet.
 date: 2018-08-22 12:24:50
 layout: layouts/base.njk
@@ -10,8 +11,8 @@ layout: layouts/base.njk
   <!-- empty -->
 </div>
 <div>
-  <h1 class="vf-intro__heading vf-intro__heading--has-tag">👋 It works! <a href="" class="vf-badge vf-badge--primary vf-badge--phases">alpha</a></h1>
-  <p class="vf-lede">You've successfully installed the Eleventy boilerplate for Visual Framework 2.0.</p>
+  <h1 class="vf-intro__heading vf-intro__heading--has-tag">{{ siteConfig.siteInformation.title | safe }} <a href="" class="vf-badge vf-badge--primary vf-badge--phases">alpha</a></h1>
+  <p class="vf-lede">{{ siteConfig.siteInformation.short_description | safe }}</p>
 
   <p class="vf-intro__text">{{ siteConfig.short_description | safe }}
 

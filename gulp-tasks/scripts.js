@@ -6,6 +6,6 @@ const concat = require('gulp-concat');
 gulp.task('js', function() {
   return gulp.src("./src/js/**/*.js")
     .pipe(concat('scripts.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('./src/site/_includes/js'));
 });

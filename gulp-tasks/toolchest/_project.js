@@ -24,7 +24,7 @@ module.exports = {
 
   // Save some data to a local file for use in the build
   storeData: function(fileName, data){
-    ensureDirectoryExistence(process.cwd() + fileName)
+    ensureDirectoryExistence(process.cwd() + fileName);
     fs.writeFile(`${process.cwd()}/${fileName}`, data, function(err) {
       if(err) {
         console.log(err);

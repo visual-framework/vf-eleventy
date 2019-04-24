@@ -7,7 +7,7 @@ with direct access to Visual Framework 2.0 components.
 
 You can clone the files to your project by:
 
-- `npm pack @visual-framework/vf-boilerplate-eleventy`
+- `yarn pack @visual-framework/vf-boilerplate-eleventy`
 - `tar -xzf visual-framework-vf-boilerplate-eleventy-0.0.1.tgz`
 - `cd package`
 - `mv * ..`
