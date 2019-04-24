@@ -1,6 +1,4 @@
 ---
-renderData:
-  title: "{{ siteConfig.siteInformation.title }}"
 subtitle: No homepage, yet.
 date: 2018-08-22 12:24:50
 layout: layouts/base.njk

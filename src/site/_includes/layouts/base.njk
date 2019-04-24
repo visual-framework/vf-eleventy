@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>{% include "css/app.css" %}</style>
     <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css" />
-    <title>{{ title or (renderData and renderData.title) }}</title>
+    <title>{{ title or (renderData and renderData.title) or siteConfig.siteInformation.title}}</title>
   </head>
   <body class="{{ bodyClass }}" >
     {% render '@vf-global-header' %}
-
     <div class="vf-body">
-
       <div class="vf-grid">
         <div>
           {{ content | safe }}
