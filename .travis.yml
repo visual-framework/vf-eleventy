@@ -13,7 +13,7 @@ stages:
 before_script:
   # - npm install
   - npm install -g gulp-cli
-  - gulp build
+  - npm run-script build
 
 deploy:
   provider: pages
