@@ -792,9 +792,14 @@
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
 
-"@types/node@*", "@types/node@^11.13.0":
+"@types/node@*":
   version "11.13.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.1.tgz#f977a12e97695663040581034b483f34c8dd4f6f"
+
+"@types/node@^12.0.2":
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.2.tgz#3452a24edf9fea138b48fad4a0a028a683da1e40"
+  integrity sha512-5tabW/i+9mhrfEOUcLDu2xBPsHJ+X5Orqy9FKpale3SjDA17j5AEpYq5vfy3oAeAHGcvANRCO3NV3d2D6q3NiA==
 
 "@types/node@^8.0.7":
   version "8.10.45"
@@ -833,19 +838,20 @@
     "@visual-framework/vf-badge" "^0.0.28"
     "@visual-framework/vf-sass-config" "^0.0.25"
 
-"@visual-framework/vf-core@^2.0.0-alpha.4":
-  version "2.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-core/-/vf-core-2.0.0-alpha.4.tgz#5c0ee4d9ec49464dec19c6967b5af1237fe39bc8"
-  integrity sha512-ZB1b4UNUMil6hF1ZDOGWDeBu98SLEhbD9tttUtw+YniDk9UPyz96y8YrPVDAFFzk1HDp/cZD+etCYhSu+SPuzA==
+"@visual-framework/vf-core@^2.0.0-alpha.5":
+  version "2.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-core/-/vf-core-2.0.0-alpha.5.tgz#64725f91ec4acb77c2c9a7f86426ff8aed305f24"
+  integrity sha512-H0ScwOCqoIE4Z1XADzNDpzmddyvbE9IH6/IyGHriwIyziDItr1iEVIxOXn/Eh1QVhbmbqOlgSjVS4NUzDTSIAg==
   dependencies:
     "@frctl/fractal" "^1.2.0-beta.2"
     "@frctl/nunjucks" "^2.0.0"
-    chalk "^2.4.1"
+    chalk "^2.4.2"
     gulp "^4.0.0"
     highlight.js "^9.15.6"
     install "^0.12.2"
+    marked "^0.6.1"
     npm "^6.9.0"
-    rollup "^1.6.0"
+    rollup "^1.7.4"
     stylelint "^9.10.1"
     stylelint-scss "^3.5.4"
     theo "^8.1.2"
@@ -6424,6 +6430,11 @@ marked@^0.3.6:
   version "0.3.19"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
 
+marked@^0.6.1:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.2.tgz#c574be8b545a8b48641456ca1dbe0e37b6dccc1a"
+  integrity sha512-LqxwVH3P/rqKX4EKGz7+c2G9r98WeM/SW34ybhgNGhUQNKtf1GmmSkJ6cDGJ/t6tiyae49qRkpyTw2B9HOrgUA==
+
 matchdep@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/matchdep/-/matchdep-2.0.0.tgz#c6f34834a0d8dbc3b37c27ee8bbcb27c7775582e"
@@ -8892,12 +8903,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup@^1.6.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.9.0.tgz#65f7db8d312a07d4e9702316025f91df56ce9f9c"
+rollup@^1.7.4:
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.12.4.tgz#f2cb825300cea6601f12a4c3d2f3918807b27403"
+  integrity sha512-sHg0F05oTMJzM592MWU8irsPx8LIFMKSCnEkcp6vp/gnj+oJ9GJEBW9hl8jUqy2L6Q2uUxFzPgvoExLbfuSODA==
   dependencies:
     "@types/estree" "0.0.39"
-    "@types/node" "^11.13.0"
+    "@types/node" "^12.0.2"
     acorn "^6.1.1"
 
 run-async@^0.1.0:
