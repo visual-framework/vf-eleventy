@@ -23,6 +23,7 @@ module.exports = function(config) {
   });
 
   // Add some utiliuty filters
+  config.addFilter("markdown", require("./src/filters/markdown.js") );
   config.addFilter("squash", require("./src/filters/squash.js") );
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, {
