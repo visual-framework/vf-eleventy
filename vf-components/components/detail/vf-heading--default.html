@@ -51,6 +51,10 @@
 
     
     
+        
+        
+        
+    
 
 <div class="Pen" data-behaviour="pen" id="pen-6cb9a1f672f5465b1c57796717b8a36b">
 
@@ -83,14 +87,17 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-             <iframe
-                class="Preview-iframe"
-                data-role="window"
-                src="../preview/vf-heading--default.html"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
-                 style=""
-                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
-            </iframe>
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>(unknown path) [Line 7, Column 44]
+  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
+
+    </div>
+    
+</div>
+
+            
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -157,11 +164,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-6cb9a1f672f5465b1c57796717b8a36b-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-xl vf-text--invert"</span>&gt;</span>This heading size is display and inverted<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-xl"</span>&gt;</span>This heading size is extra large<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-l"</span>&gt;</span>This heading size is large<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-r"</span>&gt;</span>This heading size is regular<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-s"</span>&gt;</span>This heading size is small<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -169,40 +172,52 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6cb9a1f672f5465b1c57796717b8a36b-panel-view">
     <code class="Code Code--lang-text">
-        <pre><span class="xml"></span><span class="hljs-comment">{#
-  Pass in your display type and title:
-  {% render '<a href="vf-heading.html">@vf-heading</a>', {"type": "large", "title": "large"} %}
-#}</span><span class="xml">
+        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">spaceless</span></span> %}</span><span class="xml">
 
-</span><span class="hljs-comment">{#
-  Set our data for the template
-#}</span><span class="xml">
+</span><span class="hljs-comment">{# Determine type of element to use, if not explicitly set -#}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> tags %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> tags = 'p' %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> type and title %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">set</span> vf_heading_modifiers = [{ "type": type, "title" : title}] %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+</span><span class="hljs-comment">{# Work out what colour theme is needed for the styling #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> style %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> style_class = style %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-</span><span class="hljs-comment">{#
-  Template
-  If type &amp;&amp; title are not passed it will use default modifiers in the component YAML
-#}</span><span class="xml">
+</span><span class="hljs-comment">{# Set font-size class to be used #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == "display" %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "xl" %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "extra-large" %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "xl" %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "large" %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "l" %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "regular" %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "r" %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "small" %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "s" %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">for</span></span> modifier <span class="hljs-keyword">in</span> vf_heading_modifiers %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> modifier.type == "display" -%}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-xl vf-text--invert"</span>&gt;</span></span><span class="hljs-template-variable">{{modifier.title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">elif</span></span> modifier.type == "extra-large" -%}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-xl"</span>&gt;</span></span><span class="hljs-template-variable">{{modifier.title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">elif</span></span> modifier.type == "large" -%}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-l"</span>&gt;</span></span><span class="hljs-template-variable">{{modifier.title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">elif</span></span> modifier.type == "regular" -%}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-r"</span>&gt;</span></span><span class="hljs-template-variable">{{modifier.title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">elif</span></span> modifier.type == "small" -%}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-s"</span>&gt;</span></span><span class="hljs-template-variable">{{modifier.title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">else</span></span> -%}</span><span class="xml">
-    </span><span class="hljs-comment">{# catch all for if the heading type doesn't match #}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-s"</span>&gt;</span></span><span class="hljs-template-variable">{{modifier.title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endfor</span></span> %}</span><span class="xml"></span></pre>
+
+<span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{tags}}</span><span class="xml"><span class="hljs-tag">
+
+</span></span><span class="hljs-comment">{# You're using an ID? Really?? That'll go here #}</span><span class="xml"><span class="hljs-tag">
+</span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> id %}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{-id-}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">
+
+<span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text
+
+</span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> type %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-text--heading-</span></span></span><span class="hljs-template-variable">{{size}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+
+</span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> style_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-text--</span></span></span><span class="hljs-template-variable">{{style_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+
+</span></span></span><span class="hljs-comment">{# You want a snowflake of a classname for something, here you  #}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+</span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> override_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> | </span></span></span><span class="hljs-template-variable">{{override_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+"</span>&gt;</span>
+
+</span><span class="hljs-template-variable">{{- html | safe if html else heading -}}</span><span class="xml">
+
+<span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{tags}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endspaceless</span></span> %}</span><span class="xml"></span></pre>
     </code>
 </div>
 
@@ -212,29 +227,7 @@
         
             
             <pre>{
-  <span class="hljs-attr">"component-type"</span>: <span class="hljs-string">"element"</span>,
-  <span class="hljs-attr">"vf_heading_modifiers"</span>: [
-    {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"display"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"This heading size is display and inverted"</span>
-    },
-    {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"extra-large"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"This heading size is extra large"</span>
-    },
-    {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"large"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"This heading size is large"</span>
-    },
-    {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"regular"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"This heading size is regular"</span>
-    },
-    {
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"small"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"This heading size is small"</span>
-    }
-  ]
+  <span class="hljs-attr">"component-type"</span>: <span class="hljs-string">"element"</span>
 }</pre>
             
         
@@ -258,8 +251,6 @@
                 
                 <option value="file-e4cfb9d61875812d2881d0da07e45b16">package.json</option>
                 
-                <option value="file-1e1ed5624685ab81288817929537c16d">vf-heading.css</option>
-                
                 <option value="file-85e743d088f126913e1cf0b2758b9158">vf-heading.scss</option>
                 
             </select>
@@ -278,6 +269,22 @@
 
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
+
+<span class="hljs-section">## 0.0.30 (2019-06-03)</span>
+
+<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
+
+
+
+
+
+<span class="hljs-section">## 0.0.29 (2019-05-02)</span>
+
+<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
+
+
+
+
 
 <span class="hljs-section">## 0.0.28 (2019-03-28)</span>
 
@@ -314,7 +321,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">456 Bytes</span>
+                    <span class="Meta-value">652 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -368,7 +375,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.28"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.30"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-heading"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-heading component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -376,13 +383,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attr">"license"</span>: <span class="hljs-string">"Apache 2.0"</span>,
   <span class="hljs-attr">"style"</span>: <span class="hljs-string">"vf-heading.css"</span>,
   <span class="hljs-attr">"sass"</span>: <span class="hljs-string">"index.scss"</span>,
-  <span class="hljs-attr">"files"</span>: [
-    <span class="hljs-string">"index.scss"</span>,
-    <span class="hljs-string">"vf-heading.scss"</span>,
-    <span class="hljs-string">"vf-heading.css"</span>,
-    <span class="hljs-string">"vf-heading.njk"</span>,
-    <span class="hljs-string">"vf-heading.config.yml"</span>
-  ],
   <span class="hljs-attr">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>,
   <span class="hljs-attr">"publishConfig"</span>: {
     <span class="hljs-attr">"access"</span>: <span class="hljs-string">"public"</span>
@@ -391,15 +391,11 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attr">"bugs"</span>: {
     <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://github.com/visual-framework/vf-core/issues/new"</span>
   },
-  <span class="hljs-attr">"dependencies"</span>: {
-    <span class="hljs-attr">"@visual-framework/vf-sass-config"</span>: <span class="hljs-string">"^0.0.25"</span>,
-    <span class="hljs-attr">"node-normalize-scss"</span>: <span class="hljs-string">"^8.0.0"</span>
-  },
   <span class="hljs-attr">"keywords"</span>: [
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"7d11e6ad9d9bfc895f35bef681a48c7553713213"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"7bb3e8605bb5e604a55e7480e8e0d7620cee1b7f"</span>
 }
 </pre>
                             </code>
@@ -417,142 +413,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">911 Bytes</span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="FileBrowser-item" id="file-1e1ed5624685ab81288817929537c16d" data-role="resource-preview">
-            <ul class="Meta">
-                <li class="Meta-item">
-                    <strong class="Meta-key">Content:</strong>
-                    <span class="Meta-value">
-                        <div class="FileBrowser-itemPreview">
-                            
-                            <code class="Code Code--lang-CSS FileBrowser-code">
-                                <pre><span class="hljs-selector-pseudo">:root</span> {
-  <span class="hljs-attribute">--vf-color-white</span>: <span class="hljs-built_in">rgb</span>(255, 255, 255);
-  <span class="hljs-attribute">--vf-color-off-white</span>: <span class="hljs-built_in">rgb</span>(250, 250, 250);
-  <span class="hljs-attribute">--vf-color-black</span>: <span class="hljs-built_in">rgb</span>(40, 45, 35);
-  <span class="hljs-attribute">--vf-color-gray</span>: <span class="hljs-built_in">rgb</span>(112, 115, 114);
-  <span class="hljs-attribute">--vf-color-gray-bright</span>: <span class="hljs-built_in">rgb</span>(185, 179, 168);
-  <span class="hljs-attribute">--vf-color-gray-dark</span>: <span class="hljs-built_in">rgb</span>(84, 88, 90);
-  <span class="hljs-attribute">--vf-color-green</span>: <span class="hljs-built_in">rgb</span>(0, 159, 77);
-  <span class="hljs-attribute">--vf-color-green-bright</span>: <span class="hljs-built_in">rgb</span>(108, 194, 74);
-  <span class="hljs-attribute">--vf-color-green-dark</span>: <span class="hljs-built_in">rgb</span>(0, 123, 83);
-  <span class="hljs-attribute">--vf-color-light-green</span>: <span class="hljs-built_in">rgb</span>(168, 199, 0);
-  <span class="hljs-attribute">--vf-color-light-green-bright</span>: <span class="hljs-built_in">rgb</span>(226, 232, 104);
-  <span class="hljs-attribute">--vf-color-light-green-dark</span>: <span class="hljs-built_in">rgb</span>(132, 189, 0);
-  <span class="hljs-attribute">--vf-color-ruby</span>: <span class="hljs-built_in">rgb</span>(228, 0, 70);
-  <span class="hljs-attribute">--vf-color-ruby-bright</span>: <span class="hljs-built_in">rgb</span>(229, 143, 158);
-  <span class="hljs-attribute">--vf-color-ruby-dark</span>: <span class="hljs-built_in">rgb</span>(166, 9, 61);
-  <span class="hljs-attribute">--vf-color-yellow</span>: <span class="hljs-built_in">rgb</span>(255, 205, 0);
-  <span class="hljs-attribute">--vf-color-yellow-bright</span>: <span class="hljs-built_in">rgb</span>(253, 215, 87);
-  <span class="hljs-attribute">--vf-color-yellow-dark</span>: <span class="hljs-built_in">rgb</span>(255, 184, 28);
-  <span class="hljs-attribute">--vf-color-purple</span>: <span class="hljs-built_in">rgb</span>(130, 70, 175);
-  <span class="hljs-attribute">--vf-color-purple-bright</span>: <span class="hljs-built_in">rgb</span>(203, 163, 216);
-  <span class="hljs-attribute">--vf-color-purple-dark</span>: <span class="hljs-built_in">rgb</span>(86, 61, 130);
-  <span class="hljs-attribute">--vf-color-amber</span>: <span class="hljs-built_in">rgb</span>(255, 163, 0);
-  <span class="hljs-attribute">--vf-color-amber-bright</span>: <span class="hljs-built_in">rgb</span>(190, 84, 0);
-  <span class="hljs-attribute">--vf-color-amber-dark</span>: <span class="hljs-built_in">rgb</span>(239, 192, 110);
-  <span class="hljs-attribute">--vf-color-azure</span>: <span class="hljs-built_in">rgb</span>(40, 122, 226);
-  <span class="hljs-attribute">--vf-color-azure-bright</span>: <span class="hljs-built_in">rgb</span>(139, 184, 232);
-  <span class="hljs-attribute">--vf-color-azure-dark</span>: <span class="hljs-built_in">rgb</span>(0, 61, 165);
-}
-
-<span class="hljs-selector-pseudo">:root</span> {
-  <span class="hljs-attribute">--vf-ui-color-black</span>: <span class="hljs-built_in">rgb</span>(0, 0, 0);
-  <span class="hljs-attribute">--vf-ui-color-gray</span>: <span class="hljs-built_in">rgb</span>(243, 243, 243);
-  <span class="hljs-attribute">--vf-ui-color-gray-light</span>: <span class="hljs-built_in">rgb</span>(216, 216, 216);
-  <span class="hljs-attribute">--vf-ui-color-yellow</span>: <span class="hljs-built_in">rgb</span>(255, 250, 220);
-  <span class="hljs-attribute">--vf-ui-color-red</span>: <span class="hljs-built_in">rgb</span>(211, 47, 47);
-}
-
-<span class="hljs-selector-class">.vf-text</span> {
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--heading-s</span> {
-  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"IBM Plex Sans"</span>, Helvetica, Arial, sans-serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">19px</span>;
-  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-built_in">var</span>(--vf-text-margin--bottom, 16px) <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--heading-r</span> {
-  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"IBM Plex Sans"</span>, Helvetica, Arial, sans-serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">21px</span>;
-  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.29</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-built_in">var</span>(--vf-text-margin--bottom, 16px) <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--heading-alt</span> {
-  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"IBM Plex Sans"</span>, Helvetica, Arial, sans-serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
-  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.333</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-built_in">var</span>(--vf-text-margin--bottom, 16px) <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--heading-l</span> {
-  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"IBM Plex Sans"</span>, Helvetica, Arial, sans-serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
-  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.333</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-built_in">var</span>(--vf-text-margin--bottom, 16px) <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--heading-xl</span> {
-  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"IBM Plex Sans"</span>, Helvetica, Arial, sans-serif;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">42px</span>;
-  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.547</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-built_in">var</span>(--vf-text-margin--bottom, 16px) <span class="hljs-number">0</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--has-tag</span> {
-  <span class="hljs-attribute">-webkit-box-align</span>: center;
-      <span class="hljs-attribute">-ms-flex-align</span>: center;
-          <span class="hljs-attribute">align-items</span>: center;
-  <span class="hljs-attribute">display</span>: -webkit-box;
-  <span class="hljs-attribute">display</span>: -ms-flexbox;
-  <span class="hljs-attribute">display</span>: flex;
-}
-
-<span class="hljs-selector-class">.vf-text--has-tag</span> <span class="hljs-selector-class">.vf-badge</span> {
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
-}
-
-<span class="hljs-selector-class">.vf-text--invert</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#282d23</span>;
-  <span class="hljs-attribute">color</span>: white;
-  <span class="hljs-attribute">display</span>: inline-block;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">4px</span> <span class="hljs-number">8px</span> <span class="hljs-number">4px</span> <span class="hljs-number">4px</span>;
-}
-</pre>
-                            </code>
-                            
-                        </div>
-                    </span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">URL:</strong>
-                    <span class="Meta-value"><a data-no-pjax href="../raw/vf-heading/vf-heading.css"><span>/components/raw/vf-heading/vf-heading.css</span></a></span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/vf-components/vf-heading/vf-heading.css</span>
-                </li>
-                <li class="Meta-item">
-                    <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.9 KB</span>
+                    <span class="Meta-value">668 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -639,15 +500,31 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(6)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="">
                     <span>Default</span>
                 </a>, 
             
-                <a href="vf-heading--template.html">
-                    <span>Template</span>
+                <a href="vf-heading--display.html">
+                    <span>Display</span>
+                </a>, 
+            
+                <a href="vf-heading--extra-large.html">
+                    <span>Extra Large</span>
+                </a>, 
+            
+                <a href="vf-heading--large.html">
+                    <span>Large</span>
+                </a>, 
+            
+                <a href="vf-heading--regular.html">
+                    <span>Regular</span>
+                </a>, 
+            
+                <a href="vf-heading--small.html">
+                    <span>Small</span>
                 </a>
             
             </span>
@@ -675,24 +552,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
             <span class="Meta-value">src/components/vf-components/vf-heading/vf-heading.njk</span>
         </li>
         
-        <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="vf-heading.html">@<span>vf-heading</span></a>
-            
-            </span>
-        </li class="Meta-item">
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="vf-heading--template.html">@<span>vf-heading--template</span></a>
-            
-            </span>
-        </li>
         
     </ul>
 </div>
@@ -704,40 +563,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         <p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-heading"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-heading.svg" alt="npm version"></a></p>
 <h2 id="about">About</h2>
 <h2 id="demo">Demo</h2>
-<h1 class="vf-text vf-text--heading-xl vf-text--invert">This heading size is display and inverted</h1>
-
-
-
-
-
-
-
-<h2 class="vf-text vf-text--heading-xl">This heading size is extra large</h2>
-
-
-
-
-
-
-
-<h3 class="vf-text vf-text--heading-l">This heading size is large</h3>
-
-
-
-
-
-
-
-<h4 class="vf-text vf-text--heading-r">This heading size is regular</h4>
-
-
-
-
-
-
-
-<h5 class="vf-text vf-text--heading-s">This heading size is small</h5>
-
 <h2 id="installation-and-implementation">Installation and Implementation</h2>
 <p>This component is distributed with npm. After <a href="https://www.npmjs.com/get-npm">installing npm</a>, you can install the <code>vf-heading</code> with this command.</p>
 <code><pre>$ <span class="hljs-built_in">npm</span> install --save @visual-framework/vf-heading</pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
@@ -824,6 +649,78 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-badge--primary.html" data-pjax>
+                <span>Primary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-badge--secondary.html" data-pjax>
+                <span>Secondary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-badge--tertiary.html" data-pjax>
+                <span>Tertiary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-badge--outline.html" data-pjax>
                 <span>Outline</span>
                 
@@ -848,8 +745,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-badge--sizes.html" data-pjax>
-                <span>Sizes</span>
+            <a class="Tree-entityLink" href="vf-badge--rounded.html" data-pjax>
+                <span>Rounded</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -872,8 +769,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-badge--styles.html" data-pjax>
-                <span>Styles</span>
+            <a class="Tree-entityLink" href="vf-badge--pill.html" data-pjax>
+                <span>Pill</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -896,8 +793,56 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-badge--variants.html" data-pjax>
-                <span>Variants</span>
+            <a class="Tree-entityLink" href="vf-badge--square.html" data-pjax>
+                <span>Square</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-badge--phases.html" data-pjax>
+                <span>Phases</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-badge--link.html" data-pjax>
+                <span>Link</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2171,10 +2116,21 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-heading">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Headings</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-heading.html" data-pjax>
-                <span>Headings</span>
+            <a class="Tree-entityLink" href="vf-heading--display.html" data-pjax>
+                <span>Display</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2195,6 +2151,107 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-heading--extra-large.html" data-pjax>
+                <span>Extra Large</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-heading--large.html" data-pjax>
+                <span>Large</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-heading--regular.html" data-pjax>
+                <span>Regular</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-heading--small.html" data-pjax>
+                <span>Small</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-list">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Lists</span>
@@ -2209,7 +2266,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-list--default.html" data-pjax>
-                <span>Block</span>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2384,54 +2441,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--default.html" data-pjax>
-                <span>Default</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
-                <span>Additional</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
                 <span>Global</span>
                 
@@ -2458,6 +2467,30 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
                 <span>Main</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
+                <span>Additional</span>
                 
 
 <div class="Status Status--unlabelled">

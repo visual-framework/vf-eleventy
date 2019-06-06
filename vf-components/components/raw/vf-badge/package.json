@@ -1,5 +1,5 @@
 {
-  "version": "0.0.28",
+  "version": "0.0.29",
   "name": "@visual-framework/vf-badge",
   "description": "vf-badge component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -27,12 +27,12 @@
     "url": "https://github.com/visual-framework/vf-core/issues/new"
   },
   "dependencies": {
-    "@visual-framework/vf-sass-config": "^0.0.25",
+    "@visual-framework/vf-sass-config": "^0.0.26",
     "node-normalize-scss": "^8.0.0"
   },
   "keywords": [
     "fractal",
     "component"
   ],
-  "gitHead": "7d11e6ad9d9bfc895f35bef681a48c7553713213"
+  "gitHead": "06c9235464a78ae84f0efc753595b069c8dddeee"
 }
