@@ -32,7 +32,8 @@ To add a component you can use npm/Yarn or install it manually.
 ### By package
 
 - installation: `yarn add @visual-framework/vf-logo`
-- updating: `yarn upgrade-interactive --latest`
+- updating components: `yarn upgrade-interactive --latest`
+  - alias: `npm run update-components`
 
 ### Manual installation for customisation
 
