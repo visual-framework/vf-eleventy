@@ -38,9 +38,9 @@ module.exports = function(config) {
   // {% sampleShortcode "firstName", "lastName" %}
   // handlebars
   // {{ sampleShortcode "firstName" "lastName" }}
-  config.addShortcode("sampleShortcode", function(firstName, lastName) {
-    return 'hi ' + firstName + lastName;
-  });
+  // config.addShortcode("sampleShortcode", function(firstName, lastName) {
+  //   return 'hi ' + firstName + lastName;
+  // });
 
   // minify the html output
   // config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
