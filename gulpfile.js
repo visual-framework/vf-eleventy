@@ -52,7 +52,7 @@ gulp.task('elventy-set-to-build', function(done) {
 gulp.task('eleventy', function(done) {
   global.vfBuilderPath   = __dirname + '/build/vf-components';
   global.vfComponentPath = __dirname + '/src/components'; // where our VF components live
-  global.vfDocsPath      = __dirname + '/src/docs';
+  global.vfDocsPath      = __dirname + '/src/fractal/docs';
   global.vfOpenBrowser   = false; // if you want to open a browser tab for the component library
   global.fractal         = require('@visual-framework/vf-core/fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
 
