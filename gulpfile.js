@@ -34,6 +34,7 @@ gulp.task('elventy-set-to-serve', function(done) {
   // Since we're not using the 11ty command line directly, we need to set the
   // `--serve` param manually
   process.argv.push('--serve');
+  process.env.ELEVENTY_ENV = 'development';
   fractalBuildMode = 'server';
   done();
 });
@@ -42,6 +43,7 @@ gulp.task('elventy-set-to-build', function(done) {
   // Since we're not using the 11ty command line directly, we need to set the
   // `--serve` param manually
   process.argv.push('--quiet');
+  process.env.ELEVENTY_ENV = 'production';
   done();
 });
 
