@@ -3,7 +3,7 @@ const rename = require('gulp-rename');
 
 let fractalBuildMode = 'build';
 
-// Gulp tasks live in their own files, for the sake of clarity.
+// Some Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
 
 // Eleventy config
@@ -11,8 +11,8 @@ process.argv.push('--config=eleventy.js');
 
 // Watch folders for changess
 gulp.task('watch', function() {
-  gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
-  gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
+  gulp.watch(['./src/scss/**/*.scss','./src/scss/*.scss'], gulp.parallel('css'));
+  gulp.watch(['./src/js/**/*.js','./src/js/*.js'], gulp.parallel('js'));
 });
 
 // Copy all vf HBS templates to ./src/site/_includes/components
@@ -65,14 +65,16 @@ gulp.task('eleventy', function(done) {
 
 // Let's build this sucker.
 gulp.task('build', gulp.series(
-  gulp.parallel('css','js'),
+  'vf-clean',
+  gulp.parallel('css','js','vf-css','vf-component-assets'),
   'elventy-set-to-build',
   'eleventy'
 ));
 
 // Build and watch things during dev
 gulp.task('dev', gulp.series(
-  gulp.parallel('css','js'),
+  'vf-clean',
+  gulp.parallel('css','js','vf-css','vf-component-assets'),
   'elventy-set-to-serve',
   'eleventy',
   'watch'
