@@ -11,3 +11,4 @@ src/site/_includes/js
 yarn-error.log
 dist
 build
+temp
