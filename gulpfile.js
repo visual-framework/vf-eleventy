@@ -11,8 +11,8 @@ process.argv.push('--config=eleventy.js');
 
 // Watch folders for changess
 gulp.task('watch', function() {
-  gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
-  gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
+  gulp.watch(['./src/scss/**/*.scss','./src/scss/*.scss'], gulp.parallel('css'));
+  gulp.watch(['./src/js/**/*.js','./src/js/*.js'], gulp.parallel('js'));
 });
 
 // Copy all vf HBS templates to ./src/site/_includes/components
