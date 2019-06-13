@@ -1,0 +1,37 @@
+{
+  "version": "0.0.29",
+  "name": "@visual-framework/vf-link",
+  "description": "vf-link component",
+  "homepage": "https://visual-framework.github.io/vf-core/",
+  "author": "VF",
+  "license": "Apache 2.0",
+  "style": "vf-link.css",
+  "sass": "index.scss",
+  "files": [
+    "index.scss",
+    "vf-link.scss",
+    "vf-link--secondary.scss",
+    "vf-link.variables.scss",
+    "vf-link.css",
+    "vf-link.njk",
+    "vf-link--secondary.njk",
+    "vf-link.config.yml"
+  ],
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repo": "https://github.com/visual-framework/vf-core/tree/master/components/elements/vf-link",
+  "bugs": {
+    "url": "https://github.com/visual-framework/vf-core/issues/new"
+  },
+  "dependencies": {
+    "@visual-framework/vf-sass-config": "^0.0.26",
+    "node-normalize-scss": "^8.0.0"
+  },
+  "keywords": [
+    "fractal",
+    "component"
+  ],
+  "gitHead": "06c9235464a78ae84f0efc753595b069c8dddeee"
+}

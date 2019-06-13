@@ -1,0 +1,3 @@
+/* temporary override until https://github.com/visual-framework/vf-core/issues/399 is resolved */
+.vf-sr-only {
+  display: none; }

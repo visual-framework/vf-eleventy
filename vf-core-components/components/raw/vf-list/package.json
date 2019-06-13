@@ -1,5 +1,5 @@
 {
-  "version": "0.0.30",
+  "version": "0.0.29",
   "name": "@visual-framework/vf-list",
   "description": "vf-list component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -7,6 +7,16 @@
   "license": "Apache 2.0",
   "style": "vf-list.css",
   "sass": "index.scss",
+  "files": [
+    "index.scss",
+    "vf-list.scss",
+    "vf-list.css",
+    "vf-list.njk",
+    "vf-list--inline.njk",
+    "vf-list--ordered.njk",
+    "vf-list--unordered.njk",
+    "vf-list.config.yml"
+  ],
   "test": "echo \"Error: no test specified\" && exit 1",
   "publishConfig": {
     "access": "public"
@@ -15,9 +25,13 @@
   "bugs": {
     "url": "https://github.com/visual-framework/vf-core/issues/new"
   },
+  "dependencies": {
+    "@visual-framework/vf-sass-config": "^0.0.26",
+    "node-normalize-scss": "^8.0.0"
+  },
   "keywords": [
     "fractal",
     "component"
   ],
-  "gitHead": "7bb3e8605bb5e604a55e7480e8e0d7620cee1b7f"
+  "gitHead": "06c9235464a78ae84f0efc753595b069c8dddeee"
 }
