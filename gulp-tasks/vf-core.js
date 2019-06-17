@@ -12,7 +12,7 @@ config.vfConfig = config.vfConfig || [];
 global.vfName = config.vfConfig.vfName || "Visual Framework 2.0";
 global.vfNamespace = config.vfConfig.vfNamespace || "vf-";
 global.vfComponentPath = '../src/components';
-global.vfThemePath = './tools/vf-frctl-theme';
+// global.vfThemePath = './tools/vf-frctl-theme';
 const autoprefixerOptions = { overrideBrowserslist: ['last 2 versions', '> 5%', 'Firefox ESR'] };
 const path = require('path');
 const componentPath = path.resolve('.', 'src/components' );
@@ -234,7 +234,7 @@ gulp.task('vf-scripts:es5', function() {
     }))
     // inlining the sourcemap into the exported .js file
     // .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./temp/build-files/scripts'));
+    .pipe(gulp.dest('./build/scripts'));
 });
 
 
