@@ -6,18 +6,28 @@ const fs = require('fs');
 // Configuration
 // -----------------------------------------------------------------------------
 
-// Pull in some optional configuration from the package.json file
+// Pull in some optional configuration from the package.json file, a la:
+// "vfConfig": {
+//   "vfName": "My Component Library",
+//   "vfNameSpace": "myco-",
+//   "vfComponentPath": "./src/components",
+//   "vfBuildDestination": "./build",
+//   "vfThemePath": "@frctl/mandelbrot"
+// },
+// all settings are optional
 const config = JSON.parse(fs.readFileSync('./package.json'));
 config.vfConfig = config.vfConfig || [];
 global.vfName = config.vfConfig.vfName || "Visual Framework 2.0";
 global.vfNamespace = config.vfConfig.vfNamespace || "vf-";
-global.vfComponentPath = '../src/components';
-// global.vfThemePath = './tools/vf-frctl-theme';
+global.vfComponentPath = config.vfConfig.vfComponentPath || __dirname + '/components';
+global.vfBuildDestination = config.vfConfig.vfBuildDestination || __dirname + '/temp/build-files';
+global.vfThemePath = config.vfConfig.vfThemePath || './tools/vf-frctl-theme';
 const autoprefixerOptions = { overrideBrowserslist: ['last 2 versions', '> 5%', 'Firefox ESR'] };
 const path = require('path');
-const componentPath = path.resolve('.', 'src/components' );
+const componentPath = path.resolve('.', global.vfComponentPath);
+const buildDestionation = path.resolve('.', global.vfBuildDestination);
 const SassInput = componentPath + '/vf-componenet-rollup/index.scss';
-const SassOutput = './build/css';
+const SassOutput = buildDestionation + '/css';
 
 // -----------------------------------------------------------------------------
 // Dependencies
@@ -234,7 +244,7 @@ gulp.task('vf-scripts:es5', function() {
     }))
     // inlining the sourcemap into the exported .js file
     // .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/scripts'));
+    .pipe(gulp.dest(buildDestionation + '/scripts'));
 });
 
 
@@ -244,7 +254,7 @@ gulp.task('vf-scripts:modern', function() {
       .pipe(rename(function (path) {
         path.extname = '.modern.js';
       }))
-    .pipe(gulp.dest('./temp/build-files/scripts'));
+    .pipe(gulp.dest(buildDestionation + '/scripts'));
 });
 
 // -----------------------------------------------------------------------------
@@ -253,7 +263,7 @@ gulp.task('vf-scripts:modern', function() {
 gulp.task('vf-component-assets', function() {
   return gulp
     .src([componentPath + '/vf-core-components/**/assets/**/*', componentPath + '/**/assets/**/*'])
-    .pipe(gulp.dest('./build/assets'));
+    .pipe(gulp.dest(buildDestionation + '/assets'));
 });
 
 
@@ -282,7 +292,7 @@ gulp.task('frctlBuild', function(done) {
   const fractal = require('./fractal.js').initialize('build',fractalReadyCallback);
   function fractalReadyCallback() {
     // Copy compiled css/js and other assets
-    gulp.src('./temp/build-files/**/*')
+    gulp.src(buildDestionation + '/**/*')
       .pipe(gulp.dest('./build'));
       console.info('Copied `/temp/build-files` assets.');
 
@@ -294,7 +304,7 @@ gulp.task('frctlVRT', function(done) {
   const fractal = require('./fractal.js').initialize('VRT',fractalReadyCallback);
   function fractalReadyCallback() {
     // Copy compiled css/js and other assets
-    gulp.src('./temp/build-files/**/*')
+    gulp.src(buildDestionation + '/**/*')
       .pipe(gulp.dest('./build'));
       console.info('Copied `/temp/build-files` assets.');
 

@@ -3,6 +3,11 @@
   "version": "0.0.2",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "main": "gulpfile.js",
+  "vfConfig": {
+    "vfComponentPath": "./src/components",
+    "vfBuildDestination": "./build",
+    "vfThemePath": "@frctl/mandelbrot"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "gulp dev",
