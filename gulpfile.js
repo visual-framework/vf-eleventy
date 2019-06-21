@@ -5,6 +5,7 @@ let fractalBuildMode = 'build';
 
 // Some Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
+require('./node_modules/\@visual-framework/vf-core/gulpfile.js');
 
 // Eleventy config
 process.argv.push('--config=eleventy.js');
