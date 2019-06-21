@@ -24,7 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@visual-framework/vf-banner": "0.0.21",
-    "@visual-framework/vf-core": "^2.0.0-alpha.5",
+    "@visual-framework/vf-core": "^2.0.0-alpha.6",
     "@visual-framework/vf-divider": "^0.0.35",
     "@visual-framework/vf-favicon": "0.0.35",
     "@visual-framework/vf-global-header": "0.0.36",
