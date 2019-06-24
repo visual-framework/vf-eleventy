@@ -146,7 +146,7 @@ gulp.task('vf-css', function() {
   return gulp
     .src([componentPath+'/**/*.scss',componentPath+'/**/**/*.scss'], {
       allowEmpty: true,
-      ignore: [componentPath+'/**/index.scss',componentPath+'/**/**/index.scss']
+      ignore: [componentPath+'/**/index.scss',componentPath+'/**/**/index.scss',componentPath+'/vf-core-components/vf-core/components/**/*.scss']
     })
     .pipe(ListStream.obj(function (err, data) {
       if (err)
@@ -199,7 +199,7 @@ gulp.task('vf-scss-lint', function lintCssTask() {
 
   return gulp
     .src(
-      [componentPath+'/**/embl-*.scss', componentPath+'/**/vf-*.scss', '!'+componentPath+'/**/index.scss', '!assets/**/*.scss', '!'+componentPath+'/vf-design-tokens/dist/**/*.scss']
+      [componentPath+'/**/embl-*.scss', componentPath+'/**/vf-*.scss', '!'+componentPath+'/**/index.scss', '!assets/**/*.scss']
     )
     .pipe(gulpStylelint({
       failAfterError: true,
