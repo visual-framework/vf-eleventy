@@ -1,0 +1,41 @@
+// vf-breadcrumbs
+@import 'vf-breadcrumbs.variables.scss';
+
+.vf-breadcrumbs {
+  display: flex;
+  grid-column: 1 / -1; // so that it takes up all the space no matter the parent grid
+  margin-bottom: $vf-breadcrumbs__margin--bottom;
+  margin-top: $vf-breadcrumbs__margin--top;
+}
+
+.vf-breadcrumbs__item {
+  @include set-type(body--r);
+
+  color: $vf-breadcrumbs__item-text--color;
+  margin-right: 3px;
+  position: relative;
+
+
+  &:not(:last-of-type) {
+    &::after {
+      color: $vf-breadcrumbs__item-chevron--color;
+      content: '>';
+      display: inline-block;
+      margin-left: 3px;
+    }
+  }
+}
+
+.vf-breadcrumbs__heading {
+  @include set-type(body--r, $custom-margin-bottom: 0);
+
+  display: inline;
+
+  .vf-breadcrumbs__list + & {
+    margin-left: 32px;
+  }
+}
+
+.vf-breadcrumbs__link {
+  color: currentColor;
+}

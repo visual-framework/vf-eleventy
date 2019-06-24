@@ -3,6 +3,97 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.37 (2019-06-21)
+
+
+### Bug Fixes
+
+* vf-global-header-dependencies ([e98d8b6](https://github.com/visual-framework/vf-core/commit/e98d8b6))
+
+
+
+
+
+## 0.0.36 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.35 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.34 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.33 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.32 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.36 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.35 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.34 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.33 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
+## 0.0.32 (2019-06-20)
+
+**Note:** Version bump only for package @visual-framework/vf-global-header
+
+
+
+
+
 ## 0.0.31 (2019-06-03)
 
 **Note:** Version bump only for package @visual-framework/vf-global-header

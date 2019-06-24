@@ -1,5 +1,5 @@
 {
-  "version": "0.0.15",
+  "version": "0.0.22",
   "name": "@visual-framework/vf-banner",
   "description": "vf-banner component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -8,22 +8,6 @@
   "style": "vf-banner.css",
   "sass": "index.scss",
   "main": "build/index.js",
-  "files": [
-    "index.scss",
-    "vf-banner.css",
-    "vf-banner.scss",
-    "vf-banner--fixed.scss",
-    "vf-banner--gdpr.scss",
-    "vf-banner--phase.scss",
-    "vf-banner.variables.scss",
-    "vf-banner.njk",
-    "vf-banner.js",
-    "vf-banner--fixed.njk",
-    "vf-banner--gdpr.njk",
-    "vf-banner--phase.njk",
-    "vf-banner--top.njk",
-    "vf-banner.config.yml"
-  ],
   "test": "echo \"Error: no test specified\" && exit 1",
   "publishConfig": {
     "access": "public"
@@ -33,12 +17,11 @@
     "url": "https://github.com/visual-framework/vf-core/issues"
   },
   "dependencies": {
-    "@visual-framework/vf-badge": "^0.0.29",
-    "@visual-framework/vf-sass-config": "^0.0.26"
+    "@visual-framework/vf-badge": "^0.0.36"
   },
   "keywords": [
     "fractal",
     "component"
   ],
-  "gitHead": "06c9235464a78ae84f0efc753595b069c8dddeee"
+  "gitHead": "af89c4634c8f90184625e3f04a2852ae576c371e"
 }

@@ -1,64 +1,88 @@
+
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js">
+<html lang="en" class="vf-no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-    window.frctl = {
-        env: 'static'
-    };
-    </script>
-    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+<script>
+// Detect if JS is on and swap vf-no-js for vf-js on the html element
+(function(H){H.className=H.className.replace(/\bvf-no-js\b/,'vf-js')})(document.documentElement);
+</script>
+  <title>Naming: Default | Visual Framework 2.0</title>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
 
+<link rel="apple-touch-icon" sizes="180x180" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/favicon-16x16.png">
+<link rel="manifest" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/site.webmanifest">
+<link rel="mask-icon" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 
-<title>Error rendering component naming | Visual Framework 2.0</title>
-
+  <link rel="stylesheet" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css">
 </head>
-<body>
+<body class="vf-body">
+  <div class="vf-grid">
+    <div class="vf-component__container">
+      ---
+title: Component and pattern naming
+---
+
+<p class="vf-lede">The Visual Framework uses a dual approach for the naming of things.</p>
+
+At the lower level there are **components** which are a type of "ingredient" used
+to assembl into the higher level **patterns** that are richer templates with
+usability guidance.
+
+## Type 1: Components
+
+Components are intended for re-use and should be named for what they are; that is:
+
+- vf-box (not "vf-introduction")
+- [vf-button](/components/detail/vf-button--sizes) (not "vf-call-to-action")
+- vf-grid (not "vf-wide-layout")
+- vf-header (not "vf-big-headline")
+- vf-form
+
+Why? This ensures that that a box will always be rectangular-ish pattern on pages,
+whereas an "introduction" may be a box today, but become simply large text after a redesign.
+
+### Components have
+
+- Lots of code
+    - Generally that CSS/Sass and some JS
+- An HTML code template (Nunjucks)
+- Documentation on how to use
+
+## Type 2: Patterns
+
+If your pattern is primarily intended to be used for particular websites or a brand,
+give it a name that is attached to the role it performs; that is:
+
+- vf-group-masthead
+- vf-registration-form
+- vf-start-page
+
+Why? Naming for the role the pattern does allows us to change the future visual structure,
+so a "display headline" today may have a black background, but tomorrow might have no background
+and be large and italic text.
+
+### Patterns have
+
+- Lots of code
+    - Generally that CSS/Sass and some JS
+- An HTML code template (Nunjucks)
+- Documentation on how to use
 
 
-
-<div class="Frame Frame--full" id="frame">
-
-
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>(unknown path) [Line 7, Column 44]
-  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
+For further guidance on the distinctions, see: [Patterns ≠ Components](https://medium.com/eightshapes-llc/patterns-components-2ce778cbe4e8)
+and UK.gov's information on [patterns](https://design-system.service.gov.uk/patterns) vs [components](https://design-system.service.gov.uk/components).
 
     </div>
-    
-    <code class="Error-stack">
-        <pre>Template render error: (unknown path) [Line 7, Column 44]
-  Error: Unable to call `entity["parent"]["variants"]`, which is undefined or falsey
-    at Object._prettifyError (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:36:11)
-    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:567:19
-    at Template.root [as rootRenderFunc] (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:160:3)
-    at Template.render (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:556:10)
-    at Environment.renderString (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:380:17)
-    at Environment.tryCatcher (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/util.js:16:23)
-    at Environment.ret [as renderStringAsync] (eval at makeNodePromisifiedEval (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/promisify.js:184:12), <anonymous>:14:23)
-    at NunjucksAdapter.render (/home/travis/build/visual-framework/vf-eleventy/node_modules/@frctl/nunjucks/src/adapter.js:101:28)
-    at ComponentSource._wrapInLayout (/home/travis/build/visual-framework/vf-eleventy/node_modules/@frctl/fractal/src/api/components/source.js:269:43)
-    at _wrapInLayout.next (<anonymous>)
-    at onFulfilled (/home/travis/build/visual-framework/vf-eleventy/node_modules/co/index.js:65:19)</pre>
-    </code>
-    
-</div>
+  </div>
 
-
-</div>
-
-
-
-
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
-
-
-
+  <script src="../../scripts/scripts.js"></script>
 </body>
 </html>
+

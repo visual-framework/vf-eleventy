@@ -1,5 +1,5 @@
 {
-  "version": "0.0.6",
+  "version": "0.0.12",
   "name": "@visual-framework/vf-lede",
   "description": "vf-lede component",
   "homepage": "https://visual-framework.github.io/vf-core",
@@ -15,9 +15,6 @@
   "repo": "https://github.com/visual-framework/vf-core/tree/master/tree/master/components/vf-lede",
   "bugs": {
     "url": "https://github.com/visual-framework/vf-core/issues"
-  },
-  "dependencies": {
-    "@visual-framework/vf-sass-config": "^0.0.12"
   },
   "keywords": [
     "fractal",
