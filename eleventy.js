@@ -13,6 +13,10 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
+
+  // BroswerSync options
+  config.setBrowserSyncConfig({ open: true });
+
   // Filters
   // https://www.11ty.io/docs/filters/
   // -----
