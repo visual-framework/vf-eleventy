@@ -1,6 +1,6 @@
 {
   "name": "@visual-framework/vf-boilerplate-eleventy",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "@visual-framework/vf-banner": "0.0.22",
     "@visual-framework/vf-code-example": "^0.0.36",
     "@visual-framework/vf-content": "^0.0.37",
-    "@visual-framework/vf-core": "github:visual-framework/vf-core#develop",
+    "@visual-framework/vf-core": "github:visual-framework/vf-core#18f0aec6803e7ed6ffdbfc4cfaef4354c11d0069",
     "@visual-framework/vf-design-tokens": "^0.1.7",
     "@visual-framework/vf-divider": "^0.0.36",
     "@visual-framework/vf-favicon": "0.0.36",
