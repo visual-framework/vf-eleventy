@@ -4,29 +4,34 @@ date: 2018-08-22 12:24:50
 layout: layouts/base.njk
 ---
 
+
+<section class="vf-grid">
+
+{% render '@vf-intro', {"vf_intro_phase": "alpha", "vf_intro_heading": siteConfig.siteInformation.title,
+  "vf_intro_lede": siteConfig.siteInformation.short_description,
+  "vf_intro_text": [
+    "☝️ that also means dynamic building of just the CSS and JS you need."
+  ]
+} %}
+
+</section>
+
+
 <section class="vf-intro | embl-grid embl-grid--has-centered-content">
+
 <div>
   <!-- empty -->
 </div>
 <div>
-  <h1 class="vf-intro__heading vf-intro__heading--has-tag">{{ siteConfig.siteInformation.title | safe }} <a href="" class="vf-badge vf-badge--primary vf-badge--phases">alpha</a></h1>
-  <p class="vf-lede">{{ siteConfig.siteInformation.short_description | safe }}</p>
-
-  <p class="vf-intro__text">{{ siteConfig.short_description | safe }}
-
-  (coming soon: dynamic building of just the VF 2.0 CSS and JS in use.)</p>
-</div>
-</section>
-
 
 ## What you get
 
 - the Eleventy static site generator
 - access to the Visual Framework component system
 
-To add a component you can use npm/Yarn or install it manually.
-
 ### Component installation
+
+To add a component you can use npm/Yarn or install it manually.
 
 - installation: `yarn add @visual-framework/vf-logo`
 - updating: `yarn upgrade-interactive --latest`
@@ -52,3 +57,6 @@ Code: {% render "@vf-sample", {text: "with some text"} %}
 
 Returns: {% render "@vf-sample", {text: "with some text"} %}
 </div>
+
+</div>
+</section>
