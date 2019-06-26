@@ -19,7 +19,7 @@
     "fractal",
     "component"
   ],
-  "gitHead": "7bb3e8605bb5e604a55e7480e8e0d7620cee1b7f",
+  "gitHead": "af89c4634c8f90184625e3f04a2852ae576c371e",
   "dependencies": {
     "@visual-framework/vf-form__checkbox": "^0.0.37",
     "@visual-framework/vf-form__helper": "^0.0.36",

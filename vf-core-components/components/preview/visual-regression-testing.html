@@ -1,64 +1,69 @@
-
-
 <!DOCTYPE html>
-<html lang="en" class="vf-no-js">
+<html lang="en" dir="ltr" class="no-js">
 <head>
-<script>
-// Detect if JS is on and swap vf-no-js for vf-js on the html element
-(function(H){H.className=H.className.replace(/\bvf-no-js\b/,'vf-js')})(document.documentElement);
-</script>
-  <title>Visual Regression Testing: Default | Visual Framework 2.0</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/favicon-16x16.png">
-<link rel="manifest" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/site.webmanifest">
-<link rel="mask-icon" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/safari-pinned-tab.svg" color="#ffffff">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css">
+<title>Error rendering component visual-regression-testing | Visual Framework 2.0</title>
+
 </head>
-<body class="vf-body">
-  <div class="vf-grid">
-    <div class="vf-component__container">
-      ---
-title: Visual Regression Testing
-order: 105
----
-
-To be confident that we can ammend components code if needed without breaking anything we need to test against the agreed look and interaction(s) of a component.
+<body>
 
 
 
-We are making use of [BackStopJS](https://github.com/garris/BackstopJS) to do this. We store the reference 'truth' on github inside the component library monorepo [vf-core](https://github.com/visual-framework/vf-core). We run this locally on our machines before pushing to the remomte repository to create a PR.
+<div class="Frame Frame--full" id="frame">
 
 
-
-## To get this working:
-
-
-
-First, make sure you have the latest `develop` branch and have `npm install`ed so everything is in place. When you get to a point in your code where you want to create a PR you will need to test your changes against the Visual Regressiong Testing (VRT) reference images.
-
-
-## To do this:
-
-
-1. Run `gulp frctlVRT` to create an updated static build of the component library.
-2. Run `gulp vizres-test` to start the test.
-
-When the test is complete it will open your default browser and display the results.
-
-It currently fails comparisons that have a 1.0% or more difference.
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>(unknown path)
+  Error: template not found: layouts/render.njk</p>
 
     </div>
-  </div>
+    
+    <code class="Error-stack">
+        <pre>Template render error: (unknown path)
+  Error: template not found: layouts/render.njk
+    at Object._prettifyError (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:36:11)
+    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:567:19
+    at eval (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:10:11)
+    at createTemplate (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:295:11)
+    at next (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:282:7)
+    at handle (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:329:11)
+    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:339:9
+    at next (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:280:7)
+    at handle (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:329:11)
+    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:339:9
+    at next (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:280:7)
+    at Object.asyncIter (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:286:3)
+    at Environment.getTemplate (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:321:9)
+    at Template.root [as rootRenderFunc] (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:9:5)
+    at Template.render (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:556:10)
+    at Environment.renderString (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:380:17)</pre>
+    </code>
+    
+</div>
 
-  <script src="../../scripts/scripts.js"></script>
+
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+
+
 </body>
 </html>
-

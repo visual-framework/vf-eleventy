@@ -1,66 +1,69 @@
-
-
 <!DOCTYPE html>
-<html lang="en" class="vf-no-js">
+<html lang="en" dir="ltr" class="no-js">
 <head>
-<script>
-// Detect if JS is on and swap vf-no-js for vf-js on the html element
-(function(H){H.className=H.className.replace(/\bvf-no-js\b/,'vf-js')})(document.documentElement);
-</script>
-  <title>Creating New Components: Default | Visual Framework 2.0</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/favicon-16x16.png">
-<link rel="manifest" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/site.webmanifest">
-<link rel="mask-icon" href="https://dev.assets.emblstatic.net/vf/assets/vf-favicon/assets/safari-pinned-tab.svg" color="#ffffff">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css">
+<title>Error rendering component creating-new-components | Visual Framework 2.0</title>
+
 </head>
-<body class="vf-body">
-  <div class="vf-grid">
-    <div class="vf-component__container">
-      ---
-title: Creating a new component
-order: 200
-isIndex: false
----
+<body>
 
-This codebase includes a folder and file creation tool. It allows you to quickly create all the required files to make a component. It gives you the option to create am element, block, or container.
 
-1. Install Yeoman
-   - If you've come this far and you don't have `yo`, you should be able to install it with `npm install -g yo@latest`
-   - If you get stuck, [see the official install guide](http://yeoman.io/codelab/setup.html)
-1. Create a new component
-   - Run `gulp vf-component` and answer the questions when prompted.
-       - **Type of component:** We use a variation of the atomic design methodology, [read about the differences here](http://bradfrost.com/blog/post/atomic-web-design/#atoms). We use: elements, blocks, and containers.
-           - an element would be a heading, or a button
-           - a block would be a teaser, or a search form
-           - a container would be a group of teasers
-       - **Name of component:** Go for something simple and obvious (todo: we need a guide/documentation on how we name things). Don't worry about namespacing and prefixing, the tooling will take care of this.
-       - **NPM package:** If you're making something interesting (probably not an 'element'), then saying 'yes' will allow the component to be shared as an optional part of the framework on NPM.
-    - You customised template component will have been added to your `/components` directory.
-1. Add the `@import 'vfc-your-component.scss';` to `/assets/scss/styles.scss`.
-1. Developing your component
-   - Edit your template files in the `/components/your-component-name` folder
-   - Run `gulp vf-dev` to compile and preview the component
-1. Sharing you component back
-   - Publish it to npm; or
-   - If you think your component is of use to the wider `vf-core` community, [make a Pull Request](https://github.com/visual-framework/vf-core/pulls).
 
- <div class="vf-box">
- Tip: also consult the [guidelines](guidelines) for the naming of things and coding standards.
- </div>
+<div class="Frame Frame--full" id="frame">
+
+
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>(unknown path)
+  Error: template not found: layouts/render.njk</p>
 
     </div>
-  </div>
+    
+    <code class="Error-stack">
+        <pre>Template render error: (unknown path)
+  Error: template not found: layouts/render.njk
+    at Object._prettifyError (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:36:11)
+    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:567:19
+    at eval (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:10:11)
+    at createTemplate (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:295:11)
+    at next (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:282:7)
+    at handle (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:329:11)
+    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:339:9
+    at next (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:280:7)
+    at handle (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:329:11)
+    at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:339:9
+    at next (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:280:7)
+    at Object.asyncIter (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:286:3)
+    at Environment.getTemplate (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:321:9)
+    at Template.root [as rootRenderFunc] (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:9:5)
+    at Template.render (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:556:10)
+    at Environment.renderString (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:380:17)</pre>
+    </code>
+    
+</div>
 
-  <script src="../../scripts/scripts.js"></script>
+
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+
+
 </body>
 </html>
-
