@@ -1,10 +1,10 @@
 {
   "name": "@visual-framework/vf-boilerplate-eleventy",
-  "version": "0.0.2",
+  "version": "2.0.0-alpha.1",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/visual-framework/vf-eleventy.git"
+    "url": "git+https://github.com/visual-framework/vf-eleventy.git"
   },
   "license": "Apache-2.0",
   "author": "Ken Hawkins <ken.hawkins@embl.de> (https://www.embl.de/aboutus/communication_outreach/)",
@@ -79,5 +79,13 @@
     "luxon": "^1.16.0",
     "require-dir": "^1.0.0",
     "rollup-plugin-includepaths": "^0.2.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/visual-framework/vf-eleventy/issues"
+  },
+  "homepage": "https://github.com/visual-framework/vf-eleventy#readme",
+  "devDependencies": {
+    "coffee-script": "^1.12.7"
+  },
+  "keywords": []
 }
