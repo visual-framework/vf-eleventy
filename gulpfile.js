@@ -5,7 +5,6 @@ let fractalBuildMode = 'build';
 
 // Some Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
-require('./node_modules/\@visual-framework/vf-core/gulpfile.js');
 
 // Tasks to build/run vf-core component system
 require('./node_modules/\@visual-framework/vf-core/gulpfile.js');
