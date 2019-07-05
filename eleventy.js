@@ -58,6 +58,17 @@ module.exports = function(config) {
     return new fractalRenderExtension(nunjucksEngine,fractal);
   });
 
+  // Add a tag level markdown filter
+  // {% markdown %}
+  //
+  // [I'm some markdown](#link)
+  //
+  // {% endmarkdown %}
+  config.addNunjucksTag("markdown", function(nunjucksEngine) {
+    var fractalRenderExtension = require("./src/filters/markdown_tag.js");
+    return new fractalRenderExtension(nunjucksEngine);
+  });
+
   // config.addNunjucksTag("uppercase", function(nunjucksEngine) {
   //   return new function() {
   //     this.tags = ["uppercase"];
