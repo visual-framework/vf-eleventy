@@ -35,6 +35,8 @@
   --vf-ui-color--grey--light: #d8d8d8;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
+  --vf-ui-color--white: #ffffff;
+  --vf-ui-color--off-white: #fafafa;
 }
 
 .vf-blockquote {
@@ -44,13 +46,14 @@
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
   margin: 0;
+  border: 0;
   padding: 10px 8px 10px 32px;
   position: relative;
 }
 
 .vf-blockquote::before {
   content: '';
-  border-left: 4px solid;
+  border-left: 4px solid #d0d0ce;
   position: absolute;
   left: 12px;
   height: 100%;

@@ -35,6 +35,8 @@
   --vf-ui-color--grey--light: #d8d8d8;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
+  --vf-ui-color--white: #ffffff;
+  --vf-ui-color--off-white: #fafafa;
 }
 
 .vf-text--body > a {
@@ -139,7 +141,7 @@
 
 .vf-text--heading-l {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 16px 0;
@@ -156,7 +158,11 @@
 }
 
 .vf-text--has-tag {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -165,6 +171,8 @@
 }
 
 .vf-text--invert {
+  background-color: #000000;
+  color: #ffffff;
   display: inline-block;
   padding: 4px 8px 4px 4px;
 }
@@ -188,7 +196,11 @@
 }
 
 .vf-intro__heading--has-tag {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -203,7 +215,9 @@
   }
   .vf-intro__heading--has-tag .vf-badge {
     margin-left: 0;
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 

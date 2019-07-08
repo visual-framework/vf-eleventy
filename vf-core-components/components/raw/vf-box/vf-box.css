@@ -35,10 +35,17 @@
   --vf-ui-color--grey--light: #d8d8d8;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
+  --vf-ui-color--white: #ffffff;
+  --vf-ui-color--off-white: #fafafa;
 }
 
 .vf-box {
-  box-sizing: border-box;
+  background-color: #54585a;
+  border-color: #54585a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  margin-bottom: 24px;
   padding: 24px 16px;
   width: 100%;
 }
@@ -76,9 +83,22 @@
   padding: 32px;
 }
 
+.vf-box--primary {
+  background-color: #003da5;
+  border-color: #003da5;
+  color: #ffffff;
+}
+
 .vf-box--secondary {
   background-color: #009f4d;
   border-color: #009f4d;
+  color: #ffffff;
+}
+
+.vf-box--tertiary {
+  background-color: #54585a;
+  border-color: #54585a;
+  color: #ffffff;
 }
 
 .vf-box--rounded {
@@ -89,4 +109,5 @@
   background-color: transparent;
   border-style: solid;
   border-width: 2px;
+  color: #000000;
 }

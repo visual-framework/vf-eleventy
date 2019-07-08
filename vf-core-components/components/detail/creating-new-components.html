@@ -90,8 +90,8 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: template not found: layouts/render.njk</p>
+        <p>(unknown path) [Line 7, Column 44]
+  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
 
     </div>
     
@@ -162,14 +162,14 @@
         
         <pre>---
 title: Creating a new component
-order: 200
+order: 201
 isIndex: false
 ---
 
 This codebase includes a folder and file creation tool. It allows you to quickly create all the required files to make a component. It gives you the option to create am element, block, or container.
 
 1. Install Yeoman
-- If you've come this far and you don't have `yo`, you should be able to install it with `npm install -g yo@latest`
+- If you've come this far and you don't have `yo`, you should be able to install it with `yarn global add yo@latest`
 - If you get stuck, [see the official install guide](http://yeoman.io/codelab/setup.html)
 1. Create a new component
 - Run `gulp vf-component` and answer the questions when prompted.
@@ -179,10 +179,11 @@ This codebase includes a folder and file creation tool. It allows you to quickly
 - a container would be a group of teasers
 - **Name of component:** Go for something simple and obvious (todo: we need a guide/documentation on how we name things). Don't worry about namespacing and prefixing, the tooling will take care of this.
 - **NPM package:** If you're making something interesting (probably not an 'element'), then saying 'yes' will allow the component to be shared as an optional part of the framework on NPM.
-- You customised template component will have been added to your `/components` directory.
-1. Add the `@import 'vfc-your-component.scss';` to `/assets/scss/styles.scss`.
+- Your customised template component will is in the `/components` directory.
+1. Add the `@import 'vf-your-component.scss';` to `/assets/scss/styles.scss`.
 1. Developing your component
 - Edit your template files in the `/components/your-component-name` folder
+- For further guidance on component configuration, [consult the comments in the component template files](https://github.com/visual-framework/vf-core/tree/develop/tools/component-generator/templates).
 - Run `gulp vf-dev` to compile and preview the component
 1. Sharing you component back
 - Publish it to npm; or
@@ -200,14 +201,14 @@ This codebase includes a folder and file creation tool. It allows you to quickly
     <code class="Code Code--lang-text">
         <pre><span class="hljs-comment">---</span>
 title: Creating a new component
-order: 200
+order: 201
 isIndex: false
 <span class="hljs-comment">---</span>
 
 This codebase includes a folder and file creation tool. It allows you to quickly <span class="hljs-keyword">create</span> <span class="hljs-keyword">all</span> the <span class="hljs-keyword">required</span> files <span class="hljs-keyword">to</span> make a component. It gives you the <span class="hljs-keyword">option</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">create</span> am <span class="hljs-keyword">element</span>, <span class="hljs-keyword">block</span>, <span class="hljs-keyword">or</span> container.
 
 <span class="hljs-number">1.</span> <span class="hljs-keyword">Install</span> Yeoman
-   - <span class="hljs-keyword">If</span> you<span class="hljs-string">'ve come this far and you don'</span>t have <span class="hljs-string">`yo`</span>, you should be able <span class="hljs-keyword">to</span> <span class="hljs-keyword">install</span> it <span class="hljs-keyword">with</span> <span class="hljs-string">`npm install -g yo@latest`</span>
+   - <span class="hljs-keyword">If</span> you<span class="hljs-string">'ve come this far and you don'</span>t have <span class="hljs-string">`yo`</span>, you should be able <span class="hljs-keyword">to</span> <span class="hljs-keyword">install</span> it <span class="hljs-keyword">with</span> <span class="hljs-string">`yarn global add yo@latest`</span>
    - <span class="hljs-keyword">If</span> you <span class="hljs-keyword">get</span> stuck, [see the official <span class="hljs-keyword">install</span> guide](<span class="hljs-keyword">http</span>://yeoman.io/codelab/setup.html)
 <span class="hljs-number">1.</span> <span class="hljs-keyword">Create</span> a <span class="hljs-keyword">new</span> component
    - Run <span class="hljs-string">`gulp vf-component`</span> <span class="hljs-keyword">and</span> answer the questions <span class="hljs-keyword">when</span> prompted.
@@ -217,10 +218,11 @@ This codebase includes a folder and file creation tool. It allows you to quickly
            - a <span class="hljs-keyword">container</span> would be a <span class="hljs-keyword">group</span> <span class="hljs-keyword">of</span> teasers
        - **<span class="hljs-keyword">Name</span> <span class="hljs-keyword">of</span> component:** <span class="hljs-keyword">Go</span> <span class="hljs-keyword">for</span> something simple <span class="hljs-keyword">and</span> obvious (todo: we need a guide/documentation <span class="hljs-keyword">on</span> how we <span class="hljs-keyword">name</span> things). Don<span class="hljs-string">'t worry about namespacing and prefixing, the tooling will take care of this.
        - **NPM package:** If you'</span>re making something interesting (probably <span class="hljs-keyword">not</span> an <span class="hljs-string">'element'</span>), <span class="hljs-keyword">then</span> saying <span class="hljs-string">'yes'</span> will <span class="hljs-keyword">allow</span> the component <span class="hljs-keyword">to</span> be <span class="hljs-keyword">shared</span> <span class="hljs-keyword">as</span> an optional part <span class="hljs-keyword">of</span> the framework <span class="hljs-keyword">on</span> NPM.
-    - You customised <span class="hljs-keyword">template</span> component will have been added <span class="hljs-keyword">to</span> your <span class="hljs-string">`/components`</span> directory.
-<span class="hljs-number">1.</span> <span class="hljs-keyword">Add</span> the <span class="hljs-string">`@import 'vfc-your-component.scss';`</span> <span class="hljs-keyword">to</span> <span class="hljs-string">`/assets/scss/styles.scss`</span>.
+    - Your customised <span class="hljs-keyword">template</span> component will <span class="hljs-keyword">is</span> <span class="hljs-keyword">in</span> the <span class="hljs-string">`/components`</span> directory.
+<span class="hljs-number">1.</span> <span class="hljs-keyword">Add</span> the <span class="hljs-string">`@import 'vf-your-component.scss';`</span> <span class="hljs-keyword">to</span> <span class="hljs-string">`/assets/scss/styles.scss`</span>.
 <span class="hljs-number">1.</span> Developing your component
    - Edit your <span class="hljs-keyword">template</span> files <span class="hljs-keyword">in</span> the <span class="hljs-string">`/components/your-component-name`</span> folder
+       - <span class="hljs-keyword">For</span> further guidance <span class="hljs-keyword">on</span> component configuration, [consult the comments <span class="hljs-keyword">in</span> the component <span class="hljs-keyword">template</span> files](https://github.com/visual-framework/vf-core/tree/develop/tools/component-generator/templates).
    - Run <span class="hljs-string">`gulp vf-dev`</span> <span class="hljs-keyword">to</span> compile <span class="hljs-keyword">and</span> preview the component
 <span class="hljs-number">1.</span> Sharing you component back
    - Publish it <span class="hljs-keyword">to</span> npm; or
@@ -1435,6 +1437,30 @@ This codebase includes a folder and file creation tool. It allows you to quickly
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
+                <span>Updating A Component</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="user-base.html" data-pjax>
                 <span>User Base</span>
                 
@@ -1525,94 +1551,6 @@ This codebase includes a folder and file creation tool. It allows you to quickly
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
                 <span>Visual Regression Testing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-styles">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Styles</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="colours.html" data-pjax>
-                <span>Colours</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typography.html" data-pjax>
-                <span>Typography</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1983,94 +1921,6 @@ This codebase includes a folder and file creation tool. It allows you to quickly
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-8" data-behaviour="collection" id="tree-components-collection-components">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Components</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="detail.html" data-pjax>
-                <span>Detail</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="preview.html" data-pjax>
-                <span>Preview</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="render.html" data-pjax>
-                <span>Render</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="doc.html" data-pjax>
@@ -2399,6 +2249,118 @@ This codebase includes a folder and file creation tool. It allows you to quickly
     
 
             </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Vf Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--colours.html" data-pjax>
+                <span>Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

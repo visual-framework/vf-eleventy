@@ -35,16 +35,20 @@
   --vf-ui-color--grey--light: #d8d8d8;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
+  --vf-ui-color--white: #ffffff;
+  --vf-ui-color--off-white: #fafafa;
 }
 
 .vf-form__textarea {
   border: 3px solid #f3f3f3;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
   padding: 12px;
   width: 100%;
 }
 
 .vf-form__textarea:focus {
+  border-color: #54585a;
   outline: 0;
 }

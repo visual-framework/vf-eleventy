@@ -56,7 +56,7 @@
         
     
 
-<div class="Pen" data-behaviour="pen" id="pen-7d0060c644256f9793b72a984a66b966">
+<div class="Pen" data-behaviour="pen" id="pen-9cb204f0cf0bd41a6675eb07d8764fbb">
 
     
 
@@ -83,15 +83,15 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-7d0060c644256f9793b72a984a66b966">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-9cb204f0cf0bd41a6675eb07d8764fbb">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: template not found: layouts/render.njk</p>
+        <p>(unknown path) [Line 7, Column 44]
+  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
 
     </div>
     
@@ -108,7 +108,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-7d0060c644256f9793b72a984a66b966">
+    <div class="Browser" data-behaviour="browser" id="browser-9cb204f0cf0bd41a6675eb07d8764fbb">
 
     
 
@@ -117,19 +117,19 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-7d0060c644256f9793b72a984a66b966-panel-html">HTML</a>
+            <a href="#browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-7d0060c644256f9793b72a984a66b966-panel-view">View</a>
+            <a href="#browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-7d0060c644256f9793b72a984a66b966-panel-context">Context</a>
+            <a href="#browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-context">Context</a>
         </li>
         
         
@@ -141,13 +141,13 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-7d0060c644256f9793b72a984a66b966-panel-info">Info</a>
+            <a href="#browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-info">Info</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-7d0060c644256f9793b72a984a66b966-panel-notes">Notes</a>
+            <a href="#browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-notes">Notes</a>
         </li>
         
         
@@ -157,7 +157,7 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-7d0060c644256f9793b72a984a66b966-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-html">
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-comment">&lt;!-- Error rendering component:  --&gt;</span></pre>
@@ -166,18 +166,103 @@
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7d0060c644256f9793b72a984a66b966-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-view">
     <code class="Code Code--lang-text">
-        <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">extends</span></span> 'layouts/render.njk' %}</span><span class="xml">
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-body"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
 
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> entity = frctl.components.find('@' + request.params.handle) -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> withLayout = true -%}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> withCollation = true -%}</span><span class="xml"></span></pre>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> entity.isComponent %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name">set</span> variants = entity.variants() %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">else</span></span> %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name">set</span> variants = entity.parent.variants() %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> variants.size &gt; 1 and entity.preview != '@preview--blocks' and entity.preview != '@preview--elements' %}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-tabs"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-tabs__list"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-tabs__item"</span>&gt;</span>
+              This component has variants:
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">for</span></span> variant <span class="hljs-keyword">in</span> variants.items() %}</span><span class="xml">
+
+              </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> entity.handle == variant.handle %}</span><span class="xml">
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-tabs__link is-active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#is-active"</span>&gt;</span>
+                  </span><span class="hljs-template-variable">{{ variant.label }}</span><span class="xml">
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+              </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">else</span></span> %}</span><span class="xml">
+                </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> variant.isHidden == false %}</span><span class="xml">
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-tabs__link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path(frctl.theme.urlFromRoute('component', { handle: variant.handle })) }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+                    </span><span class="hljs-template-variable">{{ variant.label }}</span><span class="xml">
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml"> </span><span class="hljs-comment">{# end variant.isHidden #}</span><span class="xml">
+              </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml"> </span><span class="hljs-comment">{# end entity.handle == variant.handle #}</span><span class="xml">
+
+            </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endfor</span></span> %}</span><span class="xml">
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name">import</span> "macros/render.njk" <span class="hljs-keyword">as</span> render %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> (entity.preview == '@preview--blocks') or (entity.preview == '@preview--elements') -%}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-body"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-component__container"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- @preview--blocks aren't done in iframes, this allows us a bit more flexibility and to test cross-contamination --&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">for</span></span> item <span class="hljs-keyword">in</span> variants %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> item.isHidden == false %}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-r"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-badge vf-badge--tertiary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#</span></span></span><span class="hljs-template-variable">{{ item.handle }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ item.handle }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Variant </span><span class="hljs-template-variable">{{ item.label }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name">set</span> rendered = item.render(null, renderEnv, { preview: withLayout, collate: withCollation }) | async(true) %}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ rendered }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-code-example__pre"</span>&gt;</span>
+</span><span class="hljs-template-variable">{{ render.entity(item.render(null, renderEnv, {preview: false, collate: false}) | async(true)) | trim }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-divider"</span> /&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endfor</span></span> %}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">else</span></span> %}</span><span class="xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Pen-panel Pen-preview Preview"</span> <span class="hljs-attr">data-behaviour</span>=<span class="hljs-string">"preview"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"preview-</span></span></span><span class="hljs-template-variable">{{ entity.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Preview-wrapper"</span> <span class="hljs-attr">data-role</span>=<span class="hljs-string">"resizer-disabled"</span>&gt;</span>
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> renderError -%}</span><span class="xml">
+            </span><span class="hljs-template-variable">{{ renderError }}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">else</span></span> %}</span><span class="xml">
+         <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">"Preview-iframe"</span>
+            <span class="hljs-attr">data-role</span>=<span class="hljs-string">"window"</span>
+            <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ previewUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+            <span class="hljs-attr">sandbox</span>=<span class="hljs-string">"allow-same-origin allow-scripts allow-forms"</span>
+
+            <span class="hljs-attr">marginwidth</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">marginheight</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">vspace</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">hspace</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">"yes"</span>
+            <span class="hljs-attr">onload</span>=<span class="hljs-string">"resizeIframe(this)"</span>
+          &gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+        </span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-body"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-figure__caption"</span>&gt;</span>
+              Open the above preview in a new window:
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path(frctl.theme.urlFromRoute('preview', { handle: entity.handle })) }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>With layout<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path(frctl.theme.urlFromRoute('render', { handle: entity.handle })) }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Component only<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml"></span></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7d0060c644256f9793b72a984a66b966-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-context">
     <code class="Code Code--lang-json">
         
             
@@ -194,7 +279,7 @@
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-7d0060c644256f9793b72a984a66b966-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
@@ -224,7 +309,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/vf-core-components/vf-core/tools/vf-frctl-theme/views/pages/components/preview.njk</span>
+            <span class="Meta-value">src/components/vf-core-components/vf-core/tools/vf-frctl-theme/views/partials/pen/preview.njk</span>
         </li>
         
         
@@ -232,7 +317,7 @@
 </div>
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-7d0060c644256f9793b72a984a66b966-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-9cb204f0cf0bd41a6675eb07d8764fbb-panel-notes">
     <div class="Prose Prose--condensed">
         
         <p class="Browser-isEmptyNote">There are no notes for this item.</p>
@@ -1379,6 +1464,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
+                <span>Updating A Component</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="user-base.html" data-pjax>
                 <span>User Base</span>
                 
@@ -1469,94 +1578,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
                 <span>Visual Regression Testing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-styles">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Styles</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="colours.html" data-pjax>
-                <span>Colours</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typography.html" data-pjax>
-                <span>Typography</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1927,94 +1948,6 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-8" data-behaviour="collection" id="tree-components-collection-components">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Components</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="detail.html" data-pjax>
-                <span>Detail</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Preview</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="render.html" data-pjax>
-                <span>Render</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="doc.html" data-pjax>
@@ -2275,7 +2208,7 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Preview</span>
                 
@@ -2343,6 +2276,118 @@
     
 
             </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Vf Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--colours.html" data-pjax>
+                <span>Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

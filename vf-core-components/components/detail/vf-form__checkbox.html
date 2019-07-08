@@ -90,8 +90,8 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: template not found: layouts/render.njk</p>
+        <p>(unknown path) [Line 7, Column 44]
+  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
 
     </div>
     
@@ -227,6 +227,8 @@
                 
                 <option value="file-faaf62d036df0fd72c88d5b4d9c56ee0">vf-form__checkbox.scss</option>
                 
+                <option value="file-4a23f574cb91fb6ec1fa01b11c0b4be6">yarn.lock</option>
+                
             </select>
         </div>
 
@@ -243,6 +245,14 @@
 
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
+
+<span class="hljs-section">## 0.0.38 (2019-07-08)</span>
+
+<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-form__checkbox
+
+
+
+
 
 <span class="hljs-section">## 0.0.37 (2019-06-21)</span>
 
@@ -403,7 +413,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">2.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -462,7 +472,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.37"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.38"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-form__checkbox"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-form__checkbox component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"http://dev.beta.embl.org/guidelines/visual-framework/dev-docs/"</span>,
@@ -479,14 +489,14 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://github.com/visual-framework/vf-core/issues/new"</span>
   },
   <span class="hljs-attr">"dependencies"</span>: {
-    <span class="hljs-attr">"@visual-framework/vf-form__item"</span>: <span class="hljs-string">"^0.0.37"</span>,
-    <span class="hljs-attr">"@visual-framework/vf-form__label"</span>: <span class="hljs-string">"^0.0.33"</span>
+    <span class="hljs-attr">"@visual-framework/vf-form__item"</span>: <span class="hljs-string">"^0.0.38"</span>,
+    <span class="hljs-attr">"@visual-framework/vf-form__label"</span>: <span class="hljs-string">"^0.0.34"</span>
   },
   <span class="hljs-attr">"keywords"</span>: [
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"af89c4634c8f90184625e3f04a2852ae576c371e"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"44284637cfbb3cc73a97ba62b0c3103e49f27d40"</span>
 }
 </pre>
                             </code>
@@ -554,6 +564,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">--vf-ui-color--grey--light</span>: <span class="hljs-number">#d8d8d8</span>;
   <span class="hljs-attribute">--vf-ui-color--yellow</span>: <span class="hljs-number">#fffadc</span>;
   <span class="hljs-attribute">--vf-ui-color--red</span>: <span class="hljs-number">#d32f2f</span>;
+  <span class="hljs-attribute">--vf-ui-color--white</span>: <span class="hljs-number">#ffffff</span>;
+  <span class="hljs-attribute">--vf-ui-color--off-white</span>: <span class="hljs-number">#fafafa</span>;
 }
 
 <span class="hljs-selector-class">.vf-form__item</span> {
@@ -585,12 +597,14 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 }
 
 <span class="hljs-selector-class">.vf-form__checkbox</span> + <span class="hljs-selector-class">.vf-form__label</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#54585a</span>;
   <span class="hljs-attribute">cursor</span>: pointer;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">position</span>: relative;
 }
 
 <span class="hljs-selector-class">.vf-form__checkbox</span> + <span class="hljs-selector-class">.vf-form__label</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffffff</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#f3f3f3</span>;
   <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
   <span class="hljs-attribute">display</span>: inline-block;
@@ -602,13 +616,28 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">width</span>: <span class="hljs-number">16px</span>;
 }
 
+<span class="hljs-selector-class">.vf-form__checkbox</span><span class="hljs-selector-pseudo">:hover</span> + <span class="hljs-selector-class">.vf-form__label</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#54585a</span>;
+}
+
+<span class="hljs-selector-class">.vf-form__checkbox</span><span class="hljs-selector-pseudo">:focus</span> + <span class="hljs-selector-class">.vf-form__label</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#54585a</span>;
+}
+
+<span class="hljs-selector-class">.vf-form__checkbox</span><span class="hljs-selector-pseudo">:checked</span> + <span class="hljs-selector-class">.vf-form__label</span><span class="hljs-selector-pseudo">:before</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#307fe2</span>;
+  <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#307fe2</span>;
+}
+
 <span class="hljs-selector-class">.vf-form__checkbox</span><span class="hljs-selector-pseudo">:disabled</span> + <span class="hljs-selector-class">.vf-form__label</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#54585a</span>;
   <span class="hljs-attribute">cursor</span>: auto;
 }
 
 <span class="hljs-selector-class">.vf-form__checkbox</span><span class="hljs-selector-pseudo">:disabled</span> + <span class="hljs-selector-class">.vf-form__label</span><span class="hljs-selector-pseudo">:before</span> {
   <span class="hljs-attribute">background</span>: <span class="hljs-number">#707372</span>;
-  <span class="hljs-attribute">box-shadow</span>: none;
+  <span class="hljs-attribute">-webkit-box-shadow</span>: none;
+          <span class="hljs-attribute">box-shadow</span>: none;
 }
 </pre>
                             </code>
@@ -626,7 +655,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.2 KB</span>
+                    <span class="Meta-value">2.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -716,6 +745,53 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
             </ul>
         </div>
         
+        <div class="FileBrowser-item" id="file-4a23f574cb91fb6ec1fa01b11c0b4be6" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JSON FileBrowser-code">
+                                <pre># THIS IS AN AUTOGENERATED FILE. DO NOT EDIT THIS FILE DIRECTLY.
+# yarn lockfile v1
+
+
+"@visual-framework/vf-form__helper@^0.0.36":
+  version "0.0.36"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-form__helper/-/vf-form__helper-0.0.36.tgz#f0f5aee7dbb7a301bf233e32f3fd9539e9d1a64c"
+
+"@visual-framework/vf-form__item@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-form__item/-/vf-form__item-0.0.37.tgz#f471855d723fa222fb3a823425ea64b4911db531"
+  dependencies:
+    "@visual-framework/vf-form__helper" "^0.0.36"
+    "@visual-framework/vf-form__label" "^0.0.33"
+
+"@visual-framework/vf-form__label@^0.0.33":
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-form__label/-/vf-form__label-0.0.33.tgz#cda35c22c62e4607c62de8d4561668e52bd4465d"
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/vf-form__checkbox/yarn.lock"><span>/components/raw/vf-form__checkbox/yarn.lock</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/vf-core-components/vf-form__checkbox/yarn.lock</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">824 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
     </div>
 </div>
 
@@ -776,7 +852,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <h2 id="about">About</h2>
 <h2 id="installation-and-implementation">Installation and Implementation</h2>
 <p>This component is distributed with npm. After <a href="https://www.npmjs.com/get-npm">installing npm</a>, you can install the <code>vf-form__checkbox</code> with this command.</p>
-<code><pre>$ <span class="hljs-built_in">npm</span> install --save @visual-framework/vf-form__checkbox</pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
+<code><pre>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-form__checkbox</span></pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
 <code><pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-form__checkbox/index.scss"</span>;</pre></code><p><em>Make sure you import any requirements along with the modules.</em></p>
 
         
@@ -1922,6 +1998,30 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
+                <span>Updating A Component</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="user-base.html" data-pjax>
                 <span>User Base</span>
                 
@@ -2012,94 +2112,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
                 <span>Visual Regression Testing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-styles">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Styles</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="colours.html" data-pjax>
-                <span>Colours</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typography.html" data-pjax>
-                <span>Typography</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2470,94 +2482,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-8" data-behaviour="collection" id="tree-components-collection-components">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Components</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="detail.html" data-pjax>
-                <span>Detail</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="preview.html" data-pjax>
-                <span>Preview</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="render.html" data-pjax>
-                <span>Render</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="doc.html" data-pjax>
@@ -2886,6 +2810,118 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     
 
             </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Vf Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--colours.html" data-pjax>
+                <span>Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

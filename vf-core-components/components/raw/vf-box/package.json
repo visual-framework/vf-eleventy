@@ -1,5 +1,5 @@
 {
-  "version": "0.0.36",
+  "version": "0.0.37",
   "name": "@visual-framework/vf-box",
   "description": "vf-box component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -19,5 +19,5 @@
     "fractal",
     "component"
   ],
-  "gitHead": "af89c4634c8f90184625e3f04a2852ae576c371e"
+  "gitHead": "44284637cfbb3cc73a97ba62b0c3103e49f27d40"
 }

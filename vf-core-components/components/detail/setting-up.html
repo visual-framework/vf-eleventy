@@ -90,8 +90,8 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: template not found: layouts/render.njk</p>
+        <p>(unknown path) [Line 7, Column 44]
+  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
 
     </div>
     
@@ -184,12 +184,14 @@ First, see if you have the needed tools installed.
 1. Open a command line/terminal
 1. Enter `node -v`
 1. Enter `gulp -v`
+1. Enter `yarn -v`
 
-If either of those steps return an error you need to install the corresponding
+If any of those steps return an error you need to install the corresponding
 software.
 
 - To install Node: go to the official [downloads page](https://nodejs.org/download/)
-- To install Gulp: Gulp requires Node and can be installed by: `npm install gulpjs/gulp-cli -g`
+- To install Gulp: Gulp requires Node and can be installed by: `yarn global add gulpjs/gulp-cli`
+- To install Yarn: Yarn require Node, [follow the install guide](https://yarnpkg.com/lang/en/docs/install/)
 
 ## Installing the Visual Framework
 
@@ -202,9 +204,9 @@ You will need to install this repo onto your machine so that you can update, ame
 1. You probably want the develop branch (or [your new feature branch](https://github.com/visual-framework/vf-core/blob/develop/CONTRIBUTING.md))
 - `git checkout develop`
 1. Install [fractal](https://github.com/frctl/fractal) You might need to use `sudo`.
-- `npm i -g @frctl/fractal`
+- `yarn global add @frctl/fractal`
 1. Download all the things
-- `npm install`
+- `yarn install`
 1. Run a dev build and open in your browser
 - `gulp vf-dev`</pre>
         
@@ -238,12 +240,14 @@ First, see if you have the needed tools installed.
 1. </span>Open a command line/terminal
 <span class="hljs-bullet">1. </span>Enter <span class="hljs-code">`node -v`</span>
 <span class="hljs-bullet">1. </span>Enter <span class="hljs-code">`gulp -v`</span>
+<span class="hljs-bullet">1. </span>Enter <span class="hljs-code">`yarn -v`</span>
 
-If either of those steps return an error you need to install the corresponding
+If any of those steps return an error you need to install the corresponding
 software.
 <span class="hljs-bullet">
 - </span>To install Node: go to the official [<span class="hljs-string">downloads page</span>](<span class="hljs-link">https://nodejs.org/download/</span>)
-<span class="hljs-bullet">- </span>To install Gulp: Gulp requires Node and can be installed by: <span class="hljs-code">`npm install gulpjs/gulp-cli -g`</span>
+<span class="hljs-bullet">- </span>To install Gulp: Gulp requires Node and can be installed by: <span class="hljs-code">`yarn global add gulpjs/gulp-cli`</span>
+<span class="hljs-bullet">- </span>To install Yarn: Yarn require Node, [<span class="hljs-string">follow the install guide</span>](<span class="hljs-link">https://yarnpkg.com/lang/en/docs/install/</span>)
 
 <span class="hljs-section">## Installing the Visual Framework</span>
 
@@ -256,9 +260,9 @@ You will need to install this repo onto your machine so that you can update, ame
 <span class="hljs-bullet">1. </span>You probably want the develop branch (or [<span class="hljs-string">your new feature branch</span>](<span class="hljs-link">https://github.com/visual-framework/vf-core/blob/develop/CONTRIBUTING.md</span>))
 <span class="hljs-bullet">    - </span><span class="hljs-code">`git checkout develop`</span>
 <span class="hljs-bullet">1. </span>Install [<span class="hljs-string">fractal</span>](<span class="hljs-link">https://github.com/frctl/fractal</span>) You might need to use <span class="hljs-code">`sudo`</span>.
-<span class="hljs-bullet">    - </span><span class="hljs-code">`npm i -g @frctl/fractal`</span>
+<span class="hljs-bullet">    - </span><span class="hljs-code">`yarn global add @frctl/fractal`</span>
 <span class="hljs-bullet">1. </span>Download all the things
-<span class="hljs-bullet">    - </span><span class="hljs-code">`npm install`</span>
+<span class="hljs-bullet">    - </span><span class="hljs-code">`yarn install`</span>
 <span class="hljs-bullet">1. </span>Run a dev build and open in your browser
 <span class="hljs-bullet">    - </span><span class="hljs-code">`gulp vf-dev`</span></pre>
     </code>
@@ -1467,6 +1471,30 @@ You will need to install this repo onto your machine so that you can update, ame
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
+                <span>Updating A Component</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="user-base.html" data-pjax>
                 <span>User Base</span>
                 
@@ -1557,94 +1585,6 @@ You will need to install this repo onto your machine so that you can update, ame
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
                 <span>Visual Regression Testing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-styles">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Styles</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="colours.html" data-pjax>
-                <span>Colours</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typography.html" data-pjax>
-                <span>Typography</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2015,94 +1955,6 @@ You will need to install this repo onto your machine so that you can update, ame
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-8" data-behaviour="collection" id="tree-components-collection-components">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Components</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="detail.html" data-pjax>
-                <span>Detail</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="preview.html" data-pjax>
-                <span>Preview</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="render.html" data-pjax>
-                <span>Render</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="doc.html" data-pjax>
@@ -2431,6 +2283,118 @@ You will need to install this repo onto your machine so that you can update, ame
     
 
             </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Vf Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--colours.html" data-pjax>
+                <span>Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

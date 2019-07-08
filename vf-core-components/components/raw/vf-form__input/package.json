@@ -1,5 +1,5 @@
 {
-  "version": "0.0.37",
+  "version": "0.0.38",
   "name": "@visual-framework/vf-form__input",
   "description": "vf-form__input component",
   "homepage": "http://dev.beta.embl.org/guidelines/visual-framework/dev-docs/",
@@ -16,12 +16,12 @@
     "url": "https://github.com/visual-framework/vf-core/issues/new"
   },
   "dependencies": {
-    "@visual-framework/vf-form__item": "^0.0.37",
-    "@visual-framework/vf-form__label": "^0.0.33"
+    "@visual-framework/vf-form__item": "^0.0.38",
+    "@visual-framework/vf-form__label": "^0.0.34"
   },
   "keywords": [
     "fractal",
     "component"
   ],
-  "gitHead": "af89c4634c8f90184625e3f04a2852ae576c371e"
+  "gitHead": "44284637cfbb3cc73a97ba62b0c3103e49f27d40"
 }

@@ -1,5 +1,5 @@
 {
-  "version": "0.0.22",
+  "version": "0.0.23",
   "name": "@visual-framework/vf-banner",
   "description": "vf-banner component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -17,11 +17,11 @@
     "url": "https://github.com/visual-framework/vf-core/issues"
   },
   "dependencies": {
-    "@visual-framework/vf-badge": "^0.0.36"
+    "@visual-framework/vf-badge": "^0.0.37"
   },
   "keywords": [
     "fractal",
     "component"
   ],
-  "gitHead": "af89c4634c8f90184625e3f04a2852ae576c371e"
+  "gitHead": "44284637cfbb3cc73a97ba62b0c3103e49f27d40"
 }

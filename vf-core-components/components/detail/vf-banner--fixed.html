@@ -90,8 +90,8 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: template not found: layouts/render.njk</p>
+        <p>(unknown path) [Line 7, Column 44]
+  Error: Unable to call <code>entity[&quot;parent&quot;][&quot;variants&quot;]</code>, which is undefined or falsey</p>
 
     </div>
     
@@ -324,6 +324,14 @@ data-vf-js-banner-cookie-version="</span></span><span class="hljs-template-varia
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
 
+<span class="hljs-section">## 0.0.23 (2019-07-08)</span>
+
+<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-banner
+
+
+
+
+
 <span class="hljs-section">## 0.0.22 (2019-06-21)</span>
 
 <span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-banner
@@ -544,7 +552,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.22"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.23"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-banner"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-banner component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -562,13 +570,13 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://github.com/visual-framework/vf-core/issues"</span>
   },
   <span class="hljs-attr">"dependencies"</span>: {
-    <span class="hljs-attr">"@visual-framework/vf-badge"</span>: <span class="hljs-string">"^0.0.36"</span>
+    <span class="hljs-attr">"@visual-framework/vf-badge"</span>: <span class="hljs-string">"^0.0.37"</span>
   },
   <span class="hljs-attr">"keywords"</span>: [
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"af89c4634c8f90184625e3f04a2852ae576c371e"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"44284637cfbb3cc73a97ba62b0c3103e49f27d40"</span>
 }
 </pre>
                             </code>
@@ -676,10 +684,13 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">--vf-ui-color--grey--light</span>: <span class="hljs-number">#d8d8d8</span>;
   <span class="hljs-attribute">--vf-ui-color--yellow</span>: <span class="hljs-number">#fffadc</span>;
   <span class="hljs-attribute">--vf-ui-color--red</span>: <span class="hljs-number">#d32f2f</span>;
+  <span class="hljs-attribute">--vf-ui-color--white</span>: <span class="hljs-number">#ffffff</span>;
+  <span class="hljs-attribute">--vf-ui-color--off-white</span>: <span class="hljs-number">#fafafa</span>;
 }
 
 <span class="hljs-selector-class">.vf-banner</span> {
-  <span class="hljs-attribute">box-sizing</span>: border-box;
+  <span class="hljs-attribute">-webkit-box-sizing</span>: border-box;
+          <span class="hljs-attribute">box-sizing</span>: border-box;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">12px</span>;
 }
 
@@ -701,8 +712,11 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 }
 
 <span class="hljs-selector-class">.vf-banner__content</span> {
-  <span class="hljs-attribute">align-content</span>: center;
-  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">-ms-flex-line-pack</span>: center;
+      <span class="hljs-attribute">align-content</span>: center;
+  <span class="hljs-attribute">-webkit-box-align</span>: center;
+      <span class="hljs-attribute">-ms-flex-align</span>: center;
+          <span class="hljs-attribute">align-items</span>: center;
 }
 
 @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">63.9375em</span>) {
@@ -733,7 +747,14 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
 }
 
+<span class="hljs-selector-class">.vf-banner--notice</span> {
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#54585a</span>;
+}
+
 <span class="hljs-selector-class">.vf-banner--notice</span> <span class="hljs-selector-class">.vf-text</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">24px</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64em</span>;
 }
@@ -750,13 +771,22 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 
 @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">1024px</span>) {
   <span class="hljs-selector-class">.vf-banner--notice</span> <span class="hljs-selector-class">.vf-button</span> {
-    <span class="hljs-attribute">align-self</span>: center;
+    <span class="hljs-attribute">-ms-flex-item-align</span>: center;
+        <span class="hljs-attribute">align-self</span>: center;
     <span class="hljs-attribute">justify-self</span>: end;
   }
 }
 
 <span class="hljs-selector-class">.vf-banner--blocking</span><span class="hljs-selector-class">.vf-banner--notice</span> {
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">16px</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.1);
+}
+
+<span class="hljs-selector-class">.vf-banner--blocking</span><span class="hljs-selector-class">.vf-banner--notice</span> <span class="hljs-selector-class">.vf-banner__content</span> {
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#54585a</span>;
 }
 
 <span class="hljs-selector-class">.vf-banner--fixed</span> {
@@ -777,6 +807,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 }
 
 <span class="hljs-selector-class">.vf-banner--phase</span> <span class="hljs-selector-attr">[class*='vf-text']</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#54585a</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">12px</span> <span class="hljs-number">0</span>;
 }
 
@@ -785,6 +816,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 }
 
 <span class="hljs-selector-class">.vf-banner--phase</span> <span class="hljs-selector-class">.vf-banner__content</span> {
+  <span class="hljs-attribute">display</span>: -webkit-box;
+  <span class="hljs-attribute">display</span>: -ms-flexbox;
   <span class="hljs-attribute">display</span>: flex;
 }
 
@@ -809,7 +842,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.2 KB</span>
+                    <span class="Meta-value">3.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -1214,12 +1247,12 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             <code class="Code Code--lang-SCSS FileBrowser-code">
                                 <pre><span class="hljs-variable">$vf-gdpr-banner-color--background</span>: set-color(vf-color--grey--dark);
 <span class="hljs-variable">$vf-gdpr-banner-color--text</span>: set-ui-color(vf-ui-color--white);
-<span class="hljs-variable">$vf-gdpr-banner-padding</span>: map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing-r);
+<span class="hljs-variable">$vf-gdpr-banner-padding</span>: map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing--r);
 
 <span class="hljs-variable">$vf-notice-banner-color--background</span>: set-color(vf-color--grey--dark);
 
 <span class="hljs-variable">$vf-notice-banner-color--text</span>: set-ui-color(vf-ui-color--white);
-<span class="hljs-variable">$vf-notice-banner-padding</span>: map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing-r);
+<span class="hljs-variable">$vf-notice-banner-padding</span>: map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing--r);
 
 <span class="hljs-variable">$vf-phase-banner-color--background</span>: set-ui-color(vf-ui-color--yellow);
 <span class="hljs-variable">$vf-phase-banner-color--text</span>: set-color(vf-color--grey--dark);
@@ -1241,7 +1274,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">569 Bytes</span>
+                    <span class="Meta-value">571 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1367,7 +1400,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 </ul>
 <h2 id="install">Install</h2>
 <p>This repository is distributed with [npm][npm]. After [installing npm][install-npm], you can install <code>primer-buttons</code> with this command.</p>
-<code><pre>$ <span class="hljs-built_in">npm</span> install --save @visual-framework/vf-banner</pre></code><h2 id="usage">Usage</h2>
+<code><pre>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-banner</span></pre></code><h2 id="usage">Usage</h2>
 <p>The source files included are written in [Sass][sass] (<code>scss</code>) You can simply point your sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
 <code><pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-banner/index.scss"</span>;</pre></code><p><em>Make sure you import any requirements along with the modules.</em></p>
 
@@ -2514,6 +2547,30 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
+                <span>Updating A Component</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="user-base.html" data-pjax>
                 <span>User Base</span>
                 
@@ -2604,94 +2661,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
                 <span>Visual Regression Testing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-styles">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Styles</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="colours.html" data-pjax>
-                <span>Colours</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="typography.html" data-pjax>
-                <span>Typography</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3062,94 +3031,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-8" data-behaviour="collection" id="tree-components-collection-components">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Components</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="detail.html" data-pjax>
-                <span>Detail</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="preview.html" data-pjax>
-                <span>Preview</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="render.html" data-pjax>
-                <span>Render</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="doc.html" data-pjax>
@@ -3478,6 +3359,118 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     
 
             </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Vf Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--colours.html" data-pjax>
+                <span>Colours</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-design-tokens--typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     

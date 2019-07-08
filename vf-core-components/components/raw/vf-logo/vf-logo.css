@@ -35,9 +35,14 @@
   --vf-ui-color--grey--light: #d8d8d8;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
+  --vf-ui-color--white: #ffffff;
+  --vf-ui-color--off-white: #fafafa;
 }
 
 .vf-logo {
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 41px;
   text-decoration: none;
@@ -47,6 +52,8 @@
   background-image: url("../assets/vf-logo/assets/logo-small.svg");
   background-repeat: no-repeat;
   background-size: auto 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 25px;
   min-width: 70px;
