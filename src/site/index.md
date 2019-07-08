@@ -4,9 +4,6 @@ date: 2018-08-22 12:24:50
 layout: layouts/base.njk
 ---
 
-
-<section class="vf-grid">
-
 {% render '@vf-intro', {"vf_intro_phase": "alpha", "vf_intro_heading": siteConfig.siteInformation.title,
   "vf_intro_lede": siteConfig.siteInformation.short_description,
   "vf_intro_text": [
@@ -14,15 +11,12 @@ layout: layouts/base.njk
   ]
 } %}
 
-</section>
-
-
 <section class="vf-intro | embl-grid embl-grid--has-centered-content">
 
 <div>
   <!-- empty -->
 </div>
-<div>
+<div class="vf-content">
 
 ## What you get
 
