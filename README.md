@@ -3,29 +3,30 @@
 This allows you to use the [11ty](https://www.11ty.io) static site generator
 with direct access to Visual Framework 2.0 components.
 
-## Cloning this repo
+## 1. Creating a new project powered by vf-eleventy
 
-You can clone the files to your project by:
+There are two methods you can use:
 
-- `curl https://registry.npmjs.org/\@visual-framework/vf-boilerplate-eleventy/-/vf-boilerplate-eleventy-2.0.0-alpha.1.tgz  -o vf-boilerplate-eleventy.tgz`
-- `tar -xzf vf-boilerplate-eleventy.tgz`
-- `cd package`
-- `mv * ..`
-- `cd ..`
+1. Use the interactive npm template [RECOMMENDED]
+    - If you don't have npm, [install it](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+    - The [`create-vf-eleventy`](https://github.com/visual-framework/create-vf-eleventy) project allows you to interactively create a new site by typing `npm init @visual-framework/vf-eleventy your-new-site-name`
+    - Follow the prompts
+1. The GitHub template
+    - Click the "[Use this template](https://help.github.com/en/articles/creating-a-repository-from-a-template)" method; quick url: https://github.com/visual-framework/vf-eleventy/generate
+    - Follow the prompts and then clone the new project to your local machine
 
-## Local development
+## 2. Developing your new site
 
-You'll need to [install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and then:
-
+1. You'll need to [install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 1. If you don't have `yarn`, install it
    - https://yarnpkg.com/lang/en/docs/install/
-2. Install all the things
+1. Install all the things
    - `yarn install`
-3. Generate the site in `/build`
+1. Generate the site in `/build`
    - `gulp dev` renders and serves
    - `gulp build` build static assets
 
-## Adding Visual Framework components
+## 3. Adding Visual Framework components
 
 To add a component you can use npm/Yarn or install it manually.
 
@@ -42,7 +43,7 @@ To add a component you can use npm/Yarn or install it manually.
 
 In either case you'll need to re-run `npm run-script dev` to access the pattern.
 
-## Footnotes
+## 4. Footnotes
 
 - Why `yarn` and not `npm`?
   For the particular structure of the Visual Framework components, Yarn is considerably
