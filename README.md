@@ -9,7 +9,7 @@ There are two methods you can use:
 
 1. Use the interactive npm template [RECOMMENDED]
     - If you don't have npm, [install it](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-    - The [`create-vf-eleventy`](https://github.com/visual-framework/create-vf-eleventy) project allows you to interactively create a new site by typing `npm init @visual-framework/vf-eleventy your-new-site-name`
+    - The [`create-vf-eleventy`](https://github.com/visual-framework/create-vf-eleventy) project allows you to interactively create a new site by typing<br/> `npm init @visual-framework/vf-eleventy your-new-site-name`
     - Follow the prompts
 1. The GitHub template
     - Click the "[Use this template](https://help.github.com/en/articles/creating-a-repository-from-a-template)" method; quick url: https://github.com/visual-framework/vf-eleventy/generate
