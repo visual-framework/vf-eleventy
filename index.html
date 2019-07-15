@@ -61,6 +61,7 @@ class="vf-logo--responsive">
 </ul>
 <h3>Component installation</h3>
 <p>To add a component you can use npm/Yarn or install it manually.</p>
+<p>In either case you'll need to re-run <code>gulp dev</code> to ensure the component is fully loaded.</p>
 <ul>
 <li>installation: <code>yarn add @visual-framework/vf-logo</code></li>
 <li>updating: <code>yarn upgrade-interactive --latest</code></li>
@@ -70,10 +71,12 @@ class="vf-logo--responsive">
 <li>Download a pattern</li>
 <li>Copy it to <code>./src/components/vf-component-name</code></li>
 </ol>
-<p>In either case you'll need to re-run <code>gulp dev</code> to access the pattern.</p>
 <h3>Add your own local component</h3>
 <p>You can add a custom VF-compatible component to <code>./src/components</code> and use it in
 your site.</p>
+<ul>
+<li><code>gulp vf-component</code></li>
+</ul>
 <p>You'll find a <code>vf-sample</code> component there, we've used it below:</p>
 <div class="vf-box">
 <p>Code: {% render &quot;@vf-sample&quot;, {text: &quot;with some text&quot;} %}</p>
