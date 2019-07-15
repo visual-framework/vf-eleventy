@@ -30,6 +30,8 @@ There are two methods you can use:
 
 To add a component you can use npm/Yarn or install it manually.
 
+In either case you'll need to re-run `gulp dev` to ensure the component is fully loaded.
+
 ### By package
 
 - installation: `yarn add @visual-framework/vf-logo`
@@ -41,7 +43,15 @@ To add a component you can use npm/Yarn or install it manually.
 1. Download a pattern
 2. Copy it to `./src/components/vf-component-name`
 
-In either case you'll need to re-run `npm run-script dev` to access the pattern.
+### Create your own local component
+
+You can add a custom VF-compatible component to `./src/components` and use it in
+your site.
+
+- `gulp vf-component`
+
+You'll find a `vf-sample` component already placed in `./src/components`
+
 
 ## 4. Footnotes
 
