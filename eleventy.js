@@ -132,7 +132,7 @@ module.exports = function(config) {
     htmlTemplateEngine : ["njk", "md"],
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true,
-    pathPrefix: "/vf-eleventy/"
+    pathPrefix: "/vf-eleventy/" // if your site is deployed to a sub-url, otherwise comment out
   };
 
 };

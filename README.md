@@ -15,7 +15,15 @@ There are two methods you can use:
     - Click the "[Use this template](https://help.github.com/en/articles/creating-a-repository-from-a-template)" method; quick url: https://github.com/visual-framework/vf-eleventy/generate
     - Follow the prompts and then clone the new project to your local machine
 
-## 2. Developing your new site
+## 2. Configuring your new site
+
+- In `package.json` update `vfConfig`
+- In `elevnety.js` update `pathPrefix`
+- Update `./src/site/_data/siteConfig.js`
+
+Otherwise configure gulp and eleventy as you would for any other project.
+
+## 3. Developing your new site
 
 1. You'll need to [install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 1. If you don't have `yarn`, install it
@@ -26,7 +34,7 @@ There are two methods you can use:
    - `gulp dev` renders and serves
    - `gulp build` build static assets
 
-## 3. Adding Visual Framework components
+## 4. Adding Visual Framework components
 
 To add a component you can use npm/Yarn or install it manually.
 
