@@ -3,7 +3,13 @@ label: Sample Local Component
 preview: '@preview--elements'
 status: beta
 variants:
-  - name: template
+  - name: default
     hidden: true
+    context:
+      text: and here is some passed text
+  - name: another-variant
+    hidden: true
+    context:
+      text: and some passed text from another variant
 context:
   component-type: element
