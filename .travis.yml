@@ -1,12 +1,8 @@
-# Deploy the pattern library to gh-pages
+# Deploy to gh-pages
 dist: trusty
 language: node_js
 node_js:
   - 10
-
-# branches:
-#   except:
-#     - /^.visual-framework\/.*$/
 
 stages:
   - deploy
@@ -19,7 +15,7 @@ before_script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: $GITHUB_TOKEN #https://docs.travis-ci.com/user/deployment/pages/
   keep-history: true
   target-branch: gh-pages
   local-dir: build

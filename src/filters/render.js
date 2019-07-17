@@ -1,5 +1,5 @@
 
-// A port-fork of the Fractal render extension for Nunjucks for 11ty
+// A port-fork-enhancement of the Fractal render extension for Nunjucks for 11ty
 // Original: https://github.com/frctl/nunjucks/blob/develop/src/extensions/render.js
 
 // {% render '@'+variant.handle, variant.context, false, { escape: false, beautify: true, codetype: 'html', highlight: true } %}
@@ -50,8 +50,9 @@ module.exports = function (nunjucksEngine,fractal) {
           entity.render(context).then(html => {
               let ret;
               if (beautify) {
+                // https://www.npmjs.com/package/js-beautify
                 const beautify = require('js-beautify').html;
-                html = beautify(html,  { indent_size: 2, space_in_empty_paren: true });
+                html = beautify(html, { indent_size: 2 });
               }
               if (highlight) {
                 const hljs = require('highlight.js');
