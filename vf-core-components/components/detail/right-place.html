@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
 
 
-<title>Visual Regression Testing | VF Boilerplate for Eleventy</title>
+<title>Right Place | VF Boilerplate for Eleventy</title>
 
 </head>
 <body>
@@ -56,14 +56,14 @@
         
     
 
-<div class="Pen" data-behaviour="pen" id="pen-afe2c6043ded6287b8adabd4b26c94c4">
+<div class="Pen" data-behaviour="pen" id="pen-7ad38c9cf3f0018f4a3b1ab140016188">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/visual-regression-testing.html" title="Component preview">
-            Visual Regression Testing
+        <a class="Pen-previewLink" href="../preview/right-place.html" title="Component preview">
+            Right Place
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -83,7 +83,7 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-afe2c6043ded6287b8adabd4b26c94c4">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-7ad38c9cf3f0018f4a3b1ab140016188">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
@@ -108,7 +108,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-afe2c6043ded6287b8adabd4b26c94c4">
+    <div class="Browser" data-behaviour="browser" id="browser-7ad38c9cf3f0018f4a3b1ab140016188">
 
     
 
@@ -117,19 +117,19 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-afe2c6043ded6287b8adabd4b26c94c4-panel-html">HTML</a>
+            <a href="#browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-afe2c6043ded6287b8adabd4b26c94c4-panel-view">View</a>
+            <a href="#browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-afe2c6043ded6287b8adabd4b26c94c4-panel-context">Context</a>
+            <a href="#browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-context">Context</a>
         </li>
         
         
@@ -141,13 +141,13 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-afe2c6043ded6287b8adabd4b26c94c4-panel-info">Info</a>
+            <a href="#browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-info">Info</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-afe2c6043ded6287b8adabd4b26c94c4-panel-notes">Notes</a>
+            <a href="#browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-notes">Notes</a>
         </li>
         
         
@@ -157,71 +157,61 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-afe2c6043ded6287b8adabd4b26c94c4-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-html">
     <code class="Code Code--lang-html">
         
         <pre>---
-title: Visual Regression Testing
-order: 105
+title: In the right place?
+label: none
+context:
+lede: None yet
+intro: This site is designed as a demonstration of all the components bundled with the Visual Framework 2.0 core.
+order: 99
+isIndex: true
 ---
 
-To be confident that we can ammend components code if needed without breaking anything we need to test against the agreed look and interaction(s) of a component.
+You most likely don't need to clone the
+[`vf-core`](https://github.com/visual-framework/vf-core) unless you're
+interested in improving the architecure of the system or contributing a global
+component for all users of the Visual Framework.
 
-We are making use of [BackStopJS](https://github.com/garris/BackstopJS) to do this. We store the reference 'truth' on github inside the component library monorepo [vf-core](https://github.com/visual-framework/vf-core). We run this locally on our machines before pushing to the remomte repository to create a PR.
+Most developers will want to build a site or design system that use the Visual
+Framework architecure and components, for those users we recommend:
 
-## To get this working:
-
-First, make sure you have the latest `develop` branch and have `yarn install`ed so everything is in place. When you get to a point in your code where you want to create a PR you will need to test your changes against the Visual Regressiong Testing (VRT) reference images.
-
-## To do this:
-
-1. Run `gulp frctlVRT` to create an updated static build of the component library.
-2. Run `gulp vizres-test` to start the test.
-
-When the test is complete it will open your default browser and display the results.
-
-It currently fails comparisons that have a 1.0% or more difference.</pre>
+1. Reviewing the links below and components on this site; and
+2. Utilising the [`vf-eleventy`](https://visual-framework.github.io/vf-eleventy/) templates.</pre>
         
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-afe2c6043ded6287b8adabd4b26c94c4-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-view">
     <code class="Code Code--lang-text">
-        <pre><span class="hljs-comment">---</span>
-title: Visual Regression Testing
-order: 105
-<span class="hljs-comment">---</span>
+        <pre><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> <span class="hljs-string">In</span> <span class="hljs-string">the</span> <span class="hljs-string">right</span> <span class="hljs-string">place?</span>
+<span class="hljs-attr">label:</span> <span class="hljs-string">none</span>
+<span class="hljs-attr">context:</span>
+<span class="hljs-attr">  lede:</span> <span class="hljs-string">None</span> <span class="hljs-string">yet</span>
+<span class="hljs-attr">  intro:</span> <span class="hljs-string">This</span> <span class="hljs-string">site</span> <span class="hljs-string">is</span> <span class="hljs-string">designed</span> <span class="hljs-string">as</span> <span class="hljs-string">a</span> <span class="hljs-string">demonstration</span> <span class="hljs-string">of</span> <span class="hljs-string">all</span> <span class="hljs-string">the</span> <span class="hljs-string">components</span> <span class="hljs-string">bundled</span> <span class="hljs-string">with</span> <span class="hljs-string">the</span> <span class="hljs-string">Visual</span> <span class="hljs-string">Framework</span> <span class="hljs-number">2.0</span> <span class="hljs-string">core.</span>
+<span class="hljs-attr">order:</span> <span class="hljs-number">99</span>
+<span class="hljs-attr">isIndex:</span> <span class="hljs-literal">true</span>
+<span class="hljs-meta">---</span>
 
-To be confident that we can ammend components code if needed without breaking anything we need to test against the agreed look and interaction(s) of a component.
+<span class="hljs-string">You</span> <span class="hljs-string">most</span> <span class="hljs-string">likely</span> <span class="hljs-string">don't</span> <span class="hljs-string">need</span> <span class="hljs-string">to</span> <span class="hljs-string">clone</span> <span class="hljs-string">the</span>
+<span class="hljs-string">[`vf-core`](https://github.com/visual-framework/vf-core)</span> <span class="hljs-string">unless</span> <span class="hljs-string">you're</span>
+<span class="hljs-string">interested</span> <span class="hljs-string">in</span> <span class="hljs-string">improving</span> <span class="hljs-string">the</span> <span class="hljs-string">architecure</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">system</span> <span class="hljs-string">or</span> <span class="hljs-string">contributing</span> <span class="hljs-string">a</span> <span class="hljs-string">global</span>
+<span class="hljs-string">component</span> <span class="hljs-string">for</span> <span class="hljs-string">all</span> <span class="hljs-string">users</span> <span class="hljs-string">of</span> <span class="hljs-string">the</span> <span class="hljs-string">Visual</span> <span class="hljs-string">Framework.</span>
 
+<span class="hljs-string">Most</span> <span class="hljs-string">developers</span> <span class="hljs-string">will</span> <span class="hljs-string">want</span> <span class="hljs-string">to</span> <span class="hljs-string">build</span> <span class="hljs-string">a</span> <span class="hljs-string">site</span> <span class="hljs-string">or</span> <span class="hljs-string">design</span> <span class="hljs-string">system</span> <span class="hljs-string">that</span> <span class="hljs-string">use</span> <span class="hljs-string">the</span> <span class="hljs-string">Visual</span>
+<span class="hljs-string">Framework</span> <span class="hljs-string">architecure</span> <span class="hljs-string">and</span> <span class="hljs-string">components,</span> <span class="hljs-string">for</span> <span class="hljs-string">those</span> <span class="hljs-string">users</span> <span class="hljs-string">we</span> <span class="hljs-attr">recommend:</span>
 
-
-We are making <span class="hljs-keyword">use</span> <span class="hljs-keyword">of</span> [BackStopJS](https://github.com/garris/BackstopJS) <span class="hljs-keyword">to</span> <span class="hljs-keyword">do</span> this. We <span class="hljs-keyword">store</span> the <span class="hljs-keyword">reference</span> <span class="hljs-string">'truth'</span> <span class="hljs-keyword">on</span> github inside the component <span class="hljs-keyword">library</span> monorepo [vf-core](https://github.com/visual-framework/vf-core). We run this locally <span class="hljs-keyword">on</span> our machines <span class="hljs-keyword">before</span> pushing <span class="hljs-keyword">to</span> the remomte repository <span class="hljs-keyword">to</span> <span class="hljs-keyword">create</span> a PR.
-
-
-
-<span class="hljs-comment">## To get this working:</span>
-
-
-
-<span class="hljs-keyword">First</span>, make sure you have the latest <span class="hljs-string">`develop`</span> branch <span class="hljs-keyword">and</span> have <span class="hljs-string">`yarn install`</span>ed so everything <span class="hljs-keyword">is</span> <span class="hljs-keyword">in</span> place. <span class="hljs-keyword">When</span> you <span class="hljs-keyword">get</span> <span class="hljs-keyword">to</span> a point <span class="hljs-keyword">in</span> your code <span class="hljs-keyword">where</span> you want <span class="hljs-keyword">to</span> <span class="hljs-keyword">create</span> a PR you will need <span class="hljs-keyword">to</span> <span class="hljs-keyword">test</span> your changes against the Visual Regressiong Testing (VRT) <span class="hljs-keyword">reference</span> images.
-
-
-<span class="hljs-comment">## To do this:</span>
-
-
-<span class="hljs-number">1.</span> Run <span class="hljs-string">`gulp frctlVRT`</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">create</span> an <span class="hljs-keyword">updated</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">build</span> <span class="hljs-keyword">of</span> the component library.
-<span class="hljs-number">2.</span> Run <span class="hljs-string">`gulp vizres-test`</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">start</span> the test.
-
-<span class="hljs-keyword">When</span> the <span class="hljs-keyword">test</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">complete</span> it will <span class="hljs-keyword">open</span> your <span class="hljs-keyword">default</span> browser <span class="hljs-keyword">and</span> display the results.
-
-It currently fails comparisons that have a <span class="hljs-number">1.0</span>% <span class="hljs-keyword">or</span> more difference.</pre>
+<span class="hljs-number">1.</span> <span class="hljs-string">Reviewing</span> <span class="hljs-string">the</span> <span class="hljs-string">links</span> <span class="hljs-string">below</span> <span class="hljs-string">and</span> <span class="hljs-string">components</span> <span class="hljs-string">on</span> <span class="hljs-string">this</span> <span class="hljs-string">site;</span> <span class="hljs-string">and</span>
+<span class="hljs-number">2.</span> <span class="hljs-string">Utilising</span> <span class="hljs-string">the</span> <span class="hljs-string">[`vf-eleventy`](https://visual-framework.github.io/vf-eleventy/)</span> <span class="hljs-string">templates.</span></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-afe2c6043ded6287b8adabd4b26c94c4-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-context">
     <code class="Code Code--lang-json">
         
             
@@ -238,11 +228,11 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-afe2c6043ded6287b8adabd4b26c94c4-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@visual-regression-testing</span>
+            <span class="Meta-value">@right-place</span>
         </li>
         
         
@@ -253,12 +243,12 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/visual-regression-testing.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/right-place.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/visual-regression-testing.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/right-place.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -268,7 +258,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/vf-core-components/vf-core/docs/guidelines/visual-regression-testing.njk</span>
+            <span class="Meta-value">src/components/vf-core-components/vf-core/docs/getting-started/right-place.njk</span>
         </li>
         
         
@@ -276,7 +266,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 </div>
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-afe2c6043ded6287b8adabd4b26c94c4-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-7ad38c9cf3f0018f4a3b1ab140016188-panel-notes">
     <div class="Prose Prose--condensed">
         
         <p class="Browser-isEmptyNote">There are no notes for this item.</p>
@@ -359,7 +349,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -762,7 +752,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -786,7 +776,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -810,7 +800,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1119,7 +1109,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1154,9 +1144,9 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-changelog">
+        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-getting-started">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Changelog</span>
+                <span>Getting Started</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1169,374 +1159,6 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="index.html" data-pjax>
                 <span>Index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-contributing">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Contributing</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="creating-new-components.html" data-pjax>
-                <span>Creating New Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="css.html" data-pjax>
-                <span>Css</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="deprecating-components.html" data-pjax>
-                <span>Deprecating Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="file-structure.html" data-pjax>
-                <span>File Structure</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-token-variables.html" data-pjax>
-                <span>Global Token Variables</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="governance.html" data-pjax>
-                <span>Governance</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="index.html" data-pjax>
-                <span>Index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="javascript.html" data-pjax>
-                <span>Javascript</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="naming.html" data-pjax>
-                <span>Naming</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="setting-up.html" data-pjax>
-                <span>Setting Up</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
-                <span>Updating A Component</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="user-base.html" data-pjax>
-                <span>User Base</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="writing-and-language.html" data-pjax>
-                <span>Writing And Language</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-guidelines">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Guidelines</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="versioning.html" data-pjax>
-                <span>Versioning</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1560,7 +1182,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
-                <span>Visual Regression Testing</span>
+                <span>Right Place</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2415,7 +2037,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2463,7 +2085,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2535,7 +2157,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -2559,7 +2181,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -2719,7 +2341,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2743,7 +2365,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2778,7 +2400,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2802,7 +2424,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2826,7 +2448,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2850,7 +2472,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2874,7 +2496,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2898,7 +2520,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2922,7 +2544,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2946,7 +2568,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2970,7 +2592,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2994,7 +2616,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3018,7 +2640,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3042,7 +2664,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3082,7 +2704,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3106,7 +2728,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3130,7 +2752,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3154,7 +2776,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3236,94 +2858,6 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-navigation">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Navigation</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
-                <span>Global</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
-                <span>Main</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
-                <span>Additional</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-no-js.html" data-pjax>
@@ -3335,7 +2869,7 @@ It currently fails comparisons that have a <span class="hljs-number">1.0</span>%
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
 
 
 </div>

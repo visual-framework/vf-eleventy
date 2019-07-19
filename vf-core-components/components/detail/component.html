@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
 
 
-<title>Naming | VF Boilerplate for Eleventy</title>
+<title><%= componentName %> | VF Boilerplate for Eleventy</title>
 
 </head>
 <body>
@@ -56,14 +56,14 @@
         
     
 
-<div class="Pen" data-behaviour="pen" id="pen-6c1f7ec15a9786f16aa157aa66b93b72">
+<div class="Pen" data-behaviour="pen" id="pen-8ea2a37a60231cb47a331a31af23a660">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/naming.html" title="Component preview">
-            Naming
+        <a class="Pen-previewLink" href="../preview/component.html" title="Component preview">
+            <%= componentName %>
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -83,7 +83,7 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-6c1f7ec15a9786f16aa157aa66b93b72">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-8ea2a37a60231cb47a331a31af23a660">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
@@ -108,7 +108,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-6c1f7ec15a9786f16aa157aa66b93b72">
+    <div class="Browser" data-behaviour="browser" id="browser-8ea2a37a60231cb47a331a31af23a660">
 
     
 
@@ -117,19 +117,19 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-html">HTML</a>
+            <a href="#browser-8ea2a37a60231cb47a331a31af23a660-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-view">View</a>
+            <a href="#browser-8ea2a37a60231cb47a331a31af23a660-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-context">Context</a>
+            <a href="#browser-8ea2a37a60231cb47a331a31af23a660-panel-context">Context</a>
         </li>
         
         
@@ -141,13 +141,13 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-info">Info</a>
+            <a href="#browser-8ea2a37a60231cb47a331a31af23a660-panel-info">Info</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-notes">Notes</a>
+            <a href="#browser-8ea2a37a60231cb47a331a31af23a660-panel-notes">Notes</a>
         </li>
         
         
@@ -157,130 +157,33 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8ea2a37a60231cb47a331a31af23a660-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre>---
-title: Component and pattern naming
----
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-lede"</span>&gt;</span>The Visual Framework uses a dual approach for the naming of things.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-At the lower level there are **components** which are a type of "ingredient" used
-to assembl into the higher level **patterns** that are richer templates with
-usability guidance.
-
-## Type 1: Components
-
-Components are intended for re-use and should be named for what they are; that is:
-
-- vf-box (not "vf-introduction")
-- [vf-button](/components/detail/vf-button--sizes) (not "vf-call-to-action")
-- vf-grid (not "vf-wide-layout")
-- vf-header (not "vf-big-headline")
-- vf-form
-
-Why? This ensures that that a box will always be rectangular-ish pattern on pages,
-whereas an "introduction" may be a box today, but become simply large text after a redesign.
-
-### Components have
-
-- Lots of code
-- Generally that CSS/Sass and some JS
-- An HTML code template (Nunjucks)
-- Documentation on how to use
-
-## Type 2: Patterns
-
-If your pattern is primarily intended to be used for particular websites or a brand,
-give it a name that is attached to the role it performs; that is:
-
-- vf-group-masthead
-- vf-registration-form
-- vf-start-page
-
-Why? Naming for the role the pattern does allows us to change the future visual structure,
-so a "display headline" today may have a black background, but tomorrow might have no background
-and be large and italic text.
-
-### Patterns have
-
-- Lots of code
-- Generally that CSS/Sass and some JS
-- An HTML code template (Nunjucks)
-- Documentation on how to use
-
-For further guidance on the distinctions, see: [Patterns ≠ Components](https://medium.com/eightshapes-llc/patterns-components-2ce778cbe4e8)
-and UK.gov's information on [patterns](https://design-system.service.gov.uk/patterns) vs [components](https://design-system.service.gov.uk/components).</pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"&lt;%= componentName %&gt;"</span>&gt;</span>
+    /* <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">componentName</span> %&gt;</span> template file */
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8ea2a37a60231cb47a331a31af23a660-panel-view">
     <code class="Code Code--lang-text">
-        <pre><span class="hljs-comment">---</span>
-title: Component <span class="hljs-keyword">and</span> pattern naming
-<span class="hljs-comment">---</span>
-
-&lt;p class=<span class="hljs-string">"vf-lede"</span>&gt;The Visual Framework uses <span class="hljs-keyword">a</span> dual approach <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> naming <span class="hljs-keyword">of</span> things.&lt;/p&gt;
-
-At <span class="hljs-keyword">the</span> <span class="hljs-built_in">lower</span> level there are **components** which are <span class="hljs-keyword">a</span> type <span class="hljs-keyword">of</span> <span class="hljs-string">"ingredient"</span> used
-<span class="hljs-built_in">to</span> assembl <span class="hljs-keyword">into</span> <span class="hljs-keyword">the</span> higher level **patterns** that are richer templates <span class="hljs-keyword">with</span>
-usability guidance.
-
-<span class="hljs-comment">## Type 1: Components</span>
-
-Components are intended <span class="hljs-keyword">for</span> re-use <span class="hljs-keyword">and</span> should be named <span class="hljs-keyword">for</span> what they are; that is:
-
-- vf-box (<span class="hljs-keyword">not</span> <span class="hljs-string">"vf-introduction"</span>)
-- [vf-button](/components/detail/vf-button<span class="hljs-comment">--sizes) (not "vf-call-to-action")</span>
-- vf-grid (<span class="hljs-keyword">not</span> <span class="hljs-string">"vf-wide-layout"</span>)
-- vf-header (<span class="hljs-keyword">not</span> <span class="hljs-string">"vf-big-headline"</span>)
-- vf-form
-
-Why? This ensures that that <span class="hljs-keyword">a</span> box will always be rectangular-ish pattern <span class="hljs-keyword">on</span> <span class="hljs-title">pages</span>,
-whereas <span class="hljs-keyword">an</span> <span class="hljs-string">"introduction"</span> may be <span class="hljs-keyword">a</span> box today, but become simply large <span class="hljs-keyword">text</span> <span class="hljs-keyword">after</span> <span class="hljs-keyword">a</span> redesign.
-
-<span class="hljs-comment">### Components have</span>
-
-- Lots <span class="hljs-keyword">of</span> code
-    - Generally that CSS/Sass <span class="hljs-keyword">and</span> some JS
-- An HTML code template (Nunjucks)
-- Documentation <span class="hljs-keyword">on</span> <span class="hljs-title">how</span> <span class="hljs-title">to</span> <span class="hljs-title">use</span>
-
-<span class="hljs-comment">## Type 2: Patterns</span>
-
-If your pattern is primarily intended <span class="hljs-built_in">to</span> be used <span class="hljs-keyword">for</span> particular websites <span class="hljs-keyword">or</span> <span class="hljs-keyword">a</span> brand,
-give <span class="hljs-keyword">it</span> <span class="hljs-keyword">a</span> name that is attached <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> role <span class="hljs-keyword">it</span> performs; that is:
-
-- vf-group-masthead
-- vf-registration-form
-- vf-<span class="hljs-built_in">start</span>-page
-
-Why? Naming <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> role <span class="hljs-keyword">the</span> pattern does allows us <span class="hljs-built_in">to</span> change <span class="hljs-keyword">the</span> future visual structure,
-so <span class="hljs-keyword">a</span> <span class="hljs-string">"display headline"</span> today may have <span class="hljs-keyword">a</span> <span class="hljs-keyword">black</span> background, but tomorrow might have no background
-<span class="hljs-keyword">and</span> be large <span class="hljs-keyword">and</span> italic <span class="hljs-keyword">text</span>.
-
-<span class="hljs-comment">### Patterns have</span>
-
-- Lots <span class="hljs-keyword">of</span> code
-    - Generally that CSS/Sass <span class="hljs-keyword">and</span> some JS
-- An HTML code template (Nunjucks)
-- Documentation <span class="hljs-keyword">on</span> <span class="hljs-title">how</span> <span class="hljs-title">to</span> <span class="hljs-title">use</span>
-
-
-For further guidance <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">distinctions</span>, <span class="hljs-title">see</span>: [<span class="hljs-title">Patterns</span> ≠ <span class="hljs-title">Components</span>](<span class="hljs-title">https</span>://<span class="hljs-title">medium</span>.<span class="hljs-title">com</span>/<span class="hljs-title">eightshapes-llc</span>/<span class="hljs-title">patterns-components-2ce778cbe4e8</span>)
-<span class="hljs-keyword">and</span> UK.gov<span class="hljs-string">'s information on [patterns](https://design-system.service.gov.uk/patterns) vs [components](https://design-system.service.gov.uk/components).</span></pre>
+        <pre>&lt;div <span class="hljs-keyword">class</span>="&lt;%= <span class="hljs-symbol">componentName</span> %&gt;"&gt;
+  /* &lt;%= <span class="hljs-symbol">componentName</span> %&gt; <span class="hljs-symbol">template</span> <span class="hljs-symbol">file</span> */
+&lt;/<span class="hljs-symbol">div</span>&gt;</pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8ea2a37a60231cb47a331a31af23a660-panel-context">
     <code class="Code Code--lang-json">
         
             
-            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">"component-type"</span>: <span class="hljs-string">"&lt;%= componentType %&gt;"</span>
+}</pre>
             
         
     </code>
@@ -293,11 +196,11 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-8ea2a37a60231cb47a331a31af23a660-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@naming</span>
+            <span class="Meta-value">@component</span>
         </li>
         
         
@@ -308,12 +211,12 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/naming.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/component.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/naming.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/component.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -323,7 +226,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/vf-core-components/vf-core/docs/contributing/naming.njk</span>
+            <span class="Meta-value">src/components/vf-core-components/vf-core/tools/component-generator/templates/_component.njk</span>
         </li>
         
         
@@ -331,7 +234,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 </div>
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-6c1f7ec15a9786f16aa157aa66b93b72-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-8ea2a37a60231cb47a331a31af23a660-panel-notes">
     <div class="Prose Prose--condensed">
         
         <p class="Browser-isEmptyNote">There are no notes for this item.</p>
@@ -414,7 +317,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -817,7 +720,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -841,7 +744,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -865,7 +768,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1174,7 +1077,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1209,9 +1112,9 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-changelog">
+        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-getting-started">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Changelog</span>
+                <span>Getting Started</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1243,379 +1146,11 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
         </li>
         
     
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-contributing">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Contributing</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="creating-new-components.html" data-pjax>
-                <span>Creating New Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="css.html" data-pjax>
-                <span>Css</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="deprecating-components.html" data-pjax>
-                <span>Deprecating Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="file-structure.html" data-pjax>
-                <span>File Structure</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-token-variables.html" data-pjax>
-                <span>Global Token Variables</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="governance.html" data-pjax>
-                <span>Governance</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="index.html" data-pjax>
-                <span>Index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="javascript.html" data-pjax>
-                <span>Javascript</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Naming</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="setting-up.html" data-pjax>
-                <span>Setting Up</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
-                <span>Updating A Component</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="user-base.html" data-pjax>
-                <span>User Base</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="writing-and-language.html" data-pjax>
-                <span>Writing And Language</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-guidelines">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Guidelines</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="versioning.html" data-pjax>
-                <span>Versioning</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
-                <span>Visual Regression Testing</span>
+            <a class="Tree-entityLink" href="right-place.html" data-pjax>
+                <span>Right Place</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2470,7 +2005,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2518,7 +2053,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2590,7 +2125,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -2614,7 +2149,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -2774,7 +2309,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2798,7 +2333,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2833,7 +2368,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2857,7 +2392,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2881,7 +2416,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2905,7 +2440,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2929,7 +2464,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2953,7 +2488,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2977,7 +2512,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3001,7 +2536,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3025,7 +2560,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3049,7 +2584,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3073,7 +2608,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3097,7 +2632,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3137,7 +2672,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3161,7 +2696,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3185,7 +2720,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3209,7 +2744,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3291,94 +2826,6 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-navigation">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Navigation</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
-                <span>Global</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
-                <span>Main</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
-                <span>Additional</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-no-js.html" data-pjax>
@@ -3390,7 +2837,7 @@ For further guidance <span class="hljs-keyword">on</span> <span class="hljs-titl
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
 
 
 </div>

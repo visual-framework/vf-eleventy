@@ -7,8 +7,8 @@
   --vf-color--grey: #707372;
   --vf-color--grey--darkest: #373a36;
   --vf-color--grey--dark: #54585a;
-  --vf-color--grey--light: #d0d0ce;
-  --vf-color--grey--lightest: #a8a99e;
+  --vf-color--grey--light: #a8a99e;
+  --vf-color--grey--lightest: #d0d0ce;
   --vf-color--red: #e40046;
   --vf-color--red--dark: #a6093d;
   --vf-color--red--light: #e58f9e;
@@ -56,6 +56,7 @@ html {
 }
 
 .vf-body {
+  display: block;
   margin: 0 auto;
   max-width: 76.5em;
 }
@@ -67,7 +68,10 @@ html {
   .vf-body {
     display: grid;
     grid-template-columns: minmax(var(--page-grid-gap), auto) [main-start] minmax(288px, 76.5em) [main-end] minmax(var(--page-grid-gap), auto);
-    margin: unset;
+    margin: 0;
     max-width: unset;
+  }
+  body {
+    margin: 0;
   }
 }

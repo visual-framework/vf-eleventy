@@ -27,19 +27,30 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: Unable to call <code>frctl[&quot;get&quot;]</code>, which is undefined or falsey</p>
+        <p>(unknown path) [Line 4, Column 51]
+  Error: Unable to call <code>path</code>, which is undefined or falsey</p>
 
     </div>
     
     <code class="Error-stack">
-        <pre>Template render error: (unknown path)
-  Error: Unable to call `frctl["get"]`, which is undefined or falsey
+        <pre>Template render error: (unknown path) [Line 4, Column 51]
+  Error: Unable to call `path`, which is undefined or falsey
     at Object._prettifyError (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/lib.js:36:11)
     at /home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:567:19
-    at eval (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:11:11)
-    at entity.render.then.catch.err (/home/travis/build/visual-framework/vf-eleventy/node_modules/@frctl/nunjucks/src/extensions/render.js:47:21)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</pre>
+    at Template.root [as rootRenderFunc] (eval at _compile (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:637:18), <anonymous>:21:3)
+    at Template.render (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:556:10)
+    at Environment.renderString (/home/travis/build/visual-framework/vf-eleventy/node_modules/nunjucks/src/environment.js:380:17)
+    at Environment.tryCatcher (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/util.js:16:23)
+    at Environment.ret [as renderStringAsync] (eval at makeNodePromisifiedEval (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/promisify.js:184:12), <anonymous>:14:23)
+    at NunjucksAdapter.render (/home/travis/build/visual-framework/vf-eleventy/node_modules/@frctl/nunjucks/src/adapter.js:101:28)
+    at ComponentSource._renderVariant (/home/travis/build/visual-framework/vf-eleventy/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
+    at _renderVariant.next (<anonymous>)
+    at onFulfilled (/home/travis/build/visual-framework/vf-eleventy/node_modules/co/index.js:65:19)
+    at bound (domain.js:402:14)
+    at runBound (domain.js:415:12)
+    at tryCatcher (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/promise.js:517:31)
+    at Promise._settlePromise (/home/travis/build/visual-framework/vf-eleventy/node_modules/bluebird/js/release/promise.js:574:18)</pre>
     </code>
     
 </div>

@@ -1,5 +1,5 @@
 {
-  "version": "0.0.38",
+  "version": "1.0.0-beta.2",
   "name": "@visual-framework/vf-intro",
   "description": "vf-intro component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -15,13 +15,9 @@
   "bugs": {
     "url": "https://github.com/visual-framework/vf-core/issues/new"
   },
-  "dependencies": {
-    "@visual-framework/vf-heading": "^0.0.37",
-    "@visual-framework/vf-text": "^0.0.37"
-  },
   "keywords": [
     "fractal",
     "component"
   ],
-  "gitHead": "44284637cfbb3cc73a97ba62b0c3103e49f27d40"
+  "gitHead": "9165d35bf7da0a48885d6bf58da48bf8c6500c5c"
 }

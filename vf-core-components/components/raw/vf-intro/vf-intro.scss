@@ -6,10 +6,13 @@
   & > * {
     grid-column: 2 / span 1;
   }
+  .vf-lede {
+    margin-bottom: 2rem;
+  }
 }
 
 .vf-intro__heading {
-  @include set-type(heading--xl);
+  @include set-type(text-heading--1);
   @include margin--block(bottom, 56px);
 }
 
@@ -21,7 +24,7 @@
     margin-left: .5rem;
   }
 
-  @media (min-width: $vf-breakpoint--l) {
+  @media (min-width: $vf-breakpoint--lg) {
     left: -83px;
     position: relative;
 
@@ -33,7 +36,7 @@
 }
 
 .vf-intro__text {
-  @include set-type(body--l);
+  @include set-type(text-body--2);
   @include margin--block(bottom, 24px);
 
   &:last-of-type {

@@ -173,6 +173,7 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-a3ec553ff1134c929e61642008d8ea13-panel-view">
     <code class="Code Code--lang-text">
         <pre><span class="xml"></span><span class="hljs-comment">{# Determine type of element to use, if not explicitly set -#}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">spaceless</span></span> %}</span><span class="xml">
 
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> href %}</span><span class="xml">
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> tags = 'a' %}</span><span class="xml">
@@ -202,14 +203,15 @@
 </span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> style %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
   </span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> styles in style %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-badge--</span></span></span><span class="hljs-template-variable">{{styles}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 </span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
-</span></span></span><span class="hljs-comment">{# You want a snowflake of a classname for something, here you  #}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+</span></span></span><span class="hljs-comment">{# You want a snowflake of a classname for something, here you go #}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 </span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> override_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> | </span></span></span><span class="hljs-template-variable">{{override_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 
 "</span>&gt;</span>
 
    </span><span class="hljs-template-variable">{{- html | safe if html else text -}}</span><span class="xml">
 
-<span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{tags}}</span><span class="xml"><span class="hljs-tag">&gt;</span></span></pre>
+<span class="hljs-tag">&lt;/</span></span><span class="hljs-template-variable">{{tags}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endspaceless</span></span> %}</span><span class="xml"></span></pre>
     </code>
 </div>
 
@@ -264,138 +266,6 @@
 
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
-
-<span class="hljs-section">## 0.0.37 (2019-07-08)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.36 (2019-06-21)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.35 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.34 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.33 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.32 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.31 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.35 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.34 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.33 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.32 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.31 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.30 (2019-06-03)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.29 (2019-05-02)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.28 (2019-03-28)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.27 (2019-02-28)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
-
-
-
-
-
-<span class="hljs-section">## 0.0.26 (2019-02-28)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
 </pre>
                             </code>
                             
@@ -412,7 +282,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.8 KB</span>
+                    <span class="Meta-value">166 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -466,7 +336,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.37"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-beta.2"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-badge"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-badge component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -486,7 +356,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"44284637cfbb3cc73a97ba62b0c3103e49f27d40"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"9165d35bf7da0a48885d6bf58da48bf8c6500c5c"</span>
 }
 </pre>
                             </code>
@@ -504,7 +374,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">660 Bytes</span>
+                    <span class="Meta-value">666 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -526,8 +396,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">--vf-color--grey</span>: <span class="hljs-number">#707372</span>;
   <span class="hljs-attribute">--vf-color--grey--darkest</span>: <span class="hljs-number">#373a36</span>;
   <span class="hljs-attribute">--vf-color--grey--dark</span>: <span class="hljs-number">#54585a</span>;
-  <span class="hljs-attribute">--vf-color--grey--light</span>: <span class="hljs-number">#d0d0ce</span>;
-  <span class="hljs-attribute">--vf-color--grey--lightest</span>: <span class="hljs-number">#a8a99e</span>;
+  <span class="hljs-attribute">--vf-color--grey--light</span>: <span class="hljs-number">#a8a99e</span>;
+  <span class="hljs-attribute">--vf-color--grey--lightest</span>: <span class="hljs-number">#d0d0ce</span>;
   <span class="hljs-attribute">--vf-color--red</span>: <span class="hljs-number">#e40046</span>;
   <span class="hljs-attribute">--vf-color--red--dark</span>: <span class="hljs-number">#a6093d</span>;
   <span class="hljs-attribute">--vf-color--red--light</span>: <span class="hljs-number">#e58f9e</span>;
@@ -721,7 +591,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 
 
 <span class="hljs-selector-class">.vf-badge</span> {
-  @<span class="hljs-keyword">include</span> set-type(button--s, <span class="hljs-variable">$custom-margin-bottom</span>: disable);
+  @<span class="hljs-keyword">include</span> set-type(text-button--<span class="hljs-number">2</span>, <span class="hljs-variable">$custom-margin-bottom</span>: disable);
 
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid currentColor;
   <span class="hljs-attribute">color</span>: inherit;
@@ -909,10 +779,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <div class="Prose Prose--condensed">
         
         <p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-badge"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-badge.svg" alt="npm version"></a></p>
-<p><a
- href="https://www.kens-home.com"
- id="harsh"
-class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">alpha</a></p>
+<p> <a href="https://www.kens-home.com" id="harsh" class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">alpha</a> </p>
 <h2 id="about">About</h2>
 <p>The <code>vf-badge</code> component is used to label a page, part of a page, or a component. The <code>vf-badge</code> component can also be a link using <code>&lt;a class=&quot;vf-badge&quot; href=&quot;&quot;&gt;badge title&lt;/a&gt;</code>.</p>
 <h2 id="installation-and-implementation">Installation and Implementation</h2>
@@ -1001,7 +868,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -1404,7 +1271,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1428,7 +1295,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1452,7 +1319,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1761,7 +1628,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1796,9 +1663,9 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-changelog">
+        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-getting-started">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Changelog</span>
+                <span>Getting Started</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1830,379 +1697,11 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
         </li>
         
     
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-contributing">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Contributing</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="creating-new-components.html" data-pjax>
-                <span>Creating New Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="css.html" data-pjax>
-                <span>Css</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="deprecating-components.html" data-pjax>
-                <span>Deprecating Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="file-structure.html" data-pjax>
-                <span>File Structure</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-token-variables.html" data-pjax>
-                <span>Global Token Variables</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="governance.html" data-pjax>
-                <span>Governance</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="index.html" data-pjax>
-                <span>Index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="javascript.html" data-pjax>
-                <span>Javascript</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="naming.html" data-pjax>
-                <span>Naming</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="setting-up.html" data-pjax>
-                <span>Setting Up</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
-                <span>Updating A Component</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="user-base.html" data-pjax>
-                <span>User Base</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="writing-and-language.html" data-pjax>
-                <span>Writing And Language</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-guidelines">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Guidelines</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="versioning.html" data-pjax>
-                <span>Versioning</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
-                <span>Visual Regression Testing</span>
+            <a class="Tree-entityLink" href="right-place.html" data-pjax>
+                <span>Right Place</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3057,7 +2556,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3105,7 +2604,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3177,7 +2676,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -3201,7 +2700,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -3361,7 +2860,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3385,7 +2884,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3420,7 +2919,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3444,7 +2943,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3468,7 +2967,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3492,7 +2991,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3516,7 +3015,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3540,7 +3039,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3564,7 +3063,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3588,7 +3087,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3612,7 +3111,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3636,7 +3135,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3660,7 +3159,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3684,7 +3183,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3724,7 +3223,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3748,7 +3247,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3772,7 +3271,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3796,7 +3295,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3878,94 +3377,6 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-navigation">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Navigation</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
-                <span>Global</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
-                <span>Main</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
-                <span>Additional</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-no-js.html" data-pjax>
@@ -3977,7 +3388,7 @@ class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">a
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
 
 
 </div>

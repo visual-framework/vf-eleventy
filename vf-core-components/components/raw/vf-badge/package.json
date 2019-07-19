@@ -1,5 +1,5 @@
 {
-  "version": "0.0.37",
+  "version": "1.0.0-beta.2",
   "name": "@visual-framework/vf-badge",
   "description": "vf-badge component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -19,5 +19,5 @@
     "fractal",
     "component"
   ],
-  "gitHead": "44284637cfbb3cc73a97ba62b0c3103e49f27d40"
+  "gitHead": "9165d35bf7da0a48885d6bf58da48bf8c6500c5c"
 }

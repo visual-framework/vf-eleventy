@@ -90,8 +90,8 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: Unable to call <code>frctl[&quot;get&quot;]</code>, which is undefined or falsey</p>
+        <p>(unknown path) [Line 4, Column 51]
+  Error: Unable to call <code>path</code>, which is undefined or falsey</p>
 
     </div>
     
@@ -170,10 +170,26 @@
     <code class="Code Code--lang-text">
         <pre>&lt;header <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-header"</span>&gt;
   &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-global-header"</span>&gt;
+
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-global-header__inner"</span>&gt;
-      {% render <span class="hljs-string">'<a href="vf-logo--responsive.html">@vf-logo--responsive</a>'</span> %}
-      &lt;p <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-global-header__site-name"</span>&gt;{{ frctl.<span class="hljs-keyword">get</span>(<span class="hljs-string">'project.title'</span>) }}&lt;/p&gt;
+      {% render <span class="hljs-string">'<a href="vf-logo--responsive.html">@vf-logo--responsive</a>'</span>, {href: path(<span class="hljs-string">'/'</span>, request), sreen_reader_text: frctl.<span class="hljs-keyword">get</span>(<span class="hljs-string">'project.title'</span>)} %}
+
+      &lt;nav <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation vf-navigation--global"</span>&gt;
+        &lt;ul <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__list | vf-list--inline"</span>&gt;
+          &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__item"</span>&gt;
+            &lt;a href=<span class="hljs-string">"https://visual-framework.github.io/vf-welcome/"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;About the Visual Framework&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__item"</span>&gt;
+            &lt;a href=<span class="hljs-string">"https://visual-framework.github.io/vf-welcome/documentation"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;Documentation&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__item"</span>&gt;
+            &lt;a href=<span class="hljs-string">"https://discord.gg/XHAvkUX"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;Help, chat&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+
     &lt;/div&gt;
+
   &lt;/div&gt;
 &lt;/header&gt;</pre>
     </code>
@@ -327,7 +343,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -730,7 +746,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -754,7 +770,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -778,7 +794,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1087,7 +1103,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1122,9 +1138,9 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-changelog">
+        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-getting-started">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Changelog</span>
+                <span>Getting Started</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1156,379 +1172,11 @@
         </li>
         
     
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-contributing">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Contributing</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="creating-new-components.html" data-pjax>
-                <span>Creating New Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="css.html" data-pjax>
-                <span>Css</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="deprecating-components.html" data-pjax>
-                <span>Deprecating Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="file-structure.html" data-pjax>
-                <span>File Structure</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-token-variables.html" data-pjax>
-                <span>Global Token Variables</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="governance.html" data-pjax>
-                <span>Governance</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="index.html" data-pjax>
-                <span>Index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="javascript.html" data-pjax>
-                <span>Javascript</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="naming.html" data-pjax>
-                <span>Naming</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="setting-up.html" data-pjax>
-                <span>Setting Up</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
-                <span>Updating A Component</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="user-base.html" data-pjax>
-                <span>User Base</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="writing-and-language.html" data-pjax>
-                <span>Writing And Language</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-guidelines">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Guidelines</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="versioning.html" data-pjax>
-                <span>Versioning</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
-                <span>Visual Regression Testing</span>
+            <a class="Tree-entityLink" href="right-place.html" data-pjax>
+                <span>Right Place</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2383,7 +2031,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2431,7 +2079,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2503,7 +2151,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -2527,7 +2175,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -2687,7 +2335,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2711,7 +2359,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2746,7 +2394,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2770,7 +2418,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2794,7 +2442,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2818,7 +2466,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2842,7 +2490,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2866,7 +2514,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2890,7 +2538,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2914,7 +2562,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2938,7 +2586,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2962,7 +2610,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2986,7 +2634,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3010,7 +2658,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3050,7 +2698,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3074,7 +2722,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3098,7 +2746,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3122,7 +2770,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3204,94 +2852,6 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-navigation">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Navigation</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
-                <span>Global</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
-                <span>Main</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
-                <span>Additional</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-no-js.html" data-pjax>
@@ -3303,7 +2863,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
 
 
 </div>

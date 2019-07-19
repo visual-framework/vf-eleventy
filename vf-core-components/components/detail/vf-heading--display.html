@@ -164,7 +164,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-aefd9a8446001f0af461d18265d5b392-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text--heading-xl vf-text--invert"</span>&gt;</span>This heading size is extra large and inverted<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text vf-text-heading--1 vf-text--invert"</span>&gt;</span>This heading size is extra large and inverted<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -185,20 +185,6 @@
   </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> style_class = style %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-</span><span class="hljs-comment">{# Set font-size class to be used #}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == "display" %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "xl" %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "extra-large" %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "xl" %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "large" %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "l" %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "regular" %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "r" %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == "small" %}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> size = "s" %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-
 <span class="hljs-tag">&lt;</span></span><span class="hljs-template-variable">{{tags}}</span><span class="xml"><span class="hljs-tag">
 
 </span></span><span class="hljs-comment">{# You're using an ID? Really?? That'll go here #}</span><span class="xml"><span class="hljs-tag">
@@ -206,11 +192,11 @@
 
 <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-text
 
-</span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> type %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-text--heading-</span></span></span><span class="hljs-template-variable">{{size}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+</span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> type %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-text-heading--</span></span></span><span class="hljs-template-variable">{{type}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 
 </span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> style_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-text--</span></span></span><span class="hljs-template-variable">{{style_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 
-</span></span></span><span class="hljs-comment">{# You want a snowflake of a classname for something, here you  #}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
+</span></span></span><span class="hljs-comment">{# You want a snowflake of a classname for something, here you go #}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 </span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">if</span></span> override_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> | </span></span></span><span class="hljs-template-variable">{{override_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">
 "</span>&gt;</span>
 
@@ -228,7 +214,7 @@
             
             <pre>{
   <span class="hljs-attr">"component-type"</span>: <span class="hljs-string">"element"</span>,
-  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"display"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,
   <span class="hljs-attr">"heading"</span>: <span class="hljs-string">"This heading size is extra large and inverted"</span>,
   <span class="hljs-attr">"style"</span>: <span class="hljs-string">"invert"</span>,
   <span class="hljs-attr">"tags"</span>: <span class="hljs-string">"h1"</span>
@@ -275,138 +261,6 @@
 
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
-
-<span class="hljs-section">## 0.0.37 (2019-07-08)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.36 (2019-06-21)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.35 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.34 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.33 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.32 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.31 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.35 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.34 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.33 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.32 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.31 (2019-06-20)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.30 (2019-06-03)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.29 (2019-05-02)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.28 (2019-03-28)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.27 (2019-02-28)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
-
-
-
-
-
-<span class="hljs-section">## 0.0.26 (2019-02-28)</span>
-
-<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-heading
 </pre>
                             </code>
                             
@@ -423,7 +277,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.8 KB</span>
+                    <span class="Meta-value">166 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -477,7 +331,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.37"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-beta.2"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-heading"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-heading component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -497,7 +351,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"44284637cfbb3cc73a97ba62b0c3103e49f27d40"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"9165d35bf7da0a48885d6bf58da48bf8c6500c5c"</span>
 }
 </pre>
                             </code>
@@ -515,7 +369,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">668 Bytes</span>
+                    <span class="Meta-value">674 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -537,8 +391,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">--vf-color--grey</span>: <span class="hljs-number">#707372</span>;
   <span class="hljs-attribute">--vf-color--grey--darkest</span>: <span class="hljs-number">#373a36</span>;
   <span class="hljs-attribute">--vf-color--grey--dark</span>: <span class="hljs-number">#54585a</span>;
-  <span class="hljs-attribute">--vf-color--grey--light</span>: <span class="hljs-number">#d0d0ce</span>;
-  <span class="hljs-attribute">--vf-color--grey--lightest</span>: <span class="hljs-number">#a8a99e</span>;
+  <span class="hljs-attribute">--vf-color--grey--light</span>: <span class="hljs-number">#a8a99e</span>;
+  <span class="hljs-attribute">--vf-color--grey--lightest</span>: <span class="hljs-number">#d0d0ce</span>;
   <span class="hljs-attribute">--vf-color--red</span>: <span class="hljs-number">#e40046</span>;
   <span class="hljs-attribute">--vf-color--red--dark</span>: <span class="hljs-number">#a6093d</span>;
   <span class="hljs-attribute">--vf-color--red--light</span>: <span class="hljs-number">#e58f9e</span>;
@@ -670,20 +524,20 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   @<span class="hljs-keyword">include</span> margin--block(bottom, 16px);
 }
 
-<span class="hljs-selector-class">.vf-text--heading-s</span> {
-  @<span class="hljs-keyword">include</span> set-type(heading--s);
+<span class="hljs-selector-class">.vf-text-heading--5</span> {
+  @<span class="hljs-keyword">include</span> set-type(text-heading--<span class="hljs-number">5</span>);
 }
-<span class="hljs-selector-class">.vf-text--heading-r</span> {
-  @<span class="hljs-keyword">include</span> set-type(heading--r);
+<span class="hljs-selector-class">.vf-text-heading--4</span> {
+  @<span class="hljs-keyword">include</span> set-type(text-heading--<span class="hljs-number">4</span>);
 }
-<span class="hljs-selector-class">.vf-text--heading-alt</span> {
-  @<span class="hljs-keyword">include</span> set-type(heading--l-alt);
+<span class="hljs-selector-class">.vf-text-heading--3</span> {
+  @<span class="hljs-keyword">include</span> set-type(text-heading--<span class="hljs-number">3</span>);
 }
-<span class="hljs-selector-class">.vf-text--heading-l</span> {
-  @<span class="hljs-keyword">include</span> set-type(heading--l);
+<span class="hljs-selector-class">.vf-text-heading--2</span> {
+  @<span class="hljs-keyword">include</span> set-type(text-heading--<span class="hljs-number">2</span>);
 }
-<span class="hljs-selector-class">.vf-text--heading-xl</span> {
-  @<span class="hljs-keyword">include</span> set-type(heading--xl);
+<span class="hljs-selector-class">.vf-text-heading--1</span> {
+  @<span class="hljs-keyword">include</span> set-type(text-heading--<span class="hljs-number">1</span>);
 }
 
 <span class="hljs-selector-class">.vf-text--has-tag</span> {
@@ -717,7 +571,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">623 Bytes</span>
+                    <span class="Meta-value">640 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -803,11 +657,11 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         <p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-heading"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-heading.svg" alt="npm version"></a></p>
 <h2 id="about">About</h2>
 <h2 id="demo">Demo</h2>
-<p> <p class="vf-text vf-text--heading-xl vf-text--invert">This heading size is extra large and inverted</p> 
- <p class="vf-text vf-text--heading-xl">This heading size is extra large</p> 
- <p class="vf-text vf-text--heading-l">This heading size is large</p> 
- <p class="vf-text vf-text--heading-r">This heading size is regular</p> 
- <p class="vf-text vf-text--heading-s">This heading size is small</p> </p>
+<p> <p class="vf-text vf-text-heading--1 vf-text--invert">This heading size is extra large and inverted</p> 
+ <p class="vf-text vf-text-heading--2">This heading size is extra large</p> 
+ <p class="vf-text vf-text-heading--3">This heading size is large</p> 
+ <p class="vf-text vf-text-heading--4">This heading size is regular</p> 
+ <p class="vf-text vf-text-heading--5">This heading size is small</p> </p>
 <h2 id="installation-and-implementation">Installation and Implementation</h2>
 <p>This component is distributed with npm. After <a href="https://www.npmjs.com/get-npm">installing npm</a>, you can install the <code>vf-heading</code> with this command.</p>
 <code><pre>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-heading</span></pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
@@ -892,7 +746,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -1295,7 +1149,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1319,7 +1173,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1343,7 +1197,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1652,7 +1506,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1687,9 +1541,9 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-changelog">
+        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-getting-started">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Changelog</span>
+                <span>Getting Started</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1721,379 +1575,11 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         </li>
         
     
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-contributing">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Contributing</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="creating-new-components.html" data-pjax>
-                <span>Creating New Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="css.html" data-pjax>
-                <span>Css</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="deprecating-components.html" data-pjax>
-                <span>Deprecating Components</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="file-structure.html" data-pjax>
-                <span>File Structure</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-token-variables.html" data-pjax>
-                <span>Global Token Variables</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="governance.html" data-pjax>
-                <span>Governance</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="index.html" data-pjax>
-                <span>Index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="javascript.html" data-pjax>
-                <span>Javascript</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="naming.html" data-pjax>
-                <span>Naming</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="setting-up.html" data-pjax>
-                <span>Setting Up</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="updating-a-component.html" data-pjax>
-                <span>Updating A Component</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="user-base.html" data-pjax>
-                <span>User Base</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="writing-and-language.html" data-pjax>
-                <span>Writing And Language</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-5" data-behaviour="collection" id="tree-components-collection-guidelines">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Guidelines</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="versioning.html" data-pjax>
-                <span>Versioning</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="visual-regression-testing.html" data-pjax>
-                <span>Visual Regression Testing</span>
+            <a class="Tree-entityLink" href="right-place.html" data-pjax>
+                <span>Right Place</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2948,7 +2434,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2996,7 +2482,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3068,7 +2554,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -3092,7 +2578,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
 
 
 </div>
@@ -3252,7 +2738,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3276,7 +2762,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3311,7 +2797,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3335,7 +2821,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3359,7 +2845,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3383,7 +2869,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3407,7 +2893,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3431,7 +2917,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3455,7 +2941,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3479,7 +2965,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3503,7 +2989,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3527,7 +3013,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3551,7 +3037,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3575,7 +3061,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3615,7 +3101,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3639,7 +3125,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3663,7 +3149,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3687,7 +3173,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3769,94 +3255,6 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-navigation">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Navigation</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
-                <span>Global</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
-                <span>Main</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
-                <span>Additional</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-no-js.html" data-pjax>
@@ -3868,7 +3266,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #19993B;" title="live"></span>
 
 
 </div>
