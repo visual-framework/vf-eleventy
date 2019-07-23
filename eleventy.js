@@ -4,32 +4,11 @@ const Path         = require('path');
 
 module.exports = function(config) {
 
-  // get the fractal enviroment
-  var fractal = global.fractal;
-
-  // Watch for changes, we'll use this to trigger a fractal rebuild
-  const touch = require("touch");
-  fractal.components.on('updated', function(source, eventData){
-  	console.log('Component source has been updated: ' + source.path);
-
-    // For now we're just touching a watched file until we can figure out something better
-    // https://github.com/11ty/eleventy/issues/604
-    // A solution will likely require a PR or forking eleventy's cmd.js
-    // to `module.exports = elev;` and then we can:
-    // ```
-    // global.eleventy.restart()
-    // global.eleventy.write()
-    // ```
-    touch('src/site/_data/fractalEnvironment.js');
-    console.log('Manual rebuild of 11ty triggered')
-  });
-
-  // A useful way to reference to the contect we are runing eleventy in
-  let env = process.env.ELEVENTY_ENV;
-
-  // Layout aliases can make templates more portable
-  config.addLayoutAlias('default', 'layouts/base.njk');
-
+  // Add in tags, filters useful for Visual Framework installs
+  // (fractal's render tag, codeblock, markdown, etc)
+  // and common configuration
+  const vfEleventyExtension = require("@visual-framework/vf-eleventy--extensions");
+  config.addPlugin(vfEleventyExtension);
 
   // BroswerSync options
   config.setBrowserSyncConfig({ open: true });
@@ -39,13 +18,11 @@ module.exports = function(config) {
   // -----
 
   // {{ "myContent" | sampleFilter }}
-  config.addFilter("sampleFilter", function(value) {
-    return 'ddd' + value;
-  });
+  // config.addFilter("sampleFilter", function(value) {
+  //   return 'ddd' + value;
+  // });
 
-  // Add some utiliuty filters
-  config.addFilter("markdown", require("./src/filters/markdown.js") );
-  config.addFilter("squash", require("./src/filters/squash.js") );
+  // Add any utiliuty filters
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc"
@@ -64,32 +41,10 @@ module.exports = function(config) {
   //   return 'hi ' + firstName + lastName;
   // });
 
-  // minify the html output
-  // config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
+  // If you want to minify html output
+  // config.addTransform("htmlmin", require("./node_modules/\@visual-framework/vf-eleventy--extensions/utils/minify-html.js"));
 
-  // Support the fractal-style render
-  // `{% render "@vf-heading", {"title": "EMBL.org", "type": "extra-large"} %}`
-  // config.addNunjucksTag("render", require("./src/filters/render.js"));
-  config.addNunjucksTag("render", function(nunjucksEngine) {
-    var fractalRenderExtension = require("./src/filters/render.js");
-    return new fractalRenderExtension(nunjucksEngine,fractal);
-  });
-
-  config.addNunjucksTag("codeblock", function(nunjucksEngine) {
-    var codeblockExtension = require("./src/filters/codeblock.js");
-    return new codeblockExtension(nunjucksEngine,fractal);
-  });
-
-  // Add a tag level markdown filter
-  // {% markdown %}
-  //
-  // [I'm some markdown](#link)
-  //
-  // {% endmarkdown %}
-  config.addNunjucksTag("markdown", function(nunjucksEngine) {
-    var fractalRenderExtension = require("./src/filters/markdown_tag.js");
-    return new fractalRenderExtension(nunjucksEngine);
-  });
+  // Add any custom tags
 
   // config.addNunjucksTag("uppercase", function(nunjucksEngine) {
   //   return new function() {
@@ -116,13 +71,6 @@ module.exports = function(config) {
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
 
-  // rss feed plugin
-  // https://github.com/11ty/eleventy-plugin-rss
-  const pluginRss = require("@11ty/eleventy-plugin-rss");
-  config.addPlugin(pluginRss);
-
-  // make the seed target act like prod
-  env = (env=="seed") ? "prod" : env;
   return {
     dir: {
       input: "src/site",

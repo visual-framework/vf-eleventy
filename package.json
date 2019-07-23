@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
-    "@11ty/eleventy-plugin-rss": "^1.0.6",
     "@node-sass/node-module-importer": "^1.2.3",
     "@visual-framework/embl-grid": "^1.0.0-alpha.2",
     "@visual-framework/vf-banner": "1.0.0-alpha.2",
@@ -34,6 +33,7 @@
     "@visual-framework/vf-core": "^2.0.0-alpha.8",
     "@visual-framework/vf-design-tokens": "^1.0.0-beta.2",
     "@visual-framework/vf-divider": "^1.0.0-rc.2",
+    "@visual-framework/vf-eleventy--extensions": "^1.0.0-alpha.1",
     "@visual-framework/vf-favicon": "1.0.0-beta.2",
     "@visual-framework/vf-font-plex-sans": "^1.0.0-beta.2",
     "@visual-framework/vf-form__checkbox": "^1.0.0-alpha.2",
@@ -88,8 +88,5 @@
     "url": "https://github.com/visual-framework/vf-eleventy/issues"
   },
   "homepage": "https://github.com/visual-framework/vf-eleventy#readme",
-  "devDependencies": {
-    "coffee-script": "^1.12.7"
-  },
   "keywords": []
 }
