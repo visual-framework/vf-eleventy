@@ -75,6 +75,11 @@ module.exports = function(config) {
     return new fractalRenderExtension(nunjucksEngine,fractal);
   });
 
+  config.addNunjucksTag("codeblock", function(nunjucksEngine) {
+    var codeblockExtension = require("./src/filters/codeblock.js");
+    return new codeblockExtension(nunjucksEngine,fractal);
+  });
+
   // Add a tag level markdown filter
   // {% markdown %}
   //
