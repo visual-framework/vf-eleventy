@@ -34,7 +34,10 @@ module.exports = function (nunjucksEngine,fractal) {
       const highlight = args[3].highlight || false;
       const entity = source.find(handle);
       if (!entity) {
-          throw new Error(`Could not render component '${handle}' - component not found.`);
+        console.warn(`Could not render component '${handle}' - component not found.`);
+        ret = new nunjucksEngine.runtime.SafeString(`<!-- Could not render component '${handle}' - component not found. -->`);
+        callback(null, ret)
+        return;
       }
       const defaultContext = entity.isComponent ? entity.variants().default().context : entity.context;
       if (!context) {
