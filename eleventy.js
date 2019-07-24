@@ -81,7 +81,6 @@ module.exports = function(config) {
       "njk", "md", // note that .md files will also be parsed with njk processor
       "css", "js" // passthrough file copying for static assets
     ],
-    openBrowser: true,
     htmlTemplateEngine : ["njk", "md"],
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true,
