@@ -3,11 +3,37 @@ const rename = require('gulp-rename');
 
 let fractalBuildMode = 'build';
 
+// -----------------------------------------------------------------------------
+// Configuration
+// -----------------------------------------------------------------------------
+
+// Pull in some optional configuration from the package.json file, a la:
+// "vfConfig": {
+//   "vfName": "My Component Library",
+//   "vfNameSpace": "myco-",
+//   "vfComponentPath": "./src/components",
+//   "vfBuildDestination": "./build",
+//   "vfThemePath": "@frctl/mandelbrot"
+// },
+// all settings are optional
+// todo: this could/should become a JS module
+const fs = require('fs');
+const path = require('path');
+const config = JSON.parse(fs.readFileSync('./package.json'));
+config.vfConfig = config.vfConfig || [];
+global.vfName = config.vfConfig.vfName || "Visual Framework 2.0";
+global.vfNamespace = config.vfConfig.vfNamespace || "vf-";
+global.vfComponentPath = config.vfConfig.vfComponentPath || __dirname + '/src/components';
+global.vfBuildDestination = config.vfConfig.vfBuildDestination || __dirname + '/temp/build-files';
+global.vfThemePath = config.vfConfig.vfThemePath || './tools/vf-frctl-theme';
+const componentPath = path.resolve('.', global.vfComponentPath);
+const buildDestionation = path.resolve('.', global.vfBuildDestination);
+
 // Some Gulp tasks live in their own files, for the sake of clarity.
 require('require-dir')('./gulp-tasks');
 
 // Tasks to build/run vf-core component system
-require('./node_modules/\@visual-framework/vf-core/gulpfile.js');
+require('./node_modules/\@visual-framework/vf-core/tools/gulp-tasks/_gulp_rollup.js')(gulp, path, componentPath, buildDestionation);
 
 // Eleventy config
 process.argv.push('--config=eleventy.js');
@@ -41,7 +67,6 @@ gulp.task('elventy-set-to-build', function(done) {
 // @todo: consider if this could/should be two parallel gulp tasks
 gulp.task('eleventy', function(done) {
   global.vfBuilderPath   = __dirname + '/build/vf-core-components';
-  global.vfComponentPath = __dirname + '/src/components'; // where our VF components live
   global.vfDocsPath      = __dirname + '/node_modules/\@visual-framework/vf-eleventy--extensions/fractal/docs';
   global.vfOpenBrowser   = false; // if you want to open a browser tab for the component library
   global.fractal         = require('@visual-framework/vf-core/fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
@@ -52,12 +77,6 @@ gulp.task('eleventy', function(done) {
     done();
   }
 });
-
-// Allow use of the component generator
-const shell = require('gulp-shell');
-gulp.task('vf-component', shell.task(
-  ['yo ./src/components/vf-core-components/vf-core/tools/component-generator/']
-));
 
 // Let's build this sucker.
 gulp.task('build', gulp.series(
