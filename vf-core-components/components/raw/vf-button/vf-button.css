@@ -229,24 +229,23 @@
   border-radius: 500px;
 }
 
-.vf-text-button--1ounded {
+.vf-button--rounded {
   border-radius: 16px;
 }
 
 .vf-text-button--2 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.57;
-  margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
   padding: 8px;
 }
 
-.vf-text-button--2.vf-text-button--1ounded {
+.vf-text-button--2.vf-text-button--rounded {
   border-radius: 8px;
 }
 
-.vf-button--l {
+.vf-text-button--1 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 700;

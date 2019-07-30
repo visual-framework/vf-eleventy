@@ -43,7 +43,7 @@
   margin: 0 0 16px 0;
 }
 
-.vf-text--heading-s {
+.vf-text-heading--5 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
   font-weight: 500;
@@ -52,7 +52,7 @@
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
-.vf-text--heading-r {
+.vf-text-heading--4 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 21px;
   font-weight: 500;
@@ -61,7 +61,7 @@
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
-.vf-text--heading-alt {
+.vf-text-heading--3 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -70,7 +70,7 @@
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
-.vf-text--heading-l {
+.vf-text-heading--2 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 30px;
   font-weight: 500;
@@ -79,7 +79,7 @@
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
-.vf-text--heading-xl {
+.vf-text-heading--1 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 42px;
   font-weight: 700;

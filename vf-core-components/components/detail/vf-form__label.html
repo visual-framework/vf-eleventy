@@ -164,9 +164,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-ed6cc65b684ff80bf1c16109e2baeed9-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-form__item"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-form__label"</span>&gt;</span>Form Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-form__input"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-form__item"</span> <span class="hljs-attr">data-vf-js-form-floatlabel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-form__label | vf-sr-only"</span>&gt;</span>Form Label<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-form__input"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"form label example"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -175,9 +175,9 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ed6cc65b684ff80bf1c16109e2baeed9-panel-view">
     <code class="Code Code--lang-text">
-        <pre>&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-form__item"</span>&gt;
-  &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-form__label"</span>&gt;<span class="hljs-keyword">Form</span> <span class="hljs-keyword">Label</span>&lt;/<span class="hljs-keyword">label</span>&gt;
-  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> id=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-form__input"</span>&gt;
+        <pre>&lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-form__item"</span> data-vf-js-<span class="hljs-keyword">form</span>-floatlabel&gt;
+  &lt;<span class="hljs-keyword">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-form__label | vf-sr-only"</span>&gt;<span class="hljs-keyword">Form</span> <span class="hljs-keyword">Label</span>&lt;/<span class="hljs-keyword">label</span>&gt;
+  &lt;<span class="hljs-keyword">input</span> <span class="hljs-keyword">type</span>=<span class="hljs-string">"text"</span> id=<span class="hljs-string">"text"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-form__input"</span> placeholder=<span class="hljs-string">"form label example"</span>&gt;
 &lt;/div&gt;</pre>
     </code>
 </div>
@@ -232,6 +232,14 @@
 
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
+
+<span class="hljs-section"># 1.0.0-alpha.3 (2019-07-25)</span>
+
+<span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-form__label
+
+
+
+
 
 
 
@@ -400,7 +408,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">436 Bytes</span>
+                    <span class="Meta-value">544 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -454,7 +462,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-alpha.2"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-alpha.3"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-form__label"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-form__label component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"http://dev.beta.embl.org/guidelines/visual-framework/dev-docs/"</span>,
@@ -474,7 +482,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"9165d35bf7da0a48885d6bf58da48bf8c6500c5c"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"5cddd451a4dfefa82c44afa9c1826d9869de7ac9"</span>
 }
 </pre>
                             </code>
@@ -595,7 +603,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 
   <span class="hljs-attribute">color</span>: set-color(vf-color--grey);
   <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">left</span>: <span class="hljs-number">26px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">24px</span>;
   <span class="hljs-attribute">position</span>: relative;
 }
 </pre>

@@ -73,7 +73,7 @@
 }
 
 .vf-form__wrap .vf-form__label {
-  border-radius-top-left: 3px;
+  border-top-left-radius: 3px;
   display: block;
   line-height: 1;
   opacity: 0;
@@ -86,7 +86,6 @@
 }
 
 .vf-form__input .vf-form__wrap {
-  -moz-osx-font-smoothing: greyscale;
   -webkit-font-smoothing: antialiased;
   position: relative;
   text-rendering: optimizeLegibility;
@@ -167,7 +166,7 @@
 }
 
 .vf-form__wrap .vf-form__input label.vf-form__label {
-  border-radius-top-left: 3px;
+  border-top-left-radius: 3px;
   color: #54585a;
   display: block;
   left: 26px;
@@ -272,7 +271,6 @@
   margin-right: 10px;
   position: relative;
   top: 6px;
-  vertical-align: center;
   width: 16px;
 }
 
@@ -314,7 +312,7 @@
 
 .vf-form__radio + .vf-form__label::before {
   background: #ffffff;
-  border-color: #f3f3f3;
+  border: 3px solid #f3f3f3;
   border-radius: 50%;
   content: '';
   display: inline-block;
@@ -322,7 +320,6 @@
   margin-right: 10px;
   position: relative;
   top: 6px;
-  vertical-align: center;
   width: 16px;
 }
 
@@ -335,8 +332,8 @@
 }
 
 .vf-form__radio:checked + .vf-form__label::before {
-  background: #003da5;
-  border-color: #003da5;
+  background: #307fe2;
+  border-color: #307fe2;
 }
 
 .vf-form__radio:disabled + .vf-form__label {
