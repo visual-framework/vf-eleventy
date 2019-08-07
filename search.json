@@ -2,7 +2,7 @@
   {
     "url": "/",
     "title": "",
-    "index": " Eleventy VF 20 alphaThis allows using 11ty static site generator with direct access Visual Framework components☝️ that also means dynamic building just CSS JS need What get generatoraccess component systemComponent installation add can use npm/Yarn install manually either case &#39;ll need rerun gulp dev ensure fully loadedinstallation: yarn @visualframework/vflogoupdating: upgradeinteractive latestManual installation customisationDownload patternCopy /src/components/vfcomponentnameAdd your own local component custom VFcompatible /src/components your sitegulp vfcomponent&#39;ll find vfsample there &#39;ve used below:Code: {% render @vfsample {text: some text} %}Returns: &#39;m sample text"
+    "index": " Eleventy VF 20 alphaThis allows using 11ty static site generator with direct access Visual Framework components☝️ that also means dynamic building just CSS JS need Quickstart npm init @visualframework/vfeleventy yournewsitename vfeleventy This will install new folder named yournewsitenameThen follow onscreen prompts links below develop configureLonger install above too easy have questions Read this guide What get generatoraccess component systemComponent installation add can use npm/Yarn manually either case &#39;ll need rerun gulp dev ensure fully loadedinstallation: yarn @visualframework/vflogoupdating: upgradeinteractive latestManual installation customisationDownload patternCopy /src/components/vfcomponentnameAdd your own local component custom VFcompatible /src/components your sitegulp vfcomponent&#39;ll find vfsample there &#39;ve used below:Code: {% render @vfsample {text: some text} %}Returns: &#39;m sample text"
   },
   {
     "url": "/posts/sample-post/",
