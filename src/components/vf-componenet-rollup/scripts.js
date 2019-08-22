@@ -16,15 +16,14 @@ vfMastheadSetStyle();
 import { vfTabs } from 'vf-tabs/vf-tabs';
 vfTabs();
 
-import 'vf-form/vf-form__core/assets/float-labels.js';
+import { vfFormFloatLabels } from 'vf-form__core/assets/vf-form__float-labels.js';
+vfFormFloatLabels();
 
 // All EMBL JS
-import { emblConditionalEdit } from 'embl-conditional-edit/embl-conditional-edit';
-emblConditionalEdit();
-
 import { emblContentHubLoaderHtmlImports } from 'embl-content-hub-loader/embl-content-hub-loader__html-imports';
 import { emblContentHubFetch } from 'embl-content-hub-loader/embl-content-hub-loader__fetch';
 import { emblContentHub } from 'embl-content-hub-loader/embl-content-hub-loader';
+import { emblConditionalEdit } from 'embl-conditional-edit/embl-conditional-edit';
 emblContentHub();
 
 import { emblBreadcrumbs } from 'embl-breadcrumbs-lookup/embl-breadcrumbs-lookup';
