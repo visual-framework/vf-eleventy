@@ -12,3 +12,4 @@ yarn-error.log
 dist
 build
 temp
+package.variables.scss
