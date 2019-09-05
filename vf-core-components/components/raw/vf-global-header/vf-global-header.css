@@ -40,6 +40,9 @@
 }
 
 .vf-logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,29 +51,32 @@
   text-decoration: none;
 }
 
-.vf-logo--responsive {
-  background-image: url("../assets/vf-logo/assets/logo-small.svg");
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.vf-logo__image {
+  --vf-logo-margin-right: 8px;
   height: 25px;
-  min-width: 70px;
+  margin-right: 16px;
+  margin-right: var(--vf-logo-margin-right);
 }
 
 @media (min-width: 500px) {
-  .vf-logo--responsive {
-    background-image: url("../assets/vf-logo/assets/logo-medium.svg");
+  .vf-logo__image {
+    --vf-logo-margin-right: map-get($vf-spacing-map, vf-spacing--md);
     height: 28px;
   }
 }
 
 @media (min-width: 999px) {
-  .vf-logo--responsive {
-    background-image: url("../assets/vf-logo/assets/logo.svg");
+  .vf-logo__image {
+    --vf-logo-margin-right: map-get($vf-spacing-map, vf-spacing--md);
     height: 30px;
   }
+}
+
+.vf-logo__text {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.71;
+  margin: 0 0 0 0;
 }
 
 .vf-navigation__list {

@@ -311,6 +311,8 @@
                 
                 <option value="file-462bdd43e9b0c62a63a43728777b61c9">package.json</option>
                 
+                <option value="file-f5dcb8aa04e5c4641a6f29b510c00c01">package.variables.scss</option>
+                
                 <option value="file-43cdbc7265fbc40b82def49a0cbe8cd0">vf-grid.css</option>
                 
                 <option value="file-ec24505d0ebf9e5cd37f69cf1a971822">vf-grid.scss</option>
@@ -332,7 +334,7 @@
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
 
-<span class="hljs-section"># 1.0.0-alpha.3 (2019-07-25)</span>
+<span class="hljs-section"># 1.0.0-alpha.5 (2019-09-05)</span>
 
 <span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-grid
 
@@ -423,7 +425,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-alpha.3"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-alpha.5"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-grid"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-grid component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -443,7 +445,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"5cddd451a4dfefa82c44afa9c1826d9869de7ac9"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"f5967acecacdadcd78ade0fbaeecfbec0977b1db"</span>
 }
 </pre>
                             </code>
@@ -462,6 +464,40 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
                     <span class="Meta-value">660 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-f5dcb8aa04e5c4641a6f29b510c00c01" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-variable">$componentInfo</span>: (
+             name: <span class="hljs-string">"@visual-framework/vf-grid"</span>,
+             version: <span class="hljs-string">"1.0.0-alpha.5"</span>,
+             location: <span class="hljs-string">"components/vf-core-"</span>,
+             vfCoreVersion: <span class="hljs-string">"2.0.0-alpha.8"</span>
+          );</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/vf-grid/package.variables.scss"><span>/components/raw/vf-grid/package.variables.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/vf-core-components/vf-grid/package.variables.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">207 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -868,17 +904,17 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-4ec486d584ee98afa9e576e1a3728300-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h1 id="the-visual-framework-grid-system">The Visual Framework Grid System</h1>
+        <h1 id="grid-component">Grid Component</h1>
 <p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-grid"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-grid.svg" alt="npm version"></a></p>
 <h2 id="about">About</h2>
 <p>As we cannot guarantee the Blocks within the a Micro Grid and make use of the child combinator <code>&gt;</code> and the universal selector <code>*</code> to target them.</p>
 <p>A Simple Grid is written to go from single column, to two column, to their respective column count depending on the size of the viewport.</p>
 <p>You can define the number of columns with a modifier class.</p>
 <p><strong><em>Do Not Use</em></strong> with any component that uses the <code>&lt;table&gt;</code> HTML element as this breaks built-in browser accessibility for screen readers etc.</p>
-<h2 id="installation-and-implementation">Installation and Implementation</h2>
+<h2 id="install">Install</h2>
 <p>This component is distributed with npm. After <a href="https://www.npmjs.com/get-npm">installing npm</a>, you can install the <code>vf-grid</code> with this command.</p>
-<code><pre>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-grid</span></pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
-<code><pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-grid/index.scss"</span>;</pre></code><p><em>Make sure you import any requirements along with the modules.</em></p>
+<pre><code>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-grid</span></code></pre><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
+<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-grid/index.scss"</span>;</code></pre><p><em>Make sure you import any requirements along with the modules.</em></p>
 <style>
 .component-library-notes .vf-grid > * {
   background-color: rgb(141, 191, 226)
@@ -887,9 +923,9 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 
 
 
-<h3 id="visual-framework-grid-auto-layout-">Visual Framework Grid (auto layout)</h3>
+<h3 id="visual-framework-grid-auto-layout">Visual Framework Grid (auto layout)</h3>
 <h6 id="html">HTML</h6>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></code><h6 id="example">Example</h6>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h6 id="example">Example</h6>
   <div class="vf-grid">
     <p>1</p>
   </div>
@@ -935,10 +971,10 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   </div>
 
 
-<h3 id="visual-framework-grid-defined-columns-">Visual Framework Grid (defined columns)</h3>
+<h3 id="visual-framework-grid-defined-columns">Visual Framework Grid (defined columns)</h3>
 <p>If you have Blocks that need to be laid out on both X and Y axis you will need to add the <code>modifier</code> classes.</p>
-<h6 id="html">HTML</h6>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-2"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></code><h6 id="example">Example</h6>
+<h6 id="html-1">HTML</h6>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-2"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h6 id="example-1">Example</h6>
   <div class="vf-grid vf-grid__col-2">
     <p>1</p>
     <p>2</p>
@@ -950,8 +986,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 
 
 
-<h6 id="html">HTML</h6>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></code><h6 id="example">Example</h6>
+<h6 id="html-2">HTML</h6>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-3"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h6 id="example-2">Example</h6>
   <div class="vf-grid vf-grid__col-3">
     <p>1</p>
     <p>2</p>
@@ -962,8 +998,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   </div>
 
 
-<h6 id="html">HTML</h6>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-4"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></code><h6 id="example">Example</h6>
+<h6 id="html-3">HTML</h6>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-4"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h6 id="example-3">Example</h6>
   <div class="vf-grid vf-grid__col-4">
     <p>1</p>
     <p>2</p>
@@ -974,8 +1010,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   </div>
 
 
-<h6 id="html">HTML</h6>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></code><h6 id="example">Example</h6>
+<h6 id="html-4">HTML</h6>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-5"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h6 id="example-4">Example</h6>
   <div class="vf-grid vf-grid__col-5">
     <p>1</p>
     <p>2</p>
@@ -986,8 +1022,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   </div>
 
 
-<h6 id="html">HTML</h6>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-6"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></code><h6 id="example">Example</h6>
+<h6 id="html-5">HTML</h6>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-grid vf-grid__col-6"</span>&gt;</span> ... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h6 id="example-5">Example</h6>
   <div class="vf-grid vf-grid__col-6">
     <p>1</p>
     <p>2</p>
@@ -3636,8 +3672,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-logo--responsive.html" data-pjax>
-                <span>Responsive</span>
+            <a class="Tree-entityLink" href="vf-logo--hidden-text.html" data-pjax>
+                <span>Hidden Text</span>
                 
 
 <div class="Status Status--unlabelled">

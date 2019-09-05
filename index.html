@@ -13,11 +13,11 @@
     <header class="vf-global-header">
 
       <div class="vf-global-header__inner">
-
         <a href="https://visual-framework.github.io/vf-welcome/"
 
-class="vf-logo--responsive">
-  <span class="vf-sr-only">Visual Framework 2.0</span>
+class="vf-logo">
+  <img class="vf-logo__image" src="https://visual-framework.github.io/vf-eleventy/assets/vf-logo/assets/logo.svg" alt="">
+  <span class="vf-logo__text"></span>
 </a>
 
         
@@ -95,7 +95,9 @@ your site.</p>
 <p>You'll find a <code>vf-sample</code> component there, we've used it below:</p>
 <div class="vf-box">
 <p>Code: {% render &quot;@vf-sample&quot;, {text: &quot;with some text&quot;} %}</p>
-<p>Returns: I'm a sample with some text</p>
+<p>Returns: <div class="vf-sample">
+I'm a sample with some text</p>
+</div>
 </div>
 </div>
 </section>

@@ -214,6 +214,8 @@
                 
                 <option value="file-b36b340b7dd6a89514c9f6e244181e23">package.json</option>
                 
+                <option value="file-d52a43005b8ae5619c4fe0225d714cba">package.variables.scss</option>
+                
                 <option value="file-19031ff05aa199def3f59d6e2fed255f">vf-no-js.css</option>
                 
                 <option value="file-61bee2f36fc663c5d67ede760e008a2f">vf-no-js.js</option>
@@ -237,7 +239,7 @@
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
 
-<span class="hljs-section"># 1.0.0-rc.3 (2019-07-25)</span>
+<span class="hljs-section"># 1.0.0-rc.5 (2019-09-05)</span>
 
 <span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-no-js
 
@@ -330,7 +332,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-rc.3"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-rc.5"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-no-js"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-no-js component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -350,7 +352,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"5cddd451a4dfefa82c44afa9c1826d9869de7ac9"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"f5967acecacdadcd78ade0fbaeecfbec0977b1db"</span>
 }
 </pre>
                             </code>
@@ -369,6 +371,40 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
                     <span class="Meta-value">670 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-d52a43005b8ae5619c4fe0225d714cba" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-variable">$componentInfo</span>: (
+             name: <span class="hljs-string">"@visual-framework/vf-no-js"</span>,
+             version: <span class="hljs-string">"1.0.0-rc.5"</span>,
+             location: <span class="hljs-string">"components/vf-core-"</span>,
+             vfCoreVersion: <span class="hljs-string">"2.0.0-alpha.8"</span>
+          );</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/vf-no-js/package.variables.scss"><span>/components/raw/vf-no-js/package.variables.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/vf-core-components/vf-no-js/package.variables.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">205 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -560,16 +596,16 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-7c0288fbe8b2be7b12256d49ac53cbbe-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h1 id="no-js-component">No JS component</h1>
+        <h1 id="no-js-component">No JS Component</h1>
 <p>Include this snippet directly in your <code>&lt;head&gt;</code> along with adding class <code>.vf-no-js</code> to your <code>&lt;html&gt;</code> (<code>&lt;html class=&quot;vf-no-js&quot;&gt;</code>).</p>
 <p>If JS is enabled in a user’s browser, <code>.vf-no-js</code> will be swapped to <code>.vf-js</code>.</p>
 <p>This method allows using CSS to conditionally show content.</p>
-<code class="lang-css"><pre><span class="hljs-selector-class">.vf-no-js</span> <span class="hljs-selector-class">.js-is-not-on</span> {
+<pre><code class="language-css"><span class="hljs-selector-class">.vf-no-js</span> <span class="hljs-selector-class">.js-is-not-on</span> {
   <span class="hljs-comment">/* SHOW block that says you need js to use this site */</span>
 }
 <span class="hljs-selector-class">.vf-js</span> <span class="hljs-selector-class">.js-is-not-on</span> {
   <span class="hljs-comment">/* HIDE block that says you need js to use this site */</span>
-}</pre></code>
+}</code></pre>
         
     </div>
 </div>
@@ -3203,8 +3239,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-logo--responsive.html" data-pjax>
-                <span>Responsive</span>
+            <a class="Tree-entityLink" href="vf-logo--hidden-text.html" data-pjax>
+                <span>Hidden Text</span>
                 
 
 <div class="Status Status--unlabelled">

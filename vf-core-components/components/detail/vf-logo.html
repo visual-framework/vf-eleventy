@@ -165,8 +165,8 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.embl.de"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/vf-logo/assets/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"VF Boilerplate for Eleventy"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-sr-only"</span>&gt;</span>Visual Framework 2.0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo__image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/vf-logo/assets/logo.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Visual Framework 2.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo__text"</span>&gt;</span>Visual Framework 2.0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
@@ -178,10 +178,9 @@
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{href}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
 </span></span><span class="hljs-comment">{# You're using an ID? Really?? That'll go here #}</span><span class="xml"><span class="hljs-tag">
 </span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> id %}</span><span class="xml"><span class="hljs-tag"> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{-id-}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">
-<span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo
-</span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-name">if</span></span> override_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> | </span></span></span><span class="hljs-template-variable">{{override_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ image | path }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ _config.project.title }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-sr-only"</span>&gt;</span></span><span class="hljs-template-variable">{{sreen_reader_text}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo </span></span></span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-name">if</span></span> override_class %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> | </span></span></span><span class="hljs-template-variable">{{override_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> -%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo__image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ image }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ logo_text }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-logo__text</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> hidden_text %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> vf-sr-only</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{logo_text}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -194,8 +193,8 @@
             <pre>{
   <span class="hljs-attr">"component-type"</span>: <span class="hljs-string">"element"</span>,
   <span class="hljs-attr">"href"</span>: <span class="hljs-string">"http://www.embl.de"</span>,
-  <span class="hljs-attr">"sreen_reader_text"</span>: <span class="hljs-string">"Visual Framework 2.0"</span>,
-  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"/assets/vf-logo/assets/logo.png"</span>
+  <span class="hljs-attr">"logo_text"</span>: <span class="hljs-string">"Visual Framework 2.0"</span>,
+  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"../../assets/vf-logo/assets/logo.svg"</span>
 }</pre>
             
         
@@ -219,6 +218,8 @@
                 
                 <option value="file-d995d5dfde2aec2e51ab2851a307a29e">package.json</option>
                 
+                <option value="file-4941d1b73e4c9d551e1f1d547b61d07f">package.variables.scss</option>
+                
                 <option value="file-676471d04670f81ec9d195cd14239a4c">vf-logo.css</option>
                 
                 <option value="file-f09afe213937b767fb185ea9a2e3d949">vf-logo.scss</option>
@@ -240,7 +241,7 @@
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
 
-<span class="hljs-section"># 1.0.0-alpha.3 (2019-07-25)</span>
+<span class="hljs-section"># 1.0.0-alpha.5 (2019-09-05)</span>
 
 <span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-logo
 
@@ -333,7 +334,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-alpha.3"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-alpha.5"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-logo"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-logo component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -353,7 +354,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"5cddd451a4dfefa82c44afa9c1826d9869de7ac9"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"f5967acecacdadcd78ade0fbaeecfbec0977b1db"</span>
 }
 </pre>
                             </code>
@@ -372,6 +373,40 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
                     <span class="Meta-value">663 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-4941d1b73e4c9d551e1f1d547b61d07f" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-variable">$componentInfo</span>: (
+             name: <span class="hljs-string">"@visual-framework/vf-logo"</span>,
+             version: <span class="hljs-string">"1.0.0-alpha.5"</span>,
+             location: <span class="hljs-string">"components/vf-core-"</span>,
+             vfCoreVersion: <span class="hljs-string">"2.0.0-alpha.8"</span>
+          );</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/vf-logo/package.variables.scss"><span>/components/raw/vf-logo/package.variables.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/vf-core-components/vf-logo/package.variables.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">207 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -426,6 +461,9 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
 }
 
 <span class="hljs-selector-class">.vf-logo</span> {
+  <span class="hljs-attribute">-webkit-box-align</span>: center;
+      <span class="hljs-attribute">-ms-flex-align</span>: center;
+          <span class="hljs-attribute">align-items</span>: center;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#000000</span>;
   <span class="hljs-attribute">display</span>: -webkit-box;
   <span class="hljs-attribute">display</span>: -ms-flexbox;
@@ -434,29 +472,32 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
   <span class="hljs-attribute">text-decoration</span>: none;
 }
 
-<span class="hljs-selector-class">.vf-logo--responsive</span> {
-  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../assets/vf-logo/assets/logo-small.svg"</span>);
-  <span class="hljs-attribute">background-repeat</span>: no-repeat;
-  <span class="hljs-attribute">background-size</span>: auto <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">display</span>: -webkit-box;
-  <span class="hljs-attribute">display</span>: -ms-flexbox;
-  <span class="hljs-attribute">display</span>: flex;
+<span class="hljs-selector-class">.vf-logo__image</span> {
+  <span class="hljs-attribute">--vf-logo-margin-right</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">25px</span>;
-  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">70px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-built_in">var</span>(--vf-logo-margin-right);
 }
 
 @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">500px</span>) {
-  <span class="hljs-selector-class">.vf-logo--responsive</span> {
-    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../assets/vf-logo/assets/logo-medium.svg"</span>);
+  <span class="hljs-selector-class">.vf-logo__image</span> {
+    <span class="hljs-attribute">--vf-logo-margin-right</span>: <span class="hljs-built_in">map-get</span>($vf-spacing-map, vf-spacing--md);
     <span class="hljs-attribute">height</span>: <span class="hljs-number">28px</span>;
   }
 }
 
 @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-number">999px</span>) {
-  <span class="hljs-selector-class">.vf-logo--responsive</span> {
-    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"../assets/vf-logo/assets/logo.svg"</span>);
+  <span class="hljs-selector-class">.vf-logo__image</span> {
+    <span class="hljs-attribute">--vf-logo-margin-right</span>: <span class="hljs-built_in">map-get</span>($vf-spacing-map, vf-spacing--md);
     <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;
   }
+}
+
+<span class="hljs-selector-class">.vf-logo__text</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"IBM Plex Sans"</span>, Helvetica, Arial, sans-serif;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.71</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
 }
 </pre>
                             </code>
@@ -474,7 +515,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.9 KB</span>
+                    <span class="Meta-value">2 KB</span>
                 </li>
             </ul>
         </div>
@@ -490,33 +531,35 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                                 <pre><span class="hljs-comment">// vf-logo</span>
 
 <span class="hljs-selector-class">.vf-logo</span> {
+  <span class="hljs-attribute">align-items</span>: center;
   <span class="hljs-attribute">color</span>: set-ui-color(vf-ui-color--black);
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">41px</span>;
   <span class="hljs-attribute">text-decoration</span>: none;
 }
 
+<span class="hljs-selector-class">.vf-logo__image</span> {
+  --vf-logo-<span class="hljs-attribute">margin-right</span>: #{map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing--sm)};
 
-<span class="hljs-selector-class">.vf-logo--responsive</span> {
-  <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/vf-logo/assets/logo-small.svg'</span>);
-  <span class="hljs-attribute">background-repeat</span>: no-repeat;
-  <span class="hljs-attribute">background-size</span>: auto <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">25px</span>;
-  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">70px</span>;
-}
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">16px</span>; <span class="hljs-comment">// IE11 Fallback</span>
+  <span class="hljs-attribute">margin-right</span>: var(--vf-logo-margin-right);
 
-@<span class="hljs-keyword">media</span> (min-width: 500px) {
-  <span class="hljs-selector-class">.vf-logo--responsive</span> {
-    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/vf-logo/assets/logo-medium.svg'</span>);
+  @<span class="hljs-keyword">media</span> (min-width: 500px) {
+    --vf-logo-<span class="hljs-attribute">margin-right</span>: #{map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing--md)};
+
     <span class="hljs-attribute">height</span>: <span class="hljs-number">28px</span>;
   }
-}
-@<span class="hljs-keyword">media</span> (min-width: 999px) {
-  <span class="hljs-selector-class">.vf-logo--responsive</span> {
-    <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">'../assets/vf-logo/assets/logo.svg'</span>);
+
+  @<span class="hljs-keyword">media</span> (min-width: 999px) {
+    --vf-logo-<span class="hljs-attribute">margin-right</span>: #{map-get(<span class="hljs-variable">$vf-spacing-map</span>, vf-spacing--md)};
+
     <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;
   }
+}
+
+<span class="hljs-selector-class">.vf-logo__text</span> {
+  @<span class="hljs-keyword">include</span> set-type(text-body--<span class="hljs-number">3</span>, <span class="hljs-variable">$custom-margin-bottom</span>: 0);
 }
 </pre>
                             </code>
@@ -534,7 +577,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">625 Bytes</span>
+                    <span class="Meta-value">677 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -564,8 +607,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                     <span>Default</span>
                 </a>, 
             
-                <a href="vf-logo--responsive.html">
-                    <span>Responsive</span>
+                <a href="vf-logo--hidden-text.html">
+                    <span>Hidden Text</span>
                 </a>
             
             </span>
@@ -595,12 +638,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
-            
-                <a href="header.html">@<span>header</span></a>, 
-            
-                <a href="header.html">@<span>header</span></a>, 
             
                 <a href="vf-global-header.html">@<span>vf-global-header</span></a>
             
@@ -614,12 +653,13 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-fe0804fde5e4661463c699bd4c108ca8-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-logo"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-logo.svg" alt="npm version"></a></p>
+        <h1 id="logo-component">Logo Component</h1>
+<p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-logo"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-logo.svg" alt="npm version"></a></p>
 <h2 id="about">About</h2>
-<h2 id="installation-and-implementation">Installation and Implementation</h2>
+<h2 id="install">Install</h2>
 <p>This component is distributed with npm. After <a href="https://www.npmjs.com/get-npm">installing npm</a>, you can install the <code>vf-logo</code> with this command.</p>
-<code><pre>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-logo</span></pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
-<code><pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-logo/index.scss"</span>;</pre></code><p><em>Make sure you import any requirements along with the modules.</em></p>
+<pre><code>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-logo</span></code></pre><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
+<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-logo/index.scss"</span>;</code></pre><p><em>Make sure you import any requirements along with the modules.</em></p>
 
         
     </div>
@@ -3254,8 +3294,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-logo--responsive.html" data-pjax>
-                <span>Responsive</span>
+            <a class="Tree-entityLink" href="vf-logo--hidden-text.html" data-pjax>
+                <span>Hidden Text</span>
                 
 
 <div class="Status Status--unlabelled">

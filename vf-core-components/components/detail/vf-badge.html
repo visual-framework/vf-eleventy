@@ -245,6 +245,8 @@
                 
                 <option value="file-a8951735c7990d224d2ba28841ba5f0b">package.json</option>
                 
+                <option value="file-b2a7c40f5bc2b0e59fc3014dc4aa15af">package.variables.scss</option>
+                
                 <option value="file-46087ea43396c361edabf15cb32c26d4">vf-badge.css</option>
                 
                 <option value="file-ecd53a2f51a36827802c6c6dd0551774">vf-badge.scss</option>
@@ -266,7 +268,7 @@
 All notable changes to this project will be documented in this file.
 See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-link">https://conventionalcommits.org</span>) for commit guidelines.
 
-<span class="hljs-section"># 1.0.0-beta.3 (2019-07-25)</span>
+<span class="hljs-section"># 1.0.0-beta.5 (2019-09-05)</span>
 
 <span class="hljs-strong">**Note:**</span> Version bump only for package @visual-framework/vf-badge
 </pre>
@@ -339,7 +341,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                             
                             <code class="Code Code--lang-JSON FileBrowser-code">
                                 <pre>{
-  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-beta.3"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0-beta.5"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"@visual-framework/vf-badge"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"vf-badge component"</span>,
   <span class="hljs-attr">"homepage"</span>: <span class="hljs-string">"https://visual-framework.github.io/vf-core/"</span>,
@@ -359,7 +361,7 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <span class="hljs-string">"fractal"</span>,
     <span class="hljs-string">"component"</span>
   ],
-  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"5cddd451a4dfefa82c44afa9c1826d9869de7ac9"</span>
+  <span class="hljs-attr">"gitHead"</span>: <span class="hljs-string">"f5967acecacdadcd78ade0fbaeecfbec0977b1db"</span>
 }
 </pre>
                             </code>
@@ -378,6 +380,40 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
                     <span class="Meta-value">666 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-b2a7c40f5bc2b0e59fc3014dc4aa15af" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre><span class="hljs-variable">$componentInfo</span>: (
+             name: <span class="hljs-string">"@visual-framework/vf-badge"</span>,
+             version: <span class="hljs-string">"1.0.0-beta.5"</span>,
+             location: <span class="hljs-string">"components/vf-core-"</span>,
+             vfCoreVersion: <span class="hljs-string">"2.0.0-alpha.8"</span>
+          );</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/vf-badge/package.variables.scss"><span>/components/raw/vf-badge/package.variables.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/vf-core-components/vf-badge/package.variables.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">207 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -781,17 +817,17 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-ee199a8150af26bfad394c4ed3276d9d-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-badge"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-badge.svg" alt="npm version"></a></p>
-<p> <a href="https://www.kens-home.com" id="harsh" class="vf-badge vf-badge--primary vf-badge--outline vf-badge--pill | override">alpha</a> </p>
+        <h1 id="badge-component">Badge Component</h1>
+<p><a href="https://badge.fury.io/js/%40visual-framework%2Fvf-badge"><img src="https://badge.fury.io/js/%40visual-framework%2Fvf-badge.svg" alt="npm version"></a></p>
 <h2 id="about">About</h2>
 <p>The <code>vf-badge</code> component is used to label a page, part of a page, or a component. The <code>vf-badge</code> component can also be a link using <code>&lt;a class=&quot;vf-badge&quot; href=&quot;&quot;&gt;badge title&lt;/a&gt;</code>.</p>
-<h2 id="installation-and-implementation">Installation and Implementation</h2>
+<h2 id="install">Install</h2>
 <p>This component is distributed with npm. After <a href="https://www.npmjs.com/get-npm">installing npm</a>, you can install the <code>vf-badge</code> with this command.</p>
-<code><pre>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-badge</span></pre></code><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
-<code><pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-badge/index.scss"</span>;</pre></code><p><em>Make sure you import any requirements along with the modules.</em></p>
+<pre><code>$ yarn <span class="hljs-keyword">add</span><span class="bash"> --dev @visual-framework/vf-badge</span></code></pre><p>The source files included are written in <a href="http://sass-lang.com">Sass</a>(<code>scss</code>). You can point your Sass <code>include-path</code> at your <code>node_modules</code> directory and import it like this.</p>
+<pre><code>@<span class="hljs-keyword">import</span> <span class="hljs-string">"@visual-framework/vf-badge/index.scss"</span>;</code></pre><p><em>Make sure you import any requirements along with the modules.</em></p>
 <h2 id="usage">Usage</h2>
 <p>If you are using the badge as a link, you must include the relevant url within the <code>href=&quot;&quot;</code> part of <code>&lt;a class=&quot;vf-badge&quot; href=&quot;&quot;&gt;badge title&lt;/a&gt;</code>, for example:</p>
-<code><pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-badge vf-badge--phases vf-badge--primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>badge title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre></code>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vf-badge vf-badge--phases vf-badge--primary"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>badge title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
         
     </div>
 </div>
@@ -3425,8 +3461,8 @@ See [<span class="hljs-string">Conventional Commits</span>](<span class="hljs-li
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-logo--responsive.html" data-pjax>
-                <span>Responsive</span>
+            <a class="Tree-entityLink" href="vf-logo--hidden-text.html" data-pjax>
+                <span>Hidden Text</span>
                 
 
 <div class="Status Status--unlabelled">

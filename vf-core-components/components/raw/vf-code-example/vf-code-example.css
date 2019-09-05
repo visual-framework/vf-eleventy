@@ -43,10 +43,8 @@
 .vf-content code,
 .vf-code-example__pre,
 .vf-code-example {
-  font-family: "IBM Plex Mono", Monaco, Consolas, "Lucida Console", monospace;
   font-size: 14px;
   line-height: 1.57;
-  margin: 0 0 0 0;
   padding-bottom: 4px;
   padding-top: 4px;
   background: #f3f3f3;
@@ -58,14 +56,10 @@
   font-size: inherit;
 }
 
-.vf-code-example {
-  display: grid;
-}
-
 .vf-content pre,
 .vf-code-example__pre {
   border: 1px;
-  display: inline-block;
+  display: grid;
   min-width: 0;
   overflow: auto;
   white-space: pre-wrap;

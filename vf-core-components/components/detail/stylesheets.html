@@ -90,7 +90,7 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path) [Line 3, Column 117]
+        <p>(unknown path) [Line 5, Column 36]
   Error: Unable to call <code>frctl[&quot;theme&quot;][&quot;get&quot;]</code>, which is undefined or falsey</p>
 
     </div>
@@ -171,7 +171,7 @@
         <pre><span class="xml"></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">if</span></span> frctl.env.server %}</span><span class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path('/css/styles.css') }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">?cachebust=</span></span></span><span class="hljs-template-variable">{{ frctl.theme.get('version') }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">else</span></span> %}</span><span class="xml">
-<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://dev.assets.emblstatic.net/vf/develop/css/styles.css?cachebust=</span></span></span><span class="hljs-template-variable">{{ frctl.theme.get('version') }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://dev.assets.emblstatic.net/vf/develop/css/styles.css"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">endif</span></span> %}</span><span class="xml">
 </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-name">for</span></span> stylesheet <span class="hljs-keyword">in</span> frctl.theme.get('styles') %}</span><span class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path(stylesheet) }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">?cachebust=</span></span></span><span class="hljs-template-variable">{{ frctl.theme.get('version') }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
@@ -2872,8 +2872,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="vf-logo--responsive.html" data-pjax>
-                <span>Responsive</span>
+            <a class="Tree-entityLink" href="vf-logo--hidden-text.html" data-pjax>
+                <span>Hidden Text</span>
                 
 
 <div class="Status Status--unlabelled">
