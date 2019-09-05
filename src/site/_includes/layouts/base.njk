@@ -13,8 +13,7 @@
     <header class="vf-global-header">
 
       <div class="vf-global-header__inner">
-
-        {% render '@vf-logo--responsive', {href:  'https://visual-framework.github.io/vf-welcome/' | url, sreen_reader_text: 'Visual Framework 2.0' } %}
+        {% render '@vf-logo', {href:  'https://visual-framework.github.io/vf-welcome/' | url, sreen_reader_text: 'Visual Framework 2.0', image: siteConfig.siteInformation.url + 'assets/vf-logo/assets/logo.svg' } %}
         {# <a href="{{ '/' | url }}" class="vf-link | vf-global-header__site-name">{{ siteConfig.siteInformation.title }}</a> #}
 
         <nav class="vf-navigation vf-navigation--global">
