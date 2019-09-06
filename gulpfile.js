@@ -62,7 +62,7 @@ process.argv.push('--config=eleventy.js');
 
 // Watch folders for changess
 gulp.task('watch', function() {
-  gulp.watch(['./src/components/**/*.scss'], gulp.parallel('vf-css'));
+  gulp.watch(['./src/components/**/*.scss', '!./src/components/**/package.variables.scss'], gulp.parallel('vf-css'));
   gulp.watch(['./src/components/**/*.js'], gulp.parallel('vf-scripts'));
   gulp.watch(['./src/scss/**/*.scss','./src/scss/*.scss'], gulp.parallel('css'));
   gulp.watch(['./src/js/**/*.js','./src/js/*.js'], gulp.parallel('js'));
@@ -85,8 +85,7 @@ gulp.task('elventy-set-to-build', function(done) {
   done();
 });
 
-// Run eleventy, but only after we wait for fractal to bootstrap
-// @todo: consider if this could/should be two parallel gulp tasks
+// Run Eleventy, but only after we wait for Fractal to start
 gulp.task('eleventy', function(done) {
   global.vfBuilderPath   = __dirname + '/build/vf-core-components';
   global.vfDocsPath      = __dirname + '/node_modules/\@visual-framework/vf-eleventy--extensions/fractal/docs';
