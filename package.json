@@ -50,6 +50,7 @@
     "@visual-framework/vf-intro": "^1.0.0-beta.5",
     "@visual-framework/vf-lede": "^1.0.0-beta.5",
     "@visual-framework/vf-logo": "^1.0.0-alpha.5",
+    "@visual-framework/vf-navigation": "^1.0.0-alpha.5",
     "@visual-framework/vf-no-js": "1.0.0-rc.5",
     "@visual-framework/vf-sass-config": "^1.0.0-beta.5",
     "@visual-framework/vf-text": "^1.0.0-beta.5",
