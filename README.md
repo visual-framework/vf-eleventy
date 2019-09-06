@@ -18,8 +18,9 @@ There are two methods you can use:
 ## 2. Configuring your new site
 
 - In `package.json` update `vfConfig`
-- In `elevnety.js` update `pathPrefix`
+- In `eleventy.js` update `pathPrefix`
 - Update `./src/site/_data/siteConfig.js`
+- If you need any ad hoc CSS and JS, add it in `./src/components/vf-local-overrides`
 
 Otherwise configure gulp and eleventy as you would for any other project.
 

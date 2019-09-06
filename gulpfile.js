@@ -64,8 +64,6 @@ process.argv.push('--config=eleventy.js');
 gulp.task('watch', function() {
   gulp.watch(['./src/components/**/*.scss', '!./src/components/**/package.variables.scss'], gulp.parallel('vf-css'));
   gulp.watch(['./src/components/**/*.js'], gulp.parallel('vf-scripts'));
-  gulp.watch(['./src/scss/**/*.scss','./src/scss/*.scss'], gulp.parallel('css'));
-  gulp.watch(['./src/js/**/*.js','./src/js/*.js'], gulp.parallel('js'));
 });
 
 gulp.task('elventy-set-to-serve', function(done) {
@@ -104,7 +102,7 @@ let fractalBuildMode = 'build';
 gulp.task('build', gulp.series(
   'component-bug-hack',
   'vf-clean',
-  gulp.parallel('css','js','vf-css','vf-scripts','vf-component-assets'),
+  gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
   'elventy-set-to-build',
   'eleventy'
 ));
@@ -113,7 +111,7 @@ gulp.task('build', gulp.series(
 gulp.task('dev', gulp.series(
   'component-bug-hack',
   'vf-clean',
-  gulp.parallel('css','js','vf-css','vf-scripts','vf-component-assets'),
+  gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
   'elventy-set-to-serve',
   'eleventy',
   'watch'
