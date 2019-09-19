@@ -7,7 +7,7 @@ with direct access to Visual Framework 2.0 components.
 
 There are two methods you can use:
 
-1. Use the interactive npm template [RECOMMENDED]
+1. Use the interactive yarn template [RECOMMENDED]
     - If you don't have npm, [install it](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
     - The [`create-vf-eleventy`](https://github.com/visual-framework/create-vf-eleventy) project allows you to interactively create a new site by typing<br/> `yarn create @visual-framework/vf-eleventy your-new-site-name`
     - Follow the prompts
@@ -37,15 +37,13 @@ Otherwise configure gulp and eleventy as you would for any other project.
 
 ## 4. Adding Visual Framework components
 
-To add a component you can use npm/Yarn or install it manually.
-
-In either case you'll need to re-run `gulp dev` to ensure the component is fully loaded.
+To add a component, use the command line or install it manually.
 
 ### By package
 
 - installation: `yarn add @visual-framework/vf-logo`
 - updating components: `yarn upgrade-interactive --latest`
-  - alias: `npm run update-components`
+  - alias: `yarn run update-components`
 
 ### Manual installation for customisation
 
