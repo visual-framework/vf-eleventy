@@ -16,8 +16,6 @@
 @import 'vf-global-custom-properties.scss';
 
 @import 'vf-global-variables.scss';
-@import '_vf-variables.shame.scss';
-@import 'vf-global-variables.scss';
 @import 'vf-border-radius.variables.scss';
 @import 'vf-breakpoints.variables.scss';
 @import 'vf-colors.map.scss';
@@ -148,7 +146,7 @@ html, button {
 
 /* All Visual Framework Boilerplates */
 
-@import 'embl-group-page/embl-group-page.scss';
+// none here
 
 /* All Visual Framework Deprecated components */
 
@@ -164,5 +162,8 @@ html, button {
 // sass imports
 @import 'vf-somepattern/vf-i-dont-exist.scss';
 
-/* Local components */
+// Local components
 @import 'vf-sample/vf-sample.scss';
+
+// If you have any locoal overrides, put them in:
+@import 'vf-local-overrides/vf-local-overrides.scss';

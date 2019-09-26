@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "name": "@visual-framework/vf-heading",
   "description": "vf-heading component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -19,5 +19,5 @@
     "fractal",
     "component"
   ],
-  "gitHead": "f5967acecacdadcd78ade0fbaeecfbec0977b1db"
+  "gitHead": "4b5999854ca11bf902f6f042d319d160c0e462b9"
 }

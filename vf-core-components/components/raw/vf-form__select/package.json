@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "name": "@visual-framework/vf-form__select",
   "description": "vf-form__select component",
   "homepage": "http://dev.beta.embl.org/guidelines/visual-framework/dev-docs/",
@@ -19,5 +19,5 @@
     "fractal",
     "component"
   ],
-  "gitHead": "f5967acecacdadcd78ade0fbaeecfbec0977b1db"
+  "gitHead": "4b5999854ca11bf902f6f042d319d160c0e462b9"
 }

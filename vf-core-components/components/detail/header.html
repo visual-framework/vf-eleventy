@@ -90,7 +90,7 @@
 <div class="Error Error--render">
     <h4 class="Error-title">Error rendering component</h4>
     <div class="Error-message Prose">
-        <p>(unknown path) [Line 4, Column 51]
+        <p>(unknown path) [Line 4, Column 39]
   Error: Unable to call <code>path</code>, which is undefined or falsey</p>
 
     </div>
@@ -172,7 +172,7 @@
   &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-global-header"</span>&gt;
 
     &lt;div <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-global-header__inner"</span>&gt;
-      {% render <span class="hljs-string">'@vf-logo--responsive'</span>, {href: path(<span class="hljs-string">'/'</span>, request), sreen_reader_text: frctl.<span class="hljs-keyword">get</span>(<span class="hljs-string">'project.title'</span>)} %}
+      {% render <span class="hljs-string">'<a href="vf-logo.html">@vf-logo</a>'</span>, {href: path(<span class="hljs-string">'/'</span>, request), logo_text: frctl.<span class="hljs-keyword">get</span>(<span class="hljs-string">'project.title'</span>), image: <span class="hljs-string">'../../assets/vf-logo/assets/logo.svg'</span> } %}
 
       &lt;nav <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation vf-navigation--global"</span>&gt;
         &lt;ul <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__list | vf-list--inline"</span>&gt;
@@ -180,7 +180,7 @@
             &lt;a href=<span class="hljs-string">"https://visual-framework.github.io/vf-welcome/"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;About the Visual Framework&lt;/a&gt;
           &lt;/li&gt;
           &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__item"</span>&gt;
-            &lt;a href=<span class="hljs-string">"https://visual-framework.github.io/vf-welcome/documentation"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;Documentation&lt;/a&gt;
+            &lt;a href=<span class="hljs-string">"https://visual-framework.github.io/vf-welcome/developing"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;Documentation&lt;/a&gt;
           &lt;/li&gt;
           &lt;li <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__item"</span>&gt;
             &lt;a href=<span class="hljs-string">"https://discord.gg/XHAvkUX"</span> <span class="hljs-keyword">class</span>=<span class="hljs-string">"vf-navigation__link"</span>&gt;Help, chat&lt;/a&gt;
@@ -245,6 +245,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">src/components/vf-core-components/vf-core/tools/vf-frctl-theme/views/partials/header.njk</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="vf-logo.html">@<span>vf-logo</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
     </ul>
@@ -1877,7 +1886,7 @@
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-design-tokens">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Vf Design Tokens</span>
+                <span>Design Tokens</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1897,7 +1906,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1921,7 +1930,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1945,7 +1954,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -1969,7 +1978,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2119,6 +2128,30 @@
 
 
 <span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-font-plex-mono.html" data-pjax>
+                <span>Plex Mono Font</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -2915,6 +2948,94 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-vf-navigation">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Navigation</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-navigation--global.html" data-pjax>
+                <span>Global</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-navigation--main.html" data-pjax>
+                <span>Main</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-navigation--additional.html" data-pjax>
+                <span>Additional</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="vf-no-js.html" data-pjax>
@@ -2927,6 +3048,54 @@
 
 
 <span class="Status-dot" style="border-color: #19993B;" title="live"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-sass-config.html" data-pjax>
+                <span>Sass config</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-sass-utilities.html" data-pjax>
+                <span>Sass utilities</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #E89300;" title="beta"></span>
 
 
 </div>
@@ -3076,6 +3245,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="vf-local-overrides.html" data-pjax>
+                <span>vf-local-overrides</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #DC0A28;" title="alhpa"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
