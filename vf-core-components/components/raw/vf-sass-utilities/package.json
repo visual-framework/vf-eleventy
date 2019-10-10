@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "name": "@visual-framework/vf-sass-utilities",
   "description": "vf-sass-utilities",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -17,5 +17,5 @@
     "fractal",
     "component"
   ],
-  "gitHead": "4b5999854ca11bf902f6f042d319d160c0e462b9"
+  "gitHead": "a3ca7b6c6eb0573f58e71f3e74098a3578c6deba"
 }

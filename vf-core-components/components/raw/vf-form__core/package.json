@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "name": "@visual-framework/vf-form__core",
   "description": "vf-form__core component",
   "homepage": "https://visual-framework.github.io/vf-core/",
@@ -19,15 +19,15 @@
     "fractal",
     "component"
   ],
-  "gitHead": "4b5999854ca11bf902f6f042d319d160c0e462b9",
+  "gitHead": "a3ca7b6c6eb0573f58e71f3e74098a3578c6deba",
   "dependencies": {
-    "@visual-framework/vf-form__checkbox": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__helper": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__input": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__item": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__label": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__radio": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__select": "^1.0.0-alpha.6",
-    "@visual-framework/vf-form__textarea": "^1.0.0-alpha.6"
+    "@visual-framework/vf-form__checkbox": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__helper": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__input": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__item": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__label": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__radio": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__select": "^1.0.0-alpha.7",
+    "@visual-framework/vf-form__textarea": "^1.0.0-alpha.7"
   }
 }

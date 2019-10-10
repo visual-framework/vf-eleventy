@@ -1,90 +1,229 @@
 // vf-button
 
+@import 'package.variables.scss';
+// Debug information from component's `package.json`:
+// ---
+/*!
+* Component: #{map-get($componentInfo, 'name')}
+* Version: #{map-get($componentInfo, 'version')}
+* Location: #{map-get($componentInfo, 'location')}
+*/
+// vf-button
+:root {
+  --default-bg-colour: set-color(vf-color--grey);
+  --default-bg-colour-dark: set-color(vf-color--grey--darkest);
+  --default-button--visited-border: set-color(vf-color--grey--lightest);
+}
+$button-hover-fix: -5px -5px rgba(0, 0, 0, 0);
 .vf-button {
   @include set-type(text-button--1);
 
   appearance: none;
-  border-radius: 4px;
+  background-color: set-ui-color(vf-ui-color--black);
+  background-color: var(--vf-button-background-color, var(--default-bg-colour));
+  border: 4px solid set-ui-color(vf-ui-color--black);
+  border: 4px solid var(--vf-button-border-color, var(--default-bg-colour));
+  box-shadow: 8px 8px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), $button-hover-fix;
+  color: var(--vf-button-text-color, set-ui-color(vf-ui-color--white));
   cursor: pointer;
   display: inline-block;
-  margin: 0;
-  padding: 12px;
+  margin: 0 16px 16px 0;
+  outline: 0;
+  padding: 12px 24px;
+  position: relative;
+  text-align: center;
   text-decoration: none;
-  transition: .01s ease-in-out;
+  // transform: translate(0, 0);
+  // transform-style: preserve-3d;
+  transition: all linear 50ms;
+
+  // &::before {
+  //   background-color: set-ui-color(vf-ui-color--black);
+  //   background-color: var(--vf-button-shadow-background-color, var(--default-bg-colour-dark));
+  //   border: 4px solid set-ui-color(vf-ui-color--black);
+  //   border: 4px solid var(--vf-button-shadow-border-color, var(--default-bg-colour-dark));
+  //   content: '';
+  //   height: 100%;
+  //   left: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   transform: translateX(4px) translateY(4px) translateZ(-1px);
+  //   transition: all linear 50ms;
+  //   width: 100%;
+  // }
+
+  // Visited Styles
+  // &:visited {
+  //   border-bottom-color: var(--vf-button-border-color--visited, var(--default-button--visited-border) );
+  //   // &::after {
+  //   //   background-color: var(--vf-button-border-color--visited, var(--default-button--visited-border) );
+  //   //   bottom: -4px;
+  //   //   content: '';
+  //   //   height: 4px;
+  //   //   left: -4px;
+  //   //   position: absolute;
+  //   //   transition: all linear 50ms;
+  //   //   width: calc(100% + 8px);
+  //   // }
+  //   // &:hover {
+  //   //   &::after {
+  //   //     background-color: var(--vf-button-shadow-border-color, var(--default-bg-colour-dark));
+  //   //     transition: all linear 50ms;
+  //   //   }
+  //   // }
+  //   &:hover {
+  //     border-bottom-color: var(--vf-button-shadow-border-color, var(--default-bg-colour-dark));
+  //   }
+  // }
+
+  // Hover and Focus Styles
+  &:focus,
+  &:hover {
+    box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), 2px 2px 4px rgba(set-ui-color(vf-ui-color--black), .25), $button-hover-fix;
+    color: set-ui-color(vf-ui-color--white);
+    transform: translate(4px, 4px) translateZ(1px);
+    // transition: all linear 50ms;
+
+    // &::before {
+    //   box-shadow: 2px 2px 4px rgba(set-ui-color(vf-ui-color--black), .25);
+    //   transform: translateX(0) translateY(0) translateZ(-1px);
+    //   transition: all linear 50ms;
+    // }
+  }
+
+  // Active Styles
+  &:active {
+    box-shadow: 0px 0px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), 2px 2px 2px rgba(set-ui-color(vf-ui-color--black), .125), $button-hover-fix;
+    transform: translate(8px, 8px) translateZ(1px);
+    // transition: all linear 25ms;
+
+    // &::before {
+    //   box-shadow: 2px 2px 2px rgba(set-ui-color(vf-ui-color--black), .125);
+    //   transform: translateX(-4px) translateY(-4px) translateZ(-1px);
+    //   transition: all linear 25ms;
+    // }
+  }
+}
+
+a.vf-button {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 .vf-button--primary {
-  @include button-link($vf-link--color, $vf-link--hover-color);
+  --vf-button-border-color: var(--vf-color--blue);
+  --vf-button-background-color: var(--vf-color--blue);
 
-  box-shadow: 0px 6px 0px 0px $vf-link--hover-color;
-  margin-bottom: 6px; // because we're using box-shadow we need to 'create the space' again
+  --vf-button-shadow-border-color: var(--vf-color--blue--dark);
+  --vf-button-shadow-background-color: var(--vf-color--blue--dark);
 
-  &:hover {
-    box-shadow: 0px 2px 0px 0px $vf-link--hover-color;
-    @include vf-slide-on-hover(4px, 'down');
-  }
+  --vf-button-border-color--visited: var(--vf-color--blue--light);
 }
 
-.vf-text-button--secondary {
-  @include button-link($vf-link--color: set-color(vf-color--green), $vf-link--hover-color: set-color(vf-color--green--dark));
+.vf-button--secondary {
+  --vf-button-border-color: var(--vf-color--green);
+  --vf-button-background-color: var(--vf-color--green);
 
-  box-shadow: 0px 6px 0px 0px set-color(vf-color--green--dark);
-  margin-bottom: 6px; // because we're using box-shadow we need to 'create the space' again
+  --vf-button-shadow-border-color: var(--vf-color--green--dark);
+  --vf-button-shadow-background-color: var(--vf-color--green--dark);
 
-  &:hover {
-    box-shadow: 0px 2px 0px 0px set-color(vf-color--green--dark);
-    @include vf-slide-on-hover(4px, 'down');
-  }
+  --vf-button-border-color--visited: var(--vf-color--green--light);
 }
 
 .vf-button--tertiary {
-  @include button-link($vf-link--color: set-color(vf-color--grey--dark), $vf-link--hover-color: set-color(vf-color--grey));
+  --vf-button-border-color: var(--vf-color--grey);
+  --vf-button-background-color: var(--vf-color--grey);
 
-  box-shadow: 0px 6px 0px 0px set-color(vf-color--grey);
-  margin-bottom: 6px; // because we're using box-shadow we need to 'create the space' again
+  --vf-button-shadow-border-color: var(--vf-color--grey--dark);
+  --vf-button-shadow-background-color: var(--vf-color--grey--dark);
 
-  &:hover {
-    box-shadow: 0px 2px 0px 0px set-color(vf-color--grey);
-    @include vf-slide-on-hover(4px, 'down');
-  }
+  --vf-button-border-color--visited: var(--vf-color--grey--light);
 }
 
 .vf-button--outline {
+  --vf-button-background-color: #{set-ui-color(vf-ui-color--white)};
+  color: var(--vf-button-border-color, var(--default-bg-colour) );
 
-  &.vf-button--primary {
-    @include button-link--ghost;
-  }
-
-  &.vf-text-button--secondary {
-    @include button-link--ghost($vf-link--color: set-color(vf-color--green), $vf-link--hover-color: set-color(vf-color--green--dark));
-  }
-
-  &.vf-button--tertiary {
-    @include button-link--ghost($vf-link--color: set-color(vf-color--grey--dark), $vf-link--hover-color: set-color(vf-color--grey));
+  &:hover {
+    color: var(--vf-button-border-color);
   }
 }
 
 .vf-button--pill {
   border-radius: 500px;
+
+  &::before {
+    border-radius: 500px;
+  }
 }
 
 .vf-button--rounded {
   border-radius: $vf-radius--md;
+
+  // &::before {
+  //   border-radius: $vf-radius--md;
+  // }
 }
 
-.vf-text-button--2 {
+.vf-button--sm {
   @include set-type(text-button--2);
 
   padding: 8px;
   // @include padding(all, map-get($vf-spacing-map, vf-spacing--sm));
 
-  &.vf-text-button--rounded {
+  &.vf-button--rounded {
     border-radius: 8px;
   }
 }
 
-.vf-text-button--1 {
+.vf-button--lg {
   @include set-type(text-button--1);
 
   padding: 16px;
 }
+
+// Begin deprecated classes and styles
+html:not(.vf-disable-deprecated) {
+
+  // Deprecated in 1.0.0-beta.7
+  // Will be removed in vf-button v2.0
+  .vf-text-button--secondary {
+    @include button-link($vf-link--color: set-color(vf-color--green), $vf-link--hover-color: set-color(vf-color--green--dark));
+
+    box-shadow: 0px 6px 0px 0px set-color(vf-color--green--dark);
+    margin-bottom: 6px; // because we're using box-shadow we need to 'create the space' again
+
+    &:hover {
+      box-shadow: 0px 2px 0px 0px set-color(vf-color--green--dark);
+    }
+  }
+
+  // Deprecated in 1.0.0-beta.7
+  // Will be removed in vf-button v2.0
+  .vf--button--outline.vf-text--button--secondary {
+    @include button-link--ghost( $vf-link--color: set-color(vf-color--green) );
+  }
+
+  // Deprecated in 1.0.0-beta.7
+  // Will be removed in vf-button v2.0
+  .vf-text-button--2 {
+    @include set-type(text-button--2);
+    padding: 8px;
+
+    &.vf-text-button--rounded {
+      border-radius: 8px;
+    }
+  }
+
+  // Deprecated in 1.0.0-beta.7
+  // Will be removed in vf-button v2.0
+  .vf-text-button--1 {
+    @include set-type(text-button--1);
+
+    padding: 16px;
+  }
+
+}
+// End deprecated
