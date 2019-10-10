@@ -1,6 +1,6 @@
 {
   "name": "@visual-framework/vf-boilerplate-eleventy",
-  "version": "2.0.0-alpha.10",
+  "version": "2.0.0-alpha.11",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "repository": {
     "type": "git",
@@ -58,7 +58,7 @@
     "@visual-framework/vf-text": "^1.0.0-beta.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
     "gulp-better-rollup": "^4.0.1",
     "gulp-cssnano": "^2.1.3",
