@@ -43,6 +43,7 @@ require('./node_modules/\@visual-framework/vf-core/tools/gulp-tasks/_gulp_rollup
 gulp.task('watch', function() {
   gulp.watch(['./src/components/**/*.scss', '!./src/components/**/package.variables.scss'], gulp.parallel('vf-css'));
   gulp.watch(['./src/components/**/*.js'], gulp.parallel('vf-scripts'));
+  console.log('to do: add a watch command');
 });
 
 gulp.task('set-to-development', function(done) {
@@ -68,8 +69,8 @@ gulp.task('fractal', function(done) {
   global.fractal         = require('@visual-framework/vf-core/fractal.js').initialize(fractalBuildMode,fractalReadyCallback); // make fractal components are available gloablly
 
   function fractalReadyCallback(fractal) {
+    // console.log('Done building Fractal');
     global.fractal = fractal; // save fractal globally
-    console.log('Done building Fractal');
     done();
   }
 
@@ -83,25 +84,11 @@ gulp.task('eleventy', function(done) {
     done(err)
   });
 
-  // function buildEleventy() {
-  //   console.log('Done building 11ty');
-  //   if (process.env.ELEVENTY_ENV == 'production') {
-  //     // nothing more to do
-  //     done();
-  //   }
-  //   if (process.env.ELEVENTY_ENV == 'development') {
-  //     // elev.watch().then(function() {
-  //     //   elev.serve('3000');
-  //     //   // console.log('Done building 11ty');
-  //     //   done();
-  //     // });
-  //   }
-  // }
-
 });
 // Eleventy doesn't always finish promptly, this ensures we exit gulp "cleanly"
-gulp.task('manual-exit', function(done) {
-  done()(process.exit());
+gulp.task('browser-sync', function(done) {
+  console.log('to do: add browsersync instance');
+  done();
 });
 
 // Let's build this sucker.
@@ -110,8 +97,7 @@ gulp.task('build', gulp.series(
   gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
   'set-to-static-build',
   'fractal',
-  'eleventy',
-  'manual-exit'
+  'eleventy'
 ));
 
 // Build and watch things during dev
@@ -121,5 +107,5 @@ gulp.task('dev', gulp.series(
   'set-to-development',
   'fractal',
   'eleventy',
-  gulp.parallel('watch','vf-watch')
+  gulp.parallel('watch', 'vf-watch', 'browser-sync')
 ));
