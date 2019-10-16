@@ -1,4 +1,5 @@
 const gulp  = require('gulp');
+const exec = require('child_process').exec
 var   fractalBuildMode;
 
 // -----------------------------------------------------------------------------
@@ -60,9 +61,7 @@ gulp.task('set-to-static-build', function(done) {
 
 // Run eleventy, but only after we wait for fractal to bootstrap
 // @todo: consider if this could/should be two parallel gulp tasks
-gulp.task('eleventy', function(done) {
-  let elev;
-  process.argv.push('--config=eleventy.js'); // Eleventy config
+gulp.task('fractal', function(done) {
   global.vfBuilderPath   = __dirname + '/build/vf-core-components';
   global.vfDocsPath      = __dirname + '/node_modules/\@visual-framework/vf-eleventy--extensions/fractal/docs';
   global.vfOpenBrowser   = false; // if you want to open a browser tab for the component library
@@ -70,29 +69,36 @@ gulp.task('eleventy', function(done) {
 
   function fractalReadyCallback(fractal) {
     global.fractal = fractal; // save fractal globally
-    elev = require('./node_modules/\@visual-framework/vf-eleventy--extensions/11ty/cmd.js');
     console.log('Done building Fractal');
-    buildEleventy();
-  }
-
-  function buildEleventy() {
-    if (process.env.ELEVENTY_ENV == 'production') {
-      elev.write().then(function() {
-        console.log('Done building 11ty');
-        done();
-      });
-    }
-    if (process.env.ELEVENTY_ENV == 'development') {
-      elev.watch().then(function() {
-        elev.serve('3000');
-        // console.log('Done building 11ty');
-        done();
-      });
-    }
+    done();
   }
 
 });
 
+gulp.task('eleventy', function(done) {
+
+  exec('npx eleventy --config=eleventy.js', function (err, stdout, stderr) {
+    console.log(stdout)
+    console.log(stderr)
+    done(err)
+  });
+
+  // function buildEleventy() {
+  //   console.log('Done building 11ty');
+  //   if (process.env.ELEVENTY_ENV == 'production') {
+  //     // nothing more to do
+  //     done();
+  //   }
+  //   if (process.env.ELEVENTY_ENV == 'development') {
+  //     // elev.watch().then(function() {
+  //     //   elev.serve('3000');
+  //     //   // console.log('Done building 11ty');
+  //     //   done();
+  //     // });
+  //   }
+  // }
+
+});
 // Eleventy doesn't always finish promptly, this ensures we exit gulp "cleanly"
 gulp.task('manual-exit', function(done) {
   done()(process.exit());
@@ -103,6 +109,7 @@ gulp.task('build', gulp.series(
   'vf-clean',
   gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
   'set-to-static-build',
+  'fractal',
   'eleventy',
   'manual-exit'
 ));
@@ -112,6 +119,7 @@ gulp.task('dev', gulp.series(
   'vf-clean',
   gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
   'set-to-development',
+  'fractal',
   'eleventy',
   gulp.parallel('watch','vf-watch')
 ));
