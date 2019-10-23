@@ -616,9 +616,10 @@
     luxon "^1.19.3"
     touch "^3.1.0"
 
-"@visual-framework/vf-favicon@1.0.0-beta.6":
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-favicon/-/vf-favicon-1.0.0-beta.6.tgz#5b6bf7af1e8e991f7d928d3c371ec1d771ffe8e5"
+"@visual-framework/vf-favicon@1.0.0-beta.7":
+  version "1.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-favicon/-/vf-favicon-1.0.0-beta.7.tgz#33a6dde7ee669850aec7a1ef581d13e8feed6205"
+  integrity sha512-Y2KefDdtBEBbOrH0KkCHM2Llp4uQ1qn8cWy6Hal5JghdZJAtoODLJloudpMcUUP5WH/4ebvlUi4pXsxJeB2iuA==
 
 "@visual-framework/vf-figure@^1.0.0-alpha.7":
   version "1.0.0-alpha.7"
