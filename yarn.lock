@@ -516,10 +516,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.0.0-beta.7.tgz#8c6dc2925bafc78cf51ab02e8d1fcb7ae81490d4"
   integrity sha512-yI8cA/c/6DSivca/1uCBS8xr4XAqEUxolSYfewfR5wAGL6XMKuQHB9mkEiuG1HegQiv54hcV1Y1zJLLakt91SQ==
 
-"@visual-framework/vf-banner@1.0.0-alpha.7":
-  version "1.0.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.0.0-alpha.7.tgz#adca50b4e1c3cfa7612931ec82742909c8f92f5d"
-  integrity sha512-+LM8Y+Ug58ADd/61myA47sg+wgErt8epomzPQDk2HSV9UKd2fk7VxSpYRi6IY/aFq+E+O5PgywCgYX8rofuVsQ==
+"@visual-framework/vf-banner@1.0.0-alpha.8":
+  version "1.0.0-alpha.8"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.0.0-alpha.8.tgz#b57a4d171fd8b9634f8eb06484727521a9607bb1"
+  integrity sha512-1gxorx4IXLRSSgI7tFf1Sd87DWGEC4nHrTCajICOKCjEMjBOysj7kzUpYBCEajpUjLb8ycVEi7ZXa/8h7hEPuA==
 
 "@visual-framework/vf-blockquote@^1.0.0-beta.7":
   version "1.0.0-beta.7"
