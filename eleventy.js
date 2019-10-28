@@ -7,7 +7,7 @@ module.exports = function(config) {
   // Add in tags, filters useful for Visual Framework installs
   // (fractal's render tag, codeblock, markdown, etc)
   // and common configuration
-  const vfEleventyExtension = require("@visual-framework/vf-eleventy--extensions");
+  const vfEleventyExtension = require("@visual-framework/vf-extensions\/11ty");
   config.addPlugin(vfEleventyExtension);
 
   // BroswerSync options
