@@ -11,7 +11,7 @@ require('./node_modules/\@visual-framework/vf-extensions/gulp-tasks/_gulp_rollup
 // Watch folders for changess
 gulp.task('watch', function() {
   // left for convience for local watch additions
-  // gulp.watch([componentPath+'/**/*.{njk,html,md}'], gulp.series('eleventy:reload'));
+  gulp.watch(['./build/css/styles.css'], gulp.series('eleventy:reload'));
 });
 
 // Let's build this sucker.
@@ -21,8 +21,7 @@ gulp.task('build', gulp.series(
   'fractal:build',
   'fractal',
   'eleventy:init',
-  'eleventy:build',
-  'manual-exit'
+  'eleventy:build'
 ));
 
 // Build and watch things during dev
