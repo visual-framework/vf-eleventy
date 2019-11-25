@@ -5,7 +5,7 @@
   <subtitle>This allows using the &lt;a class=&quot;vf-link&quot; href=&quot;https://www.11ty.io&quot;&gt;11ty&lt;/a&gt; static site generator with direct access to &lt;a class=&quot;vf-link&quot; href=&quot;https://github.com/visual-framework/vf-core&quot;&gt;Visual Framework 2.0&lt;/a&gt; components.</subtitle>
   <link href="https://visual-framework.github.io/vf-eleventy/feed.xml" rel="self"/>
   <link href="https://visual-framework.github.io/vf-eleventy/"/>
-  <updated>2019-04-09T12:24:50+00:00</updated>
+  <updated>2019-04-09T12:24:50-00:00</updated>
   <id>https://visual-framework.github.io/vf-eleventy</id>
   <author>
     <name>Visual Framework system</name>
@@ -15,7 +15,7 @@
   <entry>
     <title>I&#39;m an update</title>
     <link href="https://visual-framework.github.io/vf-eleventy/posts/sample-post/"/>
-    <updated>2019-04-09T12:24:50+00:00</updated>
+    <updated>2019-04-09T12:24:50-00:00</updated>
     <id>https://visual-framework.github.io/vf-eleventy/posts/sample-post/</id>
     <content type="html">&lt;p&gt;I&#39;m some content.&lt;/p&gt;
 </content>
