@@ -28,7 +28,7 @@
     "@11ty/eleventy": "^0.9.0",
     "@node-sass/node-module-importer": "^1.2.3",
     "@visual-framework/embl-grid": "^1.0.0-alpha.8",
-    "@visual-framework/vf-banner": "1.0.0-alpha.8",
+    "@visual-framework/vf-banner": "1.0.0",
     "@visual-framework/vf-code-example": "^1.0.0-alpha.8",
     "@visual-framework/vf-config": "^0.0.2",
     "@visual-framework/vf-content": "^1.0.0-beta.8",
