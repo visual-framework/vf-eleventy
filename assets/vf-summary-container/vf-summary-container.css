@@ -41,16 +41,11 @@
 
 /*!
  * Component: @visual-framework/embl-grid
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-rc.1
  * Location: components/embl-grid
  */
 .embl-grid {
-  display: grid;
   grid-column: main;
-  grid-column-gap: var(--page-grid-gap);
-  /* stylelint-disable declaration-colon-space-after */
-  grid-template-columns: calc(var(--embl-grid-module--prime) + var(--embl-grid-spacing-normaliser)) repeat(auto-fit, minmax(288px, 1fr));
-  /* stylelint-enable */
   margin-bottom: 48px;
 }
 
@@ -68,6 +63,16 @@
 @media (max-width: 845px) {
   .embl-grid > *:not(:first-child) {
     grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 600px) {
+  .embl-grid {
+    display: grid;
+    grid-column-gap: var(--page-grid-gap);
+    /* stylelint-disable declaration-colon-space-after */
+    grid-template-columns: calc(var(--embl-grid-module--prime) + var(--embl-grid-spacing-normaliser)) repeat(auto-fit, minmax(288px, 1fr));
+    /* stylelint-enable */
   }
 }
 
@@ -158,7 +163,7 @@
 
 /*!
  * Component: @visual-framework/vf-grid
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-rc.1
  * Location: components/vf-grid
  */
 /* stylelint-disable order/order */
@@ -298,7 +303,7 @@
 /* stylelint-enable order/order */
 /*!
  * Component: @visual-framework/vf-section-header
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0-rc.1
  * Location: components/vf-section-header
  */
 .vf-section-header__heading {
@@ -313,7 +318,7 @@
 
 /*!
  * Component: @visual-framework/vf-summary
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0-rc.1
  * Location: components/vf-summary
  */
 .vf-summary {
@@ -463,6 +468,6 @@
 
 /*!
  * Component: @visual-framework/vf-summary-container
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0-rc.1
  * Location: components/vf-summary-container
  */

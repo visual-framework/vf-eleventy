@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-box
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0-rc.1
  * Location: components/vf-box
  */
 .vf-box {
@@ -56,7 +56,7 @@
 }
 
 .vf-box :last-child {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .vf-box__heading {

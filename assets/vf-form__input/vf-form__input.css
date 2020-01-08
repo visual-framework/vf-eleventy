@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-form__input
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.9
  * Location: components/vf-form/vf-form__input
  */
 .vf-form__input:not([type='file']) {
@@ -90,6 +90,26 @@
   -webkit-font-smoothing: antialiased;
   position: relative;
   text-rendering: optimizeLegibility;
+}
+
+.vf-form__input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input::-moz-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input::placeholder {
+  opacity: 1;
 }
 
 .vf-form__input::-webkit-input-placeholder,

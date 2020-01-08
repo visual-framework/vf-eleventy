@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-heading
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0
  * Location: components/vf-heading
  */
 .vf-text {
@@ -115,7 +115,7 @@
 
 /*!
  * Component: @visual-framework/vf-badge
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0
  * Location: components/vf-badge
  */
 .vf-badge {
@@ -231,7 +231,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-text
- * Version: 1.0.0-beta.7
+ * Version: 1.0.1
  * Location: components/vf-text
  */
 .vf-text-body > a {
@@ -308,7 +308,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-link
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0
  * Location: components/vf-link
  */
 .vf-link {
@@ -339,12 +339,12 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__core
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-beta.1
  * Location: components/vf-form/vf-form__core
  */
 /*!
  * Component: @visual-framework/vf-form__helper
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.8
  * Location: components/vf-form/vf-form__helper
  */
 .vf-form__helper {
@@ -364,7 +364,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__input
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.10
  * Location: components/vf-form/vf-form__input
  */
 .vf-form__input:not([type='file']) {
@@ -413,6 +413,26 @@ a.vf-badge--primary:hover {
   -webkit-font-smoothing: antialiased;
   position: relative;
   text-rendering: optimizeLegibility;
+}
+
+.vf-form__input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input::-moz-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.vf-form__input::placeholder {
+  opacity: 1;
 }
 
 .vf-form__input::-webkit-input-placeholder,
@@ -546,7 +566,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__select
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.8
  * Location: components/vf-form/vf-form__select
  */
 .vf-form__select {
@@ -594,7 +614,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__checkbox
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.8
  * Location: components/vf-form/vf-form__checkbox
  */
 .vf-form__item.vf-form__item--checkbox {
@@ -651,7 +671,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__radio
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.8
  * Location: components/vf-form/vf-form__radio
  */
 .vf-form__radio {
@@ -705,7 +725,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.9
  * Location: components/vf-form/vf-form__textarea
  */
 .vf-form__textarea {
@@ -732,7 +752,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__item
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.9
  * Location: components/vf-form/vf-form__item
  */
 .vf-form__item {
@@ -747,7 +767,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__label
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-alpha.9
  * Location: components/vf-form/vf-form__label
  */
 .vf-form__label {
@@ -766,29 +786,30 @@ a.vf-badge--primary:hover {
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.0.0-beta.7
+* Version: 1.0.0
 * Location: components/vf-button
 */
-:root {
-  --default-bg-colour: set-color(vf-color--grey);
-  --default-bg-colour-dark: set-color(vf-color--grey--darkest);
-  --default-button--visited-border: set-color(vf-color--grey--lightest);
-}
-
 .vf-button {
+  --vf-button__color__background--default: var(--vf-color--grey);
+  --vf-button__color__background--default-dark: var(--vf-color--grey--darkest);
+  --vf-button__color__border--default-visited: var(--vf-color--grey--lightest);
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
+  -ms-flex-item-align: center;
+      align-self: center;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   background-color: #000000;
-  background-color: var(--vf-button-background-color, var(--default-bg-colour));
+  background-color: var(--vf-button-background-color, var(--vf-button__color__background--default));
   border: 4px solid #000000;
-  border: 4px solid var(--vf-button-border-color, var(--default-bg-colour));
-  -webkit-box-shadow: 8px 8px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), -5px -5px rgba(0, 0, 0, 0);
-          box-shadow: 8px 8px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), -5px -5px rgba(0, 0, 0, 0);
+  border: 4px solid var(--vf-button-border-color, var(--vf-button__color__background--default));
+  -webkit-box-shadow: 8px 8px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), -5px -5px rgba(0, 0, 0, 0);
+          box-shadow: 8px 8px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), -5px -5px rgba(0, 0, 0, 0);
   color: var(--vf-button-text-color, #ffffff);
   cursor: pointer;
   display: inline-block;
@@ -798,21 +819,25 @@ a.vf-badge--primary:hover {
   position: relative;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: all linear 50ms;
-  transition: all linear 50ms;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all linear 125ms;
+  transition: all linear 125ms;
 }
 
 .vf-button:focus, .vf-button:hover {
-  -webkit-box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), 2px 2px 4px rgba(0, 0, 0, 0.25), -5px -5px rgba(0, 0, 0, 0);
-          box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), 2px 2px 4px rgba(0, 0, 0, 0.25), -5px -5px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), 2px 2px 4px rgba(0, 0, 0, 0.25), -5px -5px rgba(0, 0, 0, 0);
+          box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), 2px 2px 4px rgba(0, 0, 0, 0.25), -5px -5px rgba(0, 0, 0, 0);
   color: #ffffff;
-  -webkit-transform: translate(4px, 4px) translateZ(1px);
-          transform: translate(4px, 4px) translateZ(1px);
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+  -webkit-transition: all linear 125ms;
+  transition: all linear 125ms;
 }
 
 .vf-button:active {
-  -webkit-box-shadow: 0px 0px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), 2px 2px 2px rgba(0, 0, 0, 0.125), -5px -5px rgba(0, 0, 0, 0);
-          box-shadow: 0px 0px 0 var(--vf-button-shadow-background-color, var(--default-bg-colour-dark)), 2px 2px 2px rgba(0, 0, 0, 0.125), -5px -5px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), 2px 2px 2px rgba(0, 0, 0, 0.125), -5px -5px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), 2px 2px 2px rgba(0, 0, 0, 0.125), -5px -5px rgba(0, 0, 0, 0);
   -webkit-transform: translate(8px, 8px) translateZ(1px);
           transform: translate(8px, 8px) translateZ(1px);
 }
@@ -847,7 +872,7 @@ a.vf-button:hover, a.vf-button:focus {
 
 .vf-button--outline {
   --vf-button-background-color: #ffffff;
-  color: var(--vf-button-border-color, var(--default-bg-colour));
+  color: var(--vf-button-border-color, var(--vf-button__color__background--default));
 }
 
 .vf-button--outline:hover {
@@ -910,12 +935,12 @@ html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
           box-shadow: 0px 2px 0px 0px #007b53;
 }
 
-html:not(.vf-disable-deprecated) .vf--button--outline.vf-text--button--secondary {
+html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary {
   background-color: #ffffff;
   color: #18974c;
 }
 
-html:not(.vf-disable-deprecated) .vf--button--outline.vf-text--button--secondary:visited {
+html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary:visited {
   background-color: #54585a;
   color: #ffffff;
 }
@@ -942,7 +967,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-figure
- * Version: 1.0.0-alpha.7
+ * Version: 1.0.0-beta.1
  * Location: components/vf-figure
  */
 .vf-figure {
@@ -971,7 +996,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-list
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0
  * Location: components/vf-list
  */
 .vf-list {
@@ -1053,7 +1078,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-blockquote
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0
  * Location: components/vf-blockquote
  */
 .vf-blockquote {
@@ -1078,9 +1103,18 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   top: 0;
 }
 
+.vf-blockquote--pullquote {
+  position: static;
+}
+
+.vf-blockquote--pullquote:before {
+  content: 'This component variant has not yet been implement, see the README.md for more information.';
+  display: block;
+}
+
 /*!
  * Component: @visual-framework/vf-divider
- * Version: 1.0.0-rc.7
+ * Version: 1.0.0
  * Location: components/vf-divider
  */
 .vf-divider {
@@ -1094,7 +1128,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-box
- * Version: 1.0.0-beta.7
+ * Version: 1.0.0
  * Location: components/vf-box
  */
 .vf-box {
@@ -1109,7 +1143,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 }
 
 .vf-box :last-child {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .vf-box__heading {
@@ -1173,7 +1207,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-content
- * Version: 1.0.0-beta.7
+ * Version: 1.0.1
  * Location: components/vf-content
  */
 .vf-content h1:not([class*='vf-']) {
