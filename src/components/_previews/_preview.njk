@@ -1,0 +1,8 @@
+{# 
+This template is for your local Fractal component library interfrace
+https://fractal.build/guide/components/preview-layouts.html#creating-a-preview-layout 
+#}
+{{ yield | safe }}
+
+<!-- The component library does not load the project-wide styles, but uses only the current compoenent's css -->
+<link media="all" rel="stylesheet" href="../raw/{{_target.baseHandle}}/{{_target.baseHandle}}.css">
