@@ -6,3 +6,5 @@ layout: layouts/post.njk
 ---
 
 I'm some content.
+
+<img src="{{ '/images/test-image.png' | url }}" />
