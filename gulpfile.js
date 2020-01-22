@@ -18,6 +18,7 @@ gulp.task('watch', function() {
 gulp.task('build', gulp.series(
   'vf-clean',
   gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
+  'vf-css:production', //optimise, prefix css
   'fractal:build',
   'fractal',
   'eleventy:init',
