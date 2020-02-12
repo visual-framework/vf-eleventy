@@ -1,6 +1,6 @@
 {
   "name": "@visual-framework/vf-boilerplate-eleventy",
-  "version": "2.0.0-alpha.15",
+  "version": "2.0.0-alpha.16",
   "description": "Build a site with Visual Framework components using the the Eleventy templating engine.",
   "repository": {
     "type": "git",
