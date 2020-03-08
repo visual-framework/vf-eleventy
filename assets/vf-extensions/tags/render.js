@@ -1,8 +1,8 @@
 // A port-fork-enhancement of the Fractal render extension for Nunjucks for 11ty
 // Original: https://github.com/frctl/nunjucks/blob/develop/src/extensions/render.js
 
-// {% render '@'+variant.handle, variant.context, false, { escape: false, beautify: true, codetype: 'html', highlight: true } %}
-// - second property is for merge (currently not implemented but option captured)
+// {% render '@'+variant.handle, variant.context, true, { escape: false, beautify: true, codetype: 'html', highlight: true } %}
+// - second property is for merging the parent context to set defaults
 // - third option set escaping of code, beautify (formatting), code type (default: html) and highlighting (hljs)
 
 module.exports = function (nunjucksEngine,fractal) {
@@ -25,12 +25,13 @@ module.exports = function (nunjucksEngine,fractal) {
       args.shift();
       const handle = args[0];
       let context = args[1];
-      const merge = args[2] || false;
+      const merge = args[2] || true;
       args[3] = args[3] || {};
       const escape = args[3].escape || false;
       const beautify = args[3].beautify || false;
       const codetype = args[3].codetype || 'html';
       const highlight = args[3].highlight || false;
+      const inherit = args[3].inherit || false;
       const entity = source.find(handle);
       if (!entity) {
         console.warn(`Could not render component '${handle}' - component was not found.`);
@@ -42,7 +43,9 @@ module.exports = function (nunjucksEngine,fractal) {
       if (!context) {
           context = defaultContext;
       } else if (merge) {
-          context = utils.defaultsDeep(context, defaultContext);
+        // Inherit unspecified settings from the parent
+        // If parent context has svg: true, and you don't specify, then you'll inherit
+        context = Object.assign(defaultContext, context);
       }
 
       source.resolve(context).then(context => {

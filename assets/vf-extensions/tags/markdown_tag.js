@@ -3,7 +3,7 @@
 module.exports = Markdown;
 
 const nunjucks = require('nunjucks');
-const md = require('markdown-it')();
+const md = require('markdown-it')({ html: true });
 
 function Markdown(env) {
 

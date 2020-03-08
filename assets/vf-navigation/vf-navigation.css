@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-list
- * Version: 1.0.0-rc.1
+ * Version: 1.0.0
  * Location: components/vf-list
  */
 .vf-list {
@@ -105,13 +105,17 @@
 
 .vf-list__link {
   border-bottom: none;
-  text-decoration: underline;
+  text-decoration: none;
   color: #3b6fb6;
 }
 
 .vf-list__link:visited {
-  color: #54585a;
+  color: #734595;
   border-bottom: none;
+}
+
+.vf-list__link:visited:hover {
+  color: #734595;
   text-decoration: underline;
 }
 
@@ -123,7 +127,7 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 1.0.0-rc.1
+ * Version: 1.0.1
  * Location: components/vf-navigation
  */
 .vf-navigation__list {
@@ -146,14 +150,18 @@
 
 .vf-navigation--global .vf-navigation__link {
   border-bottom: none;
-  text-decoration: underline;
+  text-decoration: none;
   color: #54585a;
   text-decoration: none;
 }
 
 .vf-navigation--global .vf-navigation__link:visited {
-  color: #54585a;
+  color: #734595;
   border-bottom: none;
+}
+
+.vf-navigation--global .vf-navigation__link:visited:hover {
+  color: #734595;
   text-decoration: underline;
 }
 
@@ -190,17 +198,17 @@
   color: #373a36;
 }
 
+.vf-global-layout--easy .vf-navigation--main {
+  border: 1px solid #a8a99e;
+  border-bottom: 0;
+}
+
 .vf-global-layout--normal .vf-navigation--main {
   border: 1px solid #a8a99e;
   border-bottom: 0;
 }
 
-.vf-global-layout--medium .vf-navigation--main {
-  border: 1px solid #a8a99e;
-  border-bottom: 0;
-}
-
-.vf-global-layout--medium .vf-navigation--main .vf-navigation__list {
+.vf-global-layout--normal .vf-navigation--main .vf-navigation__list {
   padding-bottom: 1.25rem;
 }
 
@@ -230,11 +238,11 @@
   --navigation--main--top-border-color: #3b6fb6;
 }
 
-html.vf-global-layout--medium {
+html.vf-global-layout--normal {
   position: relative;
 }
 
-html.vf-global-layout--medium::before {
+html.vf-global-layout--normal::before {
   background-color: #d8d8d8;
   content: '';
   height: 260px;
@@ -306,7 +314,7 @@ html.vf-global-layout--hard::before {
 
 .vf-navigation--additional .vf-navigation__link {
   border-bottom: none;
-  text-decoration: underline;
+  text-decoration: none;
   color: #fafafa;
   text-decoration: none;
 }
@@ -314,6 +322,10 @@ html.vf-global-layout--hard::before {
 .vf-navigation--additional .vf-navigation__link:visited {
   color: #ffffff;
   border-bottom: none;
+}
+
+.vf-navigation--additional .vf-navigation__link:visited:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 

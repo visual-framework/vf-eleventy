@@ -18,6 +18,6 @@
     <updated>2019-04-09T12:24:50-00:00</updated>
     <id>https://visual-framework.github.io/vf-eleventy/posts/sample-post/</id>
     <content type="html">&lt;p&gt;I&#39;m some content.&lt;/p&gt;
-</content>
+&lt;img src=&quot;https://visual-framework.github.io/vf-eleventy/images/test-image.png&quot;&gt;</content>
   </entry>
 </feed>

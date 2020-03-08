@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-grid
- * Version: 1.0.0-rc.1
+ * Version: 1.0.1
  * Location: components/vf-grid
  */
 /* stylelint-disable order/order */
@@ -126,12 +126,6 @@
   }
   [class*='grid__'] {
     grid-auto-flow: unset;
-  }
-  .vf-grid__col-1 > * + * {
-    border-top: 1px solid #707372;
-  }
-  .vf-grid__col-1 > * + *:last-of-type {
-    margin-bottom: 0;
   }
   .vf-grid__col-1 {
     grid-template-columns: repeat(1, 1fr);
