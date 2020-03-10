@@ -3,6 +3,11 @@ subtitle: No homepage, yet.
 date: 2018-08-22 12:24:50
 layout: layouts/base.njk
 templateEngineOverride: njk, md
+meta:
+  author: Page Author
+  image: your-image-here.png
+  description: "Page description"
+  keywords: "Tags"
 ---
 
 {% render '@vf-intro', {"vf_intro_phase": "alpha", "vf_intro_heading": siteConfig.siteInformation.title,
@@ -51,7 +56,8 @@ templateEngineOverride: njk, md
 ## What you get
 
 - the Eleventy static site generator
-- access to the Visual Framework component system
+- [initial templating setup]({{'posts' | url}})
+- [access to the Visual Framework component system](https://visual-framework.github.io/vf-core/)
 
 ### Component installation
 
