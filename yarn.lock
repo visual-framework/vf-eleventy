@@ -1142,9 +1142,9 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.0.1.tgz#b594fe7ce1c298c5ebc2029bfe3d2f165eeb0af3"
 
-"@visual-framework/vf-banner@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.0.2.tgz#528920753a122100340611be2fe272b5d82f99d9"
+"@visual-framework/vf-banner@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.0.3.tgz#6caf916f29efea02235123634139f1dd842a9fe7"
 
 "@visual-framework/vf-blockquote@^1.0.2":
   version "1.0.2"
