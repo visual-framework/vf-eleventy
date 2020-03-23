@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-grid
- * Version: 1.0.1
+ * Version: 1.0.2
  * Location: components/vf-grid
  */
 /* stylelint-disable order/order */
@@ -117,7 +117,7 @@
     }
   }
   @media (max-width: 1299px) {
-    .vf-grid {
+    .embl-grid .vf-grid {
       grid-column: 1 / -1;
     }
   }

@@ -8,10 +8,9 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<figure\n";
-output += "\n";
+output += "<figure ";
 if(runtime.contextOrFrameLookup(context, frame, "id")) {
-output += " id=\"";
+output += "id=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
 output += "\"";
 ;
@@ -23,7 +22,7 @@ output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "ov
 ;
 }
 output += "\">\n  <img class=\"vf-figure__image\" src=\"";
-output += runtime.suppressValue(env.getFilter("path").call(context, runtime.contextOrFrameLookup(context, frame, "imageUrl")), env.opts.autoescape);
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "imageUrl"), env.opts.autoescape);
 output += "\" alt=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "alttext"), env.opts.autoescape);
 output += "\">\n  <figcaption class=\"vf-figure__caption\">";
