@@ -58,7 +58,7 @@
     "@visual-framework/vf-section-header": "^1.1.0",
     "@visual-framework/vf-summary": "^1.0.2",
     "@visual-framework/vf-summary-container": "^1.0.0",
-    "@visual-framework/vf-table": "^0.0.2",
+    "@visual-framework/vf-table": "^1.0.0",
     "@visual-framework/vf-tabs": "^1.0.0",
     "@visual-framework/vf-text": "^1.0.1",
     "@visual-framework/vf-utility-classes": "^1.0.1",

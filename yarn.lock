@@ -1447,9 +1447,10 @@
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-summary/-/vf-summary-1.0.2.tgz#c9924b37d78ccb57632dd4e6c05ec61eee5b74f1"
 
-"@visual-framework/vf-table@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-table/-/vf-table-0.0.2.tgz#13159c12db619ea8c48ecebc597c1f89efb2b077"
+"@visual-framework/vf-table@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-table/-/vf-table-1.0.0.tgz#e135a4f1c0a708a4288b9edfeb2366b84715a605"
+  integrity sha512-0L8+Vo9lR4BD4KV9yPsawUU9HpF0CqOtS1OdyCtRym2RyjFEKKYOTXOrsNN+Wn99aKkJ/qKaDqGosB6ecoSuqA==
 
 "@visual-framework/vf-tabs@^1.0.0":
   version "1.0.0"
