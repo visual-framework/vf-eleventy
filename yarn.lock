@@ -1309,10 +1309,10 @@
     luxon "^1.22.0"
     touch "^3.1.0"
 
-"@visual-framework/vf-favicon@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-favicon/-/vf-favicon-1.0.1.tgz#f8f4bd2270ea21c1d18568ed61fd151847e91656"
-  integrity sha512-MwRokpJp16BsRzCjajtRQNJrI7lMU9r16J98KKBoV+N+w9TtQ4D6S0YMXq0HEzpEkU71vjcgrHxUITvx4XhHdg==
+"@visual-framework/vf-favicon@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-favicon/-/vf-favicon-1.0.2.tgz#cc7a2edb55c87dd1c1d556a41de5d0d5633b2d2a"
+  integrity sha512-v8xDT38A52ScAggVHhwO/lZN9nu7aqOLb9FLfxL9ibZk7GDuZNKir04dUvH3bvFzcaA97UdhiYzDWn7B4IL64A==
 
 "@visual-framework/vf-figure@^1.0.0-beta.2":
   version "1.0.0-beta.2"
