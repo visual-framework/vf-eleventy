@@ -193,10 +193,10 @@
  */.vf-tabs__list{border-bottom:1px solid #000;margin:0;padding:0 0 0 16px;position:relative}.vf-tabs__item,.vf-tabs__link{display:inline-block;position:relative}.vf-tabs__link{background:#d0d0ce;border-color:transparent transparent #000;border-style:solid;border-width:1px;color:#54585a;outline:0;padding:12px 16px;text-decoration:none;top:1px}.vf-tabs__link:hover{background-color:#54585a;color:#fff}.vf-tabs__link.is-active{background:#fafafa;border-bottom-color:#fff;color:#000}.vf-tabs__section{padding:8px 16px}@media (max-width:550px){.vf-tabs__list{border-bottom:0;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0}.vf-tabs__item{display:block;-ms-flex-preferred-size:auto;flex-basis:auto;-ms-flex-positive:1;flex-grow:1;margin:2px;position:static}.vf-tabs__link{border-color:transparent;display:block;top:unset}.vf-tabs__link.is-active{border-color:#000;position:static}.vf-tabs__section{padding:8px}}
 
 /*!
- * Component: @visual-framework/vf-table
- * Version: 0.0.2
- * Location: components/vf-core-
- */.vf-table:before{content:"This component has not yet been implement, see the README.md for more information.";display:block}
+* Component: @visual-framework/vf-table
+* Version: 1.0.0
+* Location: components/vf-core-
+*/.vf-table{background-color:#fff;border-collapse:collapse}.vf-table--fixed{table-layout:fixed}.vf-table__caption{font-family:IBM Plex Sans,Helvetica,Arial,sans-serif;font-size:21px;font-weight:500;line-height:1.29;margin:0 0 16px;margin:0 0 var(--vf-text-margin--bottom,16px);text-align:left}.vf-table__header{background-color:#d0d0ce}.vf-table__header .vf-table__heading{padding:8px 16px}.vf-table__heading{font-size:19px;font-weight:500;line-height:1.5;text-align:left}.vf-table__cell,.vf-table__heading{font-family:IBM Plex Sans,Helvetica,Arial,sans-serif;margin:0}.vf-table__cell{font-size:16px;font-weight:400;line-height:1.71;padding:4px 16px}.vf-table--tight .vf-table__cell,.vf-table--tight .vf-table__heading{padding:4px}.vf-table--loose .vf-table__heading{padding:16px 24px}.vf-table--loose .vf-table__cell{padding:8px 24px}.vf-table__row .vf-table__heading{font-family:IBM Plex Sans,Helvetica,Arial,sans-serif;font-size:19px;font-weight:500;line-height:1.5;margin:0;text-align:left}.vf-table--striped .vf-table__body .vf-table__row:nth-of-type(2n){background-color:#d8d8d8}.vf-table--striped .vf-table__body .vf-table__row:hover{background-color:#fffadc}.vf-table--bordered,.vf-table--bordered .vf-table__cell,.vf-table--bordered .vf-table__heading{border:1px solid #707372}.vf-table__body .vf-table__row:hover{background-color:#fffadc}
 /*!
  * Component: @visual-framework/vf-intro
  * Version: 1.0.1
