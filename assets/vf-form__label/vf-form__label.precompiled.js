@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<div class=\"vf-form__item\" data-vf-js-form-floatlabel>\n  <label for=\"text\" class=\"vf-form__label | vf-u-sr-only\">Form Label</label>\n  <input type=\"text\" id=\"text\" class=\"vf-form__input\" placeholder=\"form label example\">\n</div>\n";
+output += "<div class=\"vf-form__item\">\n  <label for=\"text\" class=\"vf-form__label\">Form Label</label>\n</div>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

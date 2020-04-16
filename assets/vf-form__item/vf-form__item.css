@@ -41,13 +41,11 @@
 
 /*!
  * Component: @visual-framework/vf-form__item
- * Version: 1.0.0-alpha.10
+ * Version: 1.0.0
  * Location: components/vf-form/vf-form__item
  */
 .vf-form__item {
-  display: block;
   margin-bottom: 32px;
-  position: relative;
 }
 
 .vf-form__item--inline .vf-form__label {

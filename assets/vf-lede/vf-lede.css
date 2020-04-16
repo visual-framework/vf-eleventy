@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-lede
- * Version: 1.0.0-rc.1
+ * Version: 1.0.1
  * Location: components/vf-lede
  */
 .vf-lede {
@@ -54,13 +54,17 @@
 
 .vf-lede > a {
   border-bottom: none;
-  text-decoration: underline;
+  text-decoration: none;
   color: #3b6fb6;
 }
 
 .vf-lede > a:visited {
-  color: #54585a;
+  color: #734595;
   border-bottom: none;
+}
+
+.vf-lede > a:visited:hover {
+  color: #734595;
   text-decoration: underline;
 }
 

@@ -8,7 +8,9 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
+output += "<link rel=\"shortcut icon\" href=\"";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "icon_favicon"), env.opts.autoescape);
+output += "\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "apple_touch_icon"), env.opts.autoescape);
 output += "\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "icon_32"), env.opts.autoescape);

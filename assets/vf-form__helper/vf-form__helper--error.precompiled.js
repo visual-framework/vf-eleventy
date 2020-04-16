@@ -1,14 +1,14 @@
 /**
- * Precompiled Nunjucks template: vf-form__core.njk
+ * Precompiled Nunjucks template: vf-form__helper--error.njk
  */
-(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["vf-form__core"] = (function() {
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["vf-form__helper--error"] = (function() {
 function root(env, context, frame, runtime, cb) {
 var lineno = 0;
 var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "Left intentionally blank, <a href=\"../detail/vf-form__core--example\" class=\"vf-link\" target=\"_parent\">see vf-form__core--example</a>.\n";
+output += "<p class=\"vf-form__helper vf-form__helper--error\">You have done something wrong.</p>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

@@ -31,8 +31,8 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-form__radio
- * Version: 1.0.0-alpha.9
+ * Version: 1.0.1
  * Location: components/vf-form/vf-form__radio
  */
 .vf-form__radio {
@@ -63,9 +63,9 @@
   content: '';
   display: inline-block;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 8px;
   position: relative;
-  top: 6px;
+  top: 4px;
   width: 16px;
 }
 

@@ -31,8 +31,8 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
@@ -41,13 +41,11 @@
 
 /*!
  * Component: @visual-framework/vf-form__item
- * Version: 1.0.0-alpha.10
+ * Version: 1.0.0
  * Location: components/vf-form/vf-form__item
  */
 .vf-form__item {
-  display: block;
   margin-bottom: 32px;
-  position: relative;
 }
 
 .vf-form__item--inline .vf-form__label {
@@ -56,26 +54,32 @@
 
 /*!
  * Component: @visual-framework/vf-form__label
- * Version: 1.0.0-alpha.10
+ * Version: 1.0.0
  * Location: components/vf-form/vf-form__label
  */
 .vf-form__label {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 400;
-  line-height: 1.57;
-  margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
-  margin: 0 0 4px 0;
-  color: #707372;
+  line-height: 1.421;
+  margin: 0 0 8px 0;
   display: block;
-  left: 24px;
-  position: relative;
+}
+
+.vf-form__label--required {
+  float: right;
+  margin-bottom: 0;
+}
+
+.vf-form__label--required .vf-icon svg {
+  fill: #d32f2f;
+  height: 12px;
+  width: 16px;
 }
 
 /*!
  * Component: @visual-framework/vf-form__checkbox
- * Version: 1.0.0-alpha.9
+ * Version: 1.0.1
  * Location: components/vf-form/vf-form__checkbox
  */
 .vf-form__item.vf-form__item--checkbox {
@@ -100,9 +104,9 @@
   content: '';
   display: inline-block;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 8px;
   position: relative;
-  top: 6px;
+  top: 3px;
   width: 16px;
 }
 

@@ -31,8 +31,8 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/embl-grid
- * Version: 1.0.3
+ * Version: 1.0.4
  * Location: components/embl-grid
  */
 .embl-grid {
@@ -68,8 +68,10 @@
 
 @media (min-width: 600px) {
   .embl-grid {
+    -webkit-column-gap: var(--page-grid-gap);
+       -moz-column-gap: var(--page-grid-gap);
+            column-gap: var(--page-grid-gap);
     display: grid;
-    grid-column-gap: var(--page-grid-gap);
     /* stylelint-disable declaration-colon-space-after */
     grid-template-columns: calc(var(--embl-grid-module--prime) + var(--embl-grid-spacing-normaliser)) [main-start] repeat(auto-fit, minmax(288px, 1fr)) [main-end];
     /* stylelint-enable */

@@ -31,8 +31,8 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
@@ -41,7 +41,7 @@
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.0.2
+* Version: 1.0.3
 * Location: components/vf-button
 */
 .vf-button {
@@ -132,7 +132,7 @@ a.vf-button:hover, a.vf-button:focus {
   color: var(--vf-button-border-color, var(--vf-button__color__background--default));
 }
 
-.vf-button--outline:hover {
+.vf-button--outline:focus, .vf-button--outline:hover {
   color: #3b6fb6;
   color: var(--vf-button-border-color);
 }
@@ -169,6 +169,27 @@ a.vf-button:hover, a.vf-button:focus {
   padding: 16px;
 }
 
+.vf-button--icon {
+  background: none;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: currentColor;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.vf-button--icon:focus, .vf-button--icon:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
 html:not(.vf-disable-deprecated) .vf-text-button--secondary {
   background-color: #18974c;
   border: 2px solid #18974c;
@@ -179,8 +200,8 @@ html:not(.vf-disable-deprecated) .vf-text-button--secondary {
 }
 
 html:not(.vf-disable-deprecated) .vf-text-button--secondary:visited {
-  background-color: #734595;
-  border-color: #734595;
+  background-color: #3b6fb6;
+  border-color: #3b6fb6;
 }
 
 html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
@@ -199,7 +220,7 @@ html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary 
 }
 
 html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary:visited {
-  background-color: #734595;
+  background-color: #3b6fb6;
   color: #ffffff;
 }
 

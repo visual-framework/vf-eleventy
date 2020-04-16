@@ -31,8 +31,8 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
@@ -41,26 +41,26 @@
 
 /*!
  * Component: @visual-framework/vf-text
- * Version: 1.0.1
+ * Version: 1.0.2
  * Location: components/vf-text
  */
-.vf-text-body > a {
+.vf-text-body a {
   border-bottom: none;
   text-decoration: none;
   color: #3b6fb6;
 }
 
-.vf-text-body > a:visited {
-  color: #734595;
+.vf-text-body a:visited {
+  color: #3b6fb6;
   border-bottom: none;
 }
 
-.vf-text-body > a:visited:hover {
-  color: #734595;
+.vf-text-body a:visited:hover {
+  color: #3b6fb6;
   text-decoration: underline;
 }
 
-.vf-text-body > a:hover {
+.vf-text-body a:hover {
   color: #193f90;
   border-bottom: none;
   text-decoration: underline;
@@ -196,7 +196,7 @@
 
 /*!
  * Component: @visual-framework/vf-intro
- * Version: 1.0.1
+ * Version: 1.0.2
  * Location: components/vf-intro
  */
 .vf-intro {
@@ -242,7 +242,9 @@
 
 @media (min-width: 1024px) {
   .vf-intro {
-    grid-column-gap: var(--page-grid-gap);
+    -webkit-column-gap: var(--page-grid-gap);
+       -moz-column-gap: var(--page-grid-gap);
+            column-gap: var(--page-grid-gap);
     grid-template-areas: '... header header' '... ...    links';
     grid-template-columns: var(--embl-grid-module--prime) auto var(--embl-grid-module--prime);
   }
@@ -312,12 +314,12 @@
 }
 
 .vf-intro__text > a:visited {
-  color: #734595;
+  color: #3b6fb6;
   border-bottom: none;
 }
 
 .vf-intro__text > a:visited:hover {
-  color: #734595;
+  color: #3b6fb6;
   text-decoration: underline;
 }
 

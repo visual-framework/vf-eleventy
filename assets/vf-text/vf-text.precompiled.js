@@ -17,7 +17,7 @@ t_1 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"),
 t_1 += "\"";
 ;
 }
-t_1 += "\nclass=\"vf-text--body";
+t_1 += "\nclass=\"vf-text-body";
 if(runtime.contextOrFrameLookup(context, frame, "type")) {
 t_1 += " vf-text-body--";
 t_1 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "type"), env.opts.autoescape);

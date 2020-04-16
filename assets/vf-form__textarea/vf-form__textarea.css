@@ -31,8 +31,8 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
@@ -41,7 +41,7 @@
 
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 1.0.0-alpha.10
+ * Version: 1.0.1
  * Location: components/vf-form/vf-form__textarea
  */
 .vf-form__textarea {
@@ -51,7 +51,11 @@
   line-height: 1.71;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 3px solid #f3f3f3;
+  border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -61,7 +65,7 @@
   width: 100%;
 }
 
-.vf-form__textarea:focus {
+.vf-form__textarea:hover, .vf-form__textarea:focus {
   border-color: #54585a;
   outline: 0;
 }

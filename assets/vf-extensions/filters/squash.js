@@ -11,9 +11,9 @@ module.exports = function(text) {
 
   // remove all html elements
   var re = /(<.+?>)/gi;
-  var plain = content.replace(re, '');
+  var plain = content.replace(re, ' ');
   re = /(&.+?;)/gi;
-  plain = plain.replace(re, '');
+  plain = plain.replace(re, ' ');
 
   // remove duplicated words
   var words = plain.split(' ');
@@ -23,9 +23,11 @@ module.exports = function(text) {
   // remove short and less meaningful words
   var result = dedupedStr.replace(/\b(\.|\,|the|a|an|and|am|all|you|I|to|if|of|off|me|my|on|in|it|is|at|as|we|do|be|has|but|was|so|no|not|or|up|for)\b/gi, '');
   //remove newlines, and punctuation
-  result = result.replace(/\.|\,|\?|-|—|\n/g, '');
-  //remove repeated spaces
-  result = result.replace(/[ ]{2,}/g, ' ');
+  result = result.replace(/\.|\,|\?|-|—|\n/g, ' ');
+  //remove repeated whitespace
+  result = result.replace(/\s{2,}/g, ' ');
+  //remove leading/trailing whitespace
+  result = result.replace(/^\s|\s$/g, '');
 
   return result;
 }
