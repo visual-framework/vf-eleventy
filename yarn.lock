@@ -1292,10 +1292,10 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.0.1.tgz#b594fe7ce1c298c5ebc2029bfe3d2f165eeb0af3"
 
-"@visual-framework/vf-banner@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.0.5.tgz#28f083a819170200c5d5bbfd0c8200558c432c19"
-  integrity sha512-DJL0TGOjvRU3jiChUHQt9kejKzxqFxLTANaReipmfqZw75UHzLG9b1Gi8Ylu1aT8mn8D07aZYAbYNfN40/KXjQ==
+"@visual-framework/vf-banner@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.0.6.tgz#3722128bdb35055422642fec21179749a800574e"
+  integrity sha512-1IJwMkUkQTGAKLRZEHd7aq5EllP7+vpYvO6pam8/WFEuE2SA9KCXPJL74T9tTVl2ja0BYUCaPcy8+x/vPKFSCA==
 
 "@visual-framework/vf-blockquote@^1.0.2":
   version "1.0.2"
