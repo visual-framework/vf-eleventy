@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<div class=\"vf-form__item vf-form__item--checkbox vf-form__item--checkbox--inline\">\n  <input type=\"checkbox\" id=\"checkbox-01\" class=\"vf-form__checkbox\">\n  <label for=\"checkbox-01\" class=\"vf-form__label\">Form Label</label>\n</div>\n";
+output += "<div class=\"vf-form__item vf-form__item--checkbox vf-form__item--checkbox--inline\">\n  <input type=\"checkbox\" id=\"checkbox-inline-01\" class=\"vf-form__checkbox\">\n  <label for=\"checkbox-inline-01\" class=\"vf-form__label\">Form Label</label>\n</div>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {
