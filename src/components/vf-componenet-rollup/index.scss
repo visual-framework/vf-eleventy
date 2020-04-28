@@ -121,6 +121,7 @@ html, button {
   @import 'vf-summary/vf-summary--article.scss';
   @import 'vf-summary/vf-summary--job.scss';
   @import 'vf-summary/vf-summary--profile.scss';
+  @import 'vf-summary/vf-summary--event.scss';
   @import 'vf-summary/vf-summary--publication.scss';
   @import 'vf-summary/vf-summary--news.scss';
   @import 'vf-summary/vf-summary--has-image.scss';
@@ -142,6 +143,7 @@ html, button {
 
 @import 'vf-banner/vf-banner.scss';
   @import 'vf-banner/vf-banner--phase.scss';
+  @import 'vf-banner/vf-banner--alerts.scss';
   @import 'vf-banner/vf-banner--fixed.scss';
   @import 'vf-banner/vf-banner--gdpr.scss';
 
@@ -156,7 +158,6 @@ html, button {
 // none here
 
 /* All Visual Framework Deprecated components */
-
 @import 'vf-deprecated/vf-deprecated.scss';
 
 /* EBI Specific components */
@@ -170,6 +171,7 @@ html, button {
 @import 'vf-heading/vf-heading.scss';
 @import 'vf-text/vf-text.scss';
 @import 'vf-utility-classes/vf-utility-classes.scss';
+@import 'vf-u-fullbleed/vf-u-fullbleed.scss';
 
 // This is a demonstration of vf-core's ability to warn and proceed on missing
 // sass imports
@@ -178,5 +180,5 @@ html, button {
 // Local components
 @import 'vf-sample/vf-sample.scss';
 
-// If you have any locoal overrides, put them in:
+// If you have any local overrides, put them in:
 @import 'vf-local-overrides/vf-local-overrides.scss';
