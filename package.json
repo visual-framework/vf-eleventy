@@ -46,7 +46,7 @@
     "@visual-framework/vf-form__core": "^1.0.3",
     "@visual-framework/vf-global-header": "^1.0.0-rc.2",
     "@visual-framework/vf-grid": "^1.0.4",
-    "@visual-framework/vf-grid-page": "^1.0.0",
+    "@visual-framework/vf-grid-page": "^2.0.0",
     "@visual-framework/vf-heading": "^1.0.0",
     "@visual-framework/vf-intro": "^1.0.2",
     "@visual-framework/vf-lede": "^1.0.1",
