@@ -32,7 +32,7 @@
     "@visual-framework/vf-banner": "1.0.6",
     "@visual-framework/vf-box": "^1.0.4",
     "@visual-framework/vf-card": "^1.0.6",
-    "@visual-framework/vf-card-container": "^1.0.0-alpha.4",
+    "@visual-framework/vf-card-container": "^2.0.0",
     "@visual-framework/vf-code-example": "^1.0.1",
     "@visual-framework/vf-config": "^1.0.0-alpha.0",
     "@visual-framework/vf-content": "^1.1.1",

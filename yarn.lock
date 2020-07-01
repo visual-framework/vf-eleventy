@@ -1316,10 +1316,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-button/-/vf-button-1.0.3.tgz#c291796681b549c7469f8b341f4d5abefe187af3"
   integrity sha512-1PyGh31ZcP02oBxdD4dAAcUShP0Ui596BIjmpeW8AueFjw7JAa+UWgZQ+9IXiC4oWTcj+D9qZwkJL3C2DbFFcg==
 
-"@visual-framework/vf-card-container@^1.0.0-alpha.4":
-  version "1.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-card-container/-/vf-card-container-1.0.0-alpha.4.tgz#920d56bd054d92ce55dfc63063012e7699d32989"
-  integrity sha512-jhfNv4nYwcAkYMuY5P6p9zcRSVXU+tq2GrVmr3B5V5nD/xyoiKZNyTc7NVQzqYo1lGNhn/MUoxm9x3JVXG0ATA==
+"@visual-framework/vf-card-container@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-card-container/-/vf-card-container-2.0.0.tgz#a3ca260e87e657fcb901ced46f051b8441faa69f"
+  integrity sha512-K+1tLYiGaP6g2WoJOGADT2Ce/0+ONxbtB8NwUjEdw5Ozg+gcQgbRtAS+LKvZXBevCskGwNEOixUIzRo834/EqQ==
 
 "@visual-framework/vf-card@^1.0.6":
   version "1.0.6"
