@@ -44,7 +44,7 @@
     "@visual-framework/vf-font-plex-mono": "^1.0.0",
     "@visual-framework/vf-font-plex-sans": "^1.0.0",
     "@visual-framework/vf-form__core": "^1.0.3",
-    "@visual-framework/vf-global-header": "^1.0.0-rc.2",
+    "@visual-framework/vf-global-header": "^2.0.0",
     "@visual-framework/vf-grid": "^1.0.4",
     "@visual-framework/vf-grid-page": "^1.0.0",
     "@visual-framework/vf-heading": "^1.0.0",
