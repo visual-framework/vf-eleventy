@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<div class=\"vf-tabs\">\n  <ul class=\"vf-tabs__list\" data-vf-js-tabs>\n";
+output += "<div class=\"vf-tabs\">\n  <ul class=\"vf-tabs__list\" data-vf-js-tabs>";
 frame = frame.push();
 var t_3 = runtime.contextOrFrameLookup(context, frame, "tabs");
 if(t_3) {t_3 = runtime.fromIterator(t_3);
@@ -23,16 +23,16 @@ frame.set("loop.revindex0", t_2 - t_1 - 1);
 frame.set("loop.first", t_1 === 0);
 frame.set("loop.last", t_1 === t_2 - 1);
 frame.set("loop.length", t_2);
-output += "    <li class=\"vf-tabs__item\">\n      <a class=\"vf-tabs__link\" href=\"#vf-tabs__section--";
+output += "<li class=\"vf-tabs__item\">\n      <a class=\"vf-tabs__link\" href=\"#vf-tabs__section--";
 output += runtime.suppressValue(runtime.memberLookup((t_4),"tab_number"), env.opts.autoescape);
 output += "\">";
 output += runtime.suppressValue(runtime.memberLookup((t_4),"tab_title"), env.opts.autoescape);
-output += "</a>\n    </li>\n";
+output += "</a>\n    </li>";
 ;
 }
 }
 frame = frame.pop();
-output += "  </ul>\n</div>\n\n<div class=\"vf-tabs-content\" data-vf-js-tabs-content>\n";
+output += "</ul>\n</div>\n\n<div class=\"vf-tabs-content\" data-vf-js-tabs-content>\n";
 frame = frame.push();
 var t_7 = runtime.contextOrFrameLookup(context, frame, "tabs");
 if(t_7) {t_7 = runtime.fromIterator(t_7);

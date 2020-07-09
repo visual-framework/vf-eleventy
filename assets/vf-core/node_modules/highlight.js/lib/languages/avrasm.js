@@ -1,8 +1,17 @@
-module.exports = function(hljs) {
+/*
+Language: AVR Assembly
+Author: Vladimir Ermakov <vooon341@gmail.com>
+Category: assembler
+Website: https://www.microchip.com/webdoc/avrassembler/avrassembler.wb_instruction_list.html
+*/
+
+/** @type LanguageFn */
+function avrasm(hljs) {
   return {
+    name: 'AVR Assembly',
     case_insensitive: true,
-    lexemes: '\\.?' + hljs.IDENT_RE,
     keywords: {
+      $pattern: '\\.?' + hljs.IDENT_RE,
       keyword:
         /* mnemonic */
         'adc add adiw and andi asr bclr bld brbc brbs brcc brcs break breq brge brhc brhs ' +
@@ -52,10 +61,12 @@ module.exports = function(hljs) {
       },
       {className: 'symbol',  begin: '^[A-Za-z0-9_.$]+:'},
       {className: 'meta', begin: '#', end: '$'},
-      {  // подстановка в «.macro»
+      {  // substitution within a macro
         className: 'subst',
         begin: '@[0-9]+'
       }
     ]
   };
-};
+}
+
+module.exports = avrasm;

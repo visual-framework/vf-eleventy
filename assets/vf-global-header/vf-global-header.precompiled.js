@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<header class=\"vf-global-header\">\n\n  <div class=\"vf-global-header__inner\">\n\n";
+output += "<header class=\"vf-global-header\">\n\n";
 env.getExtension("render")["run"](context,"@vf-logo", function(t_2,t_1) {
 if(t_2) { cb(t_2); return; }
 output += runtime.suppressValue(t_1, true && env.opts.autoescape);
@@ -18,7 +18,7 @@ output += "</p>\n\n";
 env.getExtension("render")["run"](context,"@vf-navigation--global", function(t_4,t_3) {
 if(t_4) { cb(t_4); return; }
 output += runtime.suppressValue(t_3, true && env.opts.autoescape);
-output += "\n  </div>\n\n</header>\n";
+output += "\n</header>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

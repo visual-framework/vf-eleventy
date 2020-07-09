@@ -1,4 +1,17 @@
 :root {
+  --page-grid-gap: 16px;
+  --embl-grid-module--prime: 200px;
+  --embl-grid-spacing-normaliser: 6px;
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --page-grid-gap: 30px;
+  }
+}
+
+/* stylelint-disable */
+:root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
   --vf-color--green--dark: #007b53;
@@ -38,3 +51,5 @@
   --vf-ui-color--white: #ffffff;
   --vf-ui-color--off-white: #fafafa;
 }
+
+/* stylelint-enable */

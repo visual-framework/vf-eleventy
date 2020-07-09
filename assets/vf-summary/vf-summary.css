@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -39,17 +40,18 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 .vf-summary {
   --vf-text-margin--bottom: 16px;
 }
 
 .vf-summary--profile {
-  --vf-icon--avatar-width: 178px;
+  --vf-icon--avatar-width: 160px;
 }
 
 /*!
  * Component: @visual-framework/vf-summary
- * Version: 1.0.4
+ * Version: 1.0.6
  * Location: components/vf-summary
  */
 .vf-summary {
@@ -57,7 +59,7 @@
 }
 
 .vf-summary--profile {
-  --vf-icon--avatar-width: 178px;
+  --vf-icon--avatar-width: 160px;
 }
 
 .vf-summary {
@@ -317,11 +319,13 @@
 }
 
 .vf-summary--profile .vf-summary__image {
-  align-self: center;
+  align-self: start;
   grid-column: 1 / span 1;
   grid-row: 1 / span 6;
+  height: auto;
   margin-right: 30px;
-  max-width: 170px;
+  max-height: var(--vf-icon--avatar-width);
+  max-width: var(--vf-icon--avatar-width);
   width: 100%;
 }
 
@@ -392,6 +396,7 @@
   line-height: 1.421;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  word-break: break-all;
 }
 
 .vf-summary__phone {

@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -39,15 +40,16 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-card-container
- * Version: 1.0.0-alpha.4
+ * Version: 2.0.0
  * Location: components/vf-card-container
  */
 .vf-card-container {
   grid-column: 1 / -1;
   margin: 0 0 3rem 0;
-  padding: 0;
+  padding: 2rem 0;
 }
 
 .vf-card-container__inner {
@@ -60,7 +62,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 76.5em;
-  padding: 2rem 0;
 }
 
 @supports (display: grid) {

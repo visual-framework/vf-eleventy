@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -31,17 +32,18 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-logo
- * Version: 1.0.1
+ * Version: 1.1.0
  * Location: components/vf-logo
  */
 .vf-logo {
@@ -57,22 +59,7 @@
 }
 
 .vf-logo__image {
-  --vf-logo-margin-right: 8px;
   height: 32px;
-  margin-right: 16px;
-  margin-right: var(--vf-logo-margin-right);
-}
-
-@media (min-width: 500px) {
-  .vf-logo__image {
-    --vf-logo-margin-right: 16px;
-  }
-}
-
-@media (min-width: 999px) {
-  .vf-logo__image {
-    --vf-logo-margin-right: 16px;
-  }
 }
 
 .vf-logo--extreme .vf-logo__image {
@@ -82,6 +69,7 @@
 }
 
 .vf-logo__text {
+  --vf-logo-margin-right: 8px;
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -89,4 +77,21 @@
   margin: 0 0 0 0;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.vf-logo--has-text .vf-logo__text {
+  margin-left: 16px;
+  margin-left: var(--vf-logo-margin-right);
+}
+
+@media (min-width: 500px) {
+  .vf-logo--has-text .vf-logo__text {
+    --vf-logo-margin-right: 16px;
+  }
+}
+
+@media (min-width: 999px) {
+  .vf-logo--has-text .vf-logo__text {
+    --vf-logo-margin-right: 16px;
+  }
 }
