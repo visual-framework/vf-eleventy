@@ -1,6 +1,7 @@
 const { DateTime } = require('luxon');
 const _            = require('lodash');
 const Path         = require('path');
+const yaml         = require("js-yaml");
 
 module.exports = function(config) {
 
@@ -33,12 +34,12 @@ module.exports = function(config) {
   //   value = value || '';
   //   return value.toLowerCase();
   // });
-  
+
   // config.addFilter("spaceToDashes", function(value) {
   //   value = value || '';
   //   return value.replace(/\s+/g, '-').toLowerCase();
   // });
-  
+
   // Shortcodes
   // https://www.11ty.io/docs/shortcodes/
   // -----
@@ -85,6 +86,9 @@ module.exports = function(config) {
 
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
+
+  // use the .yml file associated with the .njk if available
+  config.addDataExtension("yml", contents => yaml.safeLoad(contents));
 
   return {
     dir: {
