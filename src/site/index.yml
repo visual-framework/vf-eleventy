@@ -1,0 +1,19 @@
+homepageIntro:
+  vf_intro_phase: alpha
+  vf_intro_text:
+    - ☝️that also means dynamic building of just the CSS and JS you need.
+
+home_about_section_header:
+  href: /about
+  section_title: About EMBL
+
+boxContent:
+  box_heading: Did You Know?
+  box_text: This is some more content that would be in the box.
+  box_modifier: vf-box--easy vf-box-theme--primary
+
+
+boxContent2:
+  box_heading: Did You Know????
+  box_text: This is some more content that would be in the box.
+  box_modifier: vf-box--easy vf-box-theme--secondary
