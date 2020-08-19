@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -31,17 +32,18 @@
 
 :root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-badge
- * Version: 1.0.1
+ * Version: 1.1.0
  * Location: components/vf-badge
  */
 .vf-badge {
@@ -54,7 +56,7 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   padding: 4px 8px;
   text-decoration: none;
   text-transform: uppercase;
@@ -97,16 +99,13 @@
   color: #ffffff;
   color: #ffffff;
 }
-
 .vf-badge--primary:visited {
   color: #ffffff;
 }
-
 .vf-badge--primary:visited:hover {
   color: #ffffff;
   text-decoration: underline;
 }
-
 .vf-badge--primary:hover {
   color: #ffffff;
 }
@@ -122,16 +121,13 @@ a.vf-badge--primary:hover {
   color: #ffffff;
   color: #ffffff;
 }
-
 .vf-badge--secondary:visited {
   color: #ffffff;
 }
-
 .vf-badge--secondary:visited:hover {
   color: #ffffff;
   text-decoration: underline;
 }
-
 .vf-badge--secondary:hover {
   color: #ffffff;
 }
@@ -142,16 +138,13 @@ a.vf-badge--primary:hover {
   color: #ffffff;
   color: #ffffff;
 }
-
 .vf-badge--tertiary:visited {
   color: #ffffff;
 }
-
 .vf-badge--tertiary:visited:hover {
   color: #ffffff;
   text-decoration: underline;
 }
-
 .vf-badge--tertiary:hover {
   color: #ffffff;
 }
@@ -161,16 +154,13 @@ a.vf-badge--primary:hover {
   color: #3b6fb6;
   color: #3b6fb6;
 }
-
 .vf-badge--outline:visited {
-  color: #734595;
+  color: #3b6fb6;
 }
-
 .vf-badge--outline:visited:hover {
-  color: #734595;
+  color: #3b6fb6;
   text-decoration: underline;
 }
-
 .vf-badge--outline:hover {
   color: #3b6fb6;
 }
