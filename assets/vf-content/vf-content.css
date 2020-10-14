@@ -31,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -116,7 +126,7 @@
 
 /*!
  * Component: @visual-framework/vf-badge
- * Version: 1.1.0
+ * Version: 1.2.1
  * Location: components/vf-badge
  */
 .vf-badge {
@@ -124,7 +134,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
-  border: 1px solid currentColor;
+  border: 1px solid;
   color: inherit;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -170,17 +180,19 @@
   background-color: #3b6fb6;
   border-color: #3b6fb6;
   color: #ffffff;
-  color: #ffffff;
 }
-.vf-badge--primary:visited {
-  color: #ffffff;
+a.vf-badge .vf-badge--primary {
+  color: #000000;
 }
-.vf-badge--primary:visited:hover {
-  color: #ffffff;
+a.vf-badge .vf-badge--primary:visited {
+  color: #000000;
+}
+a.vf-badge .vf-badge--primary:visited:hover {
+  color: #000000;
   text-decoration: underline;
 }
-.vf-badge--primary:hover {
-  color: #ffffff;
+a.vf-badge .vf-badge--primary:hover {
+  color: #000000;
 }
 
 a.vf-badge--primary:hover {
@@ -191,25 +203,27 @@ a.vf-badge--primary:hover {
 .vf-badge--secondary {
   background-color: #18974c;
   border-color: #18974c;
-  color: #ffffff;
-  color: #ffffff;
+  color: #000000;
 }
-.vf-badge--secondary:visited {
-  color: #ffffff;
+a.vf-badge .vf-badge--secondary {
+  color: #000000;
 }
-.vf-badge--secondary:visited:hover {
-  color: #ffffff;
+a.vf-badge .vf-badge--secondary:visited {
+  color: #000000;
+}
+a.vf-badge .vf-badge--secondary:visited:hover {
+  color: #000000;
   text-decoration: underline;
 }
-.vf-badge--secondary:hover {
-  color: #ffffff;
+a.vf-badge .vf-badge--secondary:hover {
+  color: #000000;
 }
 
 .vf-badge--tertiary {
+  color: #ffffff;
+  color: #ffffff;
   background-color: #54585a;
   border-color: #54585a;
-  color: #ffffff;
-  color: #ffffff;
 }
 .vf-badge--tertiary:visited {
   color: #ffffff;
@@ -222,20 +236,35 @@ a.vf-badge--primary:hover {
   color: #ffffff;
 }
 
-.vf-badge--outline {
+.vf-badge--outline[class*=primary] {
   background-color: transparent;
-  color: #3b6fb6;
-  color: #3b6fb6;
-}
-.vf-badge--outline:visited {
+  border-color: #3b6fb6;
   color: #3b6fb6;
 }
-.vf-badge--outline:visited:hover {
-  color: #3b6fb6;
-  text-decoration: underline;
+a.vf-badge--outline[class*=primary]:hover {
+  background-color: transparent;
+  border-color: #193f90;
+  color: #193f90;
 }
-.vf-badge--outline:hover {
-  color: #3b6fb6;
+
+.vf-badge--outline[class*=secondary] {
+  background-color: transparent;
+  border-color: #18974c;
+  color: #18974c;
+}
+a.vf-badge--outline[class*=secondary]:hover {
+  background-color: transparent;
+  border-color: #007b53;
+  color: #007b53;
+}
+
+.vf-badge--outline[class*=tertiary] {
+  background-color: transparent;
+  border-color: #54585a;
+  color: #54585a;
+}
+a.vf-badge--outline[class*=tertiary]:hover {
+  background-color: transparent;
 }
 
 /*!
@@ -375,7 +404,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__core
- * Version: 1.0.3
+ * Version: 1.0.4
  * Location: components/vf-form/vf-form__core
  */
 /*!
@@ -399,7 +428,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__input
- * Version: 1.0.1
+ * Version: 1.1.0
  * Location: components/vf-form/vf-form__input
  */
 .vf-form__input:not([type=file]) {
@@ -408,9 +437,11 @@ a.vf-badge--primary:hover {
   font-weight: 400;
   line-height: 1.71;
   margin: 0 0 4px 0;
+  /* stylelint-disable */
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* stylelint-enable */
   border-color: #f3f3f3;
   border-radius: 0;
   border-style: solid;
@@ -420,6 +451,7 @@ a.vf-badge--primary:hover {
   color: #54585a;
   display: block;
   padding: 8px 12px;
+  position: relative;
   width: 100%;
 }
 .vf-form__input:not([type=file]):focus, .vf-form__input:not([type=file]):hover {
@@ -508,9 +540,12 @@ a.vf-badge--primary:hover {
 }
 
 .vf-form__input .vf-form__select {
+  /* stylelint-disable */
+  ---webkit-appearance: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  /* stylelint-enable */
   color: #a8a99e;
   cursor: pointer;
   position: relative;
@@ -591,6 +626,22 @@ a.vf-badge--primary:hover {
   border-color: #d32f2f;
 }
 
+/* stylelint-disable */
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  /* stylelint-enable */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:%23000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M.75 23.249l22.5-22.5M23.25 23.249L.75.749'/%3E%3C/svg%3E");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+
 /*!
  * Component: @visual-framework/vf-form__legend
  * Version: 1.0.1
@@ -617,7 +668,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__select
- * Version: 1.0.0
+ * Version: 1.0.1
  * Location: components/vf-form/vf-form__select
  */
 .vf-form__select {
@@ -627,9 +678,12 @@ a.vf-badge--primary:hover {
   line-height: 1.71;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  /* stylelint-disable */
+  --webkit-appearance: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  /* stylelint-enable */
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23707372' fill-rule='evenodd'%3E%3Cpath d='M6 0l6 8H0zM6 18l6-8H0z'/%3E%3C/g%3E%3C/svg%3E");
   background-position: right 0.7em top 50%, 0 0;
@@ -769,7 +823,7 @@ a.vf-badge--primary:hover {
 
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 1.0.1
+ * Version: 1.0.2
  * Location: components/vf-form/vf-form__textarea
  */
 .vf-form__textarea {
@@ -779,9 +833,11 @@ a.vf-badge--primary:hover {
   line-height: 1.71;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  /* stylelint-disable */
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* stylelint-enable */
   border: 3px solid #f3f3f3;
   border-radius: 0;
   -webkit-box-sizing: border-box;
@@ -836,7 +892,7 @@ a.vf-badge--primary:hover {
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.0.4
+* Version: 1.1.2
 * Location: components/vf-button
 */
 .vf-button {
@@ -849,9 +905,11 @@ a.vf-badge--primary:hover {
   line-height: 1;
   -ms-flex-item-align: center;
       align-self: center;
+  /* stylelint-disable */
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* stylelint-enable */
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-color: #000000;
@@ -878,7 +936,6 @@ a.vf-badge--primary:hover {
 .vf-button:focus, .vf-button:hover {
   -webkit-box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), 2px 2px 4px rgba(0, 0, 0, 0.25), -5px -5px rgba(0, 0, 0, 0);
           box-shadow: 4px 4px 0 var(--vf-button-shadow-background-color, var(--vf-button__color__background--default-dark)), 2px 2px 4px rgba(0, 0, 0, 0.25), -5px -5px rgba(0, 0, 0, 0);
-  color: #ffffff;
   -webkit-transform: translate(4px, 4px);
           transform: translate(4px, 4px);
   -webkit-transition: all linear 125ms;
@@ -906,6 +963,7 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-button--secondary {
   --vf-button-border-color: var(--vf-color--green);
   --vf-button-background-color: var(--vf-color--green);
+  --vf-button-text-color: var(--vf-ui-color--black);
   --vf-button-shadow-border-color: var(--vf-color--green--dark);
   --vf-button-shadow-background-color: var(--vf-color--green--dark);
   --vf-button-border-color--visited: var(--vf-color--green--light);
@@ -1027,7 +1085,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-figure
- * Version: 1.2.0
+ * Version: 1.3.0
  * Location: components/vf-figure
  */
 .vf-figure {
@@ -1206,7 +1264,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-box
- * Version: 1.0.4
+ * Version: 2.0.2
  * Location: components/vf-box
  */
 .vf-box {
@@ -1219,15 +1277,15 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   color: #000000;
   color: var(--box-text-color);
   display: block;
-  margin-bottom: 24px;
   padding: 24px 16px;
   width: 100%;
 }
-.vf-box :last-child {
+.vf-box > :last-child {
   margin-bottom: 0;
 }
 
 .vf-box--is-link {
+  position: relative;
   text-decoration: none;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -1260,6 +1318,28 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
+.vf-box__link {
+  color: currentColor;
+  text-decoration: none;
+}
+.vf-box__link::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  z-index: 512;
+}
+
 .vf-box__text {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -1271,10 +1351,14 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 .vf-content .vf-box__text a,
 .vf-box__text a {
   color: currentColor;
+  position: relative;
   text-decoration: underline;
+  z-index: 1984;
 }
-.vf-content .vf-box__text a:hover,
-.vf-box__text a:hover {
+.vf-content .vf-box__text a:visited, .vf-content .vf-box__text a:hover, .vf-content .vf-box__text a:focus,
+.vf-box__text a:visited,
+.vf-box__text a:hover,
+.vf-box__text a:focus {
   color: currentColor;
 }
 
@@ -1303,17 +1387,17 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 .vf-box-theme--primary {
   --vf-box-theme-color--foreground: #ffffff;
-  --vf-box-theme-color--background: #18974c;
+  --vf-box-theme-color--background: #3b6fb6;
 }
 
 .vf-box-theme--secondary {
-  --vf-box-theme-color--foreground: #ffffff;
-  --vf-box-theme-color--background: #3b6fb6;
+  --vf-box-theme-color--foreground: #000000;
+  --vf-box-theme-color--background: #18974c;
 }
 
 .vf-box-theme--tertiary {
   --vf-box-theme-color--foreground: #ffffff;
-  --vf-box-theme-color--background: #707372;
+  --vf-box-theme-color--background: #54585a;
 }
 
 .vf-box-theme--quaternary {
@@ -1322,7 +1406,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 }
 
 .vf-box-theme--quinary {
-  --vf-box-theme-color--background: #f3f3f3;
+  --vf-box-theme-color--background: #d0d0ce;
   --vf-box-theme-color--foreground: #000000;
 }
 
@@ -1338,7 +1422,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-content
- * Version: 1.1.8
+ * Version: 1.2.3
  * Location: components/vf-content
  */
 .vf-content h1:not([class*=vf-]) {

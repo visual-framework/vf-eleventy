@@ -113,7 +113,7 @@ context.addExport("override_class", t_11);
 }
 ;
 }
-output += "\n<article\n";
+output += "<article\n";
 if(runtime.contextOrFrameLookup(context, frame, "tags") == "a") {
 output += "href=\"";
 output += runtime.suppressValue((runtime.contextOrFrameLookup(context, frame, "card_href")?runtime.contextOrFrameLookup(context, frame, "card_href"):"#"), env.opts.autoescape);
@@ -149,14 +149,23 @@ output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "ov
 }
 output += "\">\n\n";
 if(runtime.contextOrFrameLookup(context, frame, "card_image")) {
-output += "  <img src=\"";
+output += "<img src=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "card_image"), env.opts.autoescape);
 output += "\" alt=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "card_image__alt"), env.opts.autoescape);
-output += "\" class=\"vf-card__image\">\n";
+output += "\" class=\"vf-card__image\" loading=\"lazy\">";
 ;
 }
-output += "\n  <div class=\"vf-card__content\">\n\n    <h3 class=\"vf-card__title\">";
+output += "\n  <div class=\"vf-card__content\">\n\n    <";
+if(runtime.contextOrFrameLookup(context, frame, "card_title")) {
+output += "h3";
+;
+}
+else {
+output += "span";
+;
+}
+output += " class=\"vf-card__title\">";
 if(runtime.contextOrFrameLookup(context, frame, "card_href")) {
 output += "<a class=\"vf-card__link\" href=\"";
 output += runtime.suppressValue((runtime.contextOrFrameLookup(context, frame, "card_href")?runtime.contextOrFrameLookup(context, frame, "card_href"):"#"), env.opts.autoescape);
@@ -168,18 +177,26 @@ if(runtime.contextOrFrameLookup(context, frame, "card_href")) {
 output += "</a>";
 ;
 }
-output += "</h3>\n\n";
+if(runtime.contextOrFrameLookup(context, frame, "card_title")) {
+output += "</h3>";
+;
+}
+else {
+output += "</span>";
+;
+}
+output += "\n";
 if(runtime.contextOrFrameLookup(context, frame, "card_subtitle")) {
-output += "    <p class=\"vf-card__subtitle\" role=\"doc-subtitle\">";
+output += "<p class=\"vf-card__subtitle\" role=\"doc-subtitle\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "card_subtitle"), env.opts.autoescape);
-output += "</p>\n";
+output += "</p>";
 ;
 }
 output += "\n";
 if(runtime.contextOrFrameLookup(context, frame, "card_text")) {
-output += "    <p class=\"vf-card__text\">";
+output += "<p class=\"vf-card__text\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "card_text"), env.opts.autoescape);
-output += "</p>\n";
+output += "</p>";
 ;
 }
 output += "  </div>\n\n</article>\n";

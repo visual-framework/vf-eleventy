@@ -31,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -43,7 +53,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-logo
- * Version: 1.1.0
+ * Version: 1.2.0
  * Location: components/vf-logo
  */
 .vf-logo {
@@ -78,18 +88,15 @@
   -ms-flex-item-align: center;
       align-self: center;
 }
-
 .vf-logo--has-text .vf-logo__text {
   margin-left: 16px;
   margin-left: var(--vf-logo-margin-right);
 }
-
 @media (min-width: 500px) {
   .vf-logo--has-text .vf-logo__text {
     --vf-logo-margin-right: 16px;
   }
 }
-
 @media (min-width: 999px) {
   .vf-logo--has-text .vf-logo__text {
     --vf-logo-margin-right: 16px;
@@ -98,7 +105,7 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 1.2.3
+ * Version: 1.2.5
  * Location: components/vf-navigation
  */
 .vf-navigation__list {
@@ -117,7 +124,7 @@
 
 /*!
  * Component: @visual-framework/vf-global-header
- * Version: 2.0.1
+ * Version: 3.0.0
  * Location: components/vf-global-header
  */
 .vf-global-header {
@@ -132,13 +139,18 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: .5rem;
-  grid-column: 1 / -1;
+  gap: 0.5rem;
+  grid-column: 1/-1;
   height: auto;
   margin: 0 auto;
-  max-width: 78.5rem;
-  padding: .5rem 0;
+  max-width: 81.25em;
+  padding: 0.5rem 0;
   width: 100%;
+}
+.vf-global-header > [class*=logo] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .vf-global-header__site-name {
@@ -151,11 +163,10 @@
 
 @media (min-width: 768px) {
   .vf-global-header__site-name {
-    margin-left: .5rem;
-    margin-right: .5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
-
 html:not(.vf-disable-deprecated) .vf-global-header__inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -167,7 +178,7 @@ html:not(.vf-disable-deprecated) .vf-global-header__inner {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  grid-column: 1 / -1;
-  padding: .5rem 0;
+  grid-column: 1/-1;
+  padding: 0.5rem 0;
   width: 100%;
 }

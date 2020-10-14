@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -39,19 +50,18 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-figure
- * Version: 1.2.0
+ * Version: 1.3.0
  * Location: components/vf-figure
  */
 .vf-figure {
   margin: 0;
 }
-
 .vf-figure__image {
   margin: 0 0 21px 0;
 }
-
 .vf-figure__caption {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -72,12 +82,10 @@
 .vf-figure--align {
   display: table;
 }
-
 .vf-figure--align .vf-figure__image {
   max-width: unset;
   width: var(--vf-figure__width, auto);
 }
-
 .vf-figure--align .vf-figure__caption {
   caption-side: bottom;
   display: table-caption;

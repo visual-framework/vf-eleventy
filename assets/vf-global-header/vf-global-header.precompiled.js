@@ -8,16 +8,26 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<header class=\"vf-global-header\">\n\n";
-env.getExtension("render")["run"](context,"@vf-logo", function(t_2,t_1) {
-if(t_2) { cb(t_2); return; }
-output += runtime.suppressValue(t_1, true && env.opts.autoescape);
-output += "\n    <p class=\"vf-global-header__site-name\">";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "text"), env.opts.autoescape);
-output += "</p>\n\n";
-env.getExtension("render")["run"](context,"@vf-navigation--global", function(t_4,t_3) {
-if(t_4) { cb(t_4); return; }
-output += runtime.suppressValue(t_3, true && env.opts.autoescape);
+if(runtime.contextOrFrameLookup(context, frame, "context")) {
+var t_1;
+t_1 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"global_logo");
+frame.set("global_logo", t_1, true);
+if(frame.topLevel) {
+context.setVariable("global_logo", t_1);
+}
+if(frame.topLevel) {
+context.addExport("global_logo", t_1);
+}
+;
+}
+output += "\n\n<header class=\"vf-global-header\">\n\n";
+env.getExtension("render")["run"](context,"@vf-logo",{"context": runtime.contextOrFrameLookup(context, frame, "global_logo")}, function(t_3,t_2) {
+if(t_3) { cb(t_3); return; }
+output += runtime.suppressValue(t_2, true && env.opts.autoescape);
+output += "\n";
+env.getExtension("render")["run"](context,"@vf-navigation--global", function(t_5,t_4) {
+if(t_5) { cb(t_5); return; }
+output += runtime.suppressValue(t_4, true && env.opts.autoescape);
 output += "\n</header>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);

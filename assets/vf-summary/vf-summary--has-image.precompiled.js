@@ -10,7 +10,7 @@ try {
 var parentTemplate = null;
 output += "<article class=\"vf-summary vf-summary--has-image\">\n  <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
-output += "\" class=\"vf-summary__link\">\n    <img class=\"vf-summary__image vf-summary__image--thumbnail\" src=\"https://www.ebi.ac.uk/biosamples/images/logo_biosamples.png\" alt=\"BioSamples\">\n  </a>\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
+output += "\" class=\"vf-summary__link\">\n    <img class=\"vf-summary__image vf-summary__image--thumbnail\" src=\"https://www.ebi.ac.uk/biosamples/images/logo_biosamples.png\" alt=\"BioSamples\" loading=\"lazy\">\n  </a>\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
 output += "\" class=\"vf-summary__link\">\n      BioSamples\n    </a>\n  </h3>\n  <p class=\"vf-summary__text\">\n    A database describing biological samples and providing links to associated experimental data.\n  </p>\n</article>\n\n<article class=\"vf-summary vf-summary--has-image\">\n  <!-- for cases when there is no image -->\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);

@@ -10,7 +10,7 @@ try {
 var parentTemplate = null;
 output += "<article class=\"vf-summary vf-summary--profile\">\n  <img class=\"vf-summary__image vf-summary__image--avatar\" src=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "image"), env.opts.autoescape);
-output += "\" alt=\"\">\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
+output += "\" alt=\"\" loading=\"lazy\">\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
 output += "\" class=\"vf-summary__link\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "name"), env.opts.autoescape);

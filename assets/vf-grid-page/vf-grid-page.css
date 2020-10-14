@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -39,9 +40,10 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-grid-page
- * Version: 2.0.0
+ * Version: 3.0.0
  * Location: components/vf-grid-page
  */
 /* The Page Grid
@@ -56,11 +58,10 @@
  * of `@supports` to invoke CSS grid layout on browsers that support it.
  *
  */
-html {
+html:not(.vf-disable-deprecated) html {
   margin: 0;
 }
-
-.vf-body {
+html:not(.vf-disable-deprecated) .vf-body {
   display: block;
   margin: 0 auto;
   max-width: 76.5em;

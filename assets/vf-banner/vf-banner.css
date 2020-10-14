@@ -31,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -43,33 +53,30 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-banner
- * Version: 1.3.0
+ * Version: 1.5.0
  * Location: components/vf-banner
  */
 .vf-banner {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: .75rem;
+  padding: 0.75rem 0;
 }
-
 .vf-banner .vf-badge {
   margin-right: 1rem;
 }
-
-.vf-content ~ .vf-banner,
-.vf-inlay__content ~ .vf-banner {
+.vf-content ~ .vf-banner, .vf-inlay__content ~ .vf-banner {
   margin-bottom: 1rem;
 }
 
 .vf-banner__text .vf-banner__link,
-.vf-banner [class*='vf-text'] .vf-link {
+.vf-banner [class*=vf-text] .vf-link {
   text-decoration: underline;
 }
 
 .vf-banner--blocking {
   display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(var(--page-grid-gap), auto) [main-start] minmax(288px, 76.5em) [main-end] minmax(var(--page-grid-gap), auto);
+  grid-column: 1/-1;
+  grid-template-columns: minmax(var(--page-grid-gap), auto) [main-start] minmax(288px, 81.25em) [main-end] minmax(var(--page-grid-gap), auto);
   height: 100%;
   left: 0;
   padding: 0;
@@ -88,26 +95,25 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
-  max-width: 78.5em;
+  max-width: 81.25em;
   padding: 0 1rem;
 }
-
+.vf-u-fullbleed .vf-banner__content {
+  padding: 0;
+}
 @supports (display: grid) {
   .vf-banner__content {
     -webkit-box-sizing: unset;
             box-sizing: unset;
     margin: unset;
     max-width: unset;
-    padding: unset;
   }
 }
-
 @media (max-width: 63.9375em) {
   .vf-banner__content {
     display: block;
   }
 }
-
 @media (min-width: 1024px) {
   .vf-banner__content {
     grid-column: main;
@@ -146,28 +152,23 @@
   background-color: #707372;
   border-top: 1px solid #373a36;
 }
-
 .vf-banner--notice .vf-banner__text,
 .vf-banner--notice .vf-text {
   color: #ffffff;
   margin-bottom: 1.5rem;
   max-width: 64rem;
 }
-
-.vf-banner--notice .vf-banner__text .vf-banner__link,
-.vf-banner--notice .vf-banner__text .vf-link,
+.vf-banner--notice .vf-banner__text .vf-banner__link, .vf-banner--notice .vf-banner__text .vf-link,
 .vf-banner--notice .vf-text .vf-banner__link,
 .vf-banner--notice .vf-text .vf-link {
   color: inherit;
 }
-
 @media (min-width: 1024px) {
   .vf-banner--notice .vf-banner__text,
-  .vf-banner--notice .vf-text {
+.vf-banner--notice .vf-text {
     margin: 0;
   }
 }
-
 @media (min-width: 1024px) {
   .vf-banner--notice .vf-button {
     -ms-flex-item-align: center;
@@ -190,8 +191,8 @@
 
 .vf-banner--fixed {
   display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(var(--page-grid-gap), auto) [main-start] minmax(288px, 76.5em) [main-end] minmax(var(--page-grid-gap), auto);
+  grid-column: 1/-1;
+  grid-template-columns: minmax(var(--page-grid-gap), auto) [main-start] minmax(288px, 81.25em) [main-end] minmax(var(--page-grid-gap), auto);
   left: 0;
   margin: 0;
   position: fixed;
@@ -203,26 +204,21 @@
   background-color: #fffadc;
   margin: 16px 0;
 }
-
 .vf-banner--phase .vf-banner__text,
-.vf-banner--phase [class*='vf-text'] {
+.vf-banner--phase [class*=vf-text] {
   color: #54585a;
   margin: 0;
 }
-
-.vf-banner--phase .vf-banner__text .vf-banner__link,
-.vf-banner--phase .vf-banner__text .vf-link,
-.vf-banner--phase [class*='vf-text'] .vf-banner__link,
-.vf-banner--phase [class*='vf-text'] .vf-link {
+.vf-banner--phase .vf-banner__text .vf-banner__link, .vf-banner--phase .vf-banner__text .vf-link,
+.vf-banner--phase [class*=vf-text] .vf-banner__link,
+.vf-banner--phase [class*=vf-text] .vf-link {
   color: inherit;
 }
-
 .vf-banner--phase .vf-banner__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 @media (min-width: 1024px) {
   .vf-banner--phase .vf-button {
     margin-left: auto;

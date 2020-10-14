@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -39,9 +50,10 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-box
- * Version: 1.0.4
+ * Version: 2.0.2
  * Location: components/vf-box
  */
 .vf-box {
@@ -54,16 +66,15 @@
   color: #000000;
   color: var(--box-text-color);
   display: block;
-  margin-bottom: 24px;
   padding: 24px 16px;
   width: 100%;
 }
-
-.vf-box :last-child {
+.vf-box > :last-child {
   margin-bottom: 0;
 }
 
 .vf-box--is-link {
+  position: relative;
   text-decoration: none;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -74,7 +85,6 @@
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
-
 .vf-box--is-link:hover {
   -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
@@ -97,6 +107,28 @@
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
+.vf-box__link {
+  color: currentColor;
+  text-decoration: none;
+}
+.vf-box__link::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  z-index: 512;
+}
+
 .vf-box__text {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -105,15 +137,17 @@
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
-
 .vf-content .vf-box__text a,
 .vf-box__text a {
   color: currentColor;
+  position: relative;
   text-decoration: underline;
+  z-index: 1984;
 }
-
-.vf-content .vf-box__text a:hover,
-.vf-box__text a:hover {
+.vf-content .vf-box__text a:visited, .vf-content .vf-box__text a:hover, .vf-content .vf-box__text a:focus,
+.vf-box__text a:visited,
+.vf-box__text a:hover,
+.vf-box__text a:focus {
   color: currentColor;
 }
 
@@ -142,17 +176,17 @@
 
 .vf-box-theme--primary {
   --vf-box-theme-color--foreground: #ffffff;
-  --vf-box-theme-color--background: #18974c;
+  --vf-box-theme-color--background: #3b6fb6;
 }
 
 .vf-box-theme--secondary {
-  --vf-box-theme-color--foreground: #ffffff;
-  --vf-box-theme-color--background: #3b6fb6;
+  --vf-box-theme-color--foreground: #000000;
+  --vf-box-theme-color--background: #18974c;
 }
 
 .vf-box-theme--tertiary {
   --vf-box-theme-color--foreground: #ffffff;
-  --vf-box-theme-color--background: #707372;
+  --vf-box-theme-color--background: #54585a;
 }
 
 .vf-box-theme--quaternary {
@@ -161,7 +195,7 @@
 }
 
 .vf-box-theme--quinary {
-  --vf-box-theme-color--background: #f3f3f3;
+  --vf-box-theme-color--background: #d0d0ce;
   --vf-box-theme-color--foreground: #000000;
 }
 

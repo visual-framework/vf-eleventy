@@ -37,7 +37,7 @@ output += "\"\n>\n\n  <img class=\"vf-figure__image\" src=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "imageUrl"), env.opts.autoescape);
 output += "\" alt=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "alttext"), env.opts.autoescape);
-output += "\">\n\n  <figcaption class=\"vf-figure__caption\">";
+output += "\" loading=\"lazy\">\n\n  <figcaption class=\"vf-figure__caption\">";
 output += runtime.suppressValue((runtime.contextOrFrameLookup(context, frame, "html")?env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "html")):runtime.contextOrFrameLookup(context, frame, "text")), env.opts.autoescape);
 output += "</figcaption>\n\n</figure>\n";
 if(parentTemplate) {

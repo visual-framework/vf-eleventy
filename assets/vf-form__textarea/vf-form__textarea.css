@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -39,9 +50,10 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 1.0.1
+ * Version: 1.0.2
  * Location: components/vf-form/vf-form__textarea
  */
 .vf-form__textarea {
@@ -51,9 +63,11 @@
   line-height: 1.71;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  /* stylelint-disable */
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* stylelint-enable */
   border: 3px solid #f3f3f3;
   border-radius: 0;
   -webkit-box-sizing: border-box;
@@ -64,7 +78,6 @@
   top: 24px;
   width: 100%;
 }
-
 .vf-form__textarea:hover, .vf-form__textarea:focus {
   border-color: #54585a;
   outline: 0;
