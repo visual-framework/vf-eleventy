@@ -1110,7 +1110,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-analytics-google/-/vf-analytics-google-1.0.0-rc.5.tgz#0dcf35d66f53e06888005786ccb00f71a601c5a4"
   integrity sha512-jpLbHu9pd7hDtujX6tP0bGB2tMvZPJ7VxegMGTnA7Dc1AsRUCQTZtJDIrc0qhlGfmcPkDd9sN01qzS0GwGJ1Hw==
 
-"@visual-framework/vf-badge@^1.1.0":
+"@visual-framework/vf-badge@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.1.0.tgz#ff1da1b2f7386d21b274f26cb7adfb25db752dad"
   integrity sha512-fvKw29Gq4jNV44PSktwjpEb3sLwKHrMsxU0szzrfAXxgRorEIWkCq8O9FEN6b1TvyG7A7qkDLIQbIgg0rJVqZw==
@@ -1135,7 +1135,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-box/-/vf-box-2.0.2.tgz#b5b9f7e3f20dbc4980404a737e251fbe887b1a19"
   integrity sha512-XyNYbIhh0J1Tfa6IKvbo+vJIWM0vgjE9C8+S7ZyOirOEG3wLR3YdRO/nGR43svyYv7c72wrUB3uA4NG8YM/nwQ==
 
-"@visual-framework/vf-button@^1.0.4":
+"@visual-framework/vf-button@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-button/-/vf-button-1.0.4.tgz#fc512dcfdb702e54d48375c54608df152d0d996d"
   integrity sha512-6OmSScx6J/7n2OyllebNWALBwETg9VF+uXAbY25GjOUUcFu/EgdySpBqD97TMdxNJy/fqx1R87sFQ8jdpFX8qg==
@@ -1347,7 +1347,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-heading/-/vf-heading-1.0.0.tgz#c3c07b9c5830492dcebc8de8a7085ffce4ccf9b6"
   integrity sha512-x5d26AErY2LoTGvmpfxtlJoupl0TvsF2qf+Bog+UOfcJEdBBKc817W1obI80uVuT70PIpuO/gCAB95yrofVdCg==
 
-"@visual-framework/vf-hero@^1.4.5":
+"@visual-framework/vf-hero@1.4.5":
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-hero/-/vf-hero-1.4.5.tgz#749346e323306695a46ca8e87d83c4488df8f20d"
   integrity sha512-IgDlLg+mYN53m+rZ7vOjtXgkgtx/v415tlXyHfQoTJhOkhsATG5ZRidMSec4RQ4h4lq4igNYBG9nyTZxGF96VA==
@@ -1362,7 +1362,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-lede/-/vf-lede-1.0.1.tgz#72cfcb81ed9b60688444bb9824562db937ba97fc"
   integrity sha512-WLBmhzJmXoamaAjQEV3mwvfkwxiaoQCrKS0++imb1HgL8v9tbE/cxJekJ6GioCUpZ+1RgoAS6mTvQ2dqT6bq4A==
 
-"@visual-framework/vf-link-list@^1.1.1":
+"@visual-framework/vf-link-list@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-link-list/-/vf-link-list-1.1.1.tgz#6f2f835f9be2da2a6cabb8b1f98ed919a548b97c"
   integrity sha512-wRpDSXHOMtJDpAfPlXjZ/nlRjemQLcRQIJrheUf3DIajAuD19U8/kza5h5SL2h7JZJxf7puWWUGHYNFc5i3Sgw==
