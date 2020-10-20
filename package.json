@@ -62,7 +62,7 @@
     "@visual-framework/vf-table": "^1.0.1-1.1.1.0",
     "@visual-framework/vf-tabs": "^1.1.1",
     "@visual-framework/vf-text": "^1.0.2",
-    "@visual-framework/vf-utility-classes": "^1.0.3",
+    "@visual-framework/vf-utility-classes": "^2.0.0",
     "gulp-image-resize": "^0.13.1",
     "html-minifier": "^4.0.0",
     "list-stream": "^2.0.0",
