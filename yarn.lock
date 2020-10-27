@@ -1387,10 +1387,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-navigation/-/vf-navigation-1.2.5.tgz#d7d1c5329d947957943573f86f9d3503bd40d26f"
   integrity sha512-NtwAul3FtBYZ3ujje3TIus4f04Ie8gXNb1sChDkUbuVQwFSvz/mU5pUr8er5p+TXpbMsZgK+aLWF38YY8CGZzA==
 
-"@visual-framework/vf-no-js@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-no-js/-/vf-no-js-1.0.0.tgz#d1824789965e003af075e89434bdcc4c7b4caebc"
-  integrity sha512-vdFgPUQgqPNOhm+gVUWmMqaqBrwjfzwqNCQxwc0FLDhtVdN2tUzc4CEcBBVvDHHbiA0bF0tlEC5lrXCPv6e/vg==
+"@visual-framework/vf-no-js@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-no-js/-/vf-no-js-1.0.1.tgz#c0c02713616705e2408a041e67588afc5aa7f845"
+  integrity sha512-T/LEPJ+JAsYRnf55gIbRs6AtolB1cuJsuVuACQHvUzam+RqFa3n42NjkGm5h/hBCZpNPmMUeftWq3VFrKAdffg==
 
 "@visual-framework/vf-sass-compilation@^1.0.1":
   version "1.0.1"
