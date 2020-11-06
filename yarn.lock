@@ -1120,10 +1120,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.2.1.tgz#f846575c21284621a757345bf36e9c0d13bd4e48"
   integrity sha512-SNHJLJoyy2MAU+OjHsiy7PC70XkNwu7qLnWTznm4qpr5wk6Y6wh6nMxaDrGc+V46FCh8hJgKE+05Rvd7n6Dxvw==
 
-"@visual-framework/vf-banner@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.5.0.tgz#5faff7d3d243cd0bb40bd723e3c2ae757b568d8c"
-  integrity sha512-2Hd3N25bTv1dqeQ84gAx+Mjkht7pVeJ6dl3tGiWPO29M9scVQ+6w/zrFCfzYGMOx6JgyeQOchJj7sHOJCGRGTg==
+"@visual-framework/vf-banner@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.6.1.tgz#06765f28e9e3801304d6b34b97d3d472a7606fbf"
+  integrity sha512-1Q21Z+ydcxrH+9IkrcECIHd1/YxypoPEguu/JphhrM9S7vsS/hScXIevVBl7u4ULf9jVmN/YnXQkG0ZWyVG4eA==
 
 "@visual-framework/vf-blockquote@^1.0.2":
   version "1.0.2"
