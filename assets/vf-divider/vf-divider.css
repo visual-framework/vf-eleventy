@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,25 +31,36 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-divider
- * Version: 1.0.0-rc.8
+ * Version: 2.0.0
  * Location: components/vf-divider
  */
 .vf-divider {
+  --context-margin--inline: 1rem;
   background-color: #d8d8d8;
-  margin: 0 8px;
-  height: 1px;
   border: none;
-  grid-column: 1 / -1;
-  margin-bottom: 24px;
+  height: 1px;
+  margin-block: 0 var(--vf-divider-margin--block-end, 1.5rem);
+  width: 100%;
 }

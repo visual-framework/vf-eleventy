@@ -1,7 +1,7 @@
 /**
- * Precompiled Nunjucks template: embl-grid.njk
+ * Precompiled Nunjucks template: embl-grid--has-centered-content.njk
  */
-(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["embl-grid"] = (function() {
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["embl-grid--has-centered-content"] = (function() {
 function root(env, context, frame, runtime, cb) {
 var lineno = 0;
 var colno = 0;
@@ -59,35 +59,18 @@ output += " | ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "embl_grid__modifier"), env.opts.autoescape);
 ;
 }
-output += "\">\n";
-(parentTemplate ? function(e, c, f, r, cb) { cb(""); } : context.getBlock("embl_grid__content"))(env, context, frame, runtime, function(t_5,t_4) {
-if(t_5) { cb(t_5); return; }
-output += t_4;
-output += "</div>\n";
+output += "\">\n  <div></div>\n  <div>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat delectus dolore molestias rerum? Dolores doloribus impedit quasi provident odit perferendis vitae incidunt, mollitia repellendus a alias necessitatibus, molestiae! Nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolor odit vel ipsa consequatur sunt, esse sapiente commodi harum velit asperiores quasi nostrum sint dolorem blanditiis eum magnam voluptatibus aliquam.</p>\n  </div>\n  <div></div>\n</div>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {
 cb(null, output);
 }
-});
-} catch (e) {
-  cb(runtime.handleError(e, lineno, colno));
-}
-}
-function b_embl_grid__content(env, context, frame, runtime, cb) {
-var lineno = 12;
-var colno = 5;
-var output = "";
-try {
-var frame = frame.push(true);
-cb(null, output);
 ;
 } catch (e) {
   cb(runtime.handleError(e, lineno, colno));
 }
 }
 return {
-b_embl_grid__content: b_embl_grid__content,
 root: root
 };
 

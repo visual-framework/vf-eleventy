@@ -53,7 +53,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-card
- * Version: 2.2.0
+ * Version: 2.2.1
  * Location: components/vf-card
  */
 .vf-card {
@@ -180,6 +180,9 @@
 }
 .vf-card--easy .vf-card__text {
   --card-text-color: #000000;
+}
+.vf-card--easy .vf-card__link::after {
+  height: calc(100% + 8px);
 }
 
 .vf-card--normal {

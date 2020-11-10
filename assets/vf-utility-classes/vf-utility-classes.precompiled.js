@@ -111,7 +111,7 @@ return t_12;
 output += "\n";
 output += runtime.suppressValue(env.getExtension("markdown")["run"](context,function(cb) {
 if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_13 = "";t_13 += "### Margins\n\nIn t-shirt sizes from `0`,`xs`, `sm`, `md`, `lg`, `xl`, `xl`, `xxl`\n";
+var t_13 = "";t_13 += "### Margins\n\nIn a increasing numerical order, basing the actual value of `.125rem` as `100` increments.\n\n| classname | size (in `rem`) |\n|-----------|-----------------|\n| .vf-u-margin--0 | 0rem |\n| .vf-u-margin--100 | .25rem |\n| .vf-u-margin--200 | .5rem |\n| .vf-u-margin--400 | 1rem |\n| .vf-u-margin--500 | 1.25rem |\n| .vf-u-margin--600 | 1.5rem |\n| .vf-u-margin--800 | 2rem |\n| .vf-u-margin--1200 | 3rem |\n<br>\n\n";
 cb(null, t_13);
 ;
 return t_13;
@@ -127,7 +127,7 @@ return t_14;
 output += "\n";
 output += runtime.suppressValue(env.getExtension("codeblock")["run"](context,"css",function(cb) {
 if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_15 = "";t_15 += ".vf-u-margin--0\n.vf-u-margin--xs\n.vf-u-margin--sm\n.vf-u-margin--md\n.vf-u-margin--lg\n.vf-u-margin--xl\n.vf-u-margin--xxl\n\n.vf-u-margin__bottom--0\n.vf-u-margin__bottom--..\n.vf-u-margin__bottom--xxl\n\n.vf-u-margin__top--0\n.vf-u-margin__top--..\n.vf-u-margin__top--xxl\n\n.vf-u-margin__left--0\n.vf-u-margin__left--..\n.vf-u-margin__left--xxl\n\n.vf-u-margin__right--0\n.vf-u-margin__right--..\n.vf-u-margin__right--xxl\n\n";
+var t_15 = "";t_15 += ".vf-u-margin--0\n.vf-u-margin--100\n.vf-u-margin--200\n.vf-u-margin--400\n.vf-u-margin--500\n.vf-u-margin--600\n.vf-u-margin--800\n.vf-u-margin--1200\n\n.vf-u-margin__bottom--0\n.vf-u-margin__bottom--..\n.vf-u-margin__bottom--1200\n\n.vf-u-margin__top--0\n.vf-u-margin__top--..\n.vf-u-margin__top--1200\n\n.vf-u-margin__left--0\n.vf-u-margin__left--..\n.vf-u-margin__left--1200\n\n.vf-u-margin__right--0\n.vf-u-margin__right--..\n.vf-u-margin__right--1200\n\n";
 cb(null, t_15);
 ;
 return t_15;
@@ -136,7 +136,7 @@ return t_15;
 output += "\n";
 output += runtime.suppressValue(env.getExtension("markdown")["run"](context,function(cb) {
 if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_16 = "";t_16 += "### Padding\n\nIn t-shirt sizes from `0`,`xs`, `sm`, `md`, `lg`, `xl`, `xl`, `xxl`\n";
+var t_16 = "";t_16 += "### Padding\n\nIn a increasing numerical order, basing the actual value of `.125rem` as `100` increments.\n\n\n| classname | size (in `rem`) |\n|-----------|-----------------|\n| .vf-u-padding--0 | 0rem |\n| .vf-u-padding--100 | .25rem |\n| .vf-u-padding--200 | .5rem |\n| .vf-u-padding--400 | 1rem |\n| .vf-u-padding--500 | 1.25rem |\n| .vf-u-padding--600 | 1.5rem |\n| .vf-u-padding--800 | 2rem |\n| .vf-u-padding--1200 | 3rem |\n<br>\n\n\n";
 cb(null, t_16);
 ;
 return t_16;
@@ -152,7 +152,7 @@ return t_17;
 output += "\n";
 output += runtime.suppressValue(env.getExtension("codeblock")["run"](context,"css",function(cb) {
 if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_18 = "";t_18 += ".vf-u-padding--0\n.vf-u-padding--xs\n.vf-u-padding--sm\n.vf-u-padding--md\n.vf-u-padding--lg\n.vf-u-padding--xl\n.vf-u-padding--xxl\n\n.vf-u-padding__bottom--0\n.vf-u-padding__bottom--..\n.vf-u-padding__bottom--xxl\n\n.vf-u-padding__top--0\n.vf-u-padding__top--..\n.vf-u-padding__top--xxl\n\n.vf-u-padding__left--0\n.vf-u-padding__left--..\n.vf-u-padding__left--xxl\n\n.vf-u-padding__right--0\n.vf-u-padding__right--..\n.vf-u-padding__right--xxl\n\n";
+var t_18 = "";t_18 += ".vf-u-padding--0\n.vf-u-padding--100\n.vf-u-padding--200\n.vf-u-padding--400\n.vf-u-padding--500\n.vf-u-padding--600\n.vf-u-padding--800\n.vf-u-padding--1200\n\n.vf-u-padding__bottom--0\n.vf-u-padding__bottom--..\n.vf-u-padding__bottom--1200\n\n.vf-u-padding__top--0\n.vf-u-padding__top--..\n.vf-u-padding__top--1200\n\n.vf-u-padding__left--0\n.vf-u-padding__left--..\n.vf-u-padding__left--1200\n\n.vf-u-padding__right--0\n.vf-u-padding__right--..\n.vf-u-padding__right--1200\n\n";
 cb(null, t_18);
 ;
 return t_18;

@@ -2,12 +2,12 @@
   {
     "url": "/",
     "title": "",
-    "index": "Eleventy VF 20 alpha This allows using 11ty static site generator with direct access Visual Framework components ☝️that also means dynamic building just CSS JS need Quickstart yarn create @visual framework/vf eleventy your new site name vf eleventy will install new vf eleventy folder named Then follow onscreen prompts links below develop configure Longer install above too easy have questions Read this guide What get initial templating setup component system Component installation add can use npm/Yarn manually either case &#39;ll need re run gulp dev ensure fully loaded installation: @visual framework/vf logo updating: upgrade interactive latest Manual customisation Download pattern Copy /src/components/vf component name Add your own local custom VF compatible /src/components your site vf component &#39;ll find vf sample there &#39;ve used below: Code: {% render @vf sample {text: some text } %} Returns: &#39;m sample"
+    "index": "Eleventy VF 20 beta; This allows using 11ty static site generator with direct access Visual Framework components ☝️that also means dynamic building just CSS JS need Quickstart yarn create @visual framework/vf eleventy your new site name vf eleventy will install new vf eleventy folder named Then follow onscreen prompts links below develop configure Longer install above too easy have questions Read this guide What get initial templating setup component system Component installation add can use npm/Yarn manually either case &#39;ll need re run gulp dev ensure fully loaded installation: @visual framework/vf logo updating: upgrade interactive latest Manual customisation Download pattern Copy /src/components/vf component name Add your own local custom VF compatible /src/components your site vf component &#39;ll find vf sample there &#39;ve used below: Code: {% render &quot;@vf sample&quot; {text: &quot;with some text&quot;} %} Returns: &#39;m sample text"
   },
   {
     "url": "/posts/",
     "title": "I&#39;m a blog-like index",
-    "index": "&#39;m blog like index alpha This aggregates your posts shows them here 22 June 2018 m update subtitle summary Need more text"
+    "index": "&#39;m blog like index beta Understanding life context its environment This aggregates your posts shows them here 22 June 2018 m update subtitle summary Need more text"
   },
   {
     "url": "/posts/sample-post/",

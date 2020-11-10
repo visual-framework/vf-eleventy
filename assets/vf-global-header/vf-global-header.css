@@ -53,7 +53,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-logo
- * Version: 1.2.0
+ * Version: 1.4.0
  * Location: components/vf-logo
  */
 .vf-logo {
@@ -79,7 +79,7 @@
 }
 
 .vf-logo__text {
-  --vf-logo-margin-right: 8px;
+  --vf-logo-margin-right: 0.5rem;
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -94,12 +94,12 @@
 }
 @media (min-width: 500px) {
   .vf-logo--has-text .vf-logo__text {
-    --vf-logo-margin-right: 16px;
+    --vf-logo-margin-right: 1rem;
   }
 }
 @media (min-width: 999px) {
   .vf-logo--has-text .vf-logo__text {
-    --vf-logo-margin-right: 16px;
+    --vf-logo-margin-right: 1rem;
   }
 }
 
@@ -124,7 +124,7 @@
 
 /*!
  * Component: @visual-framework/vf-global-header
- * Version: 3.0.0
+ * Version: 3.0.1
  * Location: components/vf-global-header
  */
 .vf-global-header {
@@ -142,9 +142,8 @@
   gap: 0.5rem;
   grid-column: 1/-1;
   height: auto;
-  margin: 0 auto;
+  margin: 0.5rem auto 0 auto;
   max-width: 81.25em;
-  padding: 0.5rem 0;
   width: 100%;
 }
 .vf-global-header > [class*=logo] {

@@ -53,12 +53,13 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-box
- * Version: 2.0.2
+ * Version: 2.2.0
  * Location: components/vf-box
  */
 .vf-box {
   --box-text-color: var( --vf-box-theme-color--foreground, var(--vf-theme-color--foreground, #000000));
   --box-background-color: var(--vf-box-theme-color--background, var(--vf-theme-color--background, #ffffff));
+  --vf-box-padding: var(--vf-box-padding--override, 1rem);
   background-color: #ffffff;
   background-color: var(--box-background-color);
   -webkit-box-sizing: border-box;
@@ -66,7 +67,8 @@
   color: #000000;
   color: var(--box-text-color);
   display: block;
-  padding: 24px 16px;
+  padding: 1rem;
+  padding: var(--vf-box-padding);
   width: 100%;
 }
 .vf-box > :last-child {
@@ -151,16 +153,16 @@
   color: currentColor;
 }
 
-.vf-box--s {
-  padding: 16px;
+.vf-box--400 {
+  --vf-box-padding: 1rem;
 }
 
-.vf-box--r {
-  padding: 24px;
+.vf-box--600 {
+  --vf-box-padding: 1.5rem;
 }
 
-.vf-box--l {
-  padding: 32px;
+.vf-box--800 {
+  --vf-box-padding: 2rem;
 }
 
 .vf-box--easy {

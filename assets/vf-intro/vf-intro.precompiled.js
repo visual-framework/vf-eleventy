@@ -80,7 +80,14 @@ context.addExport("intro_text", t_7);
 output += "\n";
 ;
 }
-output += "\n<section class=\"vf-intro | embl-grid embl-grid--has-centered-content\">\n  <div><!-- empty --></div>\n  <div>\n\n  <h1 class=\"vf-intro__heading ";
+output += "<section class=\"vf-intro\"";
+if(runtime.contextOrFrameLookup(context, frame, "intro_stack_spacing")) {
+output += " style=\"--vf-intro-spacing: ";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "intro_stack_spacing"), env.opts.autoescape);
+output += "\"";
+;
+}
+output += ">\n\n  <div><!-- empty --></div>\n\n  <div class=\"vf-stack\">\n\n  <h1 class=\"vf-intro__heading ";
 if((runtime.contextOrFrameLookup(context, frame, "vf_intro_phase")) || (runtime.contextOrFrameLookup(context, frame, "vf_intro_badge"))) {
 output += "vf-intro__heading--has-tag";
 ;
@@ -103,7 +110,7 @@ output += "</a>";
 else {
 output += "<span class=\"vf-badge vf-badge--primary vf-badge--phases\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_intro_phase"), env.opts.autoescape);
-output += "</span>";
+output += ";</span>";
 ;
 }
 ;
@@ -131,6 +138,13 @@ if((runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")) && (runtime.c
 output += "<h2 style=\"color: var(--vf-ui-color--red)\">Please use the relevant <code>vf_intro_lede</code> yaml only</h2>";
 ;
 }
+if(runtime.contextOrFrameLookup(context, frame, "vf_intro_subheading")) {
+output += "  <h2 class=\"vf-intro__subheading\">";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_intro_subheading"), env.opts.autoescape);
+output += "</h2>\n";
+;
+}
+output += "\n";
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")) {
 env.getExtension("render")["run"](context,"@vf-lede",{"vf_lede_text": runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")}, function(t_13,t_12) {
 if(t_13) { cb(t_13); return; }

@@ -64,31 +64,40 @@ if(frame.topLevel) {
 context.addExport("box_modifier", t_6);
 }
 var t_7;
-t_7 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"override_class");
-frame.set("override_class", t_7, true);
+t_7 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"box_spacing");
+frame.set("box_spacing", t_7, true);
 if(frame.topLevel) {
-context.setVariable("override_class", t_7);
+context.setVariable("box_spacing", t_7);
 }
 if(frame.topLevel) {
-context.addExport("override_class", t_7);
+context.addExport("box_spacing", t_7);
 }
 var t_8;
-t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"box_heading");
-frame.set("box_heading", t_8, true);
+t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"override_class");
+frame.set("override_class", t_8, true);
 if(frame.topLevel) {
-context.setVariable("box_heading", t_8);
+context.setVariable("override_class", t_8);
 }
 if(frame.topLevel) {
-context.addExport("box_heading", t_8);
+context.addExport("override_class", t_8);
 }
 var t_9;
-t_9 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"box_text");
-frame.set("box_text", t_9, true);
+t_9 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"box_heading");
+frame.set("box_heading", t_9, true);
 if(frame.topLevel) {
-context.setVariable("box_text", t_9);
+context.setVariable("box_heading", t_9);
 }
 if(frame.topLevel) {
-context.addExport("box_text", t_9);
+context.addExport("box_heading", t_9);
+}
+var t_10;
+t_10 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"box_text");
+frame.set("box_text", t_10, true);
+if(frame.topLevel) {
+context.setVariable("box_text", t_10);
+}
+if(frame.topLevel) {
+context.addExport("box_text", t_10);
 }
 ;
 }
@@ -102,6 +111,11 @@ output += "\"";
 output += "\n  class=\"vf-box";
 if(runtime.contextOrFrameLookup(context, frame, "box_href")) {
 output += " vf-box--is-link";
+;
+}
+if(runtime.contextOrFrameLookup(context, frame, "box_spacing")) {
+output += " vf-box--";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "box_spacing"), env.opts.autoescape);
 ;
 }
 if(runtime.contextOrFrameLookup(context, frame, "theme")) {

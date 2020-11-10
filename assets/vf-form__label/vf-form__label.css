@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -39,9 +50,10 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__label
- * Version: 1.0.1
+ * Version: 1.2.0
  * Location: components/vf-form/vf-form__label
  */
 .vf-form__label {
@@ -49,7 +61,7 @@
   font-size: 19px;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.5rem 0;
   display: block;
 }
 
@@ -57,7 +69,6 @@
   float: right;
   margin-bottom: 0;
 }
-
 .vf-form__label--required .vf-icon svg {
   fill: #3b6fb6;
   height: 12px;

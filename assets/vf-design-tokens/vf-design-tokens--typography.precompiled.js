@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<main class=\"vf-swatches | vf-grid vf-grid__col-2\">\n\n";
+output += "<main class=\"vf-grid vf-grid__col-3\">\n";
 frame = frame.push();
 var t_3 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "typography")),"properties");
 if(t_3) {t_3 = runtime.fromIterator(t_3);
@@ -23,9 +23,7 @@ frame.set("loop.revindex0", t_2 - t_1 - 1);
 frame.set("loop.first", t_1 === 0);
 frame.set("loop.last", t_1 === t_2 - 1);
 frame.set("loop.length", t_2);
-output += "\n<article class=\"vf-swatch\">\n  <div class=\"vf-swatch__colour\">\n    <h3 class=\"vf-swatch__colour-name\">\n      ";
-output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"friendlyName"), env.opts.autoescape);
-output += "\n    </h3>\n  </div>\n\n  <section class=\"vf-swatch__details\">\n    <p style=\"font-size: ";
+output += "\n<article class=\"vf-card\">\n  <div style=\"padding: 16px;\">\n    <p style=\"font-size: ";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"value")),"fontSize"), env.opts.autoescape);
 output += "; font-weight: ";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"value")),"fontWeight"), env.opts.autoescape);
@@ -33,30 +31,17 @@ output += "; line-height: ";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"value")),"lineHeight"), env.opts.autoescape);
 output += "\">";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"pangram"), env.opts.autoescape);
-output += "</p>\n  </section>\n  <ul class=\"\">\n    <li><span>Font Size: </span>";
+output += "</p>\n  </div>\n\n  <section class=\"vf-stack | vf-card__content\" style=\"--vf-stack-margin: .5rem;\">\n    <h3 class=\"vf-card__title\">";
+output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"friendlyName"), env.opts.autoescape);
+output += "</h3>\n    <hr class=\"vf-divider\">\n    <p class=\"vf-card__text\"><span>Font Size: </span><code>";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"value")),"fontSize"), env.opts.autoescape);
-output += "</li>\n    <li><span>Font Weight: </span>";
+output += "</code></p>\n    <p class=\"vf-card__text\"><span>Font Weight: </span><code>";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"value")),"fontWeight"), env.opts.autoescape);
-output += "</li>\n    <li><span>Ling Height: </span>";
+output += "</code></p>\n    <p class=\"vf-card__text\"><span>Ling Height: </span><code>";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"value")),"lineHeight"), env.opts.autoescape);
-output += "</li>\n  </ul>\n";
-output += runtime.suppressValue(env.getExtension("markdown")["run"](context,function(cb) {
-if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_5 = "";cb(null, t_5);
-;
-return t_5;
-}
-,function(cb) {
-if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_6 = "";t_6 += 4;
-cb(null, t_6);
-;
-return t_6;
-}
-), true && env.opts.autoescape);
-output += "  <ul>\n    <li><span>Sass: </span><code>@mixin set-type(`";
+output += "</code></p>\n    <hr class=\"vf-divider\">\n    <p class=\"vf-card__text\">Sass:</p>\n    <code>@mixin set-type(`";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"sassMap"), env.opts.autoescape);
-output += "`)</code></li>\n  </ul>\n</article>\n";
+output += "`)</code>\n  </section>\n</article>\n\n";
 ;
 }
 }

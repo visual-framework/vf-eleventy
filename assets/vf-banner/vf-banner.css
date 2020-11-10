@@ -53,7 +53,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-banner
- * Version: 1.5.0
+ * Version: 1.6.1
  * Location: components/vf-banner
  */
 .vf-banner {
@@ -64,7 +64,7 @@
 .vf-banner .vf-badge {
   margin-right: 1rem;
 }
-.vf-content ~ .vf-banner, .vf-inlay__content ~ .vf-banner {
+.vf-content ~ .vf-banner {
   margin-bottom: 1rem;
 }
 
@@ -178,14 +178,14 @@
 }
 
 .vf-banner--blocking.vf-banner--notice {
-  padding-bottom: 16px;
-  padding-top: 16px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .vf-banner--blocking.vf-banner--notice .vf-banner__content {
-  padding-bottom: 16px;
-  padding-top: 16px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   background-color: #707372;
 }
 

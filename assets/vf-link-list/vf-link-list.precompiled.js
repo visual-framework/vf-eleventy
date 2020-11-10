@@ -73,9 +73,14 @@ output += " ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "component_modifier"), env.opts.autoescape);
 ;
 }
-output += "\">\n  <h3 class=\"vf-links__heading\">";
+output += "\">\n";
+if(runtime.contextOrFrameLookup(context, frame, "title")) {
+output += "  <h3 class=\"vf-links__heading\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "title"), env.opts.autoescape);
-output += "</h3>\n  <ul class=\"vf-links__list";
+output += "</h3>\n";
+;
+}
+output += "  <ul class=\"vf-links__list";
 if(runtime.contextOrFrameLookup(context, frame, "list_modifier")) {
 output += " vf-links__list--";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "list_modifier"), env.opts.autoescape);

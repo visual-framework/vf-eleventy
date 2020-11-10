@@ -1,7 +1,7 @@
 /**
- * Precompiled Nunjucks template: embl-grid.njk
+ * Precompiled Nunjucks template: embl-grid--hairline.njk
  */
-(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["embl-grid"] = (function() {
+(function() {(window.nunjucksPrecompiled = window.nunjucksPrecompiled || {})["embl-grid--hairline"] = (function() {
 function root(env, context, frame, runtime, cb) {
 var lineno = 0;
 var colno = 0;
@@ -60,34 +60,25 @@ output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "em
 ;
 }
 output += "\">\n";
-(parentTemplate ? function(e, c, f, r, cb) { cb(""); } : context.getBlock("embl_grid__content"))(env, context, frame, runtime, function(t_5,t_4) {
+env.getExtension("render")["run"](context,"@vf-section-header", function(t_5,t_4) {
 if(t_5) { cb(t_5); return; }
-output += t_4;
+output += runtime.suppressValue(t_4, true && env.opts.autoescape);
+output += "  <div class=\"vf-content\">\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat delectus dolore molestias rerum? Dolores doloribus impedit quasi provident odit perferendis vitae incidunt, mollitia repellendus a alias necessitatibus, molestiae! Nesciunt.</p>\n  </div>\n";
+env.getExtension("render")["run"](context,"@vf-box--normal-primary", function(t_7,t_6) {
+if(t_7) { cb(t_7); return; }
+output += runtime.suppressValue(t_6, true && env.opts.autoescape);
 output += "</div>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {
 cb(null, output);
 }
-});
-} catch (e) {
-  cb(runtime.handleError(e, lineno, colno));
-}
-}
-function b_embl_grid__content(env, context, frame, runtime, cb) {
-var lineno = 12;
-var colno = 5;
-var output = "";
-try {
-var frame = frame.push(true);
-cb(null, output);
-;
+})});
 } catch (e) {
   cb(runtime.handleError(e, lineno, colno));
 }
 }
 return {
-b_embl_grid__content: b_embl_grid__content,
 root: root
 };
 

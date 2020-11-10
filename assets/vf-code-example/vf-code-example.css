@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -39,9 +50,10 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-code-example
- * Version: 1.0.1
+ * Version: 1.2.0
  * Location: components/vf-code-example
  */
 .vf-content pre,
@@ -53,8 +65,8 @@
   font-weight: 400;
   line-height: 1.57;
   margin: 0 0 0 0;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
   background: #f3f3f3;
   border-radius: 4px;
 }
@@ -67,10 +79,12 @@
 .vf-content pre,
 .vf-code-example__pre {
   border: 1px;
-  display: grid;
+  display: block;
   min-width: 0;
   overflow: auto;
   white-space: pre-wrap;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 /* github.com style (c) Vasily Polovnyov <vast@whiteants.net> */
@@ -79,7 +93,7 @@
   color: #000000;
   display: block;
   overflow-x: auto;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .hljs-comment,

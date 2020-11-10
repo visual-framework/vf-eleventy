@@ -42,7 +42,6 @@
   </head>
   <body class=" vf-body">
     <header class="vf-global-header">
-
       <div class="vf-global-header__inner">
         
 <a href="http://www.embl.de"
@@ -54,10 +53,10 @@ class="vf-logo | vf-logo--has-text">
         <nav class="vf-navigation vf-navigation--global">
           <ul class="vf-navigation__list | vf-list--inline">
             <li class="vf-navigation__item">
-              <a href="https://visual-framework.github.io/vf-welcome/" class="vf-navigation__link">About the Visual Framework</a>
+              <a href="https://stable.visual-framework.dev/" class="vf-navigation__link">About the Visual Framework</a>
             </li>
             <li class="vf-navigation__item">
-              <a href="https://visual-framework.github.io/vf-welcome/documentation" class="vf-navigation__link">Documentation</a>
+              <a href="https://stable.visual-framework.dev/documentation" class="vf-navigation__link">Documentation</a>
             </li>
             <li class="vf-navigation__item">
               <a href="https://join.slack.com/t/visual-framework/shared_invite/enQtNDAxNzY0NDg4NTY0LWFhMjEwNGY3ZTk3NWYxNWVjOWQ1ZWE4YjViZmY1YjBkMDQxMTNlNjQ0N2ZiMTQ1ZTZiMGM4NjU5Y2E0MjM3ZGQ" class="vf-navigation__link">Help, chat</a>
@@ -65,14 +64,14 @@ class="vf-logo | vf-logo--has-text">
           </ul>
         </nav>
       </div>
-
     </header>
     <div class="vf-grid">
       <div>
-        <section class="vf-intro | embl-grid embl-grid--has-centered-content">
+        <section class="vf-intro">
   <div><!-- empty --></div>
-  <div>
-  <h1 class="vf-intro__heading vf-intro__heading--has-tag">Eleventy for the VF 2.0<span class="vf-badge vf-badge--primary vf-badge--phases">alpha</span></h1><p class="vf-lede">This allows using the <a class="vf-link" href="https://www.11ty.io">11ty</a> static site generator with direct access to <a class="vf-link" href="https://github.com/visual-framework/vf-core">Visual Framework 2.0</a> components.</p>
+  <div class="vf-stack">
+  <h1 class="vf-intro__heading vf-intro__heading--has-tag">Eleventy for the VF 2.0<span class="vf-badge vf-badge--primary vf-badge--phases">beta;</span></h1>
+  <p class="vf-lede">This allows using the <a class="vf-link" href="https://www.11ty.io">11ty</a> static site generator with direct access to <a class="vf-link" href="https://github.com/visual-framework/vf-core">Visual Framework 2.0</a> components.</p>
   <p class="vf-intro__text">☝️that also means dynamic building of just the CSS and JS you need.</p>
   </div>
 </section>
@@ -121,12 +120,13 @@ your site.</p>
 <li><code>gulp vf-component</code></li>
 </ul>
 <p>You'll find a <code>vf-sample</code> component there, we've used it below:</p>
-<div class="vf-box">
-<p>Code: {% render &quot;@vf-sample&quot;, {text: &quot;with some text&quot;} %}</p>
-<p>Returns: <div class="vf-sample">
-I'm a sample with some text</p>
+<p>Code:</p>
+<pre>{% render "@vf-sample", {text: "with some text"} %}</pre>
+<p><br/>Returns:</p>
+<pre><div class="vf-sample">
+  I'm a sample with some text
 </div>
-</div>
+</pre>
 </div>
 </section>
 

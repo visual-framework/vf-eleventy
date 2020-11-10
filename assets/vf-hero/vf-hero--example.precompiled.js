@@ -75,7 +75,7 @@ output += "\"> ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_link_text"), env.opts.autoescape);
 output += "</a></p>\n  </div>\n</section>\n\n\n\n\n<section class=\"vf-hero vf-hero--extreme\">\n  <div class=\"vf-hero__image\">\n    <img src=\"";
 output += runtime.suppressValue(env.getFilter("path").call(context, "../../assets/vf-hero/assets/vf-intro-group.png"), env.opts.autoescape);
-output += "\" alt=\"\">\n  </div>\n\n  <div class=\"vf-hero__content\">\n";
+output += "\" alt=\"\" loading=\"lazy\">\n  </div>\n\n  <div class=\"vf-hero__content\">\n";
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading")) {
 output += " <h2 class=\"vf-hero__heading\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading"), env.opts.autoescape);

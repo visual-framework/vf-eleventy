@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<style>\n/* vf-swatches might one day be a component, but for now it's CSS we'll just use for the design token demonstration */\n.vf-swatches {\n  grid-row-gap: 32px;\n  margin: 48px 0;\n}\n.vf-swatch {\n  border: 1px solid #d0d0ce;\n  display: grid;\n  grid-template-rows: 160px 1fr;\n}\n\n.vf-swatch__details {\n  padding: 16px;\n  border-top: 1px solid #d0d0ce;\n}\n.vf-swatch:nth-of-type(6),\n.vf-swatch:nth-of-type(11) {\n  grid-column-start: 1;\n}\n.vf-swatch__colour {\n  /* margin: 16px;\n  height: calc(100% - 32px);\n  width: calc(100% - 32px); */\n  height: 100%;\n  width: 100%;\n}\n.vf-swatch__colour-name {\n  margin: 0 0 12px 0;\n}\n\n.vf-swatch__colour-hex,\n.vf-swatch__sass-variable,\n.vf-swatch__comment,\n.vf-swatch__css-property {\n  margin: 0 0 12px 0;\n}\n.vf-swatch__colour-hex {\n  text-transform: uppercase;\n}\n.vf-swatch__colour-hex,\n.vf-swatch__sass-variable,\n.vf-swatch__css-property {\n  font-family: monospace;\n  font-size: 1em;\n  align-items: start;\n}\n\n.vf-swatch__colour-hex,\n.vf-swatch__sass-variable,\n.vf-swatch__css-property {\n  font-family: 'IBM Plex Mono', Monaco, Consolas, 'Lucida Console', monospace;\n  font-size: 14px;\n}\n\n.vf-swatch__notes {\n  margin: 12px 0 0px 0;\n}\n\n.vf-swatch__notes,\n.vf-swatch__colour-name,\n.vf-swatch__meta {\n  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;\n}\n.vf-swatch__colour-name {\n  padding: 16px;\n}\n\n.vf-swatch__meta {\n  font-size: 16px;\n}\n\n.vf-swatch__details p {\n  margin-bottom: 16px;\n}\n.vf-swatch__details p:last-of-type {\n  margin-bottom: 0;\n}\n.breakpoint-example {\n  align-items: center;\n  display: flex;\n  justify-content: center;\n}\n</style>\n\n\n<main class=\"vf-swatches | vf-grid vf-grid__col-3\">\n";
+output += "<main class=\"vf-grid vf-grid__col-3\">\n";
 frame = frame.push();
 var t_3 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "breakpoints")),"properties");
 if(t_3) {t_3 = runtime.fromIterator(t_3);
@@ -23,19 +23,15 @@ frame.set("loop.revindex0", t_2 - t_1 - 1);
 frame.set("loop.first", t_1 === 0);
 frame.set("loop.last", t_1 === t_2 - 1);
 frame.set("loop.length", t_2);
-output += "\n\n<article class=\"vf-swatch\">\n  <div class=\"breakpoint-example\">\n    <p class=\"\">";
+output += "\n\n<article class=\"vf-card\">\n  <div style=\"display: flex; justify-content: center; align-items: center;\">\n    <p class=\"\">";
 output += runtime.suppressValue(runtime.memberLookup((t_4),"value"), env.opts.autoescape);
-output += "</p>\n  </div>\n\n  <section class=\"vf-swatch__details\">\n    <h3 class=\"vf-swatch__colour-name\">";
+output += "</p>\n  </div>\n\n\n  <section class=\"vf-stack | vf-card__content\" style=\"--vf-stack-margin: .5rem;\">\n    <h3 class=\"vf-card__title\">";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"friendlyName"), env.opts.autoescape);
-output += "</h3>\n";
-if(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"sassVariable")) {
-output += "    <hr class=\"vf-divider\">\n    <p>Sass:</p>\n      <p class=\"vf-swatch__sass-variable\">$";
+output += "</h3>\n    <hr class=\"vf-divider\">\n    <p class=\"vf-card__text\">Sass:</p>\n      <p class=\"vf-card__text\"><code>";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"sassVariable"), env.opts.autoescape);
-output += "</p>\n";
-;
-}
+output += "</code></p>\n";
 if(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"comment")) {
-output += "      <h4 class=\"vf-swatch__notes\">notes:</h4>\n      <p class=\"vf-swatch__comment\">\n        ";
+output += "    <hr class=\"vf-divider\">\n      <h4>notes:</h4>\n      <p class=\"vf-card__text\">\n        ";
 output += runtime.suppressValue(runtime.memberLookup((runtime.memberLookup((t_4),"meta")),"comment"), env.opts.autoescape);
 output += "\n      </p>\n";
 ;
