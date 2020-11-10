@@ -1,5 +1,5 @@
 homepageIntro:
-  vf_intro_phase: alpha
+  vf_intro_phase: beta
   vf_intro_text:
     - ☝️that also means dynamic building of just the CSS and JS you need.
 

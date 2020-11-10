@@ -15,8 +15,6 @@ meta:
 {% set vf_intro_lede = siteConfig.siteInformation.short_description %}
 {% include containers.intro %}
 
-
-
 <section class="embl-grid embl-grid--has-centered-content">
   <div>
     <!-- empty -->
@@ -82,13 +80,13 @@ your site.
 
 You'll find a `vf-sample` component there, we've used it below:
 
-<div class="vf-box">
-{% verbatim %}
-Code: {% render "@vf-sample", {text: "with some text"} %}
-{% endverbatim %}
+Code: 
 
-Returns: {% render "@vf-sample", {text: "with some text"} %}
-</div>
+<pre>{% verbatim %}{% render "@vf-sample", {text: "with some text"} %}{% endverbatim %}</pre>
+
+<br/>Returns: 
+
+<pre>{% render "@vf-sample", {text: "with some text"} %}</pre>
 
 </div>
 </section>
