@@ -1238,10 +1238,10 @@
     list-stream "^2.0.0"
     marked "^1.1.1"
 
-"@visual-framework/vf-design-tokens@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-design-tokens/-/vf-design-tokens-3.0.0.tgz#afbf793ae0c23ae3bf6d36a3c1d5b3e5753aa074"
-  integrity sha512-6kQoZabcrLnaSnR0NQNW+Co8W2j9DDZc1rBuXaZZtbN0J71jen1/cRVbkp5W03egb+V9tWUo+vu/RWx4gKz4dQ==
+"@visual-framework/vf-design-tokens@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-design-tokens/-/vf-design-tokens-3.1.0.tgz#0438da9dc796adb6bf9d794f334c6ca0cdbd417a"
+  integrity sha512-NmK9oQjHWU98iBdGlVmxz+O9bJnE30ta/FqfDlKigeySK+MqpynyQTCCjQ5NAVPNW4cpkqV2y1RwOTuopph18g==
 
 "@visual-framework/vf-divider@2.0.0", "@visual-framework/vf-divider@^2.0.0":
   version "2.0.0"
