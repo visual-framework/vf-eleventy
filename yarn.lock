@@ -1156,7 +1156,12 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-body/-/vf-body-1.0.0.tgz#aa015427fa176a7d6da5e57a8ee016377e3189d3"
   integrity sha512-P7/GJtnVSqhs45Byz3xi6QLvEeG7BdTRGf5K0JNTVLFMougiS/J1WDopIAz805nJe6oJInCnMxvUhVuveD56EQ==
 
-"@visual-framework/vf-box@2.2.0", "@visual-framework/vf-box@^2.2.0":
+"@visual-framework/vf-box@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-box/-/vf-box-2.3.0.tgz#03921d3223b808a63cfc843129ed98fe2624d452"
+  integrity sha512-uh5+JFl0fodJfnUuEAI2/Jiy8MBL8UNsm6CGQFcFd116YT1unFFwY51UVWjHCZH+edb9yctbrXMGiiwZzW5EDw==
+
+"@visual-framework/vf-box@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-box/-/vf-box-2.2.0.tgz#1109d66846e95384ea3ab9f204443521f7ffb1c2"
   integrity sha512-rpdZeeV2yt1uTiJxCMAhtKjf5C9fMsRQ0ZDyMCDDcSK+Hp5BTgWCucl/QzgGNN+sZaQSES7ZuECaLDxOom87iw==
