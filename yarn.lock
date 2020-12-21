@@ -1398,10 +1398,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-logo/-/vf-logo-1.5.0.tgz#df2adfde967fec780c8644bebaf99055785d7c7b"
   integrity sha512-gp+Bq5NniSldbUdvR7Wu2UCI2EaG2/8ENjc5g0iv9Z+BTdD2vc9jMaqgWPtxpIq5aMxekBXmtSB/STrK8CLi4g==
 
-"@visual-framework/vf-navigation@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-navigation/-/vf-navigation-2.1.0.tgz#f62e0462fb79ab38c9b79e00fffd7218234a8d24"
-  integrity sha512-aiyNtoNr/axZSBmqS6HLLi63w6HHNQIeMftcE/G/S4O89Q+pl9MmpudTO/qsUu2IbbPpcdFZWqhM/lRBtN/sTQ==
+"@visual-framework/vf-navigation@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-navigation/-/vf-navigation-2.2.0.tgz#98434105c6328db50b757fe680ab11ac645a4b89"
+  integrity sha512-Dqsi/mUdkM2wSPkJN+WHjmU/tnN2M+KqX9vwXAMyamrUHp7cw4e7V7iO7ee6U4jBWLolp54THuA2AX+pmCk/AQ==
 
 "@visual-framework/vf-no-js@1.0.1":
   version "1.0.1"
