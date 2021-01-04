@@ -1248,10 +1248,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-divider/-/vf-divider-2.0.0.tgz#1a23ebc5475be7f7e927c09ed2b6ce6e75e88fc0"
   integrity sha512-TVRB3Jg6wcKZi7TlQvWjAX7nzGdS9kJTMtvOMWfyM8+rFnM8A+VZ32vkT+UXHGa/8Lxl5ccTsCCnHgsRZu2mgA==
 
-"@visual-framework/vf-extensions@1.0.0-alpha.9":
-  version "1.0.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-extensions/-/vf-extensions-1.0.0-alpha.9.tgz#76744a67b6a93745e59db779d5e776860fa327be"
-  integrity sha512-dVe40Z2ffawI7zgCLQQbypbbLXU76aRF15BEVJnIsCv7TPBkPI4CpM1PTtZAXzq9jQWRCgcG7JmXxAaQpzPx0Q==
+"@visual-framework/vf-extensions@1.0.0-rc.0":
+  version "1.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-extensions/-/vf-extensions-1.0.0-rc.0.tgz#44ac1a9b4917be5e0c8493f3ef7f34eff07c6448"
+  integrity sha512-HDkwFZlMIF6wSV2ZjaQo5eb1DDhtJzZLlHW5oJk4PF2iIUoJvALxchPy5178YOfRjRWDUvzdhPK0m/jBOpqrRQ==
   dependencies:
     "@11ty/eleventy-plugin-rss" "^1.0.7"
     luxon "^1.22.2"
