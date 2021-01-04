@@ -1378,10 +1378,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-lede/-/vf-lede-1.0.1.tgz#72cfcb81ed9b60688444bb9824562db937ba97fc"
   integrity sha512-WLBmhzJmXoamaAjQEV3mwvfkwxiaoQCrKS0++imb1HgL8v9tbE/cxJekJ6GioCUpZ+1RgoAS6mTvQ2dqT6bq4A==
 
-"@visual-framework/vf-link-list@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-link-list/-/vf-link-list-1.3.0.tgz#de01a5e4cfe5196e576a8088e837219bcd460ac7"
-  integrity sha512-Xr5Qa6Z48LW7g5a6YZbCOoaJG2rFdXytQd7i1YkH1jNUqNJ2IyHHxBJOXWxQ0fcA2qRsLxZoeuCR+1ut3qxDpg==
+"@visual-framework/vf-link-list@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-link-list/-/vf-link-list-1.3.1.tgz#d11128ae3ae9cf95d18d323c8e64b82c73ef9806"
+  integrity sha512-5SKka34nG5tIKDsGBGgjHFq2/9cE/rVy4ywv4ykLh34WGT+2vmkLBVf1fawSMgzQ8n1iI7q6K9T1STFN9A7kHg==
 
 "@visual-framework/vf-link@1.0.3", "@visual-framework/vf-link@^1.0.3":
   version "1.0.3"
