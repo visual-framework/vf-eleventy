@@ -1267,10 +1267,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-figure/-/vf-figure-1.3.0.tgz#6d60b9ee33e9e681e13752082800fb0450e8945f"
   integrity sha512-SIS/FOhMn+cPZHqF7dNJPqhE8BNNU5pR8ZZsdWXsRC1zQDGWAaz0HyuD8Xtp8MOp+4JFP2DrrGpURc3V07uYLA==
 
-"@visual-framework/vf-font-plex-mono@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-font-plex-mono/-/vf-font-plex-mono-1.1.0.tgz#6de805029148c7ff2d57d92f4cafe8060f4c52ed"
-  integrity sha512-PQVvf0tF2W7rOuC1ETECW6d2D+xhvGkEUrYc8UYrus+Uj+dOj7XSEV3YVSdV6UonJgeLWMs/n+lrLLcfzfzHAA==
+"@visual-framework/vf-font-plex-mono@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-font-plex-mono/-/vf-font-plex-mono-1.1.1.tgz#bbb38e1b7b2182a822fe19d823da9bba80d72d84"
+  integrity sha512-8y+B4SFrOwLV8M21NC2aZuafgIz8PRvkxIYFbdf1xDRdXLm1nPxUC6wuajMEEd4kBWmD+Le5/CNy2ygyRHGWMw==
 
 "@visual-framework/vf-font-plex-sans@1.1.0":
   version "1.1.0"
