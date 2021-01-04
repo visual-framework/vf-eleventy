@@ -1272,10 +1272,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-font-plex-mono/-/vf-font-plex-mono-1.1.0.tgz#6de805029148c7ff2d57d92f4cafe8060f4c52ed"
   integrity sha512-PQVvf0tF2W7rOuC1ETECW6d2D+xhvGkEUrYc8UYrus+Uj+dOj7XSEV3YVSdV6UonJgeLWMs/n+lrLLcfzfzHAA==
 
-"@visual-framework/vf-font-plex-sans@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-font-plex-sans/-/vf-font-plex-sans-1.1.0.tgz#0229cbee0b7460805d2ba5bdc06eb683f83755fa"
-  integrity sha512-QlB8S2koZwQyYcdT2YE7YJ3gkMklWqwYbXC3PYxq5j/zvqm3MaQUPody23ZCYWW3sAwFucclN18qL4M+uGrZtA==
+"@visual-framework/vf-font-plex-sans@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-font-plex-sans/-/vf-font-plex-sans-1.1.1.tgz#25a4e7aa0dcffa83be278df42d6b77423e3e0a21"
+  integrity sha512-3DM5UZskVMfu4Zr8A6xLbqu5gkfrIfAw1egK64UrNh5pvsCalqirP5L2mmGPfOSrota386LfaZrz1HxESXFLSw==
 
 "@visual-framework/vf-form__checkbox@^1.0.2":
   version "1.0.2"
