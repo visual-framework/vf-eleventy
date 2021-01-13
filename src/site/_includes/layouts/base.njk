@@ -35,10 +35,9 @@
     {%- endif %}
 
   </head>
-  <body class="{{ bodyClass }} vf-body">
+  <body class="{{ bodyClass }} vf-body vf-stack">
     <header class="vf-global-header">
-      <div class="vf-global-header__inner">
-        {% render '@vf-logo', {href:  'https://stable.visual-framework.dev/' | url, sreen_reader_text: 'Visual Framework 2.0', image: siteConfig.siteInformation.url + 'assets/vf-logo/assets/logo.svg' } %}
+        {% render '@vf-logo', {href:  'https://stable.visual-framework.dev/' | url, logo_text: 'Visual Framework 2.0', image: siteConfig.siteInformation.url + 'assets/vf-logo/assets/logo.svg' } %}
         <nav class="vf-navigation vf-navigation--global">
           <ul class="vf-navigation__list | vf-list--inline">
             <li class="vf-navigation__item">
@@ -52,7 +51,6 @@
             </li>
           </ul>
         </nav>
-      </div>
     </header>
     <div class="vf-grid">
       <div>
