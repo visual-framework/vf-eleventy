@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-box
- * Version: 2.2.0
- * Location: components/vf-box
+ * Version: 2.3.0
+ * Location: components/undefined
  */
 .vf-box {
   --box-text-color: var( --vf-box-theme-color--foreground, var(--vf-theme-color--foreground, #000000));
@@ -102,9 +102,9 @@
 
 .vf-box__heading {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.29;
+  line-height: 1.333;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
@@ -169,6 +169,9 @@
   --box-text-color: var(--vf-box-theme-color--background, var(--vf-theme-color--background));
   --box-background-color: #ffffff;
   border-bottom: 4px solid;
+}
+.vf-box--easy .vf-box__text {
+  color: #000000;
 }
 
 .vf-box--normal {

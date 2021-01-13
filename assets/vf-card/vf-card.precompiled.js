@@ -75,41 +75,50 @@ if(frame.topLevel) {
 context.addExport("theme", t_7);
 }
 var t_8;
-t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"variant");
-frame.set("variant", t_8, true);
+t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"newTheme");
+frame.set("newTheme", t_8, true);
 if(frame.topLevel) {
-context.setVariable("variant", t_8);
+context.setVariable("newTheme", t_8);
 }
 if(frame.topLevel) {
-context.addExport("variant", t_8);
+context.addExport("newTheme", t_8);
+}
+var t_9;
+t_9 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"variant");
+frame.set("variant", t_9, true);
+if(frame.topLevel) {
+context.setVariable("variant", t_9);
+}
+if(frame.topLevel) {
+context.addExport("variant", t_9);
 }
 output += "\n";
-var t_9;
-t_9 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"id");
-frame.set("id", t_9, true);
-if(frame.topLevel) {
-context.setVariable("id", t_9);
-}
-if(frame.topLevel) {
-context.addExport("id", t_9);
-}
 var t_10;
-t_10 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"modifiers");
-frame.set("modifiers", t_10, true);
+t_10 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"id");
+frame.set("id", t_10, true);
 if(frame.topLevel) {
-context.setVariable("modifiers", t_10);
+context.setVariable("id", t_10);
 }
 if(frame.topLevel) {
-context.addExport("modifiers", t_10);
+context.addExport("id", t_10);
 }
 var t_11;
-t_11 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"override_class");
-frame.set("override_class", t_11, true);
+t_11 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"modifiers");
+frame.set("modifiers", t_11, true);
 if(frame.topLevel) {
-context.setVariable("override_class", t_11);
+context.setVariable("modifiers", t_11);
 }
 if(frame.topLevel) {
-context.addExport("override_class", t_11);
+context.addExport("modifiers", t_11);
+}
+var t_12;
+t_12 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"override_class");
+frame.set("override_class", t_12, true);
+if(frame.topLevel) {
+context.setVariable("override_class", t_12);
+}
+if(frame.topLevel) {
+context.addExport("override_class", t_12);
 }
 ;
 }
@@ -130,6 +139,11 @@ output += "\n  class=\"vf-card";
 if(runtime.contextOrFrameLookup(context, frame, "theme")) {
 output += " vf-card-theme--";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "theme"), env.opts.autoescape);
+;
+}
+if(runtime.contextOrFrameLookup(context, frame, "newTheme")) {
+output += " vf-card--";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "newTheme"), env.opts.autoescape);
 ;
 }
 if(runtime.contextOrFrameLookup(context, frame, "variant")) {
@@ -156,7 +170,7 @@ output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "ca
 output += "\" class=\"vf-card__image\" loading=\"lazy\">";
 ;
 }
-output += "\n  <div class=\"vf-card__content\">\n\n    <";
+output += "\n  <div class=\"vf-card__content | vf-stack vf-stack--400\">\n\n    <";
 if(runtime.contextOrFrameLookup(context, frame, "card_title")) {
 output += "h3";
 ;
@@ -199,7 +213,7 @@ output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "ca
 output += "</p>";
 ;
 }
-output += "  </div>\n\n</article>\n";
+output += "  </div>\n</article>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {
@@ -215,4 +229,5 @@ root: root
 };
 
 })();
+return function(ctx, cb) { return nunjucks.render("vf-card", ctx, cb); }
 })();

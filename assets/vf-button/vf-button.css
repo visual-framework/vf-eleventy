@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.2.0
-* Location: components/vf-button
+* Version: 1.3.0
+* Location: components/undefined
 */
 .vf-button {
   --vf-button__color__background--default: var(--vf-color--grey);

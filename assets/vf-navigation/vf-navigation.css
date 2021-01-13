@@ -54,7 +54,7 @@
 /*!
  * Component: @visual-framework/vf-list
  * Version: 1.0.0
- * Location: components/vf-list
+ * Location: components/undefined
  */
 .vf-list {
   list-style-type: none;
@@ -131,8 +131,8 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 2.1.0
- * Location: components/vf-navigation
+ * Version: 2.2.0
+ * Location: components/undefined
  */
 .vf-navigation__list {
   display: -webkit-box;
@@ -176,7 +176,7 @@
 }
 
 .vf-navigation--main {
-  padding: 16px 0;
+  margin-top: 1rem;
 }
 .vf-navigation--main .vf-navigation__item [aria-current] {
   color: #000000;

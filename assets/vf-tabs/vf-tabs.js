@@ -6,12 +6,14 @@
  * @example vfTabs(document.querySelectorAll('.vf-component__container')[0]);
  */
 function vfTabs(scope) {
+  /* eslint-disable no-redeclare */
   var scope = scope || document;
+  /* eslint-enable no-redeclare */
   // Get relevant elements and collections
-  const tablist = scope.querySelectorAll('[data-vf-js-tabs]');
-  const panelsList = scope.querySelectorAll('[data-vf-js-tabs-content]');
-  const panels = scope.querySelectorAll('[data-vf-js-tabs-content] [id^="vf-tabs__section"]');
-  const tabs = scope.querySelectorAll('[data-vf-js-tabs] .vf-tabs__link');
+  const tablist = scope.querySelectorAll("[data-vf-js-tabs]");
+  const panelsList = scope.querySelectorAll("[data-vf-js-tabs-content]");
+  const panels = scope.querySelectorAll("[data-vf-js-tabs-content] [id^=\"vf-tabs__section\"]");
+  const tabs = scope.querySelectorAll("[data-vf-js-tabs] .vf-tabs__link");
   if (!tablist || !panels || !tabs) {
     // exit: either tabs or tabbed content not found
     return;
@@ -26,83 +28,95 @@ function vfTabs(scope) {
 
     // get the parent ul of the clicked tab
     let parentTabSet = newTab.closest(".vf-tabs__list");
-    let oldTab = parentTabSet.querySelector('[aria-selected]');
+    let oldTab = parentTabSet.querySelector("[aria-selected]");
     if (oldTab) {
-      oldTab.removeAttribute('aria-selected');
-      oldTab.setAttribute('tabindex', '-1');
-      oldTab.classList.remove('is-active');
-      let oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
-      panels[oldIndex].hidden = true;
+      oldTab.removeAttribute("aria-selected");
+      oldTab.setAttribute("tabindex", "-1");
+      oldTab.classList.remove("is-active");
+
+      for (let item = 0; item < panels.length; item++) {
+        const panel = panels[item];
+        if (panel.id === oldTab.id){
+          panel.hidden = true;
+          break;
+        }
+      }
     }
 
     newTab.focus();
     // Make the active tab focusable by the user (Tab key)
-    newTab.removeAttribute('tabindex');
+    newTab.removeAttribute("tabindex");
     // Set the selected state
-    newTab.setAttribute('aria-selected', 'true');
-    newTab.classList.add('is-active');
+    newTab.setAttribute("aria-selected", "true");
+    newTab.classList.add("is-active");
     // Get the indices of the new tab to find the correct
     // tab panel to show
-    let index = Array.prototype.indexOf.call(tabs, newTab);
-    panels[index].hidden = false;
-  }
+    for (let item = 0; item < panels.length; item++) {
+      const panel = panels[item];
+      if (panel.id === newTab.id){
+        panel.hidden = false;
+        break;
+      }
+    }
+  };
 
   // Add semantics are remove user focusability for each tab
   Array.prototype.forEach.call(tabs, (tab, i) => {
-    tab.setAttribute('role', 'tab');
-    tab.setAttribute('id', 'tab' + (i + 1));
-    tab.setAttribute('data-tabs__item', 'tab' + (i + 1));
-    tab.setAttribute('tabindex', '-1');
-    tab.parentNode.setAttribute('role', 'presentation');
+    const tabId = tab.href.split("#")[1]; // calculate an ID based off the tab href (todo: add support for a data-vf-js-tab-id, and if set use that)
+    tab.setAttribute("role", "tab");
+    tab.setAttribute("id", tabId);
+    tab.setAttribute("data-tabs__item", tabId);
+    tab.setAttribute("tabindex", "-1");
+    tab.parentNode.setAttribute("role", "presentation");
 
     // Reset any active tabs from a previous JS call
-    tab.removeAttribute('aria-selected');
-    tab.setAttribute('tabindex', '-1');
-    tab.classList.remove('is-active');
+    tab.removeAttribute("aria-selected");
+    tab.setAttribute("tabindex", "-1");
+    tab.classList.remove("is-active");
 
     // Handle clicking of tabs for mouse users
-    tab.addEventListener('click', e => {
+    tab.addEventListener("click", e => {
       e.preventDefault();
       switchTab(e.currentTarget);
     });
 
     // Handle keydown events for keyboard users
-    tab.addEventListener('keydown', e => {
+    tab.addEventListener("keydown", e => {
       // Get the index of the current tab in the tabs node list
       let index = Array.prototype.indexOf.call(tabs, e.currentTarget);
       // Work out which key the user is pressing and
       // Calculate the new tab's index where appropriate
-      let dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : e.which === 40 ? 'down' : null;
+      let dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : e.which === 40 ? "down" : null;
       if (dir !== null) {
         e.preventDefault();
         // If the down key is pressed, move focus to the open panel,
         // otherwise switch to the adjacent tab
-        dir === 'down' ? panels[i].focus() : tabs[dir] ? switchTab(tabs[dir]) : void 0;
+        dir === "down" ? panels[i].focus() : tabs[dir] ? switchTab(tabs[dir]) : void 0;
       }
     });
   });
 
   // Add tab panel semantics and hide them all
-  Array.prototype.forEach.call(panels, (panel, i) => {
-    panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', '-1');
-    let id = panel.getAttribute('id');
-    panel.setAttribute('aria-labelledby', tabs[i].id);
+  Array.prototype.forEach.call(panels, (panel) => {
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("tabindex", "-1");
+    // let id = panel.getAttribute("id");
+    panel.setAttribute("aria-labelledby", panel.id);
     panel.hidden = true;
   });
 
   // Add the tablist role to the first <ul> in the .tabbed container
-  Array.prototype.forEach.call(tablist, (tablistset, i) => {
-    tablistset.setAttribute('role', 'tablist');
+  Array.prototype.forEach.call(tablist, (tablistset) => {
+    tablistset.setAttribute("role", "tablist");
     // Initially activate the first tab
-    let firstTab = tablistset.querySelectorAll('.vf-tabs__link')[0];
-    firstTab.removeAttribute('tabindex');
-    firstTab.setAttribute('aria-selected', 'true');
-    firstTab.classList.add('is-active');
+    let firstTab = tablistset.querySelectorAll(".vf-tabs__link")[0];
+    firstTab.removeAttribute("tabindex");
+    firstTab.setAttribute("aria-selected", "true");
+    firstTab.classList.add("is-active");
   });
-  Array.prototype.forEach.call(panelsList, (panel, i) => {
+  Array.prototype.forEach.call(panelsList, (panel) => {
     // Initially reveal the first tab panel
-    let firstPanel = panel.querySelectorAll('.vf-tabs__section')[0];
+    let firstPanel = panel.querySelectorAll(".vf-tabs__section")[0];
     firstPanel.hidden = false;
   });
 }

@@ -218,4 +218,5 @@ root: root
 };
 
 })();
+return function(ctx, cb) { return nunjucks.render("vf-button", ctx, cb); }
 })();

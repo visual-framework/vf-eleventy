@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-logo
- * Version: 1.4.0
- * Location: components/vf-logo
+ * Version: 1.5.0
+ * Location: components/undefined
  */
 .vf-logo {
   -webkit-box-align: center;
@@ -71,11 +71,10 @@
 .vf-logo__image {
   height: 32px;
 }
-
-.vf-logo--extreme .vf-logo__image {
-  height: 11vw;
-  max-height: 96px;
-  min-height: 32px;
+@media (min-width: 1025px) {
+  .vf-logo__image {
+    height: 48px;
+  }
 }
 
 .vf-logo__text {
@@ -105,8 +104,8 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 1.2.5
- * Location: components/vf-navigation
+ * Version: 2.2.0
+ * Location: components/undefined
  */
 .vf-navigation__list {
   display: -webkit-box;
@@ -124,8 +123,8 @@
 
 /*!
  * Component: @visual-framework/vf-global-header
- * Version: 3.0.1
- * Location: components/vf-global-header
+ * Version: 3.1.0
+ * Location: components/undefined
  */
 .vf-global-header {
   -webkit-box-align: center;
@@ -140,11 +139,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 0.5rem;
-  grid-column: 1/-1;
-  height: auto;
-  margin: 0.5rem auto 0 auto;
-  max-width: 81.25em;
-  width: 100%;
+  margin-top: 0.5rem;
 }
 .vf-global-header > [class*=logo] {
   -webkit-box-flex: 1;
@@ -166,18 +161,6 @@
     margin-right: 0.5rem;
   }
 }
-html:not(.vf-disable-deprecated) .vf-global-header__inner {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  grid-column: 1/-1;
-  padding: 0.5rem 0;
-  width: 100%;
+.vf-banner + div {
+  --vf-stack-margin--custom: space(200);
 }

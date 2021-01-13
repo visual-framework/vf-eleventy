@@ -21,9 +21,13 @@
  * Clear the cooke. This is mostly a development tool.
  */
 
+/* eslint-disable no-unused-vars */
+
 function vfBannerReset(vfBannerCookieNameAndVersion) {
   vfBannerSetCookie(vfBannerCookieNameAndVersion, false);
 }
+/* eslint-enable no-unused-vars */
+
 /**
  * Dismiss a banner
  */
@@ -33,15 +37,16 @@ function vfBannerClose(targetBanner) {
   // remove padding added to not cover up content
   if (targetBanner.classList.contains("vf-banner--fixed")) {
     var height = targetBanner.offsetHeight || 0;
+    var pagePadding;
 
     if (targetBanner.classList.contains("vf-banner--top")) {
-      var pagePadding = document.body.style.paddingTop.replace(/\D/g, "") || 0;
+      pagePadding = document.body.style.paddingTop.replace(/\D/g, "") || 0;
       pagePadding = pagePadding - height;
       document.body.style.paddingTop = pagePadding + "px";
     }
 
     if (targetBanner.classList.contains("vf-banner--bottom")) {
-      var pagePadding = document.body.style.paddingBottom.replace(/\D/g, "") || 0;
+      pagePadding = document.body.style.paddingBottom.replace(/\D/g, "") || 0;
       pagePadding = pagePadding - height;
       document.body.style.paddingBottom = pagePadding + "px";
     }
@@ -69,7 +74,11 @@ function vfBannerConfirm(banner, vfBannerCookieNameAndVersion) {
 
 function vfBannerSetCookie(c_name, value, exdays) {
   // var value = value || 'true';
+
+  /* eslint-disable no-redeclare */
   var exdays = exdays || 90;
+  /* eslint-enable no-redeclare */
+
   var exdate = new Date();
   var c_value;
   exdate.setDate(exdate.getDate() + exdays);
@@ -82,8 +91,7 @@ function vfBannerSetCookie(c_name, value, exdays) {
 
 
 function vfBannerGetCookie(c_name) {
-  var i,
-      x,
+  var x,
       y,
       ARRcookies = document.cookie.split(";");
 
@@ -105,7 +113,10 @@ function vfBannerGetCookie(c_name) {
 
 
 function vfBanner(scope) {
+  /* eslint-disable no-redeclare */
   var scope = scope || document;
+  /* eslint-enable no-redeclare */
+
   var bannerList = scope.querySelectorAll("[data-vf-js-banner]");
 
   if (!bannerList) {
@@ -119,7 +130,7 @@ function vfBanner(scope) {
   } // generate the banner component, js events
 
 
-  Array.prototype.forEach.call(bannerList, function (banner, i) {
+  Array.prototype.forEach.call(bannerList, function (banner) {
     // map the JS data attributes to our object structure
     var bannerRemapped = JSON.parse(JSON.stringify(banner.dataset));
 
@@ -146,7 +157,10 @@ function vfBanner(scope) {
 
 
 function vfBannerInsert(banner, bannerId, scope) {
+  /* eslint-disable no-redeclare */
   var scope = scope || document;
+  /* eslint-enable no-redeclare */
+
   var targetBanner = scope.querySelectorAll("[data-vf-js-banner-id=\"" + bannerId + "\"]")[0];
 
   if (targetBanner == undefined) {
@@ -198,7 +212,8 @@ function vfBannerInsert(banner, bannerId, scope) {
     } else if (banner.vfJsBannerButtonTheme == "tertiary") {
       generatedBannerHtml += "<button class=\"vf-button vf-button--tertary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
     } else {
-      generatedBannerHtml += "<button class=\"vf-button vf-button--secondary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
+      // default
+      generatedBannerHtml += "<button class=\"vf-button vf-button--primary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
     }
   }
 
@@ -227,16 +242,17 @@ function vfBannerInsert(banner, bannerId, scope) {
 
 
   if (targetBanner.classList.contains("vf-banner--fixed")) {
-    var height = targetBanner.offsetHeight || 0;
+    var height = Number(targetBanner.offsetHeight || 0);
+    var pagePadding;
 
     if (targetBanner.classList.contains("vf-banner--top")) {
-      var pagePadding = document.body.style.paddingTop.replace(/\D/g, "") || 0;
+      pagePadding = Number(document.body.style.paddingTop.replace(/\D/g, "") || 0);
       pagePadding = pagePadding + height;
       document.body.style.paddingTop = pagePadding + "px";
     }
 
     if (targetBanner.classList.contains("vf-banner--bottom")) {
-      var pagePadding = document.body.style.paddingBottom.replace(/\D/g, "") || 0;
+      pagePadding = Number(document.body.style.paddingBottom.replace(/\D/g, "") || 0);
       pagePadding = pagePadding + height;
       document.body.style.paddingBottom = pagePadding + "px";
     }
@@ -282,7 +298,7 @@ function vfBannerInsert(banner, bannerId, scope) {
 
 /*
  * A note on the Visual Framework and JavaScript:
- * The VF is primairly a CSS framework so we've included only a minimal amount
+ * The VF is primarily a CSS framework so we've included only a minimal amount
  * of JS in components and it's fully optional (just remove the JavaScript selectors
  * i.e. `data-vf-js-tabs`). So if you'd rather use Angular or Bootstrap for your
  * tabs, the Visual Framework won't get in the way.
@@ -291,10 +307,10 @@ function vfBannerInsert(banner, bannerId, scope) {
  * 🚫 Don't: const tabs = document.querySelectorAll('.vf-tabs');
  * ✅ Do:    const tabs = document.querySelectorAll('[data-vf-js-tabs]');
  *
- * This allows users who would prefer not to have this JS engange on an element
+ * This allows users who would prefer not to have this JS engage on an element
  * to drop `data-vf-js-component` and still maintain CSS styling.
  */
-// Decaclare `ga` as a global for eslint
+// Declare `ga` as a global for eslint
 
 /* global ga */
 
@@ -782,8 +798,11 @@ function vfGaTrackInteraction(actedOnItem, customEventName) {
 
   if (customEventName.length > 0) {
     linkName = customEventName;
+  } else if (actedOnItem.dataset.vfAnalyticsLabel) {
+    // if an explicit label, use that
+    linkName = actedOnItem.dataset.vfAnalyticsLabel;
   } else {
-    // then derive a value
+    // otherwise derive a value
     // Fix for when tags have undefined .innerText
     if (typeof actedOnItem.innerText === "undefined") {
       actedOnItem.innerText = "";
@@ -797,22 +816,20 @@ function vfGaTrackInteraction(actedOnItem, customEventName) {
 
     if (linkName.length == 0 && actedOnItem.getElementsByTagName("img")) {
       if (actedOnItem.getElementsByTagName("img")[0]) {
-        if (actedOnItem.getElementsByTagName("img")[0].hasAttribute("src")) {
-          linkName = actedOnItem.src.split("/").vfGaLinkLast();
+        // if alt text, use that
+        if (actedOnItem.getElementsByTagName("img")[0].hasAttribute("alt")) {
+          linkName = actedOnItem.getElementsByTagName("img")[0].alt;
+        } else if (actedOnItem.getElementsByTagName("img")[0].hasAttribute("src")) {
+          linkName = actedOnItem.getElementsByTagName("img")[0].src.split("/").vfGaLinkLast();
         }
       }
     } // fallback to an href value
 
 
-    if (linkName.length == 0 && actedOnItem.href) linkName = actedOnItem.href;
-
-    if (actedOnItem.dataset.vfAnalyticsLabel) {
-      linkName = actedOnItem.dataset.vfAnalyticsLabel;
-    } // special things for gloabl search box
+    if (linkName.length == 0 && actedOnItem.href) linkName = actedOnItem.href; // special things for gloabl search box
     // if (parentContainer == 'Global search') {
     //   linkName = 'query: ' + jQuery('#global-search input#query').value;
     // }
-
   } // Get closest parent container
   // Track the region of the link clicked (global nav, masthead, hero, main content, footer, etc)
   //data-vf-google-analytics-region="main-content-area-OR-SOME-OTHER-NAME"
@@ -845,6 +862,8 @@ function vfGaTrackInteraction(actedOnItem, customEventName) {
     var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3|txt|fasta)$/i;
     var href = actedOnItem.href; // log emails and downloads to seperate event "buckets"
 
+    /* eslint-disable no-useless-escape */
+
     if (href && href.match(/^mailto\:/i)) {
       // email click
       var mailLink = href.replace(/^mailto\:/i, "");
@@ -856,7 +875,9 @@ function vfGaTrackInteraction(actedOnItem, customEventName) {
       var filePath = href;
       ga && ga("send", "event", "Download", "Type / " + extension + " / " + parentContainer, filePath);
       vfGaLogMessage("Download", "Type / " + extension + " / " + parentContainer, filePath, lastGaEventTime, actedOnItem);
-    } // If link and is external, log it as an external link
+    }
+    /* eslint-enable no-useless-escape */
+    // If link and is external, log it as an external link
 
 
     if (href && href.match(/^\w+:\/\//i)) {
@@ -923,7 +944,7 @@ function vfGaTrackInteraction(actedOnItem, customEventName) {
 function vfGaLogMessage(eventCategory, eventAction, eventLabel, lastGaEventTime, actedOnItem) {
   // conditional logging
   var conditionalLoggingCheck = document.querySelector("body"); // debug: always turn on verbose analytics
-  // conditionalLoggingCheck.setAttribute('data-vf-google-analytics-verbose', 'true');
+  // conditionalLoggingCheck.setAttribute("data-vf-google-analytics-verbose", "true");
 
   if (conditionalLoggingCheck.dataset.vfGoogleAnalyticsVerbose) {
     if (conditionalLoggingCheck.dataset.vfGoogleAnalyticsVerbose == "true") {
@@ -944,12 +965,15 @@ function vfGaLogMessage(eventCategory, eventAction, eventLabel, lastGaEventTime,
 
 
 function vfTabs(scope) {
-  var scope = scope || document; // Get relevant elements and collections
+  /* eslint-disable no-redeclare */
+  var scope = scope || document;
+  /* eslint-enable no-redeclare */
+  // Get relevant elements and collections
 
-  var tablist = scope.querySelectorAll('[data-vf-js-tabs]');
-  var panelsList = scope.querySelectorAll('[data-vf-js-tabs-content]');
-  var panels = scope.querySelectorAll('[data-vf-js-tabs-content] [id^="vf-tabs__section"]');
-  var tabs = scope.querySelectorAll('[data-vf-js-tabs] .vf-tabs__link');
+  var tablist = scope.querySelectorAll("[data-vf-js-tabs]");
+  var panelsList = scope.querySelectorAll("[data-vf-js-tabs-content]");
+  var panels = scope.querySelectorAll("[data-vf-js-tabs-content] [id^=\"vf-tabs__section\"]");
+  var tabs = scope.querySelectorAll("[data-vf-js-tabs] .vf-tabs__link");
 
   if (!tablist || !panels || !tabs) {
     // exit: either tabs or tabbed content not found
@@ -965,80 +989,95 @@ function vfTabs(scope) {
   var switchTab = function switchTab(newTab) {
     // get the parent ul of the clicked tab
     var parentTabSet = newTab.closest(".vf-tabs__list");
-    var oldTab = parentTabSet.querySelector('[aria-selected]');
+    var oldTab = parentTabSet.querySelector("[aria-selected]");
 
     if (oldTab) {
-      oldTab.removeAttribute('aria-selected');
-      oldTab.setAttribute('tabindex', '-1');
-      oldTab.classList.remove('is-active');
-      var oldIndex = Array.prototype.indexOf.call(tabs, oldTab);
-      panels[oldIndex].hidden = true;
+      oldTab.removeAttribute("aria-selected");
+      oldTab.setAttribute("tabindex", "-1");
+      oldTab.classList.remove("is-active");
+
+      for (var item = 0; item < panels.length; item++) {
+        var panel = panels[item];
+
+        if (panel.id === oldTab.id) {
+          panel.hidden = true;
+          break;
+        }
+      }
     }
 
     newTab.focus(); // Make the active tab focusable by the user (Tab key)
 
-    newTab.removeAttribute('tabindex'); // Set the selected state
+    newTab.removeAttribute("tabindex"); // Set the selected state
 
-    newTab.setAttribute('aria-selected', 'true');
-    newTab.classList.add('is-active'); // Get the indices of the new tab to find the correct
+    newTab.setAttribute("aria-selected", "true");
+    newTab.classList.add("is-active"); // Get the indices of the new tab to find the correct
     // tab panel to show
 
-    var index = Array.prototype.indexOf.call(tabs, newTab);
-    panels[index].hidden = false;
+    for (var _item = 0; _item < panels.length; _item++) {
+      var _panel = panels[_item];
+
+      if (_panel.id === newTab.id) {
+        _panel.hidden = false;
+        break;
+      }
+    }
   }; // Add semantics are remove user focusability for each tab
 
 
   Array.prototype.forEach.call(tabs, function (tab, i) {
-    tab.setAttribute('role', 'tab');
-    tab.setAttribute('id', 'tab' + (i + 1));
-    tab.setAttribute('data-tabs__item', 'tab' + (i + 1));
-    tab.setAttribute('tabindex', '-1');
-    tab.parentNode.setAttribute('role', 'presentation'); // Reset any active tabs from a previous JS call
+    var tabId = tab.href.split("#")[1]; // calculate an ID based off the tab href (todo: add support for a data-vf-js-tab-id, and if set use that)
 
-    tab.removeAttribute('aria-selected');
-    tab.setAttribute('tabindex', '-1');
-    tab.classList.remove('is-active'); // Handle clicking of tabs for mouse users
+    tab.setAttribute("role", "tab");
+    tab.setAttribute("id", tabId);
+    tab.setAttribute("data-tabs__item", tabId);
+    tab.setAttribute("tabindex", "-1");
+    tab.parentNode.setAttribute("role", "presentation"); // Reset any active tabs from a previous JS call
 
-    tab.addEventListener('click', function (e) {
+    tab.removeAttribute("aria-selected");
+    tab.setAttribute("tabindex", "-1");
+    tab.classList.remove("is-active"); // Handle clicking of tabs for mouse users
+
+    tab.addEventListener("click", function (e) {
       e.preventDefault();
       switchTab(e.currentTarget);
     }); // Handle keydown events for keyboard users
 
-    tab.addEventListener('keydown', function (e) {
+    tab.addEventListener("keydown", function (e) {
       // Get the index of the current tab in the tabs node list
       var index = Array.prototype.indexOf.call(tabs, e.currentTarget); // Work out which key the user is pressing and
       // Calculate the new tab's index where appropriate
 
-      var dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : e.which === 40 ? 'down' : null;
+      var dir = e.which === 37 ? index - 1 : e.which === 39 ? index + 1 : e.which === 40 ? "down" : null;
 
       if (dir !== null) {
         e.preventDefault(); // If the down key is pressed, move focus to the open panel,
         // otherwise switch to the adjacent tab
 
-        dir === 'down' ? panels[i].focus() : tabs[dir] ? switchTab(tabs[dir]) : void 0;
+        dir === "down" ? panels[i].focus() : tabs[dir] ? switchTab(tabs[dir]) : void 0;
       }
     });
   }); // Add tab panel semantics and hide them all
 
-  Array.prototype.forEach.call(panels, function (panel, i) {
-    panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', '-1');
-    var id = panel.getAttribute('id');
-    panel.setAttribute('aria-labelledby', tabs[i].id);
+  Array.prototype.forEach.call(panels, function (panel) {
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("tabindex", "-1"); // let id = panel.getAttribute("id");
+
+    panel.setAttribute("aria-labelledby", panel.id);
     panel.hidden = true;
   }); // Add the tablist role to the first <ul> in the .tabbed container
 
-  Array.prototype.forEach.call(tablist, function (tablistset, i) {
-    tablistset.setAttribute('role', 'tablist'); // Initially activate the first tab
+  Array.prototype.forEach.call(tablist, function (tablistset) {
+    tablistset.setAttribute("role", "tablist"); // Initially activate the first tab
 
-    var firstTab = tablistset.querySelectorAll('.vf-tabs__link')[0];
-    firstTab.removeAttribute('tabindex');
-    firstTab.setAttribute('aria-selected', 'true');
-    firstTab.classList.add('is-active');
+    var firstTab = tablistset.querySelectorAll(".vf-tabs__link")[0];
+    firstTab.removeAttribute("tabindex");
+    firstTab.setAttribute("aria-selected", "true");
+    firstTab.classList.add("is-active");
   });
-  Array.prototype.forEach.call(panelsList, function (panel, i) {
+  Array.prototype.forEach.call(panelsList, function (panel) {
     // Initially reveal the first tab panel
-    var firstPanel = panel.querySelectorAll('.vf-tabs__section')[0];
+    var firstPanel = panel.querySelectorAll(".vf-tabs__section")[0];
     firstPanel.hidden = false;
   });
 }

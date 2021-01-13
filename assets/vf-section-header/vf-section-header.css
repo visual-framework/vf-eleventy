@@ -31,6 +31,16 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
   --vf-ui-color--grey: #d8d8d8;
   --vf-ui-color--grey--light: #f3f3f3;
@@ -44,7 +54,7 @@
 /*!
  * Component: @visual-framework/vf-heading
  * Version: 1.0.0
- * Location: components/vf-heading
+ * Location: components/undefined
  */
 .vf-text {
   margin: 0 0 16px 0;
@@ -116,8 +126,8 @@
 
 /*!
  * Component: @visual-framework/vf-section-header
- * Version: 1.2.1
- * Location: components/vf-section-header
+ * Version: 1.3.1
+ * Location: components/undefined
  */
 .vf-section-header__heading {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
@@ -127,7 +137,7 @@
   margin: 0 0 0 0;
 }
 .vf-section-header__heading + .vf-section-header__subheading, .vf-section-header__heading + .vf-section-header__content {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .vf-section-header__heading--is-link {
@@ -136,7 +146,7 @@
   color: #3b6fb6;
   cursor: pointer;
   display: grid;
-  grid-column-gap: 8px;
+  grid-column-gap: 0.5rem;
   grid-template-columns: auto 1fr;
 }
 .vf-section-header__heading--is-link:visited {
@@ -154,8 +164,8 @@
 }
 .vf-section-header__heading--is-link .vf-section-header__icon {
   fill: currentColor;
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
+  -webkit-transform: translateY(0.25rem);
+          transform: translateY(0.25rem);
   -webkit-transition-duration: 125ms;
           transition-duration: 125ms;
   -webkit-transition-property: -webkit-transform;
@@ -166,8 +176,8 @@
           transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 .vf-section-header__heading--is-link:hover .vf-section-header__icon, .vf-section-header__heading--is-link:focus .vf-section-header__icon {
-  -webkit-transform: translateX(4px) translateY(4px);
-          transform: translateX(4px) translateY(4px);
+  -webkit-transform: translateX(0.25rem) translateY(0.25rem);
+          transform: translateX(0.25rem) translateY(0.25rem);
 }
 .vf-section-header__heading--is-link:hover:visited, .vf-section-header__heading--is-link:focus:visited {
   color: #193f90;
@@ -198,8 +208,8 @@
   margin-top: 16px;
 }
 .vf-section-header__heading + .vf-section-header__text {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 .vf-section-header__subheading + .vf-section-header__text {
-  margin-top: 16px;
+  margin-top: 1rem;
 }
