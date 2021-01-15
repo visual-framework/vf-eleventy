@@ -50,32 +50,41 @@ context.addExport("vf_intro_badge", t_4);
 }
 output += "\n";
 var t_5;
-t_5 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_intro_lede");
-frame.set("vf_intro_lede", t_5, true);
+t_5 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_intro_subheading");
+frame.set("vf_intro_subheading", t_5, true);
 if(frame.topLevel) {
-context.setVariable("vf_intro_lede", t_5);
+context.setVariable("vf_intro_subheading", t_5);
 }
 if(frame.topLevel) {
-context.addExport("vf_intro_lede", t_5);
+context.addExport("vf_intro_subheading", t_5);
+}
+var t_6;
+t_6 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_intro_lede");
+frame.set("vf_intro_lede", t_6, true);
+if(frame.topLevel) {
+context.setVariable("vf_intro_lede", t_6);
+}
+if(frame.topLevel) {
+context.addExport("vf_intro_lede", t_6);
 }
 output += "\n";
-var t_6;
-t_6 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_intro_text");
-frame.set("vf_intro_text", t_6, true);
-if(frame.topLevel) {
-context.setVariable("vf_intro_text", t_6);
-}
-if(frame.topLevel) {
-context.addExport("vf_intro_text", t_6);
-}
 var t_7;
-t_7 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"intro_text");
-frame.set("intro_text", t_7, true);
+t_7 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_intro_text");
+frame.set("vf_intro_text", t_7, true);
 if(frame.topLevel) {
-context.setVariable("intro_text", t_7);
+context.setVariable("vf_intro_text", t_7);
 }
 if(frame.topLevel) {
-context.addExport("intro_text", t_7);
+context.addExport("vf_intro_text", t_7);
+}
+var t_8;
+t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"intro_text");
+frame.set("intro_text", t_8, true);
+if(frame.topLevel) {
+context.setVariable("intro_text", t_8);
+}
+if(frame.topLevel) {
+context.addExport("intro_text", t_8);
 }
 output += "\n";
 ;
@@ -116,24 +125,24 @@ output += ";</span>";
 ;
 }
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_intro_badge")) {
-var t_8;
-t_8 = "@vf-badge";
-frame.set("badge", t_8, true);
+var t_9;
+t_9 = "@vf-badge";
+frame.set("badge", t_9, true);
 if(frame.topLevel) {
-context.setVariable("badge", t_8);
+context.setVariable("badge", t_9);
 }
 if(frame.topLevel) {
-context.addExport("badge", t_8);
+context.addExport("badge", t_9);
 }
-env.getExtension("render")["run"](context,runtime.contextOrFrameLookup(context, frame, "badge"),{"context": runtime.contextOrFrameLookup(context, frame, "vf_intro_badge")}, function(t_10,t_9) {
-if(t_10) { cb(t_10); return; }
-output += runtime.suppressValue(t_9, true && env.opts.autoescape);
+env.getExtension("render")["run"](context,runtime.contextOrFrameLookup(context, frame, "badge"),{"context": runtime.contextOrFrameLookup(context, frame, "vf_intro_badge")}, function(t_11,t_10) {
+if(t_11) { cb(t_11); return; }
+output += runtime.suppressValue(t_10, true && env.opts.autoescape);
 cb()});
 }
 else {
 cb()}
-})(function(t_11) {
-if(t_11) { cb(t_11); return; }output += "</h1>";
+})(function(t_12) {
+if(t_12) { cb(t_12); return; }output += "</h1>";
 if((runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")) && (runtime.contextOrFrameLookup(context, frame, "vf_lede_text"))) {
 output += "<h2 style=\"color: var(--vf-ui-color--red)\">Please use the relevant <code>vf_intro_lede</code> yaml only</h2>";
 ;
@@ -146,51 +155,51 @@ output += "</h2>\n";
 }
 output += "\n";
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")) {
-env.getExtension("render")["run"](context,"@vf-lede",{"vf_lede_text": runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")}, function(t_13,t_12) {
-if(t_13) { cb(t_13); return; }
-output += runtime.suppressValue(t_12, true && env.opts.autoescape);
+env.getExtension("render")["run"](context,"@vf-lede",{"vf_lede_text": runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")}, function(t_14,t_13) {
+if(t_14) { cb(t_14); return; }
+output += runtime.suppressValue(t_13, true && env.opts.autoescape);
 cb()});
 }
 else {
 cb()}
-})(function(t_14) {
-if(t_14) { cb(t_14); return; }output += "\n";
+})(function(t_15) {
+if(t_15) { cb(t_15); return; }output += "\n";
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_lede_text")) {
-env.getExtension("render")["run"](context,"@vf-lede",{"vf_lede_text": runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")}, function(t_16,t_15) {
-if(t_16) { cb(t_16); return; }
-output += runtime.suppressValue(t_15, true && env.opts.autoescape);
+env.getExtension("render")["run"](context,"@vf-lede",{"vf_lede_text": runtime.contextOrFrameLookup(context, frame, "vf_intro_lede")}, function(t_17,t_16) {
+if(t_17) { cb(t_17); return; }
+output += runtime.suppressValue(t_16, true && env.opts.autoescape);
 cb()});
 }
 else {
 cb()}
-})(function(t_17) {
-if(t_17) { cb(t_17); return; }output += "\n";
+})(function(t_18) {
+if(t_18) { cb(t_18); return; }output += "\n";
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_intro_text")) {
 frame = frame.push();
-var t_20 = runtime.fromIterator(runtime.contextOrFrameLookup(context, frame, "vf_intro_text"));
-runtime.asyncEach(t_20, 1, function(intro_text, t_18, t_19,next) {
+var t_21 = runtime.fromIterator(runtime.contextOrFrameLookup(context, frame, "vf_intro_text"));
+runtime.asyncEach(t_21, 1, function(intro_text, t_19, t_20,next) {
 frame.set("intro_text", intro_text);
-frame.set("loop.index", t_18 + 1);
-frame.set("loop.index0", t_18);
-frame.set("loop.revindex", t_19 - t_18);
-frame.set("loop.revindex0", t_19 - t_18 - 1);
-frame.set("loop.first", t_18 === 0);
-frame.set("loop.last", t_18 === t_19 - 1);
-frame.set("loop.length", t_19);
+frame.set("loop.index", t_19 + 1);
+frame.set("loop.index0", t_19);
+frame.set("loop.revindex", t_20 - t_19);
+frame.set("loop.revindex0", t_20 - t_19 - 1);
+frame.set("loop.first", t_19 === 0);
+frame.set("loop.last", t_19 === t_20 - 1);
+frame.set("loop.length", t_20);
 output += "<p class=\"vf-intro__text\">";
 output += runtime.suppressValue(env.getFilter("safe").call(context, intro_text), env.opts.autoescape);
 output += "</p>";
-next(t_18);
+next(t_19);
 ;
-}, function(t_22,t_21) {
-if(t_22) { cb(t_22); return; }
+}, function(t_23,t_22) {
+if(t_23) { cb(t_23); return; }
 frame = frame.pop();
 cb()});
 }
 else {
 cb()}
-})(function(t_23) {
-if(t_23) { cb(t_23); return; }output += "\n  </div>\n</section>\n";
+})(function(t_24) {
+if(t_24) { cb(t_24); return; }output += "\n  </div>\n</section>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

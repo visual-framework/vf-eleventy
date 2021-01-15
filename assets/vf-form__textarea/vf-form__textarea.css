@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 1.0.2
- * Location: components/vf-form/vf-form__textarea
+ * Version: 2.0.0
+ * Location: components/undefined
  */
 .vf-form__textarea {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
@@ -68,17 +68,18 @@
   -moz-appearance: none;
        appearance: none;
   /* stylelint-enable */
-  border: 3px solid #f3f3f3;
+  border: 2px solid #707372;
   border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  padding: 12px 22px;
+  padding: 0.5rem;
   position: relative;
-  top: 24px;
   width: 100%;
 }
 .vf-form__textarea:hover, .vf-form__textarea:focus {
   border-color: #54585a;
+  -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(112, 115, 114, 0.4);
+          box-shadow: 0 0 0.125rem 0.125rem rgba(112, 115, 114, 0.4);
   outline: 0;
 }

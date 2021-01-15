@@ -53,24 +53,23 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__label
- * Version: 1.2.0
- * Location: components/vf-form/vf-form__label
+ * Version: 2.0.0
+ * Location: components/undefined
  */
 .vf-form__label {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 0.5rem 0;
-  display: block;
+  margin: 0 0 0 0;
 }
 
 .vf-form__label--required {
-  float: right;
-  margin-bottom: 0;
+  position: relative;
+  top: -0.5rem;
 }
 .vf-form__label--required .vf-icon svg {
-  fill: #3b6fb6;
-  height: 12px;
-  width: 16px;
+  fill: #d41645;
+  height: 0.5em;
+  width: 0.5em;
 }

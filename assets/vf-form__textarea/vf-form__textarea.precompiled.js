@@ -8,7 +8,7 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<div class=\"vf-form__item\">\n  <label class=\"vf-form__label\" for=\"vf-form__textarea\">Write Some More details</label>\n  <textarea class=\"vf-form__textarea\" id=\"vf-form__textarea\" name=\"vf-form__textarea\" rows=\"5\" placeholder=\"Write Some More details\"></textarea>\n</div>\n";
+output += "<div class=\"vf-form__item vf-stack\">\n  <label class=\"vf-form__label\" for=\"vf-form__textarea\">Write Some More details</label>\n  <textarea class=\"vf-form__textarea\" id=\"vf-form__textarea\" name=\"vf-form__textarea\" rows=\"5\"></textarea>\n</div>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

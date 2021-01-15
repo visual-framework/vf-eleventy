@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-grid
- * Version: 1.2.0
- * Location: components/vf-grid
+ * Version: 1.4.0
+ * Location: components/undefined
  */
 /* stylelint-disable order/order */
 .vf-grid {
@@ -67,7 +67,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 10px 0 10px 1.6339%;
+  margin: 0 0 1rem 1.2292328%;
 }
 
 .vf-grid > *:first-child {
@@ -81,32 +81,52 @@
 
 .vf-grid__col-2 > * {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 49.18305%;
-          flex: 0 0 49.18305%;
+      -ms-flex: 0 0 49.3853836%;
+          flex: 0 0 49.3853836%;
+  max-width: 49.3853836%;
+}
+.vf-grid__col-2 > *:nth-of-type(3n) {
+  margin-left: 0;
 }
 
 .vf-grid__col-3 > * {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 32.244066667%;
-          flex: 0 0 32.244066667%;
+      -ms-flex: 0 0 32.513844467%;
+          flex: 0 0 32.513844467%;
+  max-width: 32.513844467%;
+}
+.vf-grid__col-3 > *:nth-of-type(4n) {
+  margin-left: 0;
 }
 
 .vf-grid__col-4 > * {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 23.774575%;
-          flex: 0 0 23.774575%;
+      -ms-flex: 0 0 24.0780754%;
+          flex: 0 0 24.0780754%;
+  max-width: 24.0780754%;
+}
+.vf-grid__col-4 > *:nth-of-type(5n) {
+  margin-left: 0;
 }
 
 .vf-grid__col-5 > * {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 18.69288%;
-          flex: 0 0 18.69288%;
+      -ms-flex: 0 0 19.01661376%;
+          flex: 0 0 19.01661376%;
+  max-width: 19.01661376%;
+}
+.vf-grid__col-5 > *:nth-of-type(6n) {
+  margin-left: 0;
 }
 
 .vf-grid__col-6 > * {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 15.305083333%;
-          flex: 0 0 15.305083333%;
+      -ms-flex: 0 0 15.642306333%;
+          flex: 0 0 15.642306333%;
+  max-width: 15.642306333%;
+}
+.vf-grid__col-6 > *:nth-of-type(7n) {
+  margin-left: 0;
 }
 
 @media (max-width: 1023px) {
@@ -141,6 +161,7 @@
   }
   .vf-grid > * {
     margin: 0;
+    max-width: unset;
   }
 
   [class*=grid__] {
