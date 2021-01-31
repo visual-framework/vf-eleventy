@@ -1162,10 +1162,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-blockquote/-/vf-blockquote-1.0.2.tgz#115df82feb36505c505e94597aa947bd0b988b4f"
   integrity sha512-6LpVfTXHFkFxfjzsM7Z9emyolP5pYWYSRyHNPQYnJVBrKvvITjD7t1rArgMGgfMKHXcOY2pLVuzKFCi5lTFSXA==
 
-"@visual-framework/vf-body@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-body/-/vf-body-1.0.0.tgz#aa015427fa176a7d6da5e57a8ee016377e3189d3"
-  integrity sha512-P7/GJtnVSqhs45Byz3xi6QLvEeG7BdTRGf5K0JNTVLFMougiS/J1WDopIAz805nJe6oJInCnMxvUhVuveD56EQ==
+"@visual-framework/vf-body@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-body/-/vf-body-1.1.0.tgz#94cd849af13ea298fbe8946f2923827eae631002"
+  integrity sha512-GeHXQKzBAEVczaGeB2wGovlfiE1XkcHDhH3FsC62w7Ib2rkSYb0b7n7TBgj0wuXXEs5/mXf8wpHgEgDehbe0Hw==
 
 "@visual-framework/vf-box@2.3.0", "@visual-framework/vf-box@^2.3.0":
   version "2.3.0"
