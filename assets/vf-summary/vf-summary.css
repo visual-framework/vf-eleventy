@@ -61,7 +61,7 @@
 
 /*!
  * Component: @visual-framework/vf-summary
- * Version: 1.4.1
+ * Version: 1.4.2
  * Location: components/undefined
  */
 .vf-summary {
@@ -145,11 +145,11 @@
   color: #3b6fb6;
 }
 .vf-summary__link:visited {
-  color: #3b6fb6;
+  color: #734595;
   border-bottom: none;
 }
 .vf-summary__link:visited:hover {
-  color: #3b6fb6;
+  color: #734595;
   text-decoration: underline;
 }
 .vf-summary__link:hover {
@@ -327,11 +327,11 @@ html:not(.vf-disable-deprecated) .vf-summary__link {
   color: #3b6fb6;
 }
 html:not(.vf-disable-deprecated) .vf-summary__link:visited {
-  color: #3b6fb6;
+  color: #734595;
   border-bottom: none;
 }
 html:not(.vf-disable-deprecated) .vf-summary__link:visited:hover {
-  color: #3b6fb6;
+  color: #734595;
   text-decoration: underline;
 }
 html:not(.vf-disable-deprecated) .vf-summary__link:hover {

@@ -53,11 +53,18 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__fieldset
- * Version: 1.1.0
- * Location: components/vf-form/vf-form__fieldset
+ * Version: 1.1.2
+ * Location: components/undefined
  */
 .vf-form__fieldset {
   border: 0;
   margin-bottom: 1.25rem;
   padding: 0;
+}
+.vf-form__fieldset > .vf-form__label {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
 }

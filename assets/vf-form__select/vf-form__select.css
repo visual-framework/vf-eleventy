@@ -53,12 +53,12 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__core
- * Version: 1.1.0
+ * Version: 1.1.1
  * Location: components/undefined
  */
 /*!
  * Component: @visual-framework/vf-form__helper
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__helper {
@@ -76,7 +76,7 @@
 
 /*!
  * Component: @visual-framework/vf-form__input
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__input:not([type=file]) {
@@ -292,7 +292,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__legend
- * Version: 1.1.0
+ * Version: 1.1.2
  * Location: components/undefined
  */
 .vf-form__legend {
@@ -305,7 +305,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__fieldset
- * Version: 1.1.0
+ * Version: 1.1.2
  * Location: components/undefined
  */
 .vf-form__fieldset {
@@ -313,10 +313,17 @@ input[type=search]::-webkit-search-cancel-button {
   margin-bottom: 1.25rem;
   padding: 0;
 }
+.vf-form__fieldset > .vf-form__label {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+}
 
 /*!
  * Component: @visual-framework/vf-form__select
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__select {
@@ -364,7 +371,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__checkbox
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__item.vf-form__item--checkbox {
@@ -450,7 +457,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__radio
- * Version: 2.0.0
+ * Version: 2.0.2
  * Location: components/undefined
  */
 .vf-form__radio {
@@ -532,7 +539,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__textarea {
@@ -565,22 +572,27 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__item
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__item > * {
   --vf-stack-margin--custom: 0.25rem;
 }
 
+.vf-form__item--inline .vf-form__select,
 .vf-form__item--inline .vf-form__label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.vf-form__item--inline .vf-form__select {
+  width: auto;
+  padding: 0.5rem 2rem 0.5rem 1.25rem;
+}
 
 /*!
  * Component: @visual-framework/vf-form__label
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__label {
@@ -603,7 +615,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__select
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__select {

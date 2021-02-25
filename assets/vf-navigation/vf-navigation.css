@@ -116,11 +116,11 @@
   color: #3b6fb6;
 }
 .vf-list__link:visited {
-  color: #3b6fb6;
+  color: #734595;
   border-bottom: none;
 }
 .vf-list__link:visited:hover {
-  color: #3b6fb6;
+  color: #734595;
   text-decoration: underline;
 }
 .vf-list__link:hover {
@@ -131,7 +131,7 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 2.2.0
+ * Version: 2.2.1
  * Location: components/undefined
  */
 .vf-navigation__list {
@@ -204,7 +204,7 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  max-width: 81.25em;
+  max-width: 80em;
   padding: 4px 0;
   position: relative;
   text-transform: uppercase;

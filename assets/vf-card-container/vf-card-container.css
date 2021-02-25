@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-card-container
- * Version: 3.0.2
- * Location: components/vf-card-container
+ * Version: 3.1.1
+ * Location: components/undefined
  */
 .vf-card-container {
   grid-column: 1/-1;
@@ -71,7 +71,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 81.25em;
+  max-width: 80em;
 }
 @supports (display: grid) {
   .vf-card-container__inner {
@@ -80,7 +80,7 @@
     gap: var(--page-grid-gap);
     grid-template-columns: repeat(auto-fit, minmax(var(--vf-card-container__grid--size--overide, var(--vf-card-container__grid--size)), 1fr));
     margin: 0 auto;
-    max-width: 81.25em;
+    max-width: 80em;
   }
   @media (min-width: 600px) {
     .vf-card-container__inner {

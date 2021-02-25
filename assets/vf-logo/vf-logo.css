@@ -53,8 +53,8 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-logo
- * Version: 1.5.0
- * Location: components/vf-logo
+ * Version: 1.5.1
+ * Location: components/undefined
  */
 .vf-logo {
   -webkit-box-align: center;
@@ -71,8 +71,9 @@
 .vf-logo__image {
   height: 32px;
 }
+
 @media (min-width: 1025px) {
-  .vf-logo__image {
+  .vf-logo--extreme {
     height: 48px;
   }
 }

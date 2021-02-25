@@ -53,13 +53,12 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-hero
- * Version: 2.0.4
+ * Version: 3.1.0
  * Location: components/undefined
  */
 /* stylelint-disable */
 .vf-hero {
-  --vf-hero--spacing: 2rem;
-  background-color: var(--vf-hero--bg-color, #18974c);
+  background-color: #18974c;
   background-image: url("https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/roundels.png");
   background-image: var(--vf-hero--bg-image, url("https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/roundels.png"));
   margin-bottom: 2rem;
@@ -76,27 +75,28 @@
 
 .vf-hero__content {
   background-color: #ffffff;
-  background-color: var(--vf-hero-content--bg-color, #ffffff);
   color: #000000;
-  color: var(--vf-hero-content--fg-color, #000000);
   -webkit-box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1), -2px 0 3px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1), -2px 0 3px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.1);
   max-width: 60ch;
-  padding: 1rem;
-  padding: calc( var(--vf-hero--spacing) / 2);
   position: relative;
-  width: -webkit-fit-content;
-  width: fit-content;
-  width: -moz-fit-content;
   z-index: 1984;
 }
-@supports (filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1))) {
-  .vf-hero__content {
-    -webkit-box-shadow: unset;
-            box-shadow: unset;
-    -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
-  }
+
+.vf-hero__kicker {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.71;
+  margin: 0 0 0 0;
+  line-height: 1;
+  position: relative;
+}
+.vf-hero__kicker a {
+  color: currentColor;
+}
+.vf-hero__kicker a:hover {
+  text-decoration-thickness: 2px !important;
 }
 
 .vf-hero__heading {
@@ -105,31 +105,17 @@
   font-weight: 700;
   line-height: 1.547;
   margin: 0 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  line-height: 1.25;
   word-break: break-word;
 }
-.vf-hero__heading a {
-  color: inherit;
-  text-decoration: none;
-}
 
-.vf-hero__heading--additional {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.71;
-  margin: 0 0 0 0;
-  position: relative;
-}
-.vf-hero__heading--additional a {
+.vf-hero__heading_link {
   color: currentColor;
   text-decoration: none;
+}
+.vf-hero__heading_link:hover, .vf-hero__heading_link:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .vf-hero__subheading {
@@ -149,24 +135,35 @@
   margin: 0 0 0 0;
 }
 .vf-hero__text a {
+  border-bottom: none;
   color: #3b6fb6;
   text-decoration: none;
 }
-.vf-hero__text a:focus,
-.vf-hero__text a:hover,
 .vf-hero__text a:visited {
   color: #193f90;
+}
+.vf-hero__text a:focus,
+.vf-hero__text a:hover {
+  color: #193f90;
   text-decoration: underline;
+  text-decoration-thickness: 2px !important;
 }
 
 .vf-hero__link {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.29;
+  margin: 0 0 0 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #193f90;
+  border-bottom: none;
+  color: #3b6fb6;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  text-decoration: none;
 }
 .vf-hero__link svg {
   fill: currentColor;
@@ -175,146 +172,36 @@
           flex: 1 0 auto;
   margin-left: 0.5rem;
 }
-.vf-hero__link:focus, .vf-hero__link:hover, .vf-hero__link:visited {
+.vf-hero__link:visited {
   color: #193f90;
 }
-.vf-hero__link:focus svg, .vf-hero__link:hover svg, .vf-hero__link:visited svg {
+.vf-hero__link:focus, .vf-hero__link:hover {
+  color: #193f90;
+  text-decoration: underline;
+  text-decoration-thickness: 2px !important;
+}
+.vf-hero__link:focus svg, .vf-hero__link:hover svg {
   -webkit-transform: translateX(0.25rem);
           transform: translateX(0.25rem);
-}
-.vf-hero__link:hover, .vf-hero__link:hover {
-  text-decoration: none;
-}
-
-.vf-hero--primary {
-  --vf-hero--bg-color: #18974c;
-}
-
-.vf-hero--secondary {
-  --vf-hero--bg-color: #3b6fb6;
-}
-
-.vf-hero--tertiary {
-  --vf-hero--bg-color: #707372;
 }
 
 .vf-hero--800 {
   --vf-hero--spacing: 2rem;
 }
+.vf-hero--800 > .vf-box {
+  --vf-box-padding: calc(var(--vf-hero--spacing / 2));
+}
 
 .vf-hero--1200 {
   --vf-hero--spacing: 3rem;
+}
+.vf-hero--1200 > .vf-box {
+  --vf-box-padding: calc(var(--vf-hero--spacing) / 2);
 }
 
 .vf-hero--1600 {
   --vf-hero--spacing: 4rem;
 }
-
-.vf-hero--flush .vf-hero__content {
-  bottom: -2rem;
-  bottom: calc( var(--vf-hero--spacing) / -1);
-  -webkit-filter: none;
-          filter: none;
-}
-
-.vf-hero--offset {
-  margin-bottom: 4rem;
-  margin-bottom: calc( var(--vf-hero--spacing) * 2);
-}
-.vf-hero--offset .vf-hero__content {
-  bottom: -4rem;
-  bottom: calc( var(--vf-hero--spacing) * -2);
-}
-
-.vf-hero--centered .vf-hero__content {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.vf-hero--striped .vf-hero__content {
-  background-color: #ffffff;
-  background-color: var(--vf-hero-content--bg-color, #ffffff);
-  color: #000000;
-  color: var(--vf-hero-content--fg-color, #000000);
-}
-.vf-hero--striped .vf-hero__heading {
-  margin: calc( var(--vf-hero--spacing) / -2);
-  padding: calc( var(--vf-hero--spacing) / 2) calc( var(--vf-hero--spacing) / 2);
-  padding-bottom: 0;
-}
-.vf-hero--striped .vf-hero__subheading {
-  margin: calc( var(--vf-hero--spacing) / -2);
-  margin-bottom: 0;
-  padding: calc( var(--vf-hero--spacing) / 2) calc( var(--vf-hero--spacing) / 2);
-  padding-bottom: 0.5rem;
-}
-.vf-hero--striped .vf-hero__text {
-  --vf-stack-margin: 0;
-  background-color: #000000;
-  background-color: var(--vf-hero-content--bg-color, #000000);
-  color: #ffffff;
-  color: var(--vf-hero-content--fg-color, #ffffff);
-  margin: calc( var(--vf-hero--spacing) / -2);
-  padding: calc( var(--vf-hero--spacing) / 2) calc( var(--vf-hero--spacing) / 2);
-  padding-top: 0.5rem;
-}
-.vf-hero--striped .vf-hero__text a {
-  color: currentColor;
-  text-decoration: underline;
-}
-.vf-hero--striped.vf-hero--inverted .vf-hero__text a {
-  color: #3b6fb6;
-  text-decoration: none;
-}
-.vf-hero--striped.vf-hero--inverted .vf-hero__text a:hover {
-  text-decoration: underline;
-}
-.vf-hero--striped.vf-hero--block .vf-hero__heading, .vf-hero--striped.vf-hero--block .vf-hero__subheading, .vf-hero--striped.vf-hero--block .vf-hero__text {
-  position: relative;
-}
-.vf-hero--striped.vf-hero--block .vf-hero__heading::before, .vf-hero--striped.vf-hero--block .vf-hero__subheading::before, .vf-hero--striped.vf-hero--block .vf-hero__text::before {
-  background-color: inherit;
-  content: "";
-  height: 100%;
-  margin-left: calc(50% - calc(50vw - var(--context-margin--inline, 0px) + 2rem));
-  position: absolute;
-  top: 0;
-  width: calc(50vw - (var(--context-margin--inline, 0px) * 2));
-  z-index: -1;
-}
-@supports (--var: true) {
-  .vf-hero--striped .vf-hero__content {
-    -webkit-box-shadow: unset;
-            box-shadow: unset;
-  }
-}
-
-.vf-hero--inverted .vf-hero__content {
-  --vf-hero-content--bg-color: black;
-  --vf-hero-content--fg-color: white;
-}
-.vf-hero--inverted .vf-hero__text {
-  --vf-hero-content--bg-color: white;
-  --vf-hero-content--fg-color: black;
-}
-.vf-hero--inverted .vf-hero__text a {
-  color: currentColor;
-}
-
-.vf-hero--block .vf-hero__content {
-  padding-left: 0;
-}
-.vf-hero--block .vf-hero__content::before {
-  background-color: inherit;
-  content: "";
-  height: 100%;
-  margin-left: calc(50% - calc(50vw - var(--context-margin--inline, 0px)));
-  position: absolute;
-  top: 0;
-  width: calc(50vw - (var(--context-margin--inline, 0px) * 2));
-  z-index: -1;
-}
-.vf-hero--block .vf-hero__subheading {
-  --vf-stack-margin--custom: 0;
+.vf-hero--1600 > .vf-box {
+  --vf-box-padding: calc(var(--vf-hero--spacing) / 2);
 }

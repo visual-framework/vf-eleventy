@@ -46,37 +46,48 @@ context.setVariable("cardtype", t_4);
 if(frame.topLevel) {
 context.addExport("cardtype", t_4);
 }
+var t_5;
+t_5 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"cards_aspect_ratio");
+frame.set("cards_aspect_ratio", t_5, true);
+if(frame.topLevel) {
+context.setVariable("cards_aspect_ratio", t_5);
+}
+if(frame.topLevel) {
+context.addExport("cards_aspect_ratio", t_5);
+}
 output += "\n";
 ;
 }
-output += "\n<section class=\"vf-card-container";
+output += "\n<section\n  class=\"vf-card-container";
 if(runtime.contextOrFrameLookup(context, frame, "modifier")) {
 output += " | ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier"), env.opts.autoescape);
 ;
 }
-output += "\">\n  <div class=\"vf-card-container__inner\">\n";
-env.getExtension("render")["run"](context,"@vf-section-header",{"context": runtime.contextOrFrameLookup(context, frame, "container_section__header")}, function(t_6,t_5) {
-if(t_6) { cb(t_6); return; }
-output += runtime.suppressValue(t_5, true && env.opts.autoescape);
+output += "\"\n  style=\"--vf-card__image--aspect-ratio: ";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "cards_aspect_ratio"), env.opts.autoescape);
+output += ";\"\n>\n  <div class=\"vf-card-container__inner\">\n";
+env.getExtension("render")["run"](context,"@vf-section-header",{"context": runtime.contextOrFrameLookup(context, frame, "container_section__header")}, function(t_7,t_6) {
+if(t_7) { cb(t_7); return; }
+output += runtime.suppressValue(t_6, true && env.opts.autoescape);
 frame = frame.push();
-var t_9 = runtime.fromIterator(runtime.contextOrFrameLookup(context, frame, "vf_cards"));
-runtime.asyncEach(t_9, 1, function(card, t_7, t_8,next) {
+var t_10 = runtime.fromIterator(runtime.contextOrFrameLookup(context, frame, "vf_cards"));
+runtime.asyncEach(t_10, 1, function(card, t_8, t_9,next) {
 frame.set("card", card);
-frame.set("loop.index", t_7 + 1);
-frame.set("loop.index0", t_7);
-frame.set("loop.revindex", t_8 - t_7);
-frame.set("loop.revindex0", t_8 - t_7 - 1);
-frame.set("loop.first", t_7 === 0);
-frame.set("loop.last", t_7 === t_8 - 1);
-frame.set("loop.length", t_8);
-env.getExtension("render")["run"](context,"@vf-card",{"context": card}, function(t_11,t_10) {
-if(t_11) { cb(t_11); return; }
-output += runtime.suppressValue(t_10, true && env.opts.autoescape);
-next(t_7);
+frame.set("loop.index", t_8 + 1);
+frame.set("loop.index0", t_8);
+frame.set("loop.revindex", t_9 - t_8);
+frame.set("loop.revindex0", t_9 - t_8 - 1);
+frame.set("loop.first", t_8 === 0);
+frame.set("loop.last", t_8 === t_9 - 1);
+frame.set("loop.length", t_9);
+env.getExtension("render")["run"](context,"@vf-card",{"context": card}, function(t_12,t_11) {
+if(t_12) { cb(t_12); return; }
+output += runtime.suppressValue(t_11, true && env.opts.autoescape);
+next(t_8);
 });
-}, function(t_13,t_12) {
-if(t_13) { cb(t_13); return; }
+}, function(t_14,t_13) {
+if(t_14) { cb(t_14); return; }
 frame = frame.pop();
 output += "  </div>\n</section>\n";
 if(parentTemplate) {

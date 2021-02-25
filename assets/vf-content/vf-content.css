@@ -53,7 +53,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-heading
- * Version: 1.0.0
+ * Version: 1.0.1
  * Location: components/undefined
  */
 .vf-text {
@@ -126,7 +126,7 @@
 
 /*!
  * Component: @visual-framework/vf-badge
- * Version: 1.2.2
+ * Version: 1.2.3
  * Location: components/undefined
  */
 .vf-badge {
@@ -278,11 +278,11 @@ a.vf-badge--outline[class*=tertiary]:hover {
   color: #3b6fb6;
 }
 .vf-text-body a:visited {
-  color: #3b6fb6;
+  color: #734595;
   border-bottom: none;
 }
 .vf-text-body a:visited:hover {
-  color: #3b6fb6;
+  color: #734595;
   text-decoration: underline;
 }
 .vf-text-body a:hover {
@@ -347,7 +347,7 @@ a.vf-badge--outline[class*=tertiary]:hover {
 
 /*!
  * Component: @visual-framework/vf-link
- * Version: 1.0.3
+ * Version: 2.0.0
  * Location: components/undefined
  */
 .vf-link {
@@ -356,11 +356,11 @@ a.vf-badge--outline[class*=tertiary]:hover {
   color: #3b6fb6;
 }
 .vf-link:visited {
-  color: #3b6fb6;
+  color: #734595;
   border-bottom: none;
 }
 .vf-link:visited:hover {
-  color: #3b6fb6;
+  color: #734595;
   text-decoration: underline;
 }
 .vf-link:hover {
@@ -369,47 +369,27 @@ a.vf-badge--outline[class*=tertiary]:hover {
   text-decoration: underline;
 }
 
+[disabled] {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
 .vf-link--visited {
-  color: #3b6fb6;
+  color: #734595 !important;
 }
 
 .vf-link--hover {
-  color: #193f90;
-}
-
-[class*="--dark"] .vf-link {
-  border-bottom: none;
-  text-decoration: none;
-  color: #a8d2ff;
-}
-[class*="--dark"] .vf-link:visited {
-  color: #a8d2ff;
-  border-bottom: none;
-}
-[class*="--dark"] .vf-link:visited:hover {
-  color: #a8d2ff;
-  text-decoration: underline;
-}
-[class*="--dark"] .vf-link:hover {
-  color: #a8d2ff;
-  border-bottom: none;
-  text-decoration: underline;
-}
-[class*="--dark"] .vf-link--visited {
-  color: #a8d2ff;
-}
-[class*="--dark"] .vf-link--hover {
-  color: #a8d2ff;
+  color: #193f90 !important;
 }
 
 /*!
  * Component: @visual-framework/vf-form__core
- * Version: 1.1.0
+ * Version: 1.1.1
  * Location: components/undefined
  */
 /*!
  * Component: @visual-framework/vf-form__helper
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__helper {
@@ -427,7 +407,7 @@ a.vf-badge--outline[class*=tertiary]:hover {
 
 /*!
  * Component: @visual-framework/vf-form__input
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__input:not([type=file]) {
@@ -643,7 +623,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__legend
- * Version: 1.1.0
+ * Version: 1.1.2
  * Location: components/undefined
  */
 .vf-form__legend {
@@ -656,7 +636,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__fieldset
- * Version: 1.1.0
+ * Version: 1.1.2
  * Location: components/undefined
  */
 .vf-form__fieldset {
@@ -664,10 +644,17 @@ input[type=search]::-webkit-search-cancel-button {
   margin-bottom: 1.25rem;
   padding: 0;
 }
+.vf-form__fieldset > .vf-form__label {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+}
 
 /*!
  * Component: @visual-framework/vf-form__select
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__select {
@@ -715,7 +702,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__checkbox
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__item.vf-form__item--checkbox {
@@ -801,7 +788,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__radio
- * Version: 2.0.0
+ * Version: 2.0.2
  * Location: components/undefined
  */
 .vf-form__radio {
@@ -883,7 +870,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__textarea
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__textarea {
@@ -916,22 +903,27 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__item
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__item > * {
   --vf-stack-margin--custom: 0.25rem;
 }
 
+.vf-form__item--inline .vf-form__select,
 .vf-form__item--inline .vf-form__label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.vf-form__item--inline .vf-form__select {
+  width: auto;
+  padding: 0.5rem 2rem 0.5rem 1.25rem;
+}
 
 /*!
  * Component: @visual-framework/vf-form__label
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-form__label {
@@ -954,7 +946,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.3.1
+* Version: 1.4.1
 * Location: components/undefined
 */
 .vf-button {
@@ -1108,8 +1100,8 @@ html:not(.vf-disable-deprecated) .vf-text-button--secondary {
   margin-bottom: 6px;
 }
 html:not(.vf-disable-deprecated) .vf-text-button--secondary:visited {
-  background-color: #3b6fb6;
-  border-color: #3b6fb6;
+  background-color: #734595;
+  border-color: #734595;
 }
 html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
   background-color: #007b53;
@@ -1124,7 +1116,7 @@ html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary 
   color: #18974c;
 }
 html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary:visited {
-  background-color: #3b6fb6;
+  background-color: #734595;
   color: #ffffff;
 }
 html:not(.vf-disable-deprecated) .vf-text-button--2 {
@@ -1258,11 +1250,11 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   color: #3b6fb6;
 }
 .vf-list__link:visited {
-  color: #3b6fb6;
+  color: #734595;
   border-bottom: none;
 }
 .vf-list__link:visited:hover {
-  color: #3b6fb6;
+  color: #734595;
   text-decoration: underline;
 }
 .vf-list__link:hover {
@@ -1273,7 +1265,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-blockquote
- * Version: 1.0.2
+ * Version: 1.1.1
  * Location: components/undefined
  */
 .vf-blockquote {
@@ -1297,15 +1289,6 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   top: 0;
 }
 
-.vf-blockquote--pullquote {
-  position: static;
-}
-
-.vf-blockquote--pullquote:before {
-  content: "This component variant has not yet been implement, see the README.md for more information.";
-  display: block;
-}
-
 /*!
  * Component: @visual-framework/vf-divider
  * Version: 2.0.0
@@ -1322,7 +1305,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-box
- * Version: 2.3.0
+ * Version: 2.3.1
  * Location: components/undefined
  */
 .vf-box {
@@ -1485,7 +1468,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-content
- * Version: 1.3.5
+ * Version: 1.4.1
  * Location: components/undefined
  */
 .vf-content h1:not([class*=vf-]) {
@@ -1509,8 +1492,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 39px 0;
-  margin-top: 0;
-  padding-top: 13px;
+  margin-top: 13px;
 }
 .vf-content h2:not([class*=vf-]) b,
 .vf-content h2:not([class*=vf-]) strong {
@@ -1563,6 +1545,9 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 .vf-content h6:not([class*=vf-]) b,
 .vf-content h6:not([class*=vf-]) strong {
   font-weight: inherit;
+}
+.vf-content > :first-child {
+  margin-top: 0 !important;
 }
 .vf-content p:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
@@ -1752,35 +1737,4 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 }
 .vf-content__standfirst + small {
   margin-bottom: 42px;
-}
-
-[class*="--dark"].vf-content .vf-link,
-[class*="--dark"].vf-content a:not([class*=vf-]),
-.vf-content > [class*=dark] .vf-link,
-.vf-content > [class*=dark] a:not([class*=vf-]) {
-  border-bottom: none;
-  text-decoration: none;
-  color: #a8d2ff;
-}
-[class*="--dark"].vf-content .vf-link:visited,
-[class*="--dark"].vf-content a:not([class*=vf-]):visited,
-.vf-content > [class*=dark] .vf-link:visited,
-.vf-content > [class*=dark] a:not([class*=vf-]):visited {
-  color: #cba3d8;
-  border-bottom: none;
-}
-[class*="--dark"].vf-content .vf-link:visited:hover,
-[class*="--dark"].vf-content a:not([class*=vf-]):visited:hover,
-.vf-content > [class*=dark] .vf-link:visited:hover,
-.vf-content > [class*=dark] a:not([class*=vf-]):visited:hover {
-  color: #cba3d8;
-  text-decoration: underline;
-}
-[class*="--dark"].vf-content .vf-link:hover,
-[class*="--dark"].vf-content a:not([class*=vf-]):hover,
-.vf-content > [class*=dark] .vf-link:hover,
-.vf-content > [class*=dark] a:not([class*=vf-]):hover {
-  color: #a8d2ff;
-  border-bottom: none;
-  text-decoration: underline;
 }

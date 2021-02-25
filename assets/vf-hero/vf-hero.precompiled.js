@@ -21,22 +21,22 @@ context.addExport("vf_hero_image", t_1);
 }
 output += "\n";
 var t_2;
-t_2 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_heading");
-frame.set("vf_hero_heading", t_2, true);
+t_2 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_kicker");
+frame.set("vf_hero_kicker", t_2, true);
 if(frame.topLevel) {
-context.setVariable("vf_hero_heading", t_2);
+context.setVariable("vf_hero_kicker", t_2);
 }
 if(frame.topLevel) {
-context.addExport("vf_hero_heading", t_2);
+context.addExport("vf_hero_kicker", t_2);
 }
 var t_3;
-t_3 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_heading_additional");
-frame.set("vf_hero_heading_additional", t_3, true);
+t_3 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_heading");
+frame.set("vf_hero_heading", t_3, true);
 if(frame.topLevel) {
-context.setVariable("vf_hero_heading_additional", t_3);
+context.setVariable("vf_hero_heading", t_3);
 }
 if(frame.topLevel) {
-context.addExport("vf_hero_heading_additional", t_3);
+context.addExport("vf_hero_heading", t_3);
 }
 var t_4;
 t_4 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_subheading");
@@ -47,6 +47,7 @@ context.setVariable("vf_hero_subheading", t_4);
 if(frame.topLevel) {
 context.addExport("vf_hero_subheading", t_4);
 }
+output += "\n";
 var t_5;
 t_5 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_text");
 frame.set("vf_hero_text", t_5, true);
@@ -58,163 +59,100 @@ context.addExport("vf_hero_text", t_5);
 }
 output += "\n";
 var t_6;
-t_6 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"striped");
-frame.set("striped", t_6, true);
+t_6 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_link_text");
+frame.set("vf_hero_link_text", t_6, true);
 if(frame.topLevel) {
-context.setVariable("striped", t_6);
+context.setVariable("vf_hero_link_text", t_6);
 }
 if(frame.topLevel) {
-context.addExport("striped", t_6);
+context.addExport("vf_hero_link_text", t_6);
 }
 var t_7;
-t_7 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"inverted");
-frame.set("inverted", t_7, true);
+t_7 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_link_href");
+frame.set("vf_hero_link_href", t_7, true);
 if(frame.topLevel) {
-context.setVariable("inverted", t_7);
+context.setVariable("vf_hero_link_href", t_7);
 }
 if(frame.topLevel) {
-context.addExport("inverted", t_7);
+context.addExport("vf_hero_link_href", t_7);
 }
+output += "\n";
 var t_8;
-t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"theme");
-frame.set("theme", t_8, true);
+t_8 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"spacing");
+frame.set("spacing", t_8, true);
 if(frame.topLevel) {
-context.setVariable("theme", t_8);
+context.setVariable("spacing", t_8);
 }
 if(frame.topLevel) {
-context.addExport("theme", t_8);
+context.addExport("spacing", t_8);
 }
+output += "\n";
 var t_9;
-t_9 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"newTheme");
-frame.set("newTheme", t_9, true);
+t_9 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"id");
+frame.set("id", t_9, true);
 if(frame.topLevel) {
-context.setVariable("newTheme", t_9);
+context.setVariable("id", t_9);
 }
 if(frame.topLevel) {
-context.addExport("newTheme", t_9);
+context.addExport("id", t_9);
 }
 var t_10;
-t_10 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"flush");
-frame.set("flush", t_10, true);
+t_10 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"modifier_class");
+frame.set("modifier_class", t_10, true);
 if(frame.topLevel) {
-context.setVariable("flush", t_10);
+context.setVariable("modifier_class", t_10);
 }
 if(frame.topLevel) {
-context.addExport("flush", t_10);
+context.addExport("modifier_class", t_10);
 }
 var t_11;
-t_11 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"offset");
-frame.set("offset", t_11, true);
+t_11 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"override_class");
+frame.set("override_class", t_11, true);
 if(frame.topLevel) {
-context.setVariable("offset", t_11);
+context.setVariable("override_class", t_11);
 }
 if(frame.topLevel) {
-context.addExport("offset", t_11);
+context.addExport("override_class", t_11);
 }
+output += "\n  ";
+output += "\n";
 var t_12;
-t_12 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"block");
-frame.set("block", t_12, true);
+t_12 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_heading_additional");
+frame.set("vf_hero_heading_additional", t_12, true);
 if(frame.topLevel) {
-context.setVariable("block", t_12);
+context.setVariable("vf_hero_heading_additional", t_12);
 }
 if(frame.topLevel) {
-context.addExport("block", t_12);
+context.addExport("vf_hero_heading_additional", t_12);
 }
+if(runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_heading_additional")) {
 var t_13;
-t_13 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"centered");
-frame.set("centered", t_13, true);
+t_13 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"vf_hero_heading_additional");
+frame.set("vf_hero_kicker", t_13, true);
 if(frame.topLevel) {
-context.setVariable("centered", t_13);
-}
-if(frame.topLevel) {
-context.addExport("centered", t_13);
-}
-var t_14;
-t_14 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"spacing");
-frame.set("spacing", t_14, true);
-if(frame.topLevel) {
-context.setVariable("spacing", t_14);
+context.setVariable("vf_hero_kicker", t_13);
 }
 if(frame.topLevel) {
-context.addExport("spacing", t_14);
+context.addExport("vf_hero_kicker", t_13);
 }
-output += "\n";
-var t_15;
-t_15 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"id");
-frame.set("id", t_15, true);
-if(frame.topLevel) {
-context.setVariable("id", t_15);
-}
-if(frame.topLevel) {
-context.addExport("id", t_15);
-}
-var t_16;
-t_16 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"modifier_class");
-frame.set("modifier_class", t_16, true);
-if(frame.topLevel) {
-context.setVariable("modifier_class", t_16);
-}
-if(frame.topLevel) {
-context.addExport("modifier_class", t_16);
-}
-var t_17;
-t_17 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"override_class");
-frame.set("override_class", t_17, true);
-if(frame.topLevel) {
-context.setVariable("override_class", t_17);
-}
-if(frame.topLevel) {
-context.addExport("override_class", t_17);
-}
-;
-}
-output += "\n\n<section\n  class=\"vf-hero\n  ";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier_class"), env.opts.autoescape);
-if(runtime.contextOrFrameLookup(context, frame, "striped")) {
-output += " vf-hero--striped";
-;
-}
-if(runtime.contextOrFrameLookup(context, frame, "inverted")) {
-output += " vf-hero--inverted";
-;
-}
-if(runtime.contextOrFrameLookup(context, frame, "theme")) {
-output += " vf-hero-theme--";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "theme"), env.opts.autoescape);
-;
-}
-if(runtime.contextOrFrameLookup(context, frame, "newTheme")) {
-output += " vf-hero--";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "newTheme"), env.opts.autoescape);
 ;
 }
 output += "\n";
-if(runtime.contextOrFrameLookup(context, frame, "flush")) {
-output += " vf-hero--flush";
 ;
 }
-output += "\n";
-if(runtime.contextOrFrameLookup(context, frame, "offset")) {
-output += " vf-hero--offset";
-;
-}
-output += "\n";
-if(runtime.contextOrFrameLookup(context, frame, "block")) {
-output += " vf-hero--block";
-;
-}
-output += "\n";
-if(runtime.contextOrFrameLookup(context, frame, "centered")) {
-output += " vf-hero--centered";
-;
-}
-output += "\n";
+output += "<section\n  class=\"vf-hero";
 if(runtime.contextOrFrameLookup(context, frame, "spacing")) {
 output += " vf-hero--";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "spacing"), env.opts.autoescape);
 ;
 }
-output += "   | vf-u-fullbleed\"\n\n  style=\"\n";
+output += " | vf-u-fullbleed";
+if(runtime.contextOrFrameLookup(context, frame, "modifier_class")) {
+output += " ";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier_class"), env.opts.autoescape);
+;
+}
+output += "\"\n\n  style=\"";
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_image")) {
 output += "--vf-hero--bg-image: ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_image"), env.opts.autoescape);
@@ -225,14 +163,13 @@ output += "--vf-hero--bg-image-size: ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_image_size"), env.opts.autoescape);
 ;
 }
-output += "  \">\n";
-if(runtime.contextOrFrameLookup(context, frame, "deprecated_text")) {
-output += "<!-- ";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "deprecated_text"), env.opts.autoescape);
-output += " -->";
+output += "  \">\n\n  <div class=\"vf-hero__content | vf-box | vf-stack vf-stack--400 \">";
+if(runtime.contextOrFrameLookup(context, frame, "vf_hero_kicker")) {
+output += "<p class=\"vf-hero__kicker\">";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_kicker"), env.opts.autoescape);
+output += "</p>";
 ;
 }
-output += "  <div class=\"vf-hero__content | vf-stack vf-stack--400 \">\n";
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading")) {
 output += "    <h2 class=\"vf-hero__heading\">\n";
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_href")) {
@@ -248,15 +185,10 @@ if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_href")) {
 output += "</a>";
 ;
 }
-if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_additional")) {
-output += "<span class=\"vf-hero__heading--additional\">";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_additional"), env.opts.autoescape);
-output += "</span>";
+output += "    </h2>\n";
 ;
 }
-output += "</h2>\n";
-;
-}
+output += "\n";
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_subheading")) {
 output += "<p class=\"vf-hero__subheading\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_subheading"), env.opts.autoescape);
@@ -264,44 +196,40 @@ output += "</p>";
 ;
 }
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_hero_text")) {
-output += "    <p class=\"vf-hero__text\">";
-(function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_hero_href")) {
-output += "      <a class=\"vf-hero__link | vf-link\" href=\"";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_href"), env.opts.autoescape);
-output += "\">";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_text"), env.opts.autoescape);
-output += "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12S18.627 0 12 0C5.376.008.008 5.376 0 12zm13.707-5.209l4.5 4.5a1 1 0 010 1.414l-4.5 4.5a1 1 0 01-1.414-1.414l2.366-2.367a.25.25 0 00-.177-.424H6a1 1 0 010-2h8.482a.25.25 0 00.177-.427l-2.366-2.368a1 1 0 011.414-1.414z\" fill=\"\" fill-rule=\"nonzero\"></path></svg>\n      </a>\n";
-cb();
-}
-else {
+output += "    <p class=\"vf-hero__text\">\n";
 frame = frame.push();
-var t_20 = runtime.fromIterator(runtime.contextOrFrameLookup(context, frame, "vf_hero_text"));
-runtime.asyncEach(t_20, 1, function(hero_text, t_18, t_19,next) {
+var t_16 = runtime.fromIterator(runtime.contextOrFrameLookup(context, frame, "vf_hero_text"));
+runtime.asyncEach(t_16, 1, function(hero_text, t_14, t_15,next) {
 frame.set("hero_text", hero_text);
-frame.set("loop.index", t_18 + 1);
-frame.set("loop.index0", t_18);
-frame.set("loop.revindex", t_19 - t_18);
-frame.set("loop.revindex0", t_19 - t_18 - 1);
-frame.set("loop.first", t_18 === 0);
-frame.set("loop.last", t_18 === t_19 - 1);
-frame.set("loop.length", t_19);
+frame.set("loop.index", t_14 + 1);
+frame.set("loop.index0", t_14);
+frame.set("loop.revindex", t_15 - t_14);
+frame.set("loop.revindex0", t_15 - t_14 - 1);
+frame.set("loop.first", t_14 === 0);
+frame.set("loop.last", t_14 === t_15 - 1);
+frame.set("loop.length", t_15);
 output += runtime.suppressValue(env.getFilter("safe").call(context, hero_text), env.opts.autoescape);
 output += "\n";
-next(t_18);
+next(t_14);
 ;
-}, function(t_22,t_21) {
-if(t_22) { cb(t_22); return; }
+}, function(t_18,t_17) {
+if(t_18) { cb(t_18); return; }
 frame = frame.pop();
-cb()});
-}
-})(function(t_23) {
-if(t_23) { cb(t_23); return; }output += "    </p>\n";
+output += "    </p>\n";
 cb()});
 }
 else {
 cb()}
-})(function(t_24) {
-if(t_24) { cb(t_24); return; }output += "  </div>\n</section>\n";
+})(function(t_19) {
+if(t_19) { cb(t_19); return; }if((runtime.contextOrFrameLookup(context, frame, "vf_hero_link_href")) && (runtime.contextOrFrameLookup(context, frame, "vf_hero_link_text"))) {
+output += "      <a class=\"vf-hero__link\" href=\"";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_link_href"), env.opts.autoescape);
+output += "\">";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_link_text"), env.opts.autoescape);
+output += "<svg width=\"24\" height=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12S18.627 0 12 0C5.376.008.008 5.376 0 12zm13.707-5.209l4.5 4.5a1 1 0 010 1.414l-4.5 4.5a1 1 0 01-1.414-1.414l2.366-2.367a.25.25 0 00-.177-.424H6a1 1 0 010-2h8.482a.25.25 0 00.177-.427l-2.366-2.368a1 1 0 011.414-1.414z\" fill=\"\" fill-rule=\"nonzero\"></path></svg>\n      </a>\n";
+;
+}
+output += "  </div>\n</section>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

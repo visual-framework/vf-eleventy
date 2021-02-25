@@ -8,15 +8,14 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<blockquote\n";
-output += "\n";
+output += "<blockquote";
 if(runtime.contextOrFrameLookup(context, frame, "id")) {
 output += " id=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
 output += "\"";
 ;
 }
-output += "\nclass=\"vf-blockquote";
+output += " class=\"vf-blockquote";
 if(runtime.contextOrFrameLookup(context, frame, "override_class")) {
 output += " | ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "override_class"), env.opts.autoescape);

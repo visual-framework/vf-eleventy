@@ -1,3 +1,4 @@
+/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -30,19 +31,30 @@
 }
 
 :root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
+:root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #f3f3f3;
-  --vf-ui-color--grey--light: #d8d8d8;
+  --vf-ui-color--grey: #d8d8d8;
+  --vf-ui-color--grey--light: #f3f3f3;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
   --vf-ui-color--off-white: #fafafa;
 }
 
+/* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-blockquote
- * Version: 1.0.2
- * Location: components/vf-blockquote
+ * Version: 1.1.1
+ * Location: components/undefined
  */
 .vf-blockquote {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
@@ -56,21 +68,11 @@
   padding: 10px 8px 10px 32px;
   position: relative;
 }
-
 .vf-blockquote::before {
-  content: '';
+  content: "";
   border-left: 4px solid #d0d0ce;
   position: absolute;
   left: 12px;
   height: 100%;
   top: 0;
-}
-
-.vf-blockquote--pullquote {
-  position: static;
-}
-
-.vf-blockquote--pullquote:before {
-  content: 'This component variant has not yet been implement, see the README.md for more information.';
-  display: block;
 }

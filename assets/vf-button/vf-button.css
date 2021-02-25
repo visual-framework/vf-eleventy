@@ -53,7 +53,7 @@
 /* stylelint-enable */
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.3.0
+* Version: 1.4.1
 * Location: components/undefined
 */
 .vf-button {
@@ -207,8 +207,8 @@ html:not(.vf-disable-deprecated) .vf-text-button--secondary {
   margin-bottom: 6px;
 }
 html:not(.vf-disable-deprecated) .vf-text-button--secondary:visited {
-  background-color: #3b6fb6;
-  border-color: #3b6fb6;
+  background-color: #734595;
+  border-color: #734595;
 }
 html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
   background-color: #007b53;
@@ -223,7 +223,7 @@ html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary 
   color: #18974c;
 }
 html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary:visited {
-  background-color: #3b6fb6;
+  background-color: #734595;
   color: #ffffff;
 }
 html:not(.vf-disable-deprecated) .vf-text-button--2 {
