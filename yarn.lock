@@ -1132,10 +1132,10 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
 
-"@visual-framework/embl-grid@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@visual-framework/embl-grid/-/embl-grid-2.1.1.tgz#e0eed9d7f209b3c2c0ef5705d66af3c7679d3349"
-  integrity sha512-9gq5ii9zC/BmfSCUbSAK16i8Rv2CEtJyV60QX8YZlfY3MtFjUr2Akq5Eb3sdDA6b+cTviZhUCcPit7FRWi9JFA==
+"@visual-framework/embl-grid@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@visual-framework/embl-grid/-/embl-grid-2.1.2.tgz#18a1c4c859609a14280301ecbbec99ce42bebb9a"
+  integrity sha512-E+ZM5Zri+L+/I9lfDjB3yXKwoZD7r5+9qXaIN56TsGJ/uZJFZ3m/HTfdvz0h6uMeJUZHAGUNCOzlRDWle/GAtA==
 
 "@visual-framework/vf-analytics-google@1.0.3":
   version "1.0.3"
