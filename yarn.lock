@@ -1403,10 +1403,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-logo/-/vf-logo-1.5.1.tgz#eb852309d31f348b6a93ab8103fa76727f9bab20"
   integrity sha512-TLSpACmyXN0YHM33BknmeeEcu4+TXvW7GbaebB06UfVsQj5TTTF59m5YNS4M6XQMEpoGw8T2yfWpS9+hvr/LHQ==
 
-"@visual-framework/vf-navigation@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-navigation/-/vf-navigation-2.2.1.tgz#674a51a1b355e48f24da1157dd196de18f64825e"
-  integrity sha512-ciowqEDEVpAuWTfuwmPyQ23zvw5L1PPLZGK/PCgYz7+dQQkTsu+BY+kmOfoMAmX26VajVHINSdmRO0xh/9LDog==
+"@visual-framework/vf-navigation@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-navigation/-/vf-navigation-2.2.2.tgz#9da4d05aef93f345e8b34d80b851347f326775b8"
+  integrity sha512-J6FUiZGGftZi52ToJStjrNWgoOLssIlyxyTlgrxhUGvquSzW052s3rnBKz0e2pgaj9rU44owTUlAV2nvaG6NsA==
 
 "@visual-framework/vf-no-js@1.0.1":
   version "1.0.1"
