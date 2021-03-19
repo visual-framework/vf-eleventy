@@ -25,7 +25,7 @@
     "update-components": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@11ty/eleventy": "0.11.1",
+    "@11ty/eleventy": "0.12.1",
     "@node-sass/node-module-importer": "1.2.3",
     "@visual-framework/embl-grid": "2.1.1",
     "@visual-framework/vf-analytics-google": "1.0.3",
