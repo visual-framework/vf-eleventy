@@ -50,10 +50,23 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-stack
- * Version: 2.0.1
+ * Version: 2.1.1
  * Location: components/undefined
  */
 /*
@@ -86,8 +99,16 @@
   /* [3] */
 }
 
+.vf-stack--200 > * + * {
+  --vf-stack-margin: 0.5rem;
+}
+
 .vf-stack--400 > * + * {
   --vf-stack-margin: 1rem;
+}
+
+.vf-stack--500 > * + * {
+  --vf-stack-margin: 1.25rem;
 }
 
 .vf-stack--600 > * + * {
@@ -96,4 +117,12 @@
 
 .vf-stack--800 > * + * {
   --vf-stack-margin: 2rem;
+}
+
+.vf-stack--1200 > * + * {
+  --vf-stack-margin: 3rem;
+}
+
+.vf-stack--1600 > * + * {
+  --vf-stack-margin: 4rem;
 }

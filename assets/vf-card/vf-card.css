@@ -53,12 +53,14 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-card
- * Version: 2.5.1
+ * Version: 2.5.4
  * Location: components/undefined
  */
 .vf-card {
   --card-text-color: var(--vf-card-theme-color--foreground, #000000);
   --card-background-color: var(--vf-card-theme-color--background , #ffffff);
+  -ms-flex-line-pack: start;
+      align-content: start;
   background-color: var(--card-background-color);
   /* border: 1px solid var(--vf-card-theme-color--border, var(--card-border-color, )); */
   -webkit-box-shadow: 0 0.125rem 0.25rem rgba(84, 88, 90, 0.5);
@@ -135,6 +137,7 @@
   color: var(--card-text-color, #000000);
   line-height: 1.333;
   text-decoration: none;
+  word-break: break-word;
 }
 .vf-card__title .vf-card__link,
 .vf-card__heading .vf-card__link {
@@ -198,6 +201,7 @@
   font-weight: 500;
   line-height: 1.5;
   margin: 0 0 0 0;
+  word-break: break-word;
 }
 
 .vf-card__text {
@@ -208,13 +212,14 @@
   margin: 0 0 0 0;
   color: #ffffff;
   color: var(--card-text-color, #ffffff);
+  word-break: break-word;
 }
 .vf-card__text .vf-card__link,
 .vf-card__text a {
-  position: relative;
-  z-index: 1984;
   color: #3b6fb6;
+  position: relative;
   text-decoration: none;
+  z-index: 1984;
 }
 .vf-card__text .vf-card__link:hover,
 .vf-card__text a:hover {
@@ -267,15 +272,15 @@
   color: currentColor;
 }
 .vf-card--striped .vf-card__subheading {
-  color: #ffffff;
   background-color: #18974c;
   background-color: var(--vf-card-bg-color, #18974c);
+  color: #ffffff;
   margin: -1rem;
   margin-bottom: 0;
   margin-top: -0.5rem !important;
   padding: 1rem;
-  padding-top: 0;
   padding-bottom: 0.5rem;
+  padding-top: 0;
 }
 .vf-card--striped .vf-card__text {
   color: #ffffff;
@@ -293,7 +298,8 @@
   --vf-stack-margin--custom: 1rem;
 }
 
-.vf-card--primary .vf-card--brand {
+.vf-card--primary,
+.vf-card--brand {
   --vf-card-bg-color: #18974c;
   --vf-card-text-color: #ffffff;
   --vf-card-border-color: #18974c;

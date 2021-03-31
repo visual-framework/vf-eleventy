@@ -50,17 +50,30 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__input
- * Version: 2.0.1
+ * Version: 3.0.0-alpha.1
  * Location: components/undefined
  */
 .vf-form__input:not([type=file]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 400;
-  line-height: 1.71;
+  line-height: 1.421;
   margin: 0 0 0 0;
   /* stylelint-disable */
   -webkit-appearance: none;
@@ -79,8 +92,8 @@
 }
 .vf-form__input:not([type=file]):focus, .vf-form__input:not([type=file]):hover {
   border-color: #54585a;
-  -webkit-box-shadow: 0 0 0.125rem 0.125rem rgba(112, 115, 114, 0.4);
-          box-shadow: 0 0 0.125rem 0.125rem rgba(112, 115, 114, 0.4);
+  -webkit-box-shadow: 0 0 0 0.0625rem #54585a;
+          box-shadow: 0 0 0 0.0625rem #54585a;
   color: #000000;
   outline: 0;
 }
@@ -184,6 +197,8 @@
 .vf-form__input .vf-form__is-active .vf-form__select,
 .vf-form__input .vf-form__is-active .vf-form__textarea {
   background-color: #ffffff;
+  border-color: #d8d8d8;
+  color: #54585a;
 }
 
 .vf-form__input .vf-form__has-focus .vf-form__input,
@@ -217,7 +232,7 @@
 }
 
 .vf-form__input .vf-form__is-required::before {
-  color: #d32f2f;
+  color: #d41645;
   content: "*";
   display: block;
   font-size: 16px;
@@ -237,7 +252,8 @@
 }
 
 .vf-form__input:disabled {
-  background: #f3f3f3;
+  background-color: #d0d0ce;
+  border-color: #707372;
   cursor: not-allowed;
 }
 .vf-form__input:disabled::-moz-placeholder {
@@ -247,7 +263,7 @@
   color: #18974c;
 }
 
-.vf-form__input:invalid {
+.vf-form__input--invalid:not([type=file]) {
   border-color: #d32f2f;
 }
 
@@ -256,7 +272,7 @@ input[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
   /* stylelint-enable */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:none;stroke:%23000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M.75 23.249l22.5-22.5M23.25 23.249L.75.749'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M89.796 74.956a7 7 0 010-9.912L136.92 17.92a10.5 10.5 0 00-14.84-14.84L74.956 50.204a7 7 0 01-9.912 0L17.92 3.08A10.5 10.5 0 003.08 17.92l47.124 47.124a7 7 0 010 9.912L3.08 122.08a10.5 10.5 0 1014.84 14.84l47.124-47.124a7 7 0 019.912 0l47.124 47.124a10.5 10.5 0 0014.84-14.84z' fill='%2354585a'/%3E%3C/svg%3E");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 1em;
@@ -265,4 +281,15 @@ input[type=search]::-webkit-search-cancel-button {
   height: 1em;
   position: relative;
   width: 1em;
+}
+
+.vf-form__input--filter {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M136.92 136.92a10.486 10.486 0 000-14.84l-26.6-26.6a3.514 3.514 0 01-.476-4.34 59.556 59.556 0 10-18.69 18.718 3.5 3.5 0 014.34.49l26.6 26.6a10.472 10.472 0 0014.84 0zM21 59.5A38.5 38.5 0 1159.5 98 38.528 38.528 0 0121 59.5z' fill='%23707372'/%3E%3C/svg%3E");
+  background-position: 0.5em center;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  padding-left: 2em !important;
+}
+.vf-form__input--filter:focus, .vf-form__input--filter:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M136.92 136.92a10.486 10.486 0 000-14.84l-26.6-26.6a3.514 3.514 0 01-.476-4.34 59.556 59.556 0 10-18.69 18.718 3.5 3.5 0 014.34.49l26.6 26.6a10.472 10.472 0 0014.84 0zM21 59.5A38.5 38.5 0 1159.5 98 38.528 38.528 0 0121 59.5z' fill='%2354585a'/%3E%3C/svg%3E");
 }

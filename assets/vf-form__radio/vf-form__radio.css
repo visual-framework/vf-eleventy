@@ -53,7 +53,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-form__radio
- * Version: 2.0.2
+ * Version: 3.0.0-alpha.0
  * Location: components/undefined
  */
 .vf-form__radio {
@@ -75,60 +75,36 @@
   border-radius: 50%;
   content: "";
   display: inline-block;
-  height: 16px;
+  height: 1rem;
   margin-right: 8px;
+  min-width: 1rem;
   position: relative;
-  top: 2px;
-  width: 16px;
+  top: 4px;
+  width: 1rem;
 }
-.vf-form__radio:hover + .vf-form__label::before {
+.vf-form__radio:hover + .vf-form__label::before, .vf-form__radio:focus + .vf-form__label::before {
   border-color: #54585a;
-  -webkit-box-shadow: 0 0 4px #3b6fb6;
-          box-shadow: 0 0 4px #3b6fb6;
-}
-@supports (filter: drop-shadow(0 0 0.25rem blue)) {
-  .vf-form__radio:hover + .vf-form__label::before {
-    background-color: transparent;
-    -webkit-box-shadow: 0;
-            box-shadow: 0;
-    -webkit-filter: drop-shadow(0 0 4px #8bb8e8);
-            filter: drop-shadow(0 0 4px #8bb8e8);
-  }
-}
-.vf-form__radio:focus + .vf-form__label::before {
-  border-color: #54585a;
-  -webkit-box-shadow: 0 0 4px #3b6fb6;
-          box-shadow: 0 0 4px #3b6fb6;
-}
-@supports (filter: drop-shadow(0 0 0.25rem blue)) {
-  .vf-form__radio:focus + .vf-form__label::before {
-    background-color: transparent;
-    -webkit-box-shadow: 0;
-            box-shadow: 0;
-    -webkit-filter: drop-shadow(0 0 4px #8bb8e8);
-            filter: drop-shadow(0 0 4px #8bb8e8);
-  }
+  -webkit-box-shadow: 0 0 0 0.125rem #54585a;
+          box-shadow: 0 0 0 0.125rem #54585a;
 }
 .vf-form__radio:checked + .vf-form__label::before {
   background: #3b6fb6;
-  -webkit-box-shadow: inset 0 0 0 2px #ffffff;
-          box-shadow: inset 0 0 0 2px #ffffff;
+  border-color: #3b6fb6;
 }
 .vf-form__radio:disabled + .vf-form__label {
-  color: #54585a;
-  cursor: auto;
+  color: #707372;
+  cursor: not-allowed;
 }
 .vf-form__radio:disabled + .vf-form__label::before {
-  background: #707372;
+  background-color: #d0d0ce;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.vf-form__item--radio--inline {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.vf-form__item--radio .vf-form__helper {
+  margin-left: 29px;
 }
-.vf-form__item--radio--inline *:not(:first-of-type) {
-  margin-left: 1rem;
+
+.vf-form__legend + .vf-cluster__inner {
+  margin-top: 1rem !important;
 }

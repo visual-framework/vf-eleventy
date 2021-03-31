@@ -204,7 +204,7 @@
 
 /*!
  * Component: @visual-framework/vf-intro
- * Version: 1.4.6
+ * Version: 1.4.7
  * Location: components/undefined
  */
 .vf-intro {
@@ -225,10 +225,8 @@
 @media (min-width: 1024px) {
   .vf-intro {
     display: grid;
-    -webkit-column-gap: var(--page-grid-gap, 1em);
-       -moz-column-gap: var(--page-grid-gap, 1em);
-            column-gap: var(--page-grid-gap, 1em);
     grid-column: 1/-1 !important;
+    grid-column-gap: var(--page-grid-gap, 1em);
     grid-template-areas: "... header header" "... ...    links";
     grid-template-columns: var(--embl-grid-module--prime) auto var(--embl-grid-module--prime);
   }

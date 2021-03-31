@@ -131,7 +131,7 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 2.2.1
+ * Version: 2.2.2
  * Location: components/undefined
  */
 .vf-navigation__list {
@@ -192,8 +192,8 @@
   text-decoration: none;
 }
 .vf-navigation--main .vf-navigation__link:focus, .vf-navigation--main .vf-navigation__link:hover {
-  color: #000000;
   border-bottom: 1px solid currentColor;
+  color: #000000;
 }
 
 .vf-navigation--additional {
