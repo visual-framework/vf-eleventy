@@ -29,7 +29,7 @@
     "@node-sass/node-module-importer": "1.2.3",
     "@visual-framework/embl-grid": "2.1.2",
     "@visual-framework/vf-analytics-google": "1.0.3",
-    "@visual-framework/vf-banner": "1.7.1",
+    "@visual-framework/vf-banner": "1.7.2",
     "@visual-framework/vf-body": "1.2.0",
     "@visual-framework/vf-box": "2.3.1",
     "@visual-framework/vf-card": "2.5.4",
