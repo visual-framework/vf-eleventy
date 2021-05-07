@@ -78,7 +78,7 @@
   "devDependencies": {
     "@visual-framework/vf-badge": "1.2.3",
     "@visual-framework/vf-button": "1.4.1",
-    "@visual-framework/vf-hero": "3.2.0",
+    "@visual-framework/vf-hero": "3.2.3",
     "@visual-framework/vf-link-list": "1.3.4"
   }
 }
