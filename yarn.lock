@@ -1272,10 +1272,10 @@
     highlight.js "^10.1.2"
     marked "^2.0.0"
 
-"@visual-framework/vf-design-tokens@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-design-tokens/-/vf-design-tokens-3.4.0.tgz#66de970724b59571480586e5a6eb6c48bfea1833"
-  integrity sha512-oIV0+wTnjdOVkrkK5a2IlX/ilP5i5NR2W2cW893ZPglpPZt/gpah3L0s4bOIvw1bXfTT4ZH1kVgvLVhXEHE5lg==
+"@visual-framework/vf-design-tokens@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-design-tokens/-/vf-design-tokens-3.4.1.tgz#0a845d5e364c6ef7d2a39d5ab474bb4a3f5f1f41"
+  integrity sha512-drhNsS5jkM0QS/IvgrZIQXZaMM6NmW0WM1wCofIZKoc9gn8iBq2n72XsfZ1LTQllZ/yKcUxJnv5RQNRBwVZO+g==
 
 "@visual-framework/vf-divider@2.0.0", "@visual-framework/vf-divider@^2.0.0":
   version "2.0.0"
