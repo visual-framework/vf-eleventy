@@ -9,7 +9,6 @@ var output = "";
 try {
 var parentTemplate = null;
 if(runtime.contextOrFrameLookup(context, frame, "context")) {
-output += "\n";
 var t_1;
 t_1 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"button_href");
 frame.set("button_href", t_1, true);
@@ -91,7 +90,6 @@ context.setVariable("text", t_9);
 if(frame.topLevel) {
 context.addExport("text", t_9);
 }
-output += "\n";
 ;
 }
 output += "\n";

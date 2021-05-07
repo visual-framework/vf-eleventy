@@ -50,39 +50,28 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
 * Component: @visual-framework/vf-table
-* Version: 1.1.3
+* Version: 1.2.0-rc.0
 * Location: components/undefined
 */
 .vf-table {
   background-color: #ffffff;
   border-collapse: collapse;
-}
-
-.vf-table__heading .vf-button--icon {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: currentColor;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 700;
-}
-.vf-table__heading .vf-button--icon svg {
-  height: 20px;
-  margin-left: 4px;
-  opacity: 0;
-  padding: 2px;
-}
-.vf-table__heading .vf-button--icon:hover svg {
-  opacity: 1;
-}
-
-.vf-table--fixed {
-  table-layout: fixed;
 }
 
 .vf-table__caption {
@@ -98,9 +87,6 @@
 .vf-table__header {
   background-color: #d0d0ce;
 }
-.vf-table__header .vf-table__heading {
-  padding: 8px 16px;
-}
 
 .vf-table__heading {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
@@ -108,7 +94,23 @@
   font-weight: 500;
   line-height: 1.5;
   margin: 0 0 0 0;
+  padding: 8px 16px;
   text-align: left;
+}
+.vf-table__heading .vf-button--icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: currentColor;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+.vf-table__heading .vf-button--icon svg {
+  height: 20px;
+  margin-left: 4px;
+  padding: 2px;
 }
 
 .vf-table__cell {
@@ -121,18 +123,11 @@
   vertical-align: top;
 }
 
-.vf-table--tight .vf-table__heading {
-  padding: 4px 4px;
+.vf-table__row:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
-.vf-table--tight .vf-table__cell {
-  padding: 4px 4px;
-}
-
-.vf-table--loose .vf-table__heading {
-  padding: 16px 24px;
-}
-.vf-table--loose .vf-table__cell {
-  padding: 8px 24px;
+.vf-table--no-strpe .vf-table__row:nth-of-type(even) {
+  background-color: #ffffff;
 }
 
 .vf-table__row .vf-table__heading {
@@ -144,20 +139,6 @@
   text-align: left;
 }
 
-.vf-table--striped .vf-table__body .vf-table__row:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.vf-table--bordered {
-  border: 1px solid #707372;
-}
-.vf-table--bordered .vf-table__heading {
-  border: 1px solid #707372;
-}
-.vf-table--bordered .vf-table__cell {
-  border: 1px solid #707372;
-}
-
 .vf-table__body .vf-table__row:not(.vf-table__row--selected):hover {
   background-color: #fffadc;
 }
@@ -165,6 +146,10 @@
 .vf-table__label {
   margin: 0;
   text-align: center;
+}
+
+.vf-table__footer {
+  background-color: #d0d0ce;
 }
 
 .vf-table__cell--actions .vf-button--icon {
@@ -215,10 +200,30 @@
   color: #ffffff;
 }
 
-.vf-table__footer {
-  background-color: #d0d0ce;
-  border-top: 1px solid #000000;
+html:not(.vf-disable-deprecated) .vf-table--bordered {
+  border: 1px solid #707372;
 }
-.vf-table__footer .vf-table__cell {
-  padding: 8px 16px;
+html:not(.vf-disable-deprecated) .vf-table--bordered .vf-table__heading {
+  border: 1px solid #707372;
+}
+html:not(.vf-disable-deprecated) .vf-table--bordered .vf-table__cell {
+  border: 1px solid #707372;
+}
+html:not(.vf-disable-deprecated) .vf-table--striped .vf-table__body .vf-table__row:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+html:not(.vf-disable-deprecated) .vf-table--tight .vf-table__heading {
+  padding: 4px 4px;
+}
+html:not(.vf-disable-deprecated) .vf-table--tight .vf-table__cell {
+  padding: 4px 4px;
+}
+html:not(.vf-disable-deprecated) .vf-table--loose .vf-table__heading {
+  padding: 16px 24px;
+}
+html:not(.vf-disable-deprecated) .vf-table--loose .vf-table__cell {
+  padding: 8px 24px;
+}
+html:not(.vf-disable-deprecated) .vf-table--fixed {
+  table-layout: fixed;
 }

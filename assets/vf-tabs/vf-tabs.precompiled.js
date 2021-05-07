@@ -49,9 +49,14 @@ frame.set("loop.last", t_5 === t_6 - 1);
 frame.set("loop.length", t_6);
 output += "  <section class=\"vf-tabs__section\" id=\"vf-tabs__section--";
 output += runtime.suppressValue(runtime.memberLookup((t_8),"tab_number"), env.opts.autoescape);
-output += "\">\n    <h2>";
+output += "\">\n";
+if(runtime.memberLookup((t_8),"tab_heading")) {
+output += "<h2>";
 output += runtime.suppressValue(runtime.memberLookup((t_8),"tab_heading"), env.opts.autoescape);
-output += "</h2>\n    <p>";
+output += "</h2>";
+;
+}
+output += "    <p>";
 output += runtime.suppressValue(runtime.memberLookup((t_8),"tab_content"), env.opts.autoescape);
 output += "</p>\n  </section>\n";
 ;

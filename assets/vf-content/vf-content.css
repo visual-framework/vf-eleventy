@@ -942,7 +942,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.4.1
+* Version: 1.4.2
 * Location: components/undefined
 */
 .vf-button {
@@ -1464,7 +1464,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-content
- * Version: 1.5.1
+ * Version: 1.5.2
  * Location: components/undefined
  */
 .vf-content h1:not([class*=vf-]) {
@@ -1638,7 +1638,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
   line-height: 1.421;
   margin: 0 0 16px 0;
   margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
-  margin: 0 0 0 0;
+  margin: 0 0 1rem 0;
   border: 0;
   padding: 10px 8px 10px 32px;
   position: relative;

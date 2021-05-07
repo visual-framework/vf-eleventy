@@ -50,10 +50,23 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-banner
- * Version: 1.7.1
+ * Version: 1.7.2
  * Location: components/undefined
  */
 .vf-banner {
@@ -200,27 +213,27 @@
   z-index: 5150;
 }
 
-.vf-banner--phase {
+html:not(.vf-disable-deprecated) .vf-banner--phase {
   background-color: #fffadc;
   margin: 16px 0;
 }
-.vf-banner--phase .vf-banner__text,
-.vf-banner--phase [class*=vf-text] {
+html:not(.vf-disable-deprecated) .vf-banner--phase .vf-banner__text,
+html:not(.vf-disable-deprecated) .vf-banner--phase [class*=vf-text] {
   color: #54585a;
   margin: 0;
 }
-.vf-banner--phase .vf-banner__text .vf-banner__link, .vf-banner--phase .vf-banner__text .vf-link,
-.vf-banner--phase [class*=vf-text] .vf-banner__link,
-.vf-banner--phase [class*=vf-text] .vf-link {
+html:not(.vf-disable-deprecated) .vf-banner--phase .vf-banner__text .vf-banner__link, html:not(.vf-disable-deprecated) .vf-banner--phase .vf-banner__text .vf-link,
+html:not(.vf-disable-deprecated) .vf-banner--phase [class*=vf-text] .vf-banner__link,
+html:not(.vf-disable-deprecated) .vf-banner--phase [class*=vf-text] .vf-link {
   color: inherit;
 }
-.vf-banner--phase .vf-banner__content {
+html:not(.vf-disable-deprecated) .vf-banner--phase .vf-banner__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 @media (min-width: 1024px) {
-  .vf-banner--phase .vf-button {
+  html:not(.vf-disable-deprecated) .vf-banner--phase .vf-button {
     margin-left: auto;
   }
 }

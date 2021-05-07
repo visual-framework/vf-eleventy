@@ -50,10 +50,23 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-hero
- * Version: 3.2.0
+ * Version: 3.2.2
  * Location: components/undefined
  */
 /* stylelint-disable */
@@ -80,9 +93,10 @@
           box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1), -2px 0 3px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1984;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: auto;
 }
 
 .vf-hero__kicker {

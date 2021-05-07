@@ -1,4 +1,4 @@
-// <%= componentName %>
+// vf-flag
 
 // Don't need JS? Then feel free to delete this file.
 
@@ -13,34 +13,34 @@
  * 🚫 Don't: const tabs = document.querySelectorAll('.vf-tabs');
  * ✅ Do:    const tabs = document.querySelectorAll('[data-vf-js-tabs]');
  *
- * This allows users who would prefer not to have this JS engage on an element
+ * This allows users who would prefer not to have this JS engange on an element
  * to drop `data-vf-js-component` and still maintain CSS styling.
  */
 
 // Uncomment this boilerplate
 // // if you need to import any other components' JS to use here
-// import { vfOthercomponent } from vfImportPrefix + '../vf-other-component/vf-other-component';
+// import { vfOthercomponent } from 'vf-other-component/vf-other-component';
 //
 //  /**
 //   * The global function for this component
-//   * @example <%= componentNameJs %>(firstPassedVar)
+//   * @example vfFlag(firstPassedVar)
 //   * @param {string} [firstPassedVar]  - An option to be passed
 //   */
-// function <%= componentNameJs %>(firstPassedVar) {
+// function vfFlag(firstPassedVar) {
 //   firstPassedVar = firstPassedVar || 'defaultVal';
 //
 // }
 //
 // // If you need to invoke the component by default
-// <%= componentNameJs %>();
+// vfFlag();
 //
 // // By default your component should be usable with js imports
-// export { <%= componentNameJs %> };
+// export { vfFlag };
 //
 // // You should also import it at ./components/vf-component-rollup/scripts.js
-// // import { <%= componentNameJs %> } from '<%= componentName %>/<%= componentName %>';
+// // import { vfFlag } from 'vf-flag/vf-flag';
 // // Or import directly
-// // import { <%= componentNameJs %> } from '../components/raw/<%= componentName %>/<%= componentName %>.js';
+// // import { vfFlag } from '../components/raw/vf-flag/vf-flag.js';
 // // And, if needed, invoke it
-// // <%= componentNameJs %>();
+// // vfFlag();
 
