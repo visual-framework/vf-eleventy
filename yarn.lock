@@ -1320,7 +1320,12 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-analytics-google/-/vf-analytics-google-1.0.3.tgz#1328f344417e410a43efaf9990bfd6eb8316859d"
   integrity sha512-DLt30gQCCR8ZD26P86LPQbvRUpjFO84qJiLuJMZj6jexYv/Y3cLCmGy6o302ZuJVbp+zGcpGI8GID6JwQKP8Qw==
 
-"@visual-framework/vf-badge@1.2.3", "@visual-framework/vf-badge@^1.2.3":
+"@visual-framework/vf-badge@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.3.0.tgz#0b176156a172fe4db4b5273adb8f8e094477032d"
+  integrity sha512-kBDUEWFsfi5opfx/UsP1FI6tAnYxwG7cZBNsd6ktnXmblrxkdl+mUufiOzM3tH7iB/WTs9WhXjzqYOwqFwhCjg==
+
+"@visual-framework/vf-badge@^1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.2.3.tgz#546d3bd30062ce27cf0050d671071ce7ac331d73"
   integrity sha512-Da/tdGG9f3Wz84nzXHzWfPkpmQdYyszBDPHDyZQEK4oJlvKh06CylIg326xnZa3Szh/0jAzzMjPCxES1r4XnZw==
