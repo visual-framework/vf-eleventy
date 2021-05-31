@@ -62,7 +62,7 @@
     "@visual-framework/vf-stack": "^2.1.1",
     "@visual-framework/vf-summary": "1.4.2",
     "@visual-framework/vf-summary-container": "1.0.0",
-    "@visual-framework/vf-table": "1.2.0-rc.0",
+    "@visual-framework/vf-table": "1.2.0-rc.2",
     "@visual-framework/vf-tabs": "1.2.2",
     "@visual-framework/vf-text": "1.0.2",
     "@visual-framework/vf-u-fullbleed": "1.2.2",
