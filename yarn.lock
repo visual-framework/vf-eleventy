@@ -1315,10 +1315,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/embl-grid/-/embl-grid-2.1.2.tgz#18a1c4c859609a14280301ecbbec99ce42bebb9a"
   integrity sha512-E+ZM5Zri+L+/I9lfDjB3yXKwoZD7r5+9qXaIN56TsGJ/uZJFZ3m/HTfdvz0h6uMeJUZHAGUNCOzlRDWle/GAtA==
 
-"@visual-framework/vf-analytics-google@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-analytics-google/-/vf-analytics-google-1.0.3.tgz#1328f344417e410a43efaf9990bfd6eb8316859d"
-  integrity sha512-DLt30gQCCR8ZD26P86LPQbvRUpjFO84qJiLuJMZj6jexYv/Y3cLCmGy6o302ZuJVbp+zGcpGI8GID6JwQKP8Qw==
+"@visual-framework/vf-analytics-google@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-analytics-google/-/vf-analytics-google-1.0.4.tgz#9a51cb8f0ce5651360f4d8bedb3cac6007098561"
+  integrity sha512-nY/jcg/s5gOML0EFxvXb+xPthz+spR78Y/hQPjveVnXXalWHjtbbFQzMcAGkulMt9ndj8bJ5Ijb16ewiYDe2Vw==
 
 "@visual-framework/vf-badge@1.2.3", "@visual-framework/vf-badge@^1.2.3":
   version "1.2.3"
