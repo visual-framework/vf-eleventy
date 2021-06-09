@@ -58,7 +58,7 @@
     "@visual-framework/vf-no-js": "1.0.1",
     "@visual-framework/vf-sass-config": "2.5.3",
     "@visual-framework/vf-sass-utilities": "1.0.1",
-    "@visual-framework/vf-section-header": "1.3.3",
+    "@visual-framework/vf-section-header": "1.5.1",
     "@visual-framework/vf-stack": "^2.1.1",
     "@visual-framework/vf-summary": "1.4.2",
     "@visual-framework/vf-summary-container": "1.0.0",
