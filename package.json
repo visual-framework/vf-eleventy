@@ -37,7 +37,7 @@
     "@visual-framework/vf-cluster": "^1.0.2",
     "@visual-framework/vf-code-example": "1.2.1",
     "@visual-framework/vf-config": "1.0.1-alpha.0",
-    "@visual-framework/vf-content": "1.5.3",
+    "@visual-framework/vf-content": "1.5.6",
     "@visual-framework/vf-core": "2.2.24",
     "@visual-framework/vf-design-tokens": "3.4.1",
     "@visual-framework/vf-divider": "2.0.0",

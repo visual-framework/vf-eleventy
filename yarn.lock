@@ -1320,20 +1320,25 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-analytics-google/-/vf-analytics-google-1.0.3.tgz#1328f344417e410a43efaf9990bfd6eb8316859d"
   integrity sha512-DLt30gQCCR8ZD26P86LPQbvRUpjFO84qJiLuJMZj6jexYv/Y3cLCmGy6o302ZuJVbp+zGcpGI8GID6JwQKP8Qw==
 
-"@visual-framework/vf-badge@1.2.3", "@visual-framework/vf-badge@^1.2.3":
+"@visual-framework/vf-badge@1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-1.2.3.tgz#546d3bd30062ce27cf0050d671071ce7ac331d73"
   integrity sha512-Da/tdGG9f3Wz84nzXHzWfPkpmQdYyszBDPHDyZQEK4oJlvKh06CylIg326xnZa3Szh/0jAzzMjPCxES1r4XnZw==
+
+"@visual-framework/vf-badge@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-2.0.1.tgz#43466a1afc5b4218684599169d48da1d70af40d2"
+  integrity sha512-v/KatPC09dUtJlWt9dxmhfQiC22R4YbUqkQvVwdcCet8X1dWJm2orbQqnx9Jrh2lWZZRREgx6PnGQq3ySQDaHg==
 
 "@visual-framework/vf-banner@1.7.2":
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.7.2.tgz#9f66af4a8a069eae4a27b8d59ede4483e1c11404"
   integrity sha512-yEedX8QFjxsMRAVHejAxexMSC+CMdmUgwWvqkLXMq9z0m1LORXTmZfDqjMfhW0FNeEWHB8mI2HjNobq61jVWxw==
 
-"@visual-framework/vf-blockquote@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-blockquote/-/vf-blockquote-1.1.1.tgz#e1f98248bc9e735cb767dafd04e5a887e0193a01"
-  integrity sha512-zXSmXxBdV1L4442nohIYn0AaRrCFXmQ3wo72+MbuZK/NwTtaOqhooxD3nlSgaoaGctQFABCAdjGr/mc5qxxR+w==
+"@visual-framework/vf-blockquote@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-blockquote/-/vf-blockquote-1.2.0.tgz#288a56a39fefe3e042f6a768e79f9edb6e9501d2"
+  integrity sha512-tY09UQ2ADzOHtIrzNq/ZhJLvfHB2AXXv66bfuZmX3mcKNJdfcJMd+PLA3MWWxMJFjT28/2Uij0I/wjBV86lXDg==
 
 "@visual-framework/vf-body@1.2.0":
   version "1.2.0"
@@ -1345,10 +1350,15 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-box/-/vf-box-2.3.1.tgz#30acd0f46dd292482e87c6e66469c919ce192701"
   integrity sha512-e0Yn8Id3pId7IXrc90jWMyzIGfTaPu9iJ5rJQvzUTBqdTIiAj2+yg2eRumxPZwvYND7+rte39Rj14W/JVt7ulw==
 
-"@visual-framework/vf-button@1.4.3", "@visual-framework/vf-button@^1.4.3":
+"@visual-framework/vf-button@1.4.3":
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-button/-/vf-button-1.4.3.tgz#68cfc05bc6589b7de34f4b0295186b5c47a5fb7e"
   integrity sha512-DJBXFRT5F0eLwGrtqVx8prLBEribxk/P6yt4tSCBx9t8lhgnGZ2E8LwTzXYm03muPNizEcoKmxHOBz73H6y8Cg==
+
+"@visual-framework/vf-button@^2.0.0-alpha.0":
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-button/-/vf-button-2.0.0-alpha.0.tgz#812057d7fba901f2952b5ff80eb2a61d66fc5d73"
+  integrity sha512-8vb2TiUKq6qQjNfRZDlPBdRiFwlJVgXk0sMQUaL9O2nqFFZej81OMrpy0DqeFaALYfjGs4kQvrPA1GasRric1w==
 
 "@visual-framework/vf-card-container@3.1.2":
   version "3.1.2"
@@ -1392,15 +1402,15 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-config/-/vf-config-1.0.1-alpha.0.tgz#2dda99f7d2766c32cb46b321560ec15c8a3d55fe"
   integrity sha512-T5XSohedN4OKxqA0n44V8xvpDMAz1zAW0TGa+2a1B3lMpAWAt5WVpG2tdOQknHDQQpq/K/YRxFySSXk+G7f8Ew==
 
-"@visual-framework/vf-content@1.5.3":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-content/-/vf-content-1.5.3.tgz#7d86c4561fc915a00cc36433f2db9bd131247d90"
-  integrity sha512-2v9KtAKFKRGm6/kheaMUuFwvNhxl0GRfSBi2lYAtq8qnHrVvFTGyh35cNcMWgHI89eBRqZ5xMENGS7WB4zQcSQ==
+"@visual-framework/vf-content@1.5.6":
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-content/-/vf-content-1.5.6.tgz#195c88759afaab1c563fadf4fc853dd90b3b4888"
+  integrity sha512-Y/svm2UfpUNi+bxU5xLN2VzYCye0Oc/ECnpkiBW0BNobInxtF3z6mOKQWi3NzAyCMlbVDjiwajYVCiq4q918rw==
   dependencies:
-    "@visual-framework/vf-badge" "^1.2.3"
-    "@visual-framework/vf-blockquote" "^1.1.1"
+    "@visual-framework/vf-badge" "^2.0.0"
+    "@visual-framework/vf-blockquote" "^1.2.0"
     "@visual-framework/vf-box" "^2.3.1"
-    "@visual-framework/vf-button" "^1.4.3"
+    "@visual-framework/vf-button" "^2.0.0-alpha.0"
     "@visual-framework/vf-divider" "^2.0.0"
     "@visual-framework/vf-figure" "^1.3.0"
     "@visual-framework/vf-form" "^2.0.0-alpha.1"
