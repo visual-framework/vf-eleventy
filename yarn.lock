@@ -1309,7 +1309,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-figure/-/vf-figure-1.3.0.tgz#6d60b9ee33e9e681e13752082800fb0450e8945f"
   integrity sha512-SIS/FOhMn+cPZHqF7dNJPqhE8BNNU5pR8ZZsdWXsRC1zQDGWAaz0HyuD8Xtp8MOp+4JFP2DrrGpURc3V07uYLA==
 
-"@visual-framework/vf-flag@^1.0.0-alpha.2":
+"@visual-framework/vf-flag@1.0.0-alpha.2":
   version "1.0.0-alpha.2"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-flag/-/vf-flag-1.0.0-alpha.2.tgz#d13f2f87dc8e243456f9ea2140b37c137629117d"
   integrity sha512-VRXAW5rz6J4d7CvDoJWSrCFMjyzFkwtXhjSpTe2MTbu4ONVsV6xwDJQtKHVIbBESVGTvwI6W5xBnHZwHaQ5x1A==
@@ -1455,6 +1455,11 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-no-js/-/vf-no-js-1.0.1.tgz#c0c02713616705e2408a041e67588afc5aa7f845"
   integrity sha512-T/LEPJ+JAsYRnf55gIbRs6AtolB1cuJsuVuACQHvUzam+RqFa3n42NjkGm5h/hBCZpNPmMUeftWq3VFrKAdffg==
 
+"@visual-framework/vf-polyfill-js@1.0.0-alpha.1":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-polyfill-js/-/vf-polyfill-js-1.0.0-alpha.1.tgz#93cc613ac65e712010c444a8e7dc91376d3c95fc"
+  integrity sha512-uiriBLQY+K4aPoE3oXkBHREhbceEVMqW5C3xFaTWoKIUwxGNRf4akTIsD/13v3m3ODTRAt76qTSzocdmJ2G64A==
+
 "@visual-framework/vf-sass-compilation@^1.1.11":
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-sass-compilation/-/vf-sass-compilation-1.1.11.tgz#5216ba151d4bd69a831f436e44c02024d8a60f56"
@@ -1495,7 +1500,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-section-header/-/vf-section-header-1.5.1.tgz#9708d9899d60e144239f1a27a15496c77ff7f494"
   integrity sha512-9NSWP5jLbtRDOKXFbjoN5ZlC7pv6723oSCpFU+IMi74JARrdJNaiqaGHimXWK3yahAa3zCMiTBcJIPGOIFfaOg==
 
-"@visual-framework/vf-stack@^2.1.1":
+"@visual-framework/vf-stack@2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-stack/-/vf-stack-2.1.1.tgz#aed13dfc015b64675f32749b950a111f03c3eccf"
   integrity sha512-KueOLVZd3occ3Hj+dCWYSq/T5aV4ZwtV4ytRmB2UqzuCxAWhO29amHoTcZhpDcMaVWBObEbMT4tbNIzCpniNfA==
