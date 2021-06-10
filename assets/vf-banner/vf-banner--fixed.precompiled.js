@@ -9,7 +9,7 @@ var output = "";
 try {
 var parentTemplate = null;
 output += "<!-- dismissible banner -->\n<div class=\"vf-banner vf-banner--fixed vf-banner--bottom vf-banner--notice\"\ndata-vf-js-banner\ndata-vf-js-banner-state=\"dismissible\"\ndata-vf-js-banner-button-text=\"";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf") - runtime.contextOrFrameLookup(context, frame, "data") - runtime.contextOrFrameLookup(context, frame, "protection") - runtime.contextOrFrameLookup(context, frame, "banner__text"), env.opts.autoescape);
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "banner__text"), env.opts.autoescape);
 output += "\"\ndata-vf-js-banner-cookie-name=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "data") - runtime.contextOrFrameLookup(context, frame, "service") - runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
 output += "\"\ndata-vf-js-banner-cookie-version=\"";
@@ -18,7 +18,7 @@ output += "\"\ndata-vf-js-banner-extra-button=\"<a href='#'>Optional button</a><
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "data") - runtime.contextOrFrameLookup(context, frame, "service") - runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
 output += "\"\ndata-vf-js-banner-cookie-version=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "data") - runtime.contextOrFrameLookup(context, frame, "protection") - runtime.contextOrFrameLookup(context, frame, "version"), env.opts.autoescape);
-output += "\">\n  <div class=\"vf-banner__content | vf-grid\" data-vf-js-banner-notice-text>\n\n    <div class=\"vf-box\">\n        <h2 class=\"vf-text vf-text-heading-2\">A blocking banner</h2>\n        <p class=\"vf-text vf-text-body--3\">This might have a richer layout. Note, this implementation is not yet feature complete.</p>\n    </div>\n\n  </div>\n</div> -->\n\n<!-- programatic banner -->\n<!-- <div class=\"vf-banner vf-banner--fixed vf-banner--bottom vf-banner--notice\"\n      data-vf-js-banner-id=\"32423\"\n></div> -->\n";
+output += "\">\n  <div class=\"vf-banner__content | vf-grid\" data-vf-js-banner-notice-text>\n\n    <div class=\"vf-box\">\n        <h2 class=\"vf-text vf-text-heading-2\">A blocking banner</h2>\n        <p class=\"vf-text vf-text-body--3\">This might have a richer layout. Note, this implementation is not yet feature complete.</p>\n    </div>\n\n  </div>\n</div> -->\n\n<!-- programmatic banner -->\n<!-- <div class=\"vf-banner vf-banner--fixed vf-banner--bottom vf-banner--notice\"\n      data-vf-js-banner-id=\"32423\"\n></div> -->\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

@@ -66,7 +66,7 @@
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-banner
- * Version: 1.7.2
+ * Version: 1.9.0
  * Location: components/undefined
  */
 .vf-banner {
@@ -200,6 +200,10 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
   background-color: #707372;
+}
+
+.vf-banner + div {
+  --vf-stack-margin--custom: space(200);
 }
 
 .vf-banner--fixed {

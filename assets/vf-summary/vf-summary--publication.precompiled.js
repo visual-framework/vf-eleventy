@@ -8,13 +8,19 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<article class=\"vf-summary vf-summary--publication\">\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
+output += "\n\n<article class=\"vf-summary vf-summary--publication\">\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
-output += "\" class=\"vf-summary__link\">\n      Computer modeling in developmental biology: growing today, essential tomorrow.\n    </a>\n  </h3>\n  <p class=\"vf-summary__author\">\n    Jimenez RC, Albar JP, Bhak J, Blatter MC, Blicher T, Brazas MD, Brooksbank C, Budd A, De Las Rivas J, Dreyer J, van Driel MA, Dunn MJ, Fernandes PL, van Gelder CW, Hermjakob H, Ioannidis V, Judge DP, Kahlem P, Korpelainen E, Kraus HJ, Loveland J, Mayer C, McDowall J, Moran F, Mulder N, Nyronen T, Rother K, Salazar GA, Schneider R, Via A, Villaveces JM, Yu P, Schneider MV, Attwood TK, Corpas M.\n  </p>\n  <p class=\"vf-summary__source\">\n    The Journal of cell biology\n    <span class=\"vf-summary__date\">2019</span>\n  </p>\n\n  <p class=\"vf-summary__text\">\n    144(23):4214-4225. doi: 10.1242/dev.151274.\n    <a class=\"vf-link\" href=\"";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
-output += "\">Europe</a>\n    <a class=\"vf-link\" href=\"";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
-output += "\">PMC</a>\n  </p>\n</article>\n";
+output += "\" class=\"vf-summary__link\">\n      ";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__title"), env.opts.autoescape);
+output += "\n    </a>\n  </h3>\n  <p class=\"vf-summary__author\">";
+output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "summary__author")), env.opts.autoescape);
+output += "</p>\n  <p class=\"vf-summary__source\">\n    ";
+output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "summary__source")), env.opts.autoescape);
+output += "\n    <span class=\"vf-summary__date\">";
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__date"), env.opts.autoescape);
+output += "</span>\n  </p>\n\n  <p class=\"vf-summary__text\">\n    ";
+output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.contextOrFrameLookup(context, frame, "summary__text")), env.opts.autoescape);
+output += "\n  </p>\n</article>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

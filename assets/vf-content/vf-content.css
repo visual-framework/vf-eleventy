@@ -139,7 +139,7 @@
 
 /*!
  * Component: @visual-framework/vf-badge
- * Version: 1.2.3
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-badge {
@@ -147,7 +147,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
-  border: 1px solid;
+  border: 2px solid;
   color: inherit;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -158,54 +158,23 @@
   text-transform: uppercase;
 }
 
-.vf-badge--pill {
-  border-radius: 500px;
-}
-
-.vf-badge--rounded {
-  border-radius: 4px;
-}
-
-.vf-badge--square {
-  border: 0;
-  height: 12px;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 12px;
-}
-
-.vf-badge--phases {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 12px 0 0;
-  min-width: 52px;
-}
-
 .vf-badge--primary {
   background-color: #3b6fb6;
   border-color: #3b6fb6;
   color: #ffffff;
 }
 a.vf-badge .vf-badge--primary {
-  color: #000000;
+  color: #ffffff;
 }
 a.vf-badge .vf-badge--primary:visited {
-  color: #000000;
+  color: #ffffff;
 }
 a.vf-badge .vf-badge--primary:visited:hover {
-  color: #000000;
+  color: #ffffff;
   text-decoration: underline;
 }
 a.vf-badge .vf-badge--primary:hover {
-  color: #000000;
+  color: #ffffff;
 }
 
 a.vf-badge--primary:hover {
@@ -214,26 +183,17 @@ a.vf-badge--primary:hover {
 }
 
 .vf-badge--secondary {
-  background-color: #18974c;
-  border-color: #18974c;
-  color: #000000;
+  background-color: transparent;
+  border-color: #3b6fb6;
+  color: #3b6fb6;
 }
-a.vf-badge .vf-badge--secondary {
-  color: #000000;
-}
-a.vf-badge .vf-badge--secondary:visited {
-  color: #000000;
-}
-a.vf-badge .vf-badge--secondary:visited:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-a.vf-badge .vf-badge--secondary:hover {
-  color: #000000;
+a.vf-badge--secondary:hover {
+  background-color: transparent;
+  border-color: #193f90;
+  color: #193f90;
 }
 
 .vf-badge--tertiary {
-  color: #ffffff;
   color: #ffffff;
   background-color: #54585a;
   border-color: #54585a;
@@ -247,37 +207,6 @@ a.vf-badge .vf-badge--secondary:hover {
 }
 .vf-badge--tertiary:hover {
   color: #ffffff;
-}
-
-.vf-badge--outline[class*=primary] {
-  background-color: transparent;
-  border-color: #3b6fb6;
-  color: #3b6fb6;
-}
-a.vf-badge--outline[class*=primary]:hover {
-  background-color: transparent;
-  border-color: #193f90;
-  color: #193f90;
-}
-
-.vf-badge--outline[class*=secondary] {
-  background-color: transparent;
-  border-color: #18974c;
-  color: #18974c;
-}
-a.vf-badge--outline[class*=secondary]:hover {
-  background-color: transparent;
-  border-color: #007b53;
-  color: #007b53;
-}
-
-.vf-badge--outline[class*=tertiary] {
-  background-color: transparent;
-  border-color: #54585a;
-  color: #54585a;
-}
-a.vf-badge--outline[class*=tertiary]:hover {
-  background-color: transparent;
 }
 
 /*!
@@ -663,12 +592,12 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .vf-form__legend--required {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .vf-form__legend--required .vf-icon {
   fill: #d41645;
@@ -942,7 +871,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.4.2
+* Version: 2.0.0-alpha.0
 * Location: components/undefined
 */
 .vf-button {
@@ -1011,12 +940,14 @@ a.vf-button:hover, a.vf-button:focus {
 }
 
 .vf-button--secondary {
-  --vf-button-border-color: var(--vf-color--green);
-  --vf-button-background-color: var(--vf-color--green);
-  --vf-button-text-color: var(--vf-ui-color--black);
-  --vf-button-shadow-border-color: var(--vf-color--green--dark);
-  --vf-button-shadow-background-color: var(--vf-color--green--dark);
-  --vf-button-border-color--visited: var(--vf-color--green--light);
+  --vf-button-background-color: #ffffff;
+  --vf-button-border-color: var(--vf-color--blue);
+  --vf-button-text-color: var(--vf-color--blue);
+  --vf-button-shadow-border-color: var(--vf-color--blue--dark);
+  --vf-button-shadow-background-color: var(--vf-color--blue--dark);
+}
+.vf-button--secondary:focus, .vf-button--secondary:hover {
+  --vf-button-border-color: var(--vf-color--blue);
 }
 
 .vf-button--tertiary {
@@ -1027,25 +958,28 @@ a.vf-button:hover, a.vf-button:focus {
   --vf-button-border-color--visited: var(--vf-color--grey--light);
 }
 
-.vf-button--outline {
-  --vf-button-background-color: #ffffff;
-  color: #3b6fb6;
-  color: var(--vf-button-border-color, var(--vf-button__color__background--default));
+.vf-button--link {
+  --vf-button-border-color: transparent;
+  --vf-button-background-color: transparent;
+  --vf-button-shadow-border-color: transparent;
+  --vf-button-shadow-background-color: transparent;
+  --vf-button-border-color--visited: transparent;
+  --vf-button-text-color: var(--vf-color--blue);
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 8px;
 }
-.vf-button--outline:focus, .vf-button--outline:hover {
-  color: #3b6fb6;
-  color: var(--vf-button-border-color);
-}
-
-.vf-button--pill {
-  border-radius: 500px;
-}
-.vf-button--pill::before {
-  border-radius: 500px;
-}
-
-.vf-button--rounded {
-  border-radius: 16px;
+.vf-button--link:hover, .vf-button--link:focus, .vf-button--link:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .vf-button--sm {
@@ -1057,14 +991,6 @@ a.vf-button:hover, a.vf-button:focus {
 }
 .vf-button--sm.vf-button--rounded {
   border-radius: 8px;
-}
-
-.vf-button--lg {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 16px;
 }
 
 .vf-button--icon {
@@ -1085,52 +1011,6 @@ a.vf-button:hover, a.vf-button:focus {
           box-shadow: none;
   -webkit-transform: none;
           transform: none;
-}
-
-html:not(.vf-disable-deprecated) .vf-text-button--secondary {
-  background-color: #18974c;
-  border: 2px solid #18974c;
-  color: #ffffff;
-  -webkit-box-shadow: 0px 6px 0px 0px #007b53;
-          box-shadow: 0px 6px 0px 0px #007b53;
-  margin-bottom: 6px;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--secondary:visited {
-  background-color: #734595;
-  border-color: #734595;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
-  background-color: #007b53;
-  border-color: #007b53;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
-  -webkit-box-shadow: 0px 2px 0px 0px #007b53;
-          box-shadow: 0px 2px 0px 0px #007b53;
-}
-html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary {
-  background-color: #ffffff;
-  color: #18974c;
-}
-html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary:visited {
-  background-color: #734595;
-  color: #ffffff;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--2 {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 8px;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--2.vf-text-button--rounded {
-  border-radius: 8px;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--1 {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 16px;
 }
 
 /*!
@@ -1261,7 +1141,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-blockquote
- * Version: 1.1.1
+ * Version: 1.2.0
  * Location: components/undefined
  */
 .vf-blockquote {
@@ -1464,7 +1344,7 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 
 /*!
  * Component: @visual-framework/vf-content
- * Version: 1.5.2
+ * Version: 1.5.6
  * Location: components/undefined
  */
 .vf-content h1:not([class*=vf-]) {
@@ -1619,6 +1499,10 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 .vf-content li:not([class*=vf-]):last-of-type {
   margin-bottom: 1rem;
 }
+.vf-content img:not([class*=vf-]) {
+  height: auto;
+  max-width: 100%;
+}
 .vf-content hr:not([class*=vf-]) {
   --context-margin--inline: 1rem;
   background-color: #d8d8d8;
@@ -1712,6 +1596,9 @@ html:not(.vf-disable-deprecated) .vf-text-button--1 {
 }
 .vf-content .vf-video {
   margin-bottom: 32px;
+}
+.vf-content figure:not([class*=vf-]) {
+  margin: 0;
 }
 .vf-content .vf-figure--align-inline-start {
   margin-bottom: 32px;

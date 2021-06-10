@@ -49,7 +49,7 @@ class="vf-logo | vf-logo--has-text">
   <span class="vf-logo__text">Visual Framework 2.0</span>
 </a>
 
-        <nav class="vf-navigation vf-navigation--global | vf-cluster">
+        <nav class="vf-navigation vf-navigation--main | vf-cluster">
           <ul class="vf-navigation__list | vf-list | vf-cluster__inner">
             <li class="vf-navigation__item">
               <a href="https://stable.visual-framework.dev/" class="vf-navigation__link">About the Visual Framework</a>
@@ -74,12 +74,9 @@ class="vf-logo | vf-logo--has-text">
   </div>
 </section>
 <section class="embl-grid embl-grid--has-centered-content">
-  <div>
-    <!-- empty -->
-  </div>
+ <div class="vf-section-header"><h2 class="vf-section-header__heading" >Quickstart</h2></div> 
   <div class="vf-content">
-  <h2>Quickstart</h2>
-<pre><code>
+  <pre><code>
   yarn create @visual-framework/vf-eleventy your-new-site-name vf-eleventy
 <p></code></pre></p>
 <p>This will install a new <a href="https://github.com/visual-framework/vf-eleventy/"><code>vf-eleventy</code></a> to a folder named <code>your-new-site-name</code>.</p>
@@ -89,19 +86,19 @@ class="vf-logo | vf-logo--has-text">
   </div>
 </section>
 <section class="vf-intro | embl-grid embl-grid--has-centered-content">
-<div>
-  <!-- empty -->
-</div>
+ <div class="vf-section-header"><h2 class="vf-section-header__heading" >What you get</h2></div> 
 <div class="vf-content">
-<h2>What you get</h2>
 <ul>
 <li>the Eleventy static site generator</li>
 <li><a href="posts">initial templating setup</a></li>
 <li><a href="https://visual-framework.github.io/vf-core/">access to the Visual Framework component system</a></li>
 </ul>
-<h3>Component installation</h3>
-<p>To add a component you can use npm/Yarn or install it manually.</p>
-<p>In either case you'll need to re-run <code>gulp dev</code> to ensure the component is fully loaded.</p>
+</div>
+</section>
+<section class="vf-intro | embl-grid embl-grid--has-centered-content">
+ <div class="vf-section-header"><h2 class="vf-section-header__heading" >Component installation</h2></div> 
+<div class="vf-content">
+<p><a href="https://stable.visual-framework.dev/components/">Find a component in the VF directory</a> and use npm/Yarn or install it manually.</p>
 <ul>
 <li>installation: <code>yarn add @visual-framework/vf-logo</code></li>
 <li>updating: <code>yarn upgrade-interactive --latest</code></li>
@@ -111,9 +108,8 @@ class="vf-logo | vf-logo--has-text">
 <li>Download a pattern</li>
 <li>Copy it to <code>./src/components/vf-component-name</code></li>
 </ol>
-<h3>Add your own local component</h3>
-<p>You can add a custom VF-compatible component to <code>./src/components</code> and use it in
-your site.</p>
+<h3>Create your own local component</h3>
+<p>You can add a custom VF-compatible component to <code>./src/components</code> and use it in your site.</p>
 <ul>
 <li><code>gulp vf-component</code></li>
 </ul>
@@ -143,6 +139,8 @@ your site.</p>
 </div>
 
 <!-- This page was generated on Invalid DateTime -->
+<!-- IE11 polyfill JS -->
+<script nomodule crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default"></script>
 <script src="/vf-eleventy/scripts/scripts.js"></script>
 
   </body>

@@ -125,13 +125,13 @@ if((runtime.contextOrFrameLookup(context, frame, "vf_intro_phase"))) {
 if((runtime.contextOrFrameLookup(context, frame, "vf_intro_heading_href"))) {
 output += "      <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "intro_heading_href"), env.opts.autoescape);
-output += "\" class=\"vf-badge vf-badge--primary vf-badge--phases\">";
+output += "\" class=\"vf-badge vf-badge--primary\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_intro_phase"), env.opts.autoescape);
 output += "</a>";
 ;
 }
 else {
-output += "<span class=\"vf-badge vf-badge--primary vf-badge--phases\">";
+output += "<span class=\"vf-badge vf-badge--primary\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_intro_phase"), env.opts.autoescape);
 output += ";</span>";
 ;

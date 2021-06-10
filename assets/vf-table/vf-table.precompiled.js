@@ -70,9 +70,10 @@ output += "\"";
 }
 output += "      >";
 if(runtime.contextOrFrameLookup(context, frame, "sortable")) {
-output += "<button class=\"vf-button vf-button--sm vf-button--icon\">\n          ";
+output += "<button class=\"vf-button vf-button--sm vf-button--icon vf-table__button vf-table__button--sortable\">\n          ";
 output += runtime.suppressValue(runtime.memberLookup((t_4),"title"), env.opts.autoescape);
-output += "\n          <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" preserveAspectRatio=\"xMinYMin\">\n          \t<use xlink:href=\"#vf-table-sortable\"></use>\n          </svg>\n        </button>\n";
+output += "\n          <svg width=\"12\" height=\"22\" xmlns=\"http://www.w3.org/2000/svg\">\n            ";
+output += "\n            <path id=\"vf-table--sortable-top-arrow\"d=\"M6 0l6 10H0z\"/>\n            <path id=\"vf-table--sortable-bottom-arrow\" d=\"M6 22L0 12h12z\"/>\n          </svg>\n        </button>\n";
 ;
 }
 else {

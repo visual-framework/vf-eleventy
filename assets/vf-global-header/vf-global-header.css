@@ -50,6 +50,19 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-logo
@@ -105,26 +118,53 @@
 
 /*!
  * Component: @visual-framework/vf-navigation
- * Version: 2.2.1
+ * Version: 3.0.0-beta.1
  * Location: components/undefined
  */
-.vf-navigation__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.vf-navigation__item [aria-current=page] {
+  color: #000000;
+  text-shadow: 1px 0 0 currentColor;
 }
 
-.vf-navigation__heading {
-  margin: 0;
+.vf-navigation__link {
+  border-bottom: none;
+  text-decoration: none;
+  color: #54585a;
+}
+.vf-navigation__link:visited {
+  color: #54585a;
+  border-bottom: none;
+}
+.vf-navigation__link:visited:hover {
+  color: #54585a;
+  text-decoration: underline;
+}
+.vf-navigation__link:hover {
+  color: #000000;
+  border-bottom: none;
+  text-decoration: underline;
+}
+.vf-navigation__link:focus, .vf-navigation__link:hover {
+  text-decoration: underline;
+}
+
+.vf-navigation--main .vf-navigation__link {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.421;
+  margin: 0 0 0 0;
+}
+
+@media (min-width: 1024px) {
+  .vf-navigation--global {
+    margin-left: auto;
+  }
 }
 
 /*!
  * Component: @visual-framework/vf-global-header
- * Version: 3.1.1
+ * Version: 3.1.2
  * Location: components/undefined
  */
 .vf-global-header {
@@ -161,7 +201,4 @@
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-}
-.vf-banner + div {
-  --vf-stack-margin--custom: space(200);
 }

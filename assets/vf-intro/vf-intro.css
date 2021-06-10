@@ -50,6 +50,19 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-text
@@ -204,7 +217,7 @@
 
 /*!
  * Component: @visual-framework/vf-intro
- * Version: 1.4.7
+ * Version: 1.5.0
  * Location: components/undefined
  */
 .vf-intro {
@@ -267,26 +280,21 @@
 }
 
 .vf-intro__heading--has-tag {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .vf-intro__heading--has-tag .vf-badge {
-  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 @media (min-width: 1024px) {
   .vf-intro__heading--has-tag {
-    left: -83px;
     position: relative;
   }
   .vf-intro__heading--has-tag .vf-badge {
-    margin-left: 0;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    margin-right: 1rem;
+    position: absolute;
+    right: 100%;
   }
 }
 

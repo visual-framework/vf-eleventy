@@ -185,9 +185,9 @@ output += " vf-card--";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "variant"), env.opts.autoescape);
 ;
 }
-if(runtime.contextOrFrameLookup(context, frame, "modifier")) {
+if(runtime.contextOrFrameLookup(context, frame, "modifiers")) {
 output += " | ";
-output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifier"), env.opts.autoescape);
+output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "modifiers"), env.opts.autoescape);
 ;
 }
 if(runtime.contextOrFrameLookup(context, frame, "override_class")) {

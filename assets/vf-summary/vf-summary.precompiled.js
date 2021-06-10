@@ -8,7 +8,37 @@ var colno = 0;
 var output = "";
 try {
 var parentTemplate = null;
-output += "<article class=\"vf-summary\">\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
+if(runtime.contextOrFrameLookup(context, frame, "context")) {
+var t_1;
+t_1 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"summary__href");
+frame.set("summary__href", t_1, true);
+if(frame.topLevel) {
+context.setVariable("summary__href", t_1);
+}
+if(frame.topLevel) {
+context.addExport("summary__href", t_1);
+}
+var t_2;
+t_2 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"summary__title");
+frame.set("summary__title", t_2, true);
+if(frame.topLevel) {
+context.setVariable("summary__title", t_2);
+}
+if(frame.topLevel) {
+context.addExport("summary__title", t_2);
+}
+var t_3;
+t_3 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"summary__text");
+frame.set("summary__text", t_3, true);
+if(frame.topLevel) {
+context.setVariable("summary__text", t_3);
+}
+if(frame.topLevel) {
+context.addExport("summary__text", t_3);
+}
+;
+}
+output += "\n<article class=\"vf-summary\">\n  <h3 class=\"vf-summary__title\">\n    <a href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
 output += "\" class=\"vf-summary__link\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__title"), env.opts.autoescape);

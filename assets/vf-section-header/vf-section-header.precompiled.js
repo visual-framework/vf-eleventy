@@ -132,7 +132,7 @@ frame.set("loop.first", t_9 === 0);
 frame.set("loop.last", t_9 === t_10 - 1);
 frame.set("loop.length", t_10);
 t_6 += "<p class=\"vf-section-header__text\">";
-t_6 += runtime.suppressValue(section__content, env.opts.autoescape);
+t_6 += runtime.suppressValue(env.getFilter("safe").call(context, section__content), env.opts.autoescape);
 t_6 += "</p>";
 next(t_9);
 ;

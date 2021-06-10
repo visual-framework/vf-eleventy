@@ -66,7 +66,7 @@
 /* stylelint-enable */
 /*!
 * Component: @visual-framework/vf-button
-* Version: 1.4.2
+* Version: 2.0.0-alpha.0
 * Location: components/undefined
 */
 .vf-button {
@@ -135,12 +135,14 @@ a.vf-button:hover, a.vf-button:focus {
 }
 
 .vf-button--secondary {
-  --vf-button-border-color: var(--vf-color--green);
-  --vf-button-background-color: var(--vf-color--green);
-  --vf-button-text-color: var(--vf-ui-color--black);
-  --vf-button-shadow-border-color: var(--vf-color--green--dark);
-  --vf-button-shadow-background-color: var(--vf-color--green--dark);
-  --vf-button-border-color--visited: var(--vf-color--green--light);
+  --vf-button-background-color: #ffffff;
+  --vf-button-border-color: var(--vf-color--blue);
+  --vf-button-text-color: var(--vf-color--blue);
+  --vf-button-shadow-border-color: var(--vf-color--blue--dark);
+  --vf-button-shadow-background-color: var(--vf-color--blue--dark);
+}
+.vf-button--secondary:focus, .vf-button--secondary:hover {
+  --vf-button-border-color: var(--vf-color--blue);
 }
 
 .vf-button--tertiary {
@@ -151,25 +153,28 @@ a.vf-button:hover, a.vf-button:focus {
   --vf-button-border-color--visited: var(--vf-color--grey--light);
 }
 
-.vf-button--outline {
-  --vf-button-background-color: #ffffff;
-  color: #3b6fb6;
-  color: var(--vf-button-border-color, var(--vf-button__color__background--default));
+.vf-button--link {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px;
+  --vf-button-border-color: transparent;
+  --vf-button-background-color: transparent;
+  --vf-button-shadow-border-color: transparent;
+  --vf-button-shadow-background-color: transparent;
+  --vf-button-border-color--visited: transparent;
+  --vf-button-text-color: var(--vf-color--blue);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-.vf-button--outline:focus, .vf-button--outline:hover {
-  color: #3b6fb6;
-  color: var(--vf-button-border-color);
-}
-
-.vf-button--pill {
-  border-radius: 500px;
-}
-.vf-button--pill::before {
-  border-radius: 500px;
-}
-
-.vf-button--rounded {
-  border-radius: 16px;
+.vf-button--link:hover, .vf-button--link:focus, .vf-button--link:active {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .vf-button--sm {
@@ -181,14 +186,6 @@ a.vf-button:hover, a.vf-button:focus {
 }
 .vf-button--sm.vf-button--rounded {
   border-radius: 8px;
-}
-
-.vf-button--lg {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 16px;
 }
 
 .vf-button--icon {
@@ -209,50 +206,4 @@ a.vf-button:hover, a.vf-button:focus {
           box-shadow: none;
   -webkit-transform: none;
           transform: none;
-}
-
-html:not(.vf-disable-deprecated) .vf-text-button--secondary {
-  background-color: #18974c;
-  border: 2px solid #18974c;
-  color: #ffffff;
-  -webkit-box-shadow: 0px 6px 0px 0px #007b53;
-          box-shadow: 0px 6px 0px 0px #007b53;
-  margin-bottom: 6px;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--secondary:visited {
-  background-color: #734595;
-  border-color: #734595;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
-  background-color: #007b53;
-  border-color: #007b53;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--secondary:hover {
-  -webkit-box-shadow: 0px 2px 0px 0px #007b53;
-          box-shadow: 0px 2px 0px 0px #007b53;
-}
-html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary {
-  background-color: #ffffff;
-  color: #18974c;
-}
-html:not(.vf-disable-deprecated) .vf-button--outline.vf-text--button--secondary:visited {
-  background-color: #734595;
-  color: #ffffff;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--2 {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 8px;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--2.vf-text-button--rounded {
-  border-radius: 8px;
-}
-html:not(.vf-disable-deprecated) .vf-text-button--1 {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  padding: 16px;
 }

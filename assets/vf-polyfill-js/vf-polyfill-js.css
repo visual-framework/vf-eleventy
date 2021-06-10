@@ -1,4 +1,3 @@
-/* stylelint-disable */
 :root {
   --vf-color--green: #18974c;
   --vf-color--green--darkest: #0a5032;
@@ -31,41 +30,17 @@
 }
 
 :root {
-  --vf-theme--primary: #3b6fb6;
-  --vf-theme--primary--dark: #193f90;
-  --vf-theme--secondary: #18974c;
-  --vf-theme--secondary--dark: #007b53;
-  --vf-theme--tertiary: #54585a;
-  --vf-theme--quaternary: #f4c61f;
-  --vf-theme--quinary: #d0d0ce;
-}
-
-:root {
   --vf-ui-color--black: #000000;
-  --vf-ui-color--grey: #d8d8d8;
-  --vf-ui-color--grey--light: #f3f3f3;
+  --vf-ui-color--grey: #f3f3f3;
+  --vf-ui-color--grey--light: #d8d8d8;
   --vf-ui-color--yellow: #fffadc;
   --vf-ui-color--red: #d32f2f;
   --vf-ui-color--white: #ffffff;
   --vf-ui-color--off-white: #fafafa;
 }
 
-:root {
-  --vf-color--neutral--0: #ffffff;
-  --vf-color--neutral--100: #f3f3f3;
-  --vf-color--neutral--200: #e4e4e4;
-  --vf-color--neutral--300: #d0d0ce;
-  --vf-color--neutral--400: #a9abaa;
-  --vf-color--neutral--500: #8d8f8e;
-  --vf-color--neutral--600: #707372;
-  --vf-color--neutral--700: #54585a;
-  --vf-color--neutral--800: #373a36;
-  --vf-color--neutral--900: #000000;
-}
-
-/* stylelint-enable */
 /*!
- * Component: @visual-framework/vf-analytics-google
- * Version: 1.0.4
- * Location: components/undefined
+ * Component: @visual-framework/vf-polyfill-js
+ * Version: 1.0.0-alpha.1
+ * Location: components/vf-polyfill-js
  */

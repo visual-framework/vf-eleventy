@@ -66,7 +66,7 @@
 /* stylelint-enable */
 /*!
 * Component: @visual-framework/vf-table
-* Version: 1.2.0-rc.0
+* Version: 1.2.0-rc.2
 * Location: components/undefined
 */
 .vf-table {
@@ -85,7 +85,7 @@
 }
 
 .vf-table__header {
-  background-color: #d0d0ce;
+  border-bottom: 2px solid #d0d0ce;
 }
 
 .vf-table__heading {
@@ -97,7 +97,8 @@
   padding: 8px 16px;
   text-align: left;
 }
-.vf-table__heading .vf-button--icon {
+
+.vf-table__button--sortable {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -107,10 +108,28 @@
   display: flex;
   font-weight: 700;
 }
-.vf-table__heading .vf-button--icon svg {
-  height: 20px;
+.vf-table__button--sortable svg {
+  fill: #d0d0ce;
+  height: 22px;
   margin-left: 4px;
   padding: 2px;
+}
+.vf-table__button--sortable:hover svg {
+  fill: #54585A;
+}
+
+.vf-table__button--sorted-bottom #vf-table--sortable-top-arrow {
+  fill: #54585A;
+}
+.vf-table__button--sorted-bottom #vf-table--sortable-bottom-arrow {
+  opacity: 0;
+}
+
+.vf-table__button--sorted-top #vf-table--sortable-top-arrow {
+  opacity: 0;
+}
+.vf-table__button--sorted-top #vf-table--sortable-bottom-arrow {
+  fill: #54585A;
 }
 
 .vf-table__cell {

@@ -210,7 +210,7 @@ function vfBannerInsert(banner, bannerId, scope) {
     } else if (banner.vfJsBannerButtonTheme == "secondary") {
       generatedBannerHtml += "<button class=\"vf-button vf-button--secondary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
     } else if (banner.vfJsBannerButtonTheme == "tertiary") {
-      generatedBannerHtml += "<button class=\"vf-button vf-button--tertary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
+      generatedBannerHtml += "<button class=\"vf-button vf-button--tertiary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
     } else {
       // default
       generatedBannerHtml += "<button class=\"vf-button vf-button--primary\" data-vf-js-banner-close>" + banner.vfJsBannerButtonText + "</button>";
@@ -501,7 +501,7 @@ function vfGaInit(vfGaTrackOptions) {
     };
 
     var riskCheck = function riskCheck(e) {
-      input = e.srcElement.value;
+      var input = e.srcElement.value;
 
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)) {
         var domain = input.replace(/.*@/, "");

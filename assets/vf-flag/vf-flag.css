@@ -50,12 +50,25 @@
   --vf-ui-color--off-white: #fafafa;
 }
 
+:root {
+  --vf-color--neutral--0: #ffffff;
+  --vf-color--neutral--100: #f3f3f3;
+  --vf-color--neutral--200: #e4e4e4;
+  --vf-color--neutral--300: #d0d0ce;
+  --vf-color--neutral--400: #a9abaa;
+  --vf-color--neutral--500: #8d8f8e;
+  --vf-color--neutral--600: #707372;
+  --vf-color--neutral--700: #54585a;
+  --vf-color--neutral--800: #373a36;
+  --vf-color--neutral--900: #000000;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-flag
- * Version: 1.0.0-alpha.1
+ * Version: 1.0.0-alpha.2
  * Location: components/undefined
- * Build time: Wed, 24 Mar 2021 13:35:51 GMT
+ * Build time: Wed, 09 Jun 2021 10:39:40 GMT
  */
 .vf-flag {
   display: table;
@@ -66,6 +79,11 @@
   display: table-cell;
   padding-right: 1rem;
   padding-right: var(--vf-flag--spacing, 1rem);
+}
+.vf-flag__media img:not([class*=vf-]) {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .vf-flag__media > * {
   display: block;
