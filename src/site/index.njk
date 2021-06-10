@@ -17,13 +17,11 @@ meta:
 {% include containers.intro %}
 
 <section class="embl-grid embl-grid--has-centered-content">
-  <div>
-    <!-- empty -->
-  </div>
+  {% render '@vf-section-header', {
+    "section_title": "Quickstart"
+  } %}
   <div class="vf-content">
   {% markdown %}
-
-  ## Quickstart
 
   ```
 
@@ -44,25 +42,26 @@ meta:
   </div>
 </section>
 
-
 <section class="vf-intro | embl-grid embl-grid--has-centered-content">
-
-<div>
-  <!-- empty -->
-</div>
+{% render '@vf-section-header', {
+  "section_title": "What you get"
+} %}
 <div class="vf-content">
-
-## What you get
 
 - the Eleventy static site generator
 - [initial templating setup]({{'posts' | url}})
 - [access to the Visual Framework component system](https://visual-framework.github.io/vf-core/)
 
-### Component installation
+</div>
+</section>
 
-To add a component you can use npm/Yarn or install it manually.
+<section class="vf-intro | embl-grid embl-grid--has-centered-content">
+{% render '@vf-section-header', {
+  "section_title": "Component installation"
+} %}
+<div class="vf-content">
 
-In either case you'll need to re-run `gulp dev` to ensure the component is fully loaded.
+[Find a component in the VF directory](https://stable.visual-framework.dev/components/) and use npm/Yarn or install it manually.
 
 - installation: `yarn add @visual-framework/vf-logo`
 - updating: `yarn upgrade-interactive --latest`
@@ -72,10 +71,9 @@ In either case you'll need to re-run `gulp dev` to ensure the component is fully
 1. Download a pattern
 2. Copy it to `./src/components/vf-component-name`
 
-### Add your own local component
+### Create your own local component
 
-You can add a custom VF-compatible component to `./src/components` and use it in
-your site.
+You can add a custom VF-compatible component to `./src/components` and use it in your site.
 
 - `gulp vf-component`
 
