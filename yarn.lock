@@ -1510,10 +1510,10 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-summary-container/-/vf-summary-container-1.0.0.tgz#97ed788acd633bd54fc85dfae9925e22a0484560"
   integrity sha512-ASZ2GLwQXih0Cb2bprlgpCKBKsxmjDBHj+s0lsYp5zNFGj6IfpY9Cne8ti5eSYxc358JxKkjE8xEn80xrSeb9Q==
 
-"@visual-framework/vf-summary@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-summary/-/vf-summary-1.5.0.tgz#693ed20ea5f976b4ff197de941d024d6a9779dc7"
-  integrity sha512-LtTYyzbjSC7fayM22B1Rs2Ou1nNLFuow36zIIHV5dG6uuG+LLY9EItfjkUZHgUoUQt3OIjiinVRjgrS4tgSvKg==
+"@visual-framework/vf-summary@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-summary/-/vf-summary-1.5.1.tgz#cbf8c2a31693278c03fd0b62ed2721a16110d8f4"
+  integrity sha512-b6rv+1wqnfiSO/b/yvR1gCsglE2V+wTYT1lvY3rXaOv6u1bkG0ClkN5Gxg5NCgqvJHLTtLHpvbwlsk4dzoi19Q==
 
 "@visual-framework/vf-table@1.2.0-rc.2":
   version "1.2.0-rc.2"
