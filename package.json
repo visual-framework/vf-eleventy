@@ -41,7 +41,7 @@
     "@visual-framework/vf-core": "2.2.27",
     "@visual-framework/vf-design-tokens": "3.4.1",
     "@visual-framework/vf-divider": "2.0.0",
-    "@visual-framework/vf-extensions": "1.0.0-rc.1",
+    "@visual-framework/vf-extensions": "1.0.0",
     "@visual-framework/vf-favicon": "1.0.2",
     "@visual-framework/vf-flag": "1.0.0-alpha.2",
     "@visual-framework/vf-font-plex-mono": "1.1.1",
