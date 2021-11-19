@@ -8,7 +8,16 @@ const {componentPath, componentDirectories, buildDestionation} = require('@visua
 require('./node_modules/\@visual-framework/vf-core/gulp-tasks/_gulp_rollup.js')(gulp, path, componentPath, componentDirectories, buildDestionation);
 require('./node_modules/\@visual-framework/vf-extensions/gulp-tasks/_gulp_rollup.js')(gulp, path, componentPath, componentDirectories, buildDestionation);
 
-// Watch folders for changess
+// Optional support for creating components
+// `gulp vf-component`
+try {
+  require(path.resolve(".", __dirname + "/node_modules/@visual-framework/vf-component-generator/gulp-tasks/vf-generator.js"))(gulp, path);
+} catch (error) {
+  console.log("🛠  vf-component generator not found. To generate components: yarn add vf-component-generator --dev")
+  // console.error(error);
+}
+
+// Watch folders for changes
 gulp.task('watch', function() {
   // left for convenience for local watch additions
   gulp.watch(['./build/css/styles.css'], gulp.series('eleventy:reload'));

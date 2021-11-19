@@ -61,7 +61,6 @@ your site.
 
 You'll find a `vf-sample` component already placed in `./src/components`
 
-
 ## 4. Footnotes
 
 - Why `yarn` and not `npm`?
