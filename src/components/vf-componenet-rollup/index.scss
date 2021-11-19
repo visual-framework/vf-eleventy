@@ -50,6 +50,7 @@ button {
 /* All Visual Framework Elements */
 
 @import 'vf-badge/vf-badge.scss';
+@import 'vf-bookmark/vf-bookmark.scss';
 @import 'vf-collapse/vf-collapse.scss';
 @import 'vf-link/vf-link.scss';
 @import 'vf-logo/vf-logo.scss';
@@ -79,7 +80,6 @@ button {
 @import 'vf-code-example/vf-code-example.scss';
 @import 'vf-page-header/vf-page-header.scss';
 @import 'vf-link-list/vf-link-list.scss';
-@import 'vf-header/vf-header.scss';
 @import 'vf-hero/vf-hero.scss';
 
 @import 'vf-lede/vf-lede.scss';
@@ -89,7 +89,6 @@ button {
 @import 'vf-masthead/vf-masthead.scss';
 
 @import 'vf-navigation/vf-navigation.scss';
-@import 'vf-navigation/vf-navigation--additional.scss';
 
 @import 'vf-section-header/vf-section-header.scss';
 @import 'vf-activity-list/vf-activity-list.scss';
@@ -119,6 +118,8 @@ button {
 @import 'vf-pagination/vf-pagination.scss';
 @import 'vf-pagination/vf-pagination--full.scss';
 @import 'vf-back-to-top/vf-back-to-top.scss';
+@import 'vf-progress-indicator/vf-progress-indicator.scss';
+@import 'vf-dropdown/vf-dropdown.scss';
 
 /* All Visual Framework Containers */
 
@@ -132,6 +133,8 @@ button {
 @import 'vf-banner/vf-banner--fixed.scss';
 @import 'vf-banner/vf-banner--gdpr.scss';
 
+@import 'vf-banner/vf-banner-elixir.scss';
+
 @import 'vf-details/vf-details.scss';
 
 @import 'vf-news-container/vf-news-container.scss';
@@ -140,6 +143,7 @@ button {
 
 @import 'vf-show-more/vf-show-more.scss';
 
+@import 'vf-mega-menu/vf-mega-menu.scss';
 @import 'vf-tree/vf-tree.scss';
 
 /* All Visual Framework Boilerplates */
@@ -161,6 +165,7 @@ button {
 @import 'vf-heading/vf-heading.scss';
 @import 'vf-text/vf-text.scss';
 @import 'vf-u-fullbleed/vf-u-fullbleed.scss';
+@import 'vf-smooth-scroll/vf-smooth-scroll.scss';
 
 /* Visual Framework Utility Class Mixins */
 @import 'vf-sass-config/mixins/vf-utility-mixins.scss';
@@ -169,6 +174,9 @@ button {
 // This is a demonstration of vf-core's ability to warn and proceed on missing
 // sass imports
 @import 'vf-somepattern/vf-i-dont-exist.scss';
+
+// Local components
+@import 'vf-sample/vf-sample.scss';
 
 // If you have any local overrides, put them in:
 @import 'vf-local-overrides/vf-local-overrides.scss';
