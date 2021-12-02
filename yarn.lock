@@ -7001,10 +7001,10 @@ liquidjs@^6.4.3:
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-6.4.3.tgz#c7caf7a3f6c87dc6a22a5a351328cf8f7298c243"
   integrity sha512-m1xSB10Ncu22NR3X0xdaqu/GvP1xadDCFYGqGgd6me8DAWjyA68BKE5DHJmSxw1CGsWPsX+Hj2v/87J2w/LvMQ==
 
-list-stream@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/list-stream/-/list-stream-2.0.0.tgz#c474edd43ab7d9647f5a9aafcbade52de15b068f"
-  integrity sha512-s9BgobQNJt767O+CJXlNeDmzkbjyiE0Zt1u24D89J3QnQXWwFeuvx7dWzutkBotTuWfk+n+Gc2E0RwfmEx53NA==
+list-stream@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/list-stream/-/list-stream-2.1.0.tgz#514e7606de46474f3c25cee78f8cb2d08498b631"
+  integrity sha512-CkEgbERCsaO2qEf5WL9RGKtJtDQ/qsnIU95+5Pfikp2jYuh9TRLgTZpJ3Pyc3f2Sqt1Uj+1vSZCXRaa/VlRlyQ==
   dependencies:
     readable-stream "~3.4.0"
 
