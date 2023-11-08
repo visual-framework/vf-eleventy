@@ -70,7 +70,7 @@
     "@visual-framework/vf-utility-classes": "2.0.0",
     "gulp-image-resize": "0.13.1",
     "html-minifier": "4.0.0",
-    "list-stream": "2.0.0",
+    "list-stream": "2.1.0",
     "require-dir": "1.2.0"
   },
   "bugs": {
