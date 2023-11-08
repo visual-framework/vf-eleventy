@@ -33,7 +33,7 @@
     "@visual-framework/vf-body": "1.2.0",
     "@visual-framework/vf-box": "2.4.0",
     "@visual-framework/vf-card": "2.6.2",
-    "@visual-framework/vf-card-container": "3.2.1",
+    "@visual-framework/vf-card-container": "3.2.3",
     "@visual-framework/vf-cluster": "^1.0.2",
     "@visual-framework/vf-code-example": "1.3.0",
     "@visual-framework/vf-config": "1.0.1-alpha.0",
