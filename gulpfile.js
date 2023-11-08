@@ -1,44 +1,23 @@
-const gulp  = require('gulp');
-var   fractalBuildMode;
-
-// -----------------------------------------------------------------------------
-// Configuration
-// -----------------------------------------------------------------------------
-
-// Pull in some optional configuration from the package.json file, a la:
-// "vfConfig": {
-//   "vfName": "My Component Library",
-//   "vfNameSpace": "myco-",
-//   "vfComponentPath": "./src/components",
-//   "vfComponentDirectories": [
-//      "vf-core-components",
-//      "../node_modules/your-optional-collection-of-dependencies"
-//     NOTE: Don't forget to symlink: `cd components` `ln -s ../node_modules/your-optional-collection-of-dependencies`
-//    ],
-//   "vfBuildDestination": "./build",
-//   "vfThemePath": "@frctl/mandelbrot"
-// },
-// all settings are optional
-// todo: this could/should become a JS module
-const fs = require('fs');
 const path = require('path');
-const config = JSON.parse(fs.readFileSync('./package.json'));
-const vfCoreConfig = JSON.parse(fs.readFileSync(require.resolve('@visual-framework/vf-core/package.json')));
-config.vfConfig = config.vfConfig || [];
-global.vfName = config.vfConfig.vfName || "Visual Framework 2.0";
-global.vfNamespace = config.vfConfig.vfNamespace || "vf-";
-global.vfComponentPath = config.vfConfig.vfComponentPath || path.resolve('.', __dirname + '/components');
-global.vfBuildDestination = config.vfConfig.vfBuildDestination || __dirname + '/temp/build-files';
-global.vfThemePath = config.vfConfig.vfThemePath || './tools/vf-frctl-theme';
-global.vfVersion = vfCoreConfig.version || 'not-specified';
-const componentPath = path.resolve('.', global.vfComponentPath).replace(/\\/g, '/');
-const componentDirectories = config.vfConfig.vfComponentDirectories || ['vf-core-components'];
-const buildDestionation = path.resolve('.', global.vfBuildDestination).replace(/\\/g, '/');
+const gulp = require('gulp');
+
+// Pull in optional configuration from the package.json file, a la:
+const {componentPath, componentDirectories, buildDestionation} = require('@visual-framework/vf-config');
 
 // Tasks to build/run vf-core component system
-require('./node_modules/\@visual-framework/vf-core/tools/gulp-tasks/_gulp_rollup.js')(gulp, path, componentPath, componentDirectories, buildDestionation);
+require('./node_modules/\@visual-framework/vf-core/gulp-tasks/_gulp_rollup.js')(gulp, path, componentPath, componentDirectories, buildDestionation);
+require('./node_modules/\@visual-framework/vf-extensions/gulp-tasks/_gulp_rollup.js')(gulp, path, componentPath, componentDirectories, buildDestionation);
 
-// Watch folders for changess
+// Optional support for creating components
+// `gulp vf-component`
+try {
+  require(path.resolve(".", __dirname + "/node_modules/@visual-framework/vf-component-generator/gulp-tasks/vf-generator.js"))(gulp, path);
+} catch (error) {
+  console.log("🛠  vf-component generator not found. To generate components: yarn add vf-component-generator --dev")
+  // console.error(error);
+}
+
+// Watch folders for changes
 gulp.task('watch', function() {
   gulp.watch(['./src/components/**/*.scss', '!./src/components/**/package.variables.scss'], gulp.parallel('vf-css'));
   gulp.watch(['./src/components/**/*.js'], gulp.parallel('vf-scripts'));
@@ -105,16 +84,20 @@ gulp.task('manual-exit', function(done) {
 gulp.task('build', gulp.series(
   'vf-clean',
   gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
-  'set-to-static-build',
-  'eleventy',
-  'manual-exit'
+  'vf-css:production', //optimise, prefix css
+  'fractal:build',
+  'fractal',
+  'eleventy:init',
+  'eleventy:build'
 ));
 
 // Build and watch things during dev
 gulp.task('dev', gulp.series(
   'vf-clean',
   gulp.parallel('vf-css','vf-scripts','vf-component-assets'),
-  'set-to-development',
-  'eleventy',
+  'fractal:development',
+  'fractal',
+  'eleventy:init',
+  'eleventy:develop',
   gulp.parallel('watch','vf-watch')
 ));

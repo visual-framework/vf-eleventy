@@ -1,13 +1,14 @@
 const { DateTime } = require('luxon');
 const _            = require('lodash');
 const Path         = require('path');
+const yaml         = require("js-yaml");
 
 module.exports = function(config) {
 
   // Add in tags, filters useful for Visual Framework installs
   // (fractal's render tag, codeblock, markdown, etc)
   // and common configuration
-  const vfEleventyExtension = require("@visual-framework/vf-eleventy--extensions");
+  const vfEleventyExtension = require("@visual-framework/vf-extensions\/11ty");
   config.addPlugin(vfEleventyExtension);
 
   // BroswerSync options
@@ -23,11 +24,21 @@ module.exports = function(config) {
   // });
 
   // Add any utiliuty filters
-  config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
+  config.addFilter("dateDisplay", (dateObj, format = "d LLL y") => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc"
     }).toFormat(format);
   });
+
+  // config.addFilter("makeLowercase", function(value) {
+  //   value = value || '';
+  //   return value.toLowerCase();
+  // });
+
+  // config.addFilter("spaceToDashes", function(value) {
+  //   value = value || '';
+  //   return value.replace(/\s+/g, '-').toLowerCase();
+  // });
 
   // Shortcodes
   // https://www.11ty.io/docs/shortcodes/
@@ -68,8 +79,16 @@ module.exports = function(config) {
   //   }();
   // });
 
+  // copy js files
+  // this is neccesary now that 11ty tries to compile JS files as templates
+  // @todo: backport to vf-eleventy
+  config.addPassthroughCopy("./src/site/**/*.js");
+
   // pass some assets right through
   config.addPassthroughCopy("./src/site/images");
+
+  // use the .yml file associated with the .njk if available
+  config.addDataExtension("yml", contents => yaml.safeLoad(contents));
 
   return {
     dir: {
@@ -79,7 +98,7 @@ module.exports = function(config) {
     },
     templateFormats : [
       "njk", "md", // note that .md files will also be parsed with njk processor
-      "css", "js" // passthrough file copying for static assets
+      "css" // passthrough file copying for static assets
     ],
     htmlTemplateEngine : ["njk", "md"],
     markdownTemplateEngine : "njk",

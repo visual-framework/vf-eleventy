@@ -1,1 +1,4 @@
 // Add any images to be used here
+// and use them like
+// src="{{ '/images/test-image.png' | url }}" 
+

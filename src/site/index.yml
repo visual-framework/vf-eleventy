@@ -1,0 +1,8 @@
+homepageIntro:
+  vf_intro_phase: false
+  vf_intro_text:
+    - ☝️that also means dynamic building of just the CSS and JS you need.
+
+home_about_section_header:
+  href: /about
+  section_title: About EMBL

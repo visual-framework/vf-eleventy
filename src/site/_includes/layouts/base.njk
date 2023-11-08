@@ -1,36 +1,56 @@
 <!doctype html>
 <html lang="en" class="vf-no-js">
   <head>
+    {% render '@vf-no-js' -%}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/develop/css/styles.css" /> #}
     <link rel="stylesheet" media="all" href="{{ '/css/styles.css' | url }}" />
     <title>{{ title or (renderData and renderData.title) or siteConfig.siteInformation.title}}</title>
-    {% render '@vf-no-js' %}
+    <link href="{{ siteConfig.siteInformation.url }}feed.xml" type="application/rss+xml" rel="alternate" title="{{ siteConfig.siteInformation.title }} RSS Feed">
+    {% render '@vf-favicon' -%}
+
+    <!-- Descriptive meta -->
+    <meta name="title" content="{{ title or (renderData and renderData.title) or siteConfig.siteInformation.title}}">
+    <meta name="author" content="{{ meta.author }}">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="{{ meta.keywords }}">
+    <meta name="description" content="{{ meta.description }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ siteConfig.siteInformation.url }}{{ page.url.slice(1) }}">
+    <meta property="og:title" content="{{ title or (renderData and renderData.title) or siteConfig.siteInformation.title}}">
+    <meta property="og:description" content="{{ meta.description }}">
+    {% if meta.image -%}
+    <meta property="og:image" content="{{ meta.image | url }}">
+    {%- endif %}
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="{{ siteConfig.siteInformation.url }}{{ page.url.slice(1) }}">
+    <meta property="twitter:title" content="{{ title or (renderData and renderData.title) or siteConfig.siteInformation.title}}">
+    <meta property="twitter:description" content="{{ meta.description }}">
+    {% if meta.image -%}
+    <meta property="twitter:image" content="{{ meta.image | url }}">
+    {%- endif %}
+
   </head>
-  <body class="{{ bodyClass }} vf-body">
+  <body class="{{ bodyClass }} vf-body vf-stack vf-stack--400">
     <header class="vf-global-header">
-
-      <div class="vf-global-header__inner">
-        {% render '@vf-logo', {href:  'https://visual-framework.github.io/vf-welcome/' | url, sreen_reader_text: 'Visual Framework 2.0', image: siteConfig.siteInformation.url + 'assets/vf-logo/assets/logo.svg' } %}
-        {# <a href="{{ '/' | url }}" class="vf-link | vf-global-header__site-name">{{ siteConfig.siteInformation.title }}</a> #}
-
-        <nav class="vf-navigation vf-navigation--global">
-          <ul class="vf-navigation__list | vf-list--inline">
+        {% render '@vf-logo', {href:  'https://stable.visual-framework.dev/' | url, logo_text: 'Visual Framework 2.0', image: siteConfig.siteInformation.url + 'assets/vf-logo/assets/logo.svg' } %}
+        <nav class="vf-navigation vf-navigation--main | vf-cluster">
+          <ul class="vf-navigation__list | vf-list | vf-cluster__inner">
             <li class="vf-navigation__item">
-              <a href="https://visual-framework.github.io/vf-welcome/" class="vf-navigation__link">About the Visual Framework</a>
+              <a href="https://stable.visual-framework.dev/" class="vf-navigation__link">About the Visual Framework</a>
             </li>
             <li class="vf-navigation__item">
-              <a href="https://visual-framework.github.io/vf-welcome/documentation" class="vf-navigation__link">Documentation</a>
+              <a href="https://stable.visual-framework.dev/documentation" class="vf-navigation__link">Documentation</a>
             </li>
             <li class="vf-navigation__item">
               <a href="https://join.slack.com/t/visual-framework/shared_invite/enQtNDAxNzY0NDg4NTY0LWFhMjEwNGY3ZTk3NWYxNWVjOWQ1ZWE4YjViZmY1YjBkMDQxMTNlNjQ0N2ZiMTQ1ZTZiMGM4NjU5Y2E0MjM3ZGQ" class="vf-navigation__link">Help, chat</a>
             </li>
           </ul>
         </nav>
-
-      </div>
-
     </header>
     <div class="vf-grid">
       <div>

@@ -1,0 +1,56 @@
+---
+title: I'm a blog-like index
+subtitle: This aggregates all of your posts and shows them here.
+date: 2019-04-09 12:24:50
+layout: layouts/base.njk
+meta:
+  author: Page Author
+  image: your-image-here.png
+  description: "Page description"
+  keywords: "Tags"
+---
+
+{% render '@vf-intro', {"vf_intro_phase": "", "vf_intro_heading": title,
+  "vf_intro_lede": subtitle,
+  "vf_intro_text": [
+    ""
+  ]
+} %}
+
+
+<section class="embl-grid embl-grid--has-centered-content">
+  <div>
+    <!-- empty -->
+  </div>
+  <div class="">
+{%- for post in collections.posts %}
+<article class="vf-summary vf-summary--news">
+  <span class="vf-summary__date">22 June 2018</span>
+  <img class="vf-summary__image" src="{{ post.data.meta.image | url }}" alt="">
+  <h3 class="vf-summary__title">
+    <a href="{{ post.url }}" class="vf-summary__link">{{ post.data.title }}</a>
+  </h3>
+  <p class="vf-summary__text">
+    {{ post.data.subtitle }}
+  </p>
+</article>
+{%- endfor %}
+  </div>
+  <div></div>
+</section>
+
+<hr class="vf-divider" />
+
+<section class="embl-grid embl-grid--has-centered-content">
+  <div>
+    <!-- empty -->
+  </div>
+  <div class="vf-content">
+{% markdown %}
+
+Need more text?
+
+{% endmarkdown %}
+  </div>
+  <div></div>
+</section>

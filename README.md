@@ -1,6 +1,8 @@
+![screenshot](https://raw.githubusercontent.com/visual-framework/vf-eleventy/master/screenshot.jpg "Screenshot of VF 2.0 11ty quickstart")
+
 # Eleventy boilerplate for Visual Framework 2.0
 
-This allows you to use the [11ty](https://www.11ty.io) static site generator
+This incorporates the [11ty](https://www.11ty.io) static site generator
 with direct access to Visual Framework 2.0 components.
 
 ## 1. Creating a new project powered by vf-eleventy
@@ -58,7 +60,6 @@ your site.
 - `gulp vf-component`
 
 You'll find a `vf-sample` component already placed in `./src/components`
-
 
 ## 4. Footnotes
 

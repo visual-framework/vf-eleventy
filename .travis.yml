@@ -2,15 +2,14 @@
 dist: trusty
 language: node_js
 node_js:
-  - 10
+  - 12
 
 stages:
   - deploy
 
 before_script:
-  # - npm install
-  - npm install -g gulp-cli
-  - npm run-script build
+  - yarn install 
+  - yarn run build
 
 deploy:
   provider: pages
