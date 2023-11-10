@@ -24,9 +24,8 @@ jobs:
       run: |
         npm install -g yarn
         npm install -g gulp
-        cd tools/vf-core
         yarn install
-        gulp vf-build # to do: we should make this run by `npm test`
+        gulp build # to do: we should make this run by `npm test`
       env:
         CI: true
     - name: Deploy to GH Pages 🚀
