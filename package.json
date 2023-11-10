@@ -59,7 +59,7 @@
     "@visual-framework/vf-polyfill-js": "1.0.0-alpha.1",
     "@visual-framework/vf-sass-config": "2.7.1",
     "@visual-framework/vf-sass-utilities": "1.0.1",
-    "@visual-framework/vf-section-header": "1.5.3",
+    "@visual-framework/vf-section-header": "1.5.5",
     "@visual-framework/vf-stack": "3.0.0",
     "@visual-framework/vf-summary": "1.6.1",
     "@visual-framework/vf-summary-container": "1.0.0",
