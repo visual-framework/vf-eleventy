@@ -30,7 +30,7 @@ jobs:
       env:
         CI: true
     - name: Deploy to GH Pages 🚀
-        uses: actions/deploy-pages@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public      
+      uses: actions/deploy-pages@v2
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: public      
