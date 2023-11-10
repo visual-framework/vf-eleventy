@@ -1653,7 +1653,12 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-link-list/-/vf-link-list-1.5.0.tgz#5e05963918778e8dcb4bbdec7c0aebc8ec82b090"
   integrity sha512-ZJ616OMISx04peEnB9cpwV3Lj9wmeMVmE7G+9gpV6U/b5+7NAnmAOkWnVyYdYOhdWqyvaQUe11LE3CimZCt/GA==
 
-"@visual-framework/vf-link@2.0.0", "@visual-framework/vf-link@^2.0.0":
+"@visual-framework/vf-link@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-link/-/vf-link-2.0.1.tgz#31e61d00fc1e2bee67f809be2ece4f785e73f821"
+  integrity sha512-Sr8EdE1i4VT5JVeH+hd+33iY4RUUNChxdnfh5NGbmTqSPFuKFPi5A6/HeQfL2l9G4frP9mMJIv0LpqFE87v2ew==
+
+"@visual-framework/vf-link@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-link/-/vf-link-2.0.0.tgz#55dfaa6a3b989a47ae1c480a0df7bbc2618b63ca"
   integrity sha512-LKv7D9MwHb4vxEXR4uXSTYqWaJ+WGd3ZfwHIOO1brcbh0q6657aXOte12Yy3RIUOJiZMlJQjs1w3V7myizPe7A==
