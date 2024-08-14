@@ -1393,10 +1393,14 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-analytics-google/-/vf-analytics-google-1.0.4.tgz#9a51cb8f0ce5651360f4d8bedb3cac6007098561"
   integrity sha512-nY/jcg/s5gOML0EFxvXb+xPthz+spR78Y/hQPjveVnXXalWHjtbbFQzMcAGkulMt9ndj8bJ5Ijb16ewiYDe2Vw==
 
-"@visual-framework/vf-badge@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-2.0.1.tgz#43466a1afc5b4218684599169d48da1d70af40d2"
-  integrity sha512-v/KatPC09dUtJlWt9dxmhfQiC22R4YbUqkQvVwdcCet8X1dWJm2orbQqnx9Jrh2lWZZRREgx6PnGQq3ySQDaHg==
+"@visual-framework/vf-badge@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-badge/-/vf-badge-3.0.3.tgz#21a69e1d5d3c92ffa346bba27cae49a2edfb18ae"
+  integrity sha512-mZqpqPTsxzcIvVjvvIlRj5ZKgEMMWbv0zjZ2nP6Yio7oZryiFT2QEMY1kNvcqpH3Qnjse95umzUPxG+OREpuCA==
+  dependencies:
+    "@visual-framework/vf-box" "^2.4.0"
+    "@visual-framework/vf-stack" "^3.0.0"
+    "@visual-framework/vf-u-fullbleed" "^1.2.2"
 
 "@visual-framework/vf-badge@^3.0.0-alpha.1":
   version "3.0.0-alpha.1"
