@@ -1407,10 +1407,16 @@
     "@visual-framework/vf-stack" "^3.0.0"
     "@visual-framework/vf-u-fullbleed" "^1.2.2"
 
-"@visual-framework/vf-banner@1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-1.9.2.tgz#86f559c56bf3b5574aa4d3e4384b3c2cab64ec61"
-  integrity sha512-TKu8XUU8VAfPvvbAavt+tnYjTYMGBFORbUogMD5WFb7kGBz2sTcoACLC0R/eAum0VrAzrVrX4kz8VtCdZOK+2Q==
+"@visual-framework/vf-banner@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-banner/-/vf-banner-2.0.3.tgz#8bd24b9c7f419ee0c1edaad97be11a29ebc7da05"
+  integrity sha512-UutHr9JVXJ5qMU5Nhz2G82f2xa/LWtAyf4QjeXST8iUIUwG6V6iTD+Z4N5m6Oi3hWCaRN/eh5mR7TJOYg5S1PQ==
+  dependencies:
+    "@visual-framework/vf-box" "^2.4.0"
+    "@visual-framework/vf-button" "^3.0.1"
+    "@visual-framework/vf-grid" "^1.4.1"
+    "@visual-framework/vf-stack" "^3.0.0"
+    "@visual-framework/vf-u-fullbleed" "^1.2.2"
 
 "@visual-framework/vf-blockquote@^1.2.1":
   version "1.2.1"
@@ -1439,6 +1445,11 @@
   version "3.0.0-alpha.0"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-button/-/vf-button-3.0.0-alpha.0.tgz#a8f953cf015393178fb5cbe81147e32b30377342"
   integrity sha512-I4iDGABcSRLMKiq9ilnibmQXfDpS6E0lljb5zjSBsnJIl/7jQfnL815jrdnRvrhpozO8dzPFizbZir8Yk8aeWw==
+
+"@visual-framework/vf-button@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@visual-framework/vf-button/-/vf-button-3.0.1.tgz#6a16cf994feee5b86a818e442f310c1faf0fae7c"
+  integrity sha512-H/TscX8/z1D4DLwsttaDNNByZmZGfybGdOgtthw3QKZ7DSDBlmSkZBVXmawdzQCiHDE9NLZEvaZ0cWuQfX1/xw==
 
 "@visual-framework/vf-card-container@3.2.3":
   version "3.2.3"
@@ -1635,7 +1646,7 @@
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-global-header/-/vf-global-header-3.1.2.tgz#b3c6025a73318144259d4e5255dc8da402cd7cfc"
   integrity sha512-xeR982BhzO7+k7/Vpuccbqqo/7JpGnEAF35pmMaBA9+GHqnkQtMo8Gd/R8hRc4JTYv5/Ougf6DRVBzaRBZG9zw==
 
-"@visual-framework/vf-grid@1.4.1":
+"@visual-framework/vf-grid@1.4.1", "@visual-framework/vf-grid@^1.4.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@visual-framework/vf-grid/-/vf-grid-1.4.1.tgz#990930180e76b42690df0e52e05fbfe81b4482d7"
   integrity sha512-a8YGRh6FC5g52jlXupuAN2lDkCivus0igPAJyGw+eWxK9l91bxgGB+vMhcME3yEdY+n7qy/HugQVKhmB271+4w==
