@@ -37,10 +37,10 @@ jobs:
         CI: true
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Upload entire repository
+        path: '.'
     - name: Deploy to GH Pages 🚀
       id: deployment
       uses: actions/deploy-pages@v4
