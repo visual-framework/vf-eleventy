@@ -34,7 +34,7 @@ jobs:
       env:
         CI: true
     - name: Configure Pages
-      uses: actions/configure-pages@v4
+      uses: actions/configure-pages@v5
     - name: Deploy to GH Pages 🚀
       uses: actions/deploy-pages@v4
       with:
