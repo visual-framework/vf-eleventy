@@ -28,6 +28,7 @@ jobs:
         gulp build # to do: we should make this run by `npm test`
       env:
         CI: true
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Deploy to GH Pages 🚀
       uses: actions/deploy-pages@v4
       with:
