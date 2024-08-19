@@ -42,6 +42,7 @@ jobs:
       with:
         # Upload entire repository
         path: 'build'
+        overwrite: true
     - name: Deploy to GH Pages 🚀
       id: deployment
       uses: actions/deploy-pages@v4 
