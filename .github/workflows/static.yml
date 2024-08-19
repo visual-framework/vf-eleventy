@@ -13,6 +13,9 @@ jobs:
       contents: read
       pages: write
       id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     strategy:
       matrix:
@@ -34,6 +37,7 @@ jobs:
         CI: true
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Deploy to GH Pages 🚀
+      id: deployment
       uses: actions/deploy-pages@v4
       with:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
