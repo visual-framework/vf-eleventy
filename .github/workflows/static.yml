@@ -10,11 +10,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
     strategy:
       matrix:
         node-version: [18.x]
@@ -33,8 +28,6 @@ jobs:
         gulp build # to do: we should make this run by `npm test`
       env:
         CI: true
-    - name: Configure Pages
-      uses: actions/configure-pages@v4
     - name: Deploy to GH Pages 🚀
       uses: actions/deploy-pages@v4
       with:
