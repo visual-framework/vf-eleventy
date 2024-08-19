@@ -13,9 +13,6 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     strategy:
       matrix:
@@ -37,8 +34,10 @@ jobs:
         CI: true
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Upload artifact
+      id: github-pages
       uses: actions/upload-artifact@v4
       with:
+        name: "github-pages"
         # Upload entire repository
         path: 'build'
     - name: Deploy to GH Pages 🚀
