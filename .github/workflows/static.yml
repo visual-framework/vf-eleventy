@@ -4,7 +4,15 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
-
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 jobs:
   build:
 
@@ -12,10 +20,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
 
     strategy:
       matrix:
@@ -33,11 +37,8 @@ jobs:
         npm install -g gulp
         yarn install
         gulp build # to do: we should make this run by `npm test`
-      env:
-        CI: true
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-pages-artifact@v2
       with:
         # Upload entire repository
         path: 'build'
