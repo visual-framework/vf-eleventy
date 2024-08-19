@@ -9,6 +9,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: read
       pages: write
@@ -34,15 +37,10 @@ jobs:
         CI: true
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Upload artifact
-      id: github-pages
       uses: actions/upload-artifact@v4
       with:
-        name: "github-pages"
         # Upload entire repository
         path: 'build'
     - name: Deploy to GH Pages 🚀
       id: deployment
-      uses: actions/deploy-pages@v4
-      with:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        publish_dir: public      
+      uses: actions/deploy-pages@v4 
