@@ -54,25 +54,21 @@ context.setVariable("vf_section__content", t_5);
 if(frame.topLevel) {
 context.addExport("vf_section__content", t_5);
 }
+var t_6;
+t_6 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"hidden");
+frame.set("hidden", t_6, true);
+if(frame.topLevel) {
+context.setVariable("hidden", t_6);
+}
+if(frame.topLevel) {
+context.addExport("hidden", t_6);
+}
 ;
 }
-output += "\n";
 output += runtime.suppressValue(env.getExtension("spaceless")["run"](context,function(cb) {
 if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_6 = "";t_6 += "\n";
-if(runtime.contextOrFrameLookup(context, frame, "href")) {
-var t_7;
-t_7 = "a";
-frame.set("tags", t_7, true);
-if(frame.topLevel) {
-context.setVariable("tags", t_7);
-}
-if(frame.topLevel) {
-context.addExport("tags", t_7);
-}
-;
-}
-else {
+var t_7 = "";t_7 += "\n";
+t_7 += "\n";
 var t_8;
 t_8 = "h2";
 frame.set("tags", t_8, true);
@@ -82,41 +78,69 @@ context.setVariable("tags", t_8);
 if(frame.topLevel) {
 context.addExport("tags", t_8);
 }
-;
-}
-t_6 += "\n<div class=\"vf-section-header\">\n  <";
-t_6 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "tags"), env.opts.autoescape);
-t_6 += "\n    class=\"vf-section-header__heading";
 if(runtime.contextOrFrameLookup(context, frame, "href")) {
-t_6 += " vf-section-header__heading--is-link";
 ;
 }
-t_6 += "\" ";
-if(runtime.contextOrFrameLookup(context, frame, "href")) {
-t_6 += "href=\"";
-t_6 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "href"), env.opts.autoescape);
-t_6 += "\"";
-;
-}
+t_7 += "\n<div class=\"vf-section-header\">\n  ";
+t_7 += "\n";
+if(runtime.contextOrFrameLookup(context, frame, "hidden")) {
+t_7 += "    <";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "tags"), env.opts.autoescape);
+t_7 += "\n      class=\"vf-section-header__heading vf-u-sr-only\"";
 if(runtime.contextOrFrameLookup(context, frame, "id")) {
-t_6 += " id=\"";
-t_6 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
-t_6 += "\"";
+t_7 += " id=\"";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
+t_7 += "\"";
 ;
 }
-t_6 += ">";
-t_6 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "section_title"), env.opts.autoescape);
+t_7 += ">";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "section_title"), env.opts.autoescape);
+t_7 += "</";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "tags"), env.opts.autoescape);
+t_7 += ">\n  ";
+t_7 += "\n";
+;
+}
+else {
+t_7 += "    <";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "tags"), env.opts.autoescape);
+t_7 += "\n      class=\"vf-section-header__heading";
 if(runtime.contextOrFrameLookup(context, frame, "href")) {
-t_6 += "      <svg aria-hidden=\"true\" class=\"vf-section-header__icon | vf-icon vf-icon-arrow--inline-end\" width=\"1em\" height=\"1em\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12S18.627 0 12 0C5.376.008.008 5.376 0 12zm13.707-5.209l4.5 4.5a1 1 0 010 1.414l-4.5 4.5a1 1 0 01-1.414-1.414l2.366-2.367a.25.25 0 00-.177-.424H6a1 1 0 010-2h8.482a.25.25 0 00.177-.427l-2.366-2.368a1 1 0 011.414-1.414z\" fill=\"\" fill-rule=\"nonzero\"></path></svg>";
+t_7 += " vf-section-header__heading--is-link";
 ;
 }
-t_6 += "</";
-t_6 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "tags"), env.opts.autoescape);
-t_6 += ">\n";
+t_7 += "\"";
+if(runtime.contextOrFrameLookup(context, frame, "id")) {
+t_7 += " id=\"";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
+t_7 += "\"";
+;
+}
+t_7 += ">\n";
+if(runtime.contextOrFrameLookup(context, frame, "href")) {
+t_7 += "<a href=\"";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "href"), env.opts.autoescape);
+t_7 += "\">";
+;
+}
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "section_title"), env.opts.autoescape);
+if(runtime.contextOrFrameLookup(context, frame, "href")) {
+t_7 += "</a>";
+;
+}
+if(runtime.contextOrFrameLookup(context, frame, "href")) {
+t_7 += "        <svg aria-hidden=\"true\" class=\"vf-section-header__icon | vf-icon vf-icon-arrow--inline-end\" width=\"1em\" height=\"1em\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12S18.627 0 12 0C5.376.008.008 5.376 0 12zm13.707-5.209l4.5 4.5a1 1 0 010 1.414l-4.5 4.5a1 1 0 01-1.414-1.414l2.366-2.367a.25.25 0 00-.177-.424H6a1 1 0 010-2h8.482a.25.25 0 00.177-.427l-2.366-2.368a1 1 0 011.414-1.414z\" fill=\"\" fill-rule=\"nonzero\"></path></svg>";
+;
+}
+t_7 += "</";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "tags"), env.opts.autoescape);
+t_7 += ">\n";
+;
+}
 if(runtime.contextOrFrameLookup(context, frame, "section__subheading")) {
-t_6 += "\n    <p class=\"vf-section-header__subheading\">";
-t_6 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "section__subheading"), env.opts.autoescape);
-t_6 += "</p>\n";
+t_7 += "    <p class=\"vf-section-header__subheading\">";
+t_7 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "section__subheading"), env.opts.autoescape);
+t_7 += "</p>\n";
 ;
 }
 (function(cb) {if(runtime.contextOrFrameLookup(context, frame, "vf_section__content")) {
@@ -131,9 +155,9 @@ frame.set("loop.revindex0", t_10 - t_9 - 1);
 frame.set("loop.first", t_9 === 0);
 frame.set("loop.last", t_9 === t_10 - 1);
 frame.set("loop.length", t_10);
-t_6 += "<p class=\"vf-section-header__text\">";
-t_6 += runtime.suppressValue(env.getFilter("safe").call(context, section__content), env.opts.autoescape);
-t_6 += "</p>";
+t_7 += "<p class=\"vf-section-header__text\">";
+t_7 += runtime.suppressValue(env.getFilter("safe").call(context, section__content), env.opts.autoescape);
+t_7 += "</p>";
 next(t_9);
 ;
 }, function(t_13,t_12) {
@@ -144,10 +168,10 @@ cb()});
 else {
 cb()}
 })(function(t_14) {
-if(t_14) { cb(t_14); return; }t_6 += "</div>\n\n";
-cb(null, t_6);
+if(t_14) { cb(t_14); return; }t_7 += "</div>\n\n";
+cb(null, t_7);
 });
-return t_6;
+return t_7;
 }
 ,null), true && env.opts.autoescape);
 if(parentTemplate) {

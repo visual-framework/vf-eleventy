@@ -74,7 +74,7 @@ context.addExport("summary__category", t_7);
 }
 ;
 }
-output += "\n<article class=\"vf-summary vf-summary--news\">\n  <span class=\"vf-summary__date\">";
+output += "<article class=\"vf-summary vf-summary--news\">\n  <span class=\"vf-summary__date\">";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__date"), env.opts.autoescape);
 output += "</span>\n  <img class=\"vf-summary__image\" src=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__image"), env.opts.autoescape);
@@ -84,16 +84,21 @@ output += "\" loading=\"lazy\">\n  <h3 class=\"vf-summary__title\">\n    <a href
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__href"), env.opts.autoescape);
 output += "\" class=\"vf-summary__link\">\n      ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__title"), env.opts.autoescape);
-output += "\n    </a>\n  </h3>\n  <p class=\"vf-summary__text\">\n";
+output += "\n    </a>\n  </h3>\n";
+if(runtime.contextOrFrameLookup(context, frame, "summary__text")) {
+output += "<p class=\"vf-summary__text\">\n";
 if(runtime.contextOrFrameLookup(context, frame, "summary__category")) {
-output += "    <span class=\"vf-summary__category\">\n      ";
+output += "<span class=\"vf-summary__category\">\n      ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__category"), env.opts.autoescape);
-output += "\n    </span>\n";
+output += "\n    </span>";
 ;
 }
 output += "    ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "summary__text"), env.opts.autoescape);
-output += "\n  </p>\n</article>\n";
+output += "\n  </p>";
+;
+}
+output += "</article>\n";
 if(parentTemplate) {
 parentTemplate.rootRenderFunc(env, context, frame, runtime, cb);
 } else {

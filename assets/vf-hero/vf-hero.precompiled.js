@@ -185,7 +185,7 @@ output += "</p>";
 ;
 }
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading")) {
-output += "    <h2 class=\"vf-hero__heading\">";
+output += "    <h1 class=\"vf-hero__heading\">";
 if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_href")) {
 output += "<a class=\"vf-hero__heading_link\" href=\"";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_href"), env.opts.autoescape);
@@ -197,7 +197,7 @@ if(runtime.contextOrFrameLookup(context, frame, "vf_hero_heading_href")) {
 output += "</a>";
 ;
 }
-output += "</h2>\n";
+output += "</h1>\n";
 ;
 }
 output += "\n";

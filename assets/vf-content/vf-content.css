@@ -31,13 +31,32 @@
 }
 
 :root {
-  --vf-theme--primary: #3b6fb6;
-  --vf-theme--primary--dark: #193f90;
-  --vf-theme--secondary: #18974c;
-  --vf-theme--secondary--dark: #007b53;
-  --vf-theme--tertiary: #54585a;
-  --vf-theme--quaternary: #f4c61f;
-  --vf-theme--quinary: #d0d0ce;
+  --vf-color__text--primary: #1a1c1a;
+  --vf-color__text--secondary: #373a36;
+  --vf-color__link: #3b6fb6;
+  --vf-color__link--hover: #193f90;
+  --vf-color__link--focus: #193f90;
+  --vf-color__link--visited: #563d82;
+}
+
+:root {
+  --vf-color__button__text--primary: #ffffff;
+  --vf-color__button__border--primary: #3b6fb6;
+  --vf-color__button__background--primary: #3b6fb6;
+  --vf-color__button__shadow--primary: #193f90;
+  --vf-color__button__text--secondary: #3b6fb6;
+  --vf-color__button__border--secondary: #3b6fb6;
+  --vf-color__button__background--secondary: #ffffff;
+  --vf-color__button__shadow--secondary: #193f90;
+  --vf-color__button__text--tertiary: #ffffff;
+  --vf-color__button__border--tertiary: #373a36;
+  --vf-color__button__background--tertiary: #373a36;
+  --vf-color__button__shadow--tertiary: #000000;
+}
+
+:root {
+  --vf-color__brand: #18974c;
+  --vf-color__brand--dark: #0a5032;
 }
 
 :root {
@@ -63,10 +82,20 @@
   --vf-color--neutral--900: #000000;
 }
 
+:root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-heading
- * Version: 1.0.1
+ * Version: 1.1.1
  * Location: components/undefined
  */
 .vf-text {
@@ -76,46 +105,51 @@
 .vf-text-heading--5 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.5;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--4 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 21px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.29;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--3 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--2 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 30px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--1 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 42px;
+  color: #1a1c1a;
   font-weight: 700;
   line-height: 1.547;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text--has-tag {
@@ -139,7 +173,7 @@
 
 /*!
  * Component: @visual-framework/vf-badge
- * Version: 2.0.1
+ * Version: 3.0.3
  * Location: components/undefined
  */
 .vf-badge {
@@ -211,7 +245,7 @@ a.vf-badge--secondary:hover {
 
 /*!
  * Component: @visual-framework/vf-text
- * Version: 1.0.2
+ * Version: 1.1.1
  * Location: components/undefined
  */
 .vf-text-body a {
@@ -220,11 +254,11 @@ a.vf-badge--secondary:hover {
   color: #3b6fb6;
 }
 .vf-text-body a:visited {
-  color: #734595;
+  color: #563d82;
   border-bottom: none;
 }
 .vf-text-body a:visited:hover {
-  color: #734595;
+  color: #563d82;
   text-decoration: underline;
 }
 .vf-text-body a:hover {
@@ -239,57 +273,62 @@ a.vf-badge--secondary:hover {
   font-weight: 600;
   line-height: 1.5;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-body--5 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.57;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-body--4 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.57;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-body--3 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.71;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-body--2 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-body--1 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 32px;
+  font-size: 28px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.3125;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 /*!
  * Component: @visual-framework/vf-link
- * Version: 2.0.0
+ * Version: 2.0.2
  * Location: components/undefined
  */
 .vf-link {
@@ -298,11 +337,11 @@ a.vf-badge--secondary:hover {
   color: #3b6fb6;
 }
 .vf-link:visited {
-  color: #734595;
+  color: #563d82;
   border-bottom: none;
 }
 .vf-link:visited:hover {
-  color: #734595;
+  color: #563d82;
   text-decoration: underline;
 }
 .vf-link:hover {
@@ -317,7 +356,7 @@ a.vf-badge--secondary:hover {
 }
 
 .vf-link--visited {
-  color: #734595 !important;
+  color: #563D82 !important;
 }
 
 .vf-link--hover {
@@ -326,7 +365,7 @@ a.vf-badge--secondary:hover {
 
 /*!
  * Component: @visual-framework/vf-form
- * Version: 2.0.0-alpha.1
+ * Version: 2.0.2
  * Location: components/undefined
  */
 /*!
@@ -337,9 +376,10 @@ a.vf-badge--secondary:hover {
 .vf-form__helper {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.71;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   color: #707372;
 }
 
@@ -355,9 +395,10 @@ a.vf-badge--secondary:hover {
 .vf-form__input:not([type=file]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   /* stylelint-disable */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -579,15 +620,16 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__legend
- * Version: 2.0.0-alpha.0
+ * Version: 2.0.2
  * Location: components/undefined
  */
 .vf-form__legend {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   padding: 0;
 }
 
@@ -621,16 +663,16 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
  * Component: @visual-framework/vf-form__select
- * Version: 3.0.0-alpha.0
+ * Version: 3.0.0
  * Location: components/undefined
  */
 .vf-form__select {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   /* stylelint-disable */
   --webkit-appearance: none;
   -webkit-appearance: none;
@@ -648,7 +690,6 @@ input[type=search]::-webkit-search-cancel-button {
           box-sizing: border-box;
   color: #54585a;
   display: block;
-  margin: 0;
   max-width: 100%;
   padding: 0.5rem;
   width: 100%;
@@ -801,10 +842,11 @@ input[type=search]::-webkit-search-cancel-button {
 .vf-form__textarea {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
   /* stylelint-disable */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -855,9 +897,10 @@ input[type=search]::-webkit-search-cancel-button {
 .vf-form__label {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,7 +914,7 @@ input[type=search]::-webkit-search-cancel-button {
 
 /*!
 * Component: @visual-framework/vf-button
-* Version: 2.0.0-alpha.0
+* Version: 3.0.1
 * Location: components/undefined
 */
 .vf-button {
@@ -1015,24 +1058,23 @@ a.vf-button:hover, a.vf-button:focus {
 
 /*!
  * Component: @visual-framework/vf-figure
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-figure {
   margin: 0;
 }
 .vf-figure__image {
-  margin: 0 0 21px 0;
+  margin: 0 0 0.5rem 0;
 }
 .vf-figure__caption {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  color: #373a36;
   font-weight: 400;
-  line-height: 1.57;
+  line-height: 1.71;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
-  color: #707372;
-  font-style: italic;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-figure__image {
@@ -1063,7 +1105,7 @@ a.vf-button:hover, a.vf-button:focus {
 
 /*!
  * Component: @visual-framework/vf-list
- * Version: 1.0.0
+ * Version: 1.1.2
  * Location: components/undefined
  */
 .vf-list {
@@ -1072,22 +1114,14 @@ a.vf-button:hover, a.vf-button:focus {
   margin: 0;
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.71;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-list__item {
   margin-bottom: 1rem;
-}
-
-.vf-list--l {
-  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 1.421;
-  margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-list--ordered {
@@ -1120,17 +1154,36 @@ a.vf-button:hover, a.vf-button:focus {
   margin-bottom: 1rem;
 }
 
+.vf-list--definition__term {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  color: #1a1c1a;
+  font-weight: 500;
+  line-height: 1.29;
+  margin: var(--vf-stack-margin, 0) 0 8px 0;
+}
+
+.vf-list--definition__details {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  color: #1a1c1a;
+  font-weight: 400;
+  line-height: 1.421;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
+}
+
 .vf-list__link {
   border-bottom: none;
   text-decoration: none;
   color: #3b6fb6;
 }
 .vf-list__link:visited {
-  color: #734595;
+  color: #563d82;
   border-bottom: none;
 }
 .vf-list__link:visited:hover {
-  color: #734595;
+  color: #563d82;
   text-decoration: underline;
 }
 .vf-list__link:hover {
@@ -1139,35 +1192,86 @@ a.vf-button:hover, a.vf-button:focus {
   text-decoration: underline;
 }
 
+.vf-list--l {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  color: #1a1c1a;
+  font-weight: 400;
+  line-height: 1.421;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
+}
+
+.vf-list--tight .vf-list__item {
+  margin-bottom: 0.25rem;
+}
+
 /*!
  * Component: @visual-framework/vf-blockquote
- * Version: 1.2.0
+ * Version: 1.2.7
  * Location: components/undefined
  */
 .vf-blockquote {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
   margin: 0 0 0 0;
   border: 0;
   padding: 10px 8px 10px 32px;
   position: relative;
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  color: #1a1c1a;
+  font-weight: 500;
+  line-height: 1.3125;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 .vf-blockquote::before {
-  content: "";
   border-left: 4px solid #d0d0ce;
-  position: absolute;
-  left: 12px;
+  content: "";
   height: 100%;
+  left: 12px;
+  position: absolute;
   top: 0;
+}
+
+.vf-blockquote::before {
+  margin-right: 1.5rem;
+  border-left: 1px solid var(--vf-color--grey);
+  left: 8px;
+  content: "";
+}
+
+.vf-blockquote_author__link {
+  border-bottom: none;
+  text-decoration: none;
+  color: #3b6fb6;
+}
+.vf-blockquote_author__link:visited {
+  color: #563d82;
+  border-bottom: none;
+}
+.vf-blockquote_author__link:visited:hover {
+  color: #563d82;
+  text-decoration: underline;
+}
+.vf-blockquote_author__link:hover {
+  color: #193f90;
+  border-bottom: none;
+  text-decoration: underline;
 }
 
 /*!
  * Component: @visual-framework/vf-divider
- * Version: 2.0.0
+ * Version: 2.0.1
  * Location: components/undefined
  */
 .vf-divider {
@@ -1176,12 +1280,14 @@ a.vf-button:hover, a.vf-button:focus {
   border: none;
   height: 1px;
   margin-block: 0 var(--vf-divider-margin--block-end, 1.5rem);
+  margin-top: 1rem; /* IE Fallback */
+  margin-top: var(--vf-stack-margin, 1rem);
   width: 100%;
 }
 
 /*!
  * Component: @visual-framework/vf-box
- * Version: 2.3.1
+ * Version: 2.4.0
  * Location: components/undefined
  */
 .vf-box {
@@ -1234,7 +1340,7 @@ a.vf-button:hover, a.vf-button:focus {
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-box__link {
@@ -1265,7 +1371,7 @@ a.vf-button:hover, a.vf-button:focus {
   font-weight: 400;
   line-height: 1.71;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content .vf-box__text a,
 .vf-box__text a {
@@ -1344,15 +1450,16 @@ a.vf-button:hover, a.vf-button:focus {
 
 /*!
  * Component: @visual-framework/vf-content
- * Version: 1.5.6
+ * Version: 1.6.16
  * Location: components/undefined
  */
 .vf-content h1:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 42px;
+  color: #1a1c1a;
   font-weight: 700;
   line-height: 1.547;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
 }
 .vf-content h1:not([class*=vf-]) + small {
   margin-bottom: 35px;
@@ -1365,10 +1472,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content h2:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 30px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
-  margin: 0 0 39px 0;
-  margin-top: 13px;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content h2:not([class*=vf-]) b,
 .vf-content h2:not([class*=vf-]) strong {
@@ -1377,10 +1485,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content h3:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
-  margin: 0 0 13px 0;
-  margin-top: 24px;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content h3:not([class*=vf-]) b,
 .vf-content h3:not([class*=vf-]) strong {
@@ -1389,10 +1498,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content h4:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 21px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.29;
-  margin: 0 0 13px 0;
-  margin-top: 24px;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content h4:not([class*=vf-]) b,
 .vf-content h4:not([class*=vf-]) strong {
@@ -1401,10 +1511,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content h5:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.5;
-  margin: 0 0 13px 0;
-  margin-top: 24px;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content h5:not([class*=vf-]) b,
 .vf-content h5:not([class*=vf-]) strong {
@@ -1413,10 +1524,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content h6:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.5;
-  margin: 0 0 13px 0;
-  margin-top: 24px;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content h6:not([class*=vf-]) b,
 .vf-content h6:not([class*=vf-]) strong {
@@ -1428,9 +1540,10 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content p:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 24px 0;
+  margin: var(--vf-stack-margin, 0) 0 1rem 0;
 }
 .vf-content .vf-link,
 .vf-content a:not([class*=vf-]) {
@@ -1457,10 +1570,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content small:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.57;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
   display: block;
 }
 .vf-content ol:not([class*=vf-]) {
@@ -1486,10 +1600,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content li:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
   margin-bottom: 0.5rem;
 }
 .vf-content li:not([class*=vf-]) > ul:not([class*=vf-]),
@@ -1498,6 +1613,23 @@ a.vf-button:hover, a.vf-button:focus {
 }
 .vf-content li:not([class*=vf-]):last-of-type {
   margin-bottom: 1rem;
+}
+.vf-content dl:not([class*=vf-]) dt:not([class*=vf-]) {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  color: #1a1c1a;
+  font-weight: 500;
+  line-height: 1.29;
+  margin: var(--vf-stack-margin, 0) 0 8px 0;
+}
+.vf-content dl:not([class*=vf-]) dd:not([class*=vf-]) {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  color: #1a1c1a;
+  font-weight: 400;
+  line-height: 1.421;
+  margin: 0 0 16px 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 .vf-content img:not([class*=vf-]) {
   height: auto;
@@ -1509,6 +1641,8 @@ a.vf-button:hover, a.vf-button:focus {
   border: none;
   height: 1px;
   margin-block: 0 var(--vf-divider-margin--block-end, 1.5rem);
+  margin-top: 1rem; /* IE Fallback */
+  margin-top: var(--vf-stack-margin, 1rem);
   width: 100%;
 }
 .vf-content code:not([class*=vf-]) {
@@ -1518,21 +1652,22 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content blockquote:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
   margin: 0 0 1rem 0;
   border: 0;
   padding: 10px 8px 10px 32px;
   position: relative;
 }
 .vf-content blockquote:not([class*=vf-])::before {
-  content: "";
   border-left: 4px solid #d0d0ce;
-  position: absolute;
-  left: 12px;
+  content: "";
   height: 100%;
+  left: 12px;
+  position: absolute;
   top: 0;
 }
 .vf-content blockquote:not([class*=vf-]) p:last-of-type:not([class*=vf-]) {
@@ -1545,10 +1680,11 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content table:not([class*=vf-]) caption {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 21px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.29;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
   text-align: left;
 }
 .vf-content table:not([class*=vf-]) thead {
@@ -1557,18 +1693,20 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content table:not([class*=vf-]) thead th {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.5;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   padding: 8px 16px;
   text-align: left;
 }
 .vf-content table:not([class*=vf-]) td {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
   padding: 8px 16px;
   text-align: left;
   vertical-align: top;
@@ -1586,19 +1724,29 @@ a.vf-button:hover, a.vf-button:focus {
 .vf-content figcaption:not([class*=vf-]),
 .vf-content cite:not([class*=vf-]) {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  color: #1a1c1a;
   font-weight: 400;
-  line-height: 1.57;
+  line-height: 1.71;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
-  color: #707372;
-  font-style: italic;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
+  color: #54585a;
 }
 .vf-content .vf-video {
   margin-bottom: 32px;
 }
 .vf-content figure:not([class*=vf-]) {
-  margin: 0;
+  display: table;
+  margin: auto;
+}
+.vf-content figure:not([class*=vf-]) img:not([class*=vf-]) {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.vf-content figure:not([class*=vf-]) figcaption:not([class*=vf-]) {
+  caption-side: bottom;
+  display: table-caption;
 }
 .vf-content .vf-figure--align-inline-start {
   margin-bottom: 32px;
@@ -1616,7 +1764,7 @@ a.vf-button:hover, a.vf-button:focus {
   margin-top: 0;
 }
 .vf-content__standfirst + .vf-content__standfirst {
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
 }
 .vf-content__standfirst + small {
   margin-bottom: 42px;

@@ -20,14 +20,14 @@
 // // if you need to import any other components' JS to use here
 // import { vfOthercomponent } from 'vf-other-component/vf-other-component';
 
- /**
-  * The global function for this component
-  * @example vfcomponentName(firstPassedVar)
-  * @param {string} [firstPassedVar]  - An option to be passed
-  */
+/**
+* The global function for this component
+* @example vfcomponentName(firstPassedVar)
+* @param {string} [firstPassedVar]  - An option to be passed
+*/
 function vfLocalOverrides(firstPassedVar) {
-  firstPassedVar = firstPassedVar || 'defaultVal';
-  console.log('vfLocalOverrides invoked with a value of', firstPassedVar);
+  firstPassedVar = firstPassedVar || "defaultVal";
+  console.log("vfLocalOverrides invoked with a value of", firstPassedVar);
 }
 
 // // If you need to invoke the component by default

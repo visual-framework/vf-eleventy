@@ -36,6 +36,15 @@ context.setVariable("navigation", t_3);
 if(frame.topLevel) {
 context.addExport("navigation", t_3);
 }
+var t_4;
+t_4 = runtime.memberLookup((runtime.contextOrFrameLookup(context, frame, "context")),"activateJavascript");
+frame.set("activateJavascript", t_4, true);
+if(frame.topLevel) {
+context.setVariable("activateJavascript", t_4);
+}
+if(frame.topLevel) {
+context.addExport("activateJavascript", t_4);
+}
 ;
 }
 output += "<nav class=\"vf-navigation";
@@ -44,46 +53,55 @@ output += " vf-navigation--";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "classModifier"), env.opts.autoescape);
 ;
 }
-if(runtime.contextOrFrameLookup(context, frame, "classModifier") == "additional") {
+if(runtime.contextOrFrameLookup(context, frame, "classModifier") == "on-this-page") {
 output += " | vf-u-fullbleed";
 ;
 }
-else {
-output += " | vf-cluster";
+output += " | vf-cluster\">\n  <ul class=\"vf-navigation__list | vf-list | vf-cluster__inner\"";
+if(runtime.contextOrFrameLookup(context, frame, "classModifier") == "on-this-page" && runtime.contextOrFrameLookup(context, frame, "activateJavascript") == true) {
+output += " data-vf-js-navigation-on-this-page-container=\"true\"";
 ;
 }
-output += "\">\n";
+if(runtime.contextOrFrameLookup(context, frame, "classModifier") == "on-this-page" && runtime.contextOrFrameLookup(context, frame, "activateJavascript") == false) {
+output += " data-vf-js-navigation-on-this-page-container=\"false\"";
+;
+}
+output += ">\n";
 if(runtime.contextOrFrameLookup(context, frame, "heading")) {
-output += "  <h3 class=\"vf-navigation__heading\">";
+output += "<li class=\"vf-navigation__item\">\n      ";
+output += "\n      ";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "heading"), env.opts.autoescape);
-output += "</h3>\n";
+output += "\n    </li>";
 ;
 }
-output += "  <ul class=\"vf-navigation__list | vf-list | vf-cluster__inner\">\n";
 frame = frame.push();
-var t_6 = runtime.contextOrFrameLookup(context, frame, "navigation");
-if(t_6) {t_6 = runtime.fromIterator(t_6);
-var t_5 = t_6.length;
-for(var t_4=0; t_4 < t_6.length; t_4++) {
-var t_7 = t_6[t_4];
-frame.set("item", t_7);
-frame.set("loop.index", t_4 + 1);
-frame.set("loop.index0", t_4);
-frame.set("loop.revindex", t_5 - t_4);
-frame.set("loop.revindex0", t_5 - t_4 - 1);
-frame.set("loop.first", t_4 === 0);
-frame.set("loop.last", t_4 === t_5 - 1);
-frame.set("loop.length", t_5);
+var t_7 = runtime.contextOrFrameLookup(context, frame, "navigation");
+if(t_7) {t_7 = runtime.fromIterator(t_7);
+var t_6 = t_7.length;
+for(var t_5=0; t_5 < t_7.length; t_5++) {
+var t_8 = t_7[t_5];
+frame.set("item", t_8);
+frame.set("loop.index", t_5 + 1);
+frame.set("loop.index0", t_5);
+frame.set("loop.revindex", t_6 - t_5);
+frame.set("loop.revindex0", t_6 - t_5 - 1);
+frame.set("loop.first", t_5 === 0);
+frame.set("loop.last", t_5 === t_6 - 1);
+frame.set("loop.length", t_6);
 output += "    <li class=\"vf-navigation__item\">\n      <a\n      href=\"";
-output += runtime.suppressValue(runtime.memberLookup((t_7),"navigation_href"), env.opts.autoescape);
-output += "\"\n      class=\"vf-navigation__link\"\n";
-if(runtime.memberLookup((t_7),"currentPage")) {
+output += runtime.suppressValue(runtime.memberLookup((t_8),"navigation_href"), env.opts.autoescape);
+output += "\"\n      class=\"vf-navigation__link\"";
+if(runtime.memberLookup((t_8),"currentPage")) {
 output += " aria-current=\"page\"";
 ;
 }
+if(runtime.memberLookup((t_8),"currentSection")) {
+output += " aria-selected=\"true\"";
+;
+}
 output += ">";
-output += runtime.suppressValue(runtime.memberLookup((t_7),"text"), env.opts.autoescape);
-output += "</a>\n    </li>\n";
+output += runtime.suppressValue(runtime.memberLookup((t_8),"text"), env.opts.autoescape);
+output += "</a>\n    </li>";
 ;
 }
 }

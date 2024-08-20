@@ -1,6 +1,6 @@
 /*
  *
- * scripts.css
+ * scripts.js
  * The Visual Framework kitchen sink of JavaScript.
  * Import this as a quick way to get *everything*,
  *
@@ -10,22 +10,27 @@
 import { vfBanner } from "vf-banner/vf-banner";
 vfBanner();
 
-import { vfMastheadSetStyle } from "vf-masthead/vf-masthead";
-vfMastheadSetStyle();
+// import { vfBannerElixir } from "vf-banner-elixir/vf-banner-elixir";
+// vfBannerElixir();
 
-import { vfGaIndicateLoaded } from "vf-analytics-google/vf-analytics-google";
-let vfGaTrackOptions = {
-  vfGaTrackPageLoad: true
-};
-vfGaIndicateLoaded(vfGaTrackOptions);
+// VF Masthead has been deprecated
+// https://github.com/visual-framework/vf-core/pull/1406/
+// import { vfMastheadSetStyle } from "vf-masthead/vf-masthead";
+// vfMastheadSetStyle();
+
+// import { vfGaIndicateLoaded } from "vf-analytics-google/vf-analytics-google";
+// let vfGaTrackOptions = {
+//   vfGaTrackPageLoad: true
+// };
+// vfGaIndicateLoaded(vfGaTrackOptions);
 
 import { vfTabs } from "vf-tabs/vf-tabs";
 vfTabs();
 
-import { vfTree } from "vf-tree/vf-tree";
-vfTree();
+// import { vfTree } from "vf-tree/vf-tree";
+// vfTree();
 
-// import { vfFormFloatLabels } from 'vf-form__core/assets/vf-form__float-labels.js';
+// import { vfFormFloatLabels } from 'form /assets/vf-form__float-labels.js';
 // vfFormFloatLabels();
 
 // import { vfSearchClientSide } from "vf-search-client-side/vf-search-client-side";
@@ -47,9 +52,21 @@ vfTree();
 // import { emblBreadcrumbs } from "embl-breadcrumbs-lookup/embl-breadcrumbs-lookup";
 // emblBreadcrumbs();
 
+// import { vfBackToTop } from "vf-back-to-top/vf-back-to-top.js";
+// vfBackToTop();
+
+// import { vfDropdown } from "vf-dropdown/vf-dropdown.js";
+// vfDropdown();
+
+// import { vfNavigationOnThisPage } from "vf-navigation/vf-navigation.js";
+// vfNavigationOnThisPage();
+
 // import { emblContentMetaProperties_Read } from "embl-content-meta-properties/embl-content-meta-properties";
 
 // import { emblNotifications } from "embl-notifications/embl-notifications";
 // emblNotifications();
+
+// import { vfMegaMenu } from 'vf-mega-menu/vf-mega-menu';
+// vfMegaMenu();
 
 // No default invokation

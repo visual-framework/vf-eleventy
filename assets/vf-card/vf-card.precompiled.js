@@ -174,7 +174,7 @@ output += " vf-card--brand";
 ;
 }
 else {
-output += "vf-card--";
+output += " vf-card--";
 output += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "newTheme"), env.opts.autoescape);
 ;
 }

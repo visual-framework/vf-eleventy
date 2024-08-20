@@ -31,13 +31,32 @@
 }
 
 :root {
-  --vf-theme--primary: #3b6fb6;
-  --vf-theme--primary--dark: #193f90;
-  --vf-theme--secondary: #18974c;
-  --vf-theme--secondary--dark: #007b53;
-  --vf-theme--tertiary: #54585a;
-  --vf-theme--quaternary: #f4c61f;
-  --vf-theme--quinary: #d0d0ce;
+  --vf-color__text--primary: #1a1c1a;
+  --vf-color__text--secondary: #373a36;
+  --vf-color__link: #3b6fb6;
+  --vf-color__link--hover: #193f90;
+  --vf-color__link--focus: #193f90;
+  --vf-color__link--visited: #563d82;
+}
+
+:root {
+  --vf-color__button__text--primary: #ffffff;
+  --vf-color__button__border--primary: #3b6fb6;
+  --vf-color__button__background--primary: #3b6fb6;
+  --vf-color__button__shadow--primary: #193f90;
+  --vf-color__button__text--secondary: #3b6fb6;
+  --vf-color__button__border--secondary: #3b6fb6;
+  --vf-color__button__background--secondary: #ffffff;
+  --vf-color__button__shadow--secondary: #193f90;
+  --vf-color__button__text--tertiary: #ffffff;
+  --vf-color__button__border--tertiary: #373a36;
+  --vf-color__button__background--tertiary: #373a36;
+  --vf-color__button__shadow--tertiary: #000000;
+}
+
+:root {
+  --vf-color__brand: #18974c;
+  --vf-color__brand--dark: #0a5032;
 }
 
 :root {
@@ -63,10 +82,20 @@
   --vf-color--neutral--900: #000000;
 }
 
+:root {
+  --vf-theme--primary: #3b6fb6;
+  --vf-theme--primary--dark: #193f90;
+  --vf-theme--secondary: #18974c;
+  --vf-theme--secondary--dark: #007b53;
+  --vf-theme--tertiary: #54585a;
+  --vf-theme--quaternary: #f4c61f;
+  --vf-theme--quinary: #d0d0ce;
+}
+
 /* stylelint-enable */
 /*!
  * Component: @visual-framework/vf-heading
- * Version: 1.0.1
+ * Version: 1.1.0
  * Location: components/undefined
  */
 .vf-text {
@@ -76,46 +105,51 @@
 .vf-text-heading--5 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.5;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--4 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 21px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.29;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--3 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--2 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 30px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text-heading--1 {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 42px;
+  color: #1a1c1a;
   font-weight: 700;
   line-height: 1.547;
   margin: 0 0 16px 0;
-  margin: 0 0 var(--vf-text-margin--bottom, 16px) 0;
+  margin: var(--vf-stack-margin, 0) 0 var(--vf-text-margin--bottom, 16px) 0;
 }
 
 .vf-text--has-tag {
@@ -139,21 +173,23 @@
 
 /*!
  * Component: @visual-framework/vf-section-header
- * Version: 1.5.1
+ * Version: 1.5.5
  * Location: components/undefined
  */
 .vf-section-header__heading {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 24px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.333;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
 }
 .vf-section-header__heading + .vf-section-header__subheading, .vf-section-header__heading + .vf-section-header__content {
   margin-top: 1.25rem;
 }
 
-.vf-section-header__heading--is-link {
+.vf-section-header__heading--is-link,
+.vf-section-header__heading--is-link a {
   border-bottom: none;
   text-decoration: none;
   color: #3b6fb6;
@@ -162,20 +198,24 @@
   grid-column-gap: 0.25rem;
   grid-template-columns: auto 1fr;
 }
-.vf-section-header__heading--is-link:visited {
-  color: #3b6fb6;
+.vf-section-header__heading--is-link:visited,
+.vf-section-header__heading--is-link a:visited {
+  color: color-interactive();
   border-bottom: none;
 }
-.vf-section-header__heading--is-link:visited:hover {
-  color: #3b6fb6;
+.vf-section-header__heading--is-link:visited:hover,
+.vf-section-header__heading--is-link a:visited:hover {
+  color: color-interactive();
   text-decoration: underline;
 }
-.vf-section-header__heading--is-link:hover {
+.vf-section-header__heading--is-link:hover,
+.vf-section-header__heading--is-link a:hover {
   color: #193f90;
   border-bottom: none;
   text-decoration: underline;
 }
-.vf-section-header__heading--is-link .vf-section-header__icon {
+.vf-section-header__heading--is-link .vf-section-header__icon,
+.vf-section-header__heading--is-link a .vf-section-header__icon {
   fill: currentColor;
   padding-top: 0.1em;
   -webkit-transform: translateX(0.25rem);
@@ -189,28 +229,34 @@
   -webkit-transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
           transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
-.vf-section-header__heading--is-link:hover .vf-section-header__icon, .vf-section-header__heading--is-link:focus .vf-section-header__icon {
+.vf-section-header__heading--is-link:hover .vf-section-header__icon, .vf-section-header__heading--is-link:focus .vf-section-header__icon,
+.vf-section-header__heading--is-link a:hover .vf-section-header__icon,
+.vf-section-header__heading--is-link a:focus .vf-section-header__icon {
   -webkit-transform: translateX(0.5rem);
           transform: translateX(0.5rem);
 }
-.vf-section-header__heading--is-link:hover:visited, .vf-section-header__heading--is-link:focus:visited {
+.vf-section-header__heading--is-link:hover:visited, .vf-section-header__heading--is-link:focus:visited,
+.vf-section-header__heading--is-link a:hover:visited,
+.vf-section-header__heading--is-link a:focus:visited {
   color: #193f90;
 }
 
 .vf-section-header__subheading {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 21px;
+  color: #1a1c1a;
   font-weight: 500;
   line-height: 1.29;
-  margin: 0 0 0 0;
+  margin: var(--vf-stack-margin, 0) 0 0 0;
 }
 
 .vf-section-header__text {
   font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
+  color: #1a1c1a;
   font-weight: 400;
   line-height: 1.421;
-  margin: 0 0 8px 0;
+  margin: var(--vf-stack-margin, 0) 0 8px 0;
 }
 .vf-section-header__text a,
 .vf-section-header__text .vf-link {
@@ -220,12 +266,12 @@
 }
 .vf-section-header__text a:visited,
 .vf-section-header__text .vf-link:visited {
-  color: #734595;
+  color: #563d82;
   border-bottom: none;
 }
 .vf-section-header__text a:visited:hover,
 .vf-section-header__text .vf-link:visited:hover {
-  color: #734595;
+  color: #563d82;
   text-decoration: underline;
 }
 .vf-section-header__text a:hover,

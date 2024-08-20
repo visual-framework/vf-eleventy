@@ -10,29 +10,29 @@ try {
 var parentTemplate = null;
 output += runtime.suppressValue(env.getExtension("spaceless")["run"](context,function(cb) {
 if(!cb) { cb = function(err) { if(err) { throw err; }}}
-var t_1 = "";t_1 += "\n<a";
+var t_1 = "";t_1 += "\n<a\n";
 if(runtime.contextOrFrameLookup(context, frame, "id")) {
-t_1 += " id=\"";
+t_1 += "id=\"";
 t_1 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "id"), env.opts.autoescape);
 t_1 += "\"";
 ;
 }
-t_1 += "href=\"";
+t_1 += "\nhref=\"";
 t_1 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "link_href"), env.opts.autoescape);
-t_1 += "\"";
+t_1 += "\"\n\n";
 if(runtime.contextOrFrameLookup(context, frame, "target")) {
-t_1 += " target=\"_";
+t_1 += "target=\"_";
 t_1 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "target"), env.opts.autoescape);
 t_1 += "\"";
 ;
 }
-t_1 += "class=\"vf-link";
+t_1 += "\nclass=\"vf-link";
 if(runtime.contextOrFrameLookup(context, frame, "override_class")) {
 t_1 += " | ";
 t_1 += runtime.suppressValue(runtime.contextOrFrameLookup(context, frame, "override_class"), env.opts.autoescape);
 ;
 }
-t_1 += "\"";
+t_1 += "\"\n\n";
 if(runtime.contextOrFrameLookup(context, frame, "disabled")) {
 t_1 += "disabled";
 ;
