@@ -54,7 +54,7 @@ jobs:
           path: ./build  # Adjust this path based on your build output directory
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build  # The directory to deploy (output of the build)
